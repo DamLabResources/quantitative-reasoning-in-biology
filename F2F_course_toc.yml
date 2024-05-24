@@ -1,0 +1,110 @@
+# F2F Course
+format: jb-book
+root: content/index
+parts:
+  - caption: Part 1 : Hello World
+    chapters:
+    
+    # Week 1
+    # Introduction to Colab and Otter
+    - file: content/Module01/course
+      sections:
+      - file: content/Module01/walkthrough
+      - file: content/Module01/lab 
+    
+    # Week 2
+    # Variables and functions
+    - file: content/Module02/course
+      sections:
+      - file: content/Module02/walkthrough
+      - file: content/Module02/lab 
+    
+    # Week 3
+    # Pandas
+    - file: content/Module03/course
+      sections:
+      - file: content/Module03/walkthrough
+      - file: content/Module03/lab 
+    
+    # Week 4 & 5
+    # Project 1: Find & Clean
+    - file: content/F2F_project1/course
+      sections:
+      - file: content/F2F_project1/TemplateNotebook
+      
+    
+    
+  - caption: Part 2 : Descriptive Visualization
+    chapters:
+    
+    # Week 6
+    # Groupby-Apply-Combine
+    - file: content/Module04/course
+      sections:
+      - file: content/Module04/walkthrough
+      - file: content/Module04/lab 
+    
+    # Week 7
+    # Plotting with Pandas
+    - file: content/Module05/course
+      sections:
+      - file: content/Module05/walkthrough
+      - file: content/Module05/lab 
+    
+    # Week 8
+    # Plotting with Seaborn
+    - file: content/Module06/course
+      sections:
+      - file: content/Module06/walkthrough
+      - file: content/Module06/lab 
+    
+    # Week 9 & 10
+    # Project 2: Descriptive Visualization
+    - file: content/F2F_project2/course
+      sections:
+      - file: content/F2F_project2/TemplateNotebook
+    
+    
+  - caption: Part 3 : Inferential Analysis
+    chapters:
+    
+    # Week 11
+    # Categorical comparisons
+    - file: content/Module07/course
+      sections:
+      - file: content/Module07/walkthrough
+      - file: content/Module07/lab 
+    
+    # Week 12
+    # Comparison across groups
+    - file: content/Module08/course
+      sections:
+      - file: content/Module08/walkthrough
+      - file: content/Module08/lab 
+    
+    # Week 13
+    # Regression
+    - file: content/Module09/course
+      sections:
+      - file: content/Module09/walkthrough
+      - file: content/Module09/lab 
+    
+    # Week 14
+    # Power Analysis
+    - file: content/Module10/course
+      sections:
+      - file: content/Module10/walkthrough
+      - file: content/Module10/lab 
+      
+    # Week 15
+    # Machine Learning
+    - file: content/Module11/course
+      sections:
+      - file: content/Module11/walkthrough
+      - file: content/Module11/lab 
+    
+    # Week 16 & 17
+    # Project 3: Inferential Analysis
+    - file: content/F2F_project3/course
+      sections:
+      - file: content/F2F_project3/TemplateNotebook    

@@ -1,0 +1,7 @@
+# In _config.yml
+title: Quantitative Reasoning in Biology
+author: Will Dampier
+execute:
+  execute_notebooks: force
+
+# Add a bibtex file so that we can create citations
