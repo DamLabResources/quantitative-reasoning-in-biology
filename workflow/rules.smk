@@ -141,5 +141,3 @@ rule render_book:
     
     shell:
         "jupyter-book build --config {input.config} --toc {input.toc_file} --path-output {output} ."
-        
-        
