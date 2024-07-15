@@ -132,7 +132,7 @@ rule bookify_walkthrough:
         
 rule render_book:
     input:
-        toc_file = '{book}_toc.yml',
+        toc_file = 'tocs/{book}_toc.yml',
         book_files = get_files_from_book_config,
         config = '_config.yml'
     output:
