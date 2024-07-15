@@ -1,7 +1,12 @@
 all:
-	snakemake -c 1 build_bblearn_uploads
+	uploads
+	books
+
+books:
 	snakemake -c 1 build_all_books
 
+uploads:
+	snakemake -c 1 build_bblearn_uploads
 
 vale:
 	vale content/*/*.md

@@ -27,5 +27,44 @@ ONLY edit the files in the `content/` directory.
 
 ### Style checking
 
+This project uses [`vale`](https://vale.sh/) as a generic style checker.
+
+```bash
+vale path/to/file.md
+```
+
+Vale cannot natively handle `.ipynb` files.
+However, if you add the following alias to your local `~./.bashrc` file you can sidestep the issue.
+
+```bash
+alias smrt_vale='function _smrt_vale(){ 
+    local file="$1"; 
+    shift 
+    if [[ "${file##*.}" == "md" ]]; then 
+        vale "$file" "$@"; 
+    elif [[ "${file##*.}" == "ipynb" ]]; then 
+        jupyter nbconvert --to markdown "$file" --stdout | vale --ext=.md /dev/stdin "$@"; 
+    else 
+        echo "Unsupported file extension. Please provide a .md or .ipynb file."; 
+    fi 
+}; _smrt_vale'
+
+
+smrt_vale path/to/file.ipynb
+```
+
 
 ### Building 
+
+The entire set can be built with:
+
+```bash
+make all
+```
+
+Indvidual parts can be made with:
+
+```bash
+make books
+make uploads
+```
