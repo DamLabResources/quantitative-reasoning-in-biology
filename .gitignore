@@ -1,3 +1,4 @@
+_build/
 .ipynb_checkpoints*
 .snakemake/*
 *.OTTER_LOG

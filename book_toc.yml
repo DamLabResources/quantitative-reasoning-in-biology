@@ -1,8 +1,15 @@
 format: jb-book
-root: content/index
+root: content/book_index
 parts:
-  - caption: Part 1 : Hello World
+
+  - caption: "Part 0: Introduction"
     chapters:
-    - file: content/Module01/Module01-book
+    - file: content/misc/book_intro
+      
+
+  - caption: "Part 1 : Hello World"
+    chapters:
+    - file: content/Module01/Module01_book
       sections:
-      - file: content/Module01/Module01-walkthrough
+      - file: content/Module01/Module01_walkthrough_book
+      
