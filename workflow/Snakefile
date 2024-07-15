@@ -1,0 +1,23 @@
+include: "utils.py"
+include: "rules.smk"
+
+MODULES = get_all_modules()
+print(MODULES)
+
+rule build_bblearn_uploads:
+    input:
+        expand('_bblearn/{module}/{module}_{suffix}',
+               module=MODULES,
+               suffix=['files.zip',
+                       'walkthrough.ipynb',
+                       'walkthrough_SOLUTION.ipynb',
+                       'lab.ipynb',
+                       'lab_SOLUTION.ipynb'
+                       ])
+               
+rule build_all_books:
+    input:
+        '_book/book/',
+        '_book/F2F/',
+        '_book/online/',
+    
