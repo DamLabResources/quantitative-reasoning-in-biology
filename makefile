@@ -1,6 +1,6 @@
 all:
-	uploads
-	books
+	make uploads
+	make books
 
 books:
 	snakemake -c 1 build_all_books

@@ -110,7 +110,7 @@ rule:
 
 def get_files_from_book_config(wildcards):
     
-    book_yaml_path = f'{wildcards["book"]}_toc.yml'
+    book_yaml_path = f'tocs/{wildcards["book"]}_toc.yml'
     book_structure = yaml.full_load(open(book_yaml_path))
     
     root_index_file = book_structure['root'] + '.md' # Assumption
