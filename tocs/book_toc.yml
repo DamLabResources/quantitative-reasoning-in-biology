@@ -12,4 +12,5 @@ parts:
     - file: content/Module01/Module01_book
       sections:
       - file: content/Module01/Module01_walkthrough_book
+      - file: content/Module01/notebook_actions
       
