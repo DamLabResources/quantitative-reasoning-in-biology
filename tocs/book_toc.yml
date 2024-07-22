@@ -14,3 +14,9 @@ parts:
       - file: content/Module01/Module01_walkthrough_book
       - file: content/Module01/notebook_actions
       
+    - file: content/Module02/Module02_book
+      sections:
+      - file: content/Module02/Module02_walkthrough_book
+      - file: content/Module02/nanopore_description
+      - file: content/Module02/dilution_calculations
+      
