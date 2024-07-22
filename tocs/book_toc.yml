@@ -4,8 +4,8 @@ parts:
 
   - caption: "Part 0: Introduction"
     chapters:
+    - file: content/misc/about_this_book
     - file: content/misc/book_intro
-      
 
   - caption: "Part 1 : Hello World"
     chapters:
