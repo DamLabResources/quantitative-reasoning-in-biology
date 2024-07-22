@@ -1,0 +1,936 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Walkthrough &#8212; Quantitative Reasoning in Biology</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/Module02/Module02_walkthrough_book';</script>
+    <link rel="canonical" href="https://damlabresources.github.io/quantitative-reasoning-in-biology/content/Module02/Module02_walkthrough_book.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Nanopore Sequencing" href="nanopore_description.html" />
+    <link rel="prev" title="Module 2: Simple calculations" href="Module02_book.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">Work in progress!</div>
+  </div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../book_index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Quantitative Reasoning in Biology</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../book_index.html">
+                    Quantitative Reasoning in Biology
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 0: Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../misc/about_this_book.html">About this book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/book_intro.html">Introduction</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 1 : Hello World</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module01/Module01_book.html">Module 1: Hello World</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module01/Module01_walkthrough_book.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module01/notebook_actions.html">Notebook basics</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="Module02_book.html">Module 2: Simple calculations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nanopore_description.html">Nanopore Sequencing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dilution_calculations.html">Dilution calculations</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/content/Module02/Module02_walkthrough_book.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Walkthrough</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#programmatic-arithmetic-in-python">Programmatic Arithmetic in Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-problem">The Problem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Walkthrough</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-template-weight">What is the template weight?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#q1-calculate-the-molarity-of-the-sample">Q1: Calculate the molarity of the sample</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#f-strings"><code class="docutils literal notranslate"><span class="pre">f-strings</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linting-through-color">Linting through color</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#q2-calculate-the-amount-of-sample-to-add">Q2: Calculate the amount of sample to add.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#q3-describing-the-reaction-yield">Q3: Describing the reaction yield</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#q4-write-a-function-which-calculates-the-reaction-yield">Q4: Write a function which calculates the reaction yield</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="walkthrough">
+<h1>Walkthrough<a class="headerlink" href="#walkthrough" title="Link to this heading">#</a></h1>
+<p>Remember, all assignments are due before the weekly synchronous session.</p>
+<section id="learning-objectives">
+<h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Link to this heading">#</a></h2>
+<p>At the end of this learning activity you will be able to:</p>
+<ul class="simple">
+<li><p>Use basic arithmetic operations in Python.</p></li>
+<li><p>Summarize the basic expression syntax in Python.</p></li>
+<li><p>Write an equation that uses the result of one variable to calculate the value of another.</p></li>
+<li><p>Create basic <code class="docutils literal notranslate"><span class="pre">f-strings</span></code> in Python to display dynamically created data.</p></li>
+<li><p>Summarize a general strategy for using Python to calculate dilutions.</p></li>
+</ul>
+</section>
+<section id="programmatic-arithmetic-in-python">
+<h2>Programmatic Arithmetic in Python<a class="headerlink" href="#programmatic-arithmetic-in-python" title="Link to this heading">#</a></h2>
+<p>Often times in the lab we have common tasks that we repeat over and over again.
+This can be anything from counting the number of cells on a plate, to normalizing values with a reference, to calculating dilutions for stock chemicals.
+Automating these types of tasks can lead to drastic speedups in the time it takes to get common tasks done.
+This week we’ll use a common problem from molecular biology as our jumping off point into Python.</p>
+<p>Recently, my lab obtained a Nanopore MinION.
+It is a 1000 dollar, USB-key sized DNA sequencer that reads millions of bases for about 100 dollars per sample.
+As part of a Senior Design Project we used the device to track the COVID outbreak in the Drexel community using rapid sequencing.
+Watch the video explaining the project in the Recommended Materials for more context.
+This protocol requires numerous tedious calculations relating mass, moles, and concentrations.
+This week we will explore how to use Python to automate these calculations.</p>
+<p>The Nanopore sequencing protocol requires the operator to perform 3 enzymatic reactions:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">End-Prep</span></code>: Prepare the 3’ and 5’ ends of the DNA by removing single-basepair overhangs and add a single <code class="docutils literal notranslate"><span class="pre">A</span></code> at the end of the molecule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Barcode</span> <span class="pre">ligation</span></code>: Attach unique barcodes to each sample using a <code class="docutils literal notranslate"><span class="pre">T</span></code> overhang so each sample has an individual <em>key</em> at the start of the sequence.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Adapter</span> <span class="pre">ligation</span></code>: After pooling each sample, another DNA molecule (called an <em>adapter</em>) needs to be added so it can attach to the motor protein inside the Nanopore device.</p></li>
+</ol>
+<p>Refer to the online textbook for more detail.</p>
+</section>
+<section id="the-problem">
+<h2>The Problem<a class="headerlink" href="#the-problem" title="Link to this heading">#</a></h2>
+<p>Just like baking, when performing enzymatic reactions it is critical that we use the right amount of each ingredient.
+The Nanopore enzymatic reagents come in prescribed amounts and it is up to the operator to ensure that the correct initial amount of template DNA is added to each reaction.</p>
+<p>The amount of template DNA needed for each reaction is listed in the protocol in <a class="reference external" href="https://en.wikipedia.org/wiki/Mole_(unit)"><em>moles</em></a>.
+Moles are a unit of “amount” such as the number of molecules of DNA, there are 6.022 × 10^(23) items in a mole.
+However, we can’t <em>count</em> the amount of DNA we have in a test-tube.
+But, we can <em>weight</em> the DNA by looking at the amount of light absorbed by the sample using a device called a <a class="reference external" href="https://www.youtube.com/watch?v=RRKZN--7jqg">Qubit</a>.
+Then, if we know the number of nucleotides in the strand, we can convert the weight of the DNA into a number of <em>moles</em>.
+Refer to the course book for a in-depth review of math.</p>
+<p>Doing this calculation manually is tedious and prone to error. The perfect thing to automate.</p>
+</section>
+<section id="id1">
+<h2>Walkthrough<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>We do this through a series of <em>expressions</em>.
+Remember, the computer is not ‘space limited’ we should write code so WE understand it.
+Not, try to make everything as short and compact as possible.</p>
+<p>Assume you have a 25 ul of a 280 bp double-stranded template at that you measured to be a concentration of 50.6 ng/ul.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># It is often useful to define all of your variables at the beginning.</span>
+<span class="n">amplicon_length</span> <span class="o">=</span> <span class="mi">280</span> <span class="c1"># bp</span>
+<span class="n">dna_weight</span> <span class="o">=</span> <span class="mi">650</span> <span class="c1"># g/mole/bp</span>
+<span class="n">dna_conc</span> <span class="o">=</span> <span class="mf">50.6</span> <span class="c1"># ng/ul</span>
+<span class="n">volume</span> <span class="o">=</span> <span class="mi">25</span> <span class="c1"># ul</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="what-is-the-template-weight">
+<h2>What is the template weight?<a class="headerlink" href="#what-is-the-template-weight" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">template_weight</span> <span class="o">=</span> <span class="n">amplicon_length</span><span class="o">*</span><span class="n">dna_weight</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The template weighs </span><span class="si">{</span><span class="n">template_weight</span><span class="si">}</span><span class="s1"> g/mole&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The template weighs 182000 g/mole
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="q1-calculate-the-molarity-of-the-sample">
+<h2>Q1: Calculate the molarity of the sample<a class="headerlink" href="#q1-calculate-the-molarity-of-the-sample" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Answer in fmoles/ul</span>
+
+<span class="n">dna_molarity</span> <span class="o">=</span> <span class="n">dna_conc</span> <span class="o">*</span> <span class="mf">1E-9</span> <span class="o">/</span> <span class="n">template_weight</span> <span class="o">/</span> <span class="mf">1E-15</span> <span class="c1"># SOLUTION</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The DNA molarity is </span><span class="si">{</span><span class="n">dna_molarity</span><span class="si">}</span><span class="s1"> fmoles/ul&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The DNA molarity is 278.02197802197804 fmoles/ul
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Is dna_molarity a float:&#39;</span><span class="p">,</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dna_molarity</span><span class="p">,</span> <span class="nb">float</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Is dna_molarity a float: True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;dna_molarity = </span><span class="si">{</span><span class="n">dna_molarity</span><span class="si">:</span><span class="s1">0.1f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dna_molarity = 278.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Some things to notice above:</p>
+<ol class="arabic simple">
+<li><p>There’s an <code class="docutils literal notranslate"><span class="pre">f</span></code> immediately before the <code class="docutils literal notranslate"><span class="pre">'</span></code>. This makes it a “formatted” string. Or <code class="docutils literal notranslate"><span class="pre">f-string</span></code>.</p></li>
+<li><p>There’s a lot of different colors changing.</p></li>
+</ol>
+<section id="f-strings">
+<h3><code class="docutils literal notranslate"><span class="pre">f-strings</span></code><a class="headerlink" href="#f-strings" title="Link to this heading">#</a></h3>
+<p>These are a new (circa 2016) addition to Python that makes adding data into strings.
+Representing our results as dynamically changing explanatory statements helps make our analysis more transparent and reproducible.
+<code class="docutils literal notranslate"><span class="pre">f-strings</span></code> make this much easier.</p>
+<p>Take a look at this post from <a class="reference external" href="https://thepythonguru.com/python-string-formatting/">The Python Guru</a> for an indepth explanation of the formatting.</p>
+</section>
+<section id="linting-through-color">
+<h3>Linting through color<a class="headerlink" href="#linting-through-color" title="Link to this heading">#</a></h3>
+<p>If we look around our notebook, we can see that there are a lot of different text colors.
+Those are hints at what Python thinks we’re trying to tell it.
+Understanding the code can really help with debugging.</p>
+<p>Numbers are green.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="mi">1231231</span>
+</pre></div>
+</div>
+<p>Variables are black.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">val</span> <span class="o">=</span> <span class="mi">1231231</span>
+<span class="n">other</span> <span class="o">=</span> <span class="n">val</span>
+</pre></div>
+</div>
+<p>Strings are orange.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">val</span> <span class="o">=</span> <span class="s1">&#39;1231231&#39;</span>
+</pre></div>
+</div>
+<p><em>Even if they are strings of numbers.</em></p>
+<p><code class="docutils literal notranslate"><span class="pre">f-strings</span></code> are orange.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">val</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;1231231&#39;</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">f-strings</span></code> are orange, unless it is between <code class="docutils literal notranslate"><span class="pre">{</span></code> <code class="docutils literal notranslate"><span class="pre">}</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">val</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;This book is </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s1"> years old.&#39;</span>
+</pre></div>
+</div>
+<p>The parts between curly braces are replaced by the value in the code.</p>
+<p>Notice how imbalanced braces alters the color.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">val</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;This book is </span><span class="si">{</span><span class="n">age</span><span class="w"> </span><span class="n">years</span><span class="w"> </span><span class="n">old</span><span class="o">.</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="q2-calculate-the-amount-of-sample-to-add">
+<h2>Q2: Calculate the amount of sample to add.<a class="headerlink" href="#q2-calculate-the-amount-of-sample-to-add" title="Link to this heading">#</a></h2>
+<p>The protocol requires us to start with 200 fmoles of template DNA.
+How many mircoliters of our stock do we need to start with?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Answer in ul</span>
+
+<span class="n">wanted_dna</span> <span class="o">=</span> <span class="mi">200</span> <span class="c1"># fmoles</span>
+
+<span class="n">volume_to_add</span> <span class="o">=</span> <span class="n">wanted_dna</span> <span class="o">/</span> <span class="n">dna_molarity</span> <span class="c1"># SOLUTION</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;You should add </span><span class="si">{</span><span class="n">volume_to_add</span><span class="si">:</span><span class="s1">0.2f</span><span class="si">}</span><span class="s1"> ul of sample to your reaction.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>You should add 0.72 ul of sample to your reaction.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Is volume_to_add a float:&#39;</span><span class="p">,</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">volume_to_add</span><span class="p">,</span> <span class="nb">float</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Is volume_to_add a float: True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;volume_to_add = </span><span class="si">{</span><span class="n">volume_to_add</span><span class="si">:</span><span class="s1">0.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>volume_to_add = 0.72
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="q3-describing-the-reaction-yield">
+<h2>Q3: Describing the reaction yield<a class="headerlink" href="#q3-describing-the-reaction-yield" title="Link to this heading">#</a></h2>
+<p>Calculating how much <strong>total</strong> amount of DNA we created during the PCR is called the <em>yield</em> of the reaction.</p>
+<p>Create an <code class="docutils literal notranslate"><span class="pre">f-string</span></code> that renders the yield in femtomoles of this reaction. Round your answer to the nearest integer.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate the amount of DNA in the entire reaction</span>
+<span class="c1"># Answer in fmoles</span>
+<span class="n">dna_yield</span> <span class="o">=</span> <span class="n">dna_molarity</span><span class="o">*</span><span class="n">volume</span> <span class="c1"># SOLUTION</span>
+
+<span class="c1"># Create an f-string that uses the dna_yield variable</span>
+<span class="c1"># and describes the result in a short sentence</span>
+<span class="n">dna_yield_description</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;The experiment yielded </span><span class="si">{</span><span class="n">dna_yield</span><span class="si">:</span><span class="s1">0.0f</span><span class="si">}</span><span class="s1"> fmoles of DNA.&#39;</span> <span class="c1"># SOLUTION</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">dna_yield_description</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The experiment yielded 6951 fmoles of DNA.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Is dna_yield_description a str:&#39;</span><span class="p">,</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dna_yield_description</span><span class="p">,</span> <span class="nb">str</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Is dna_yield_description a str: True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Is the correct number in the description:&#39;</span><span class="p">,</span> <span class="s1">&#39;6951&#39;</span> <span class="ow">in</span> <span class="n">dna_yield_description</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Is the correct number in the description: True
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">#</a></h2>
+<p>Functions are self contained blocks of code created for a reusable purpose.</p>
+<p><strong>Purpose:</strong></p>
+<ul class="simple">
+<li><p>Modularity: Breaks down complex processes into smaller, manageable parts.</p></li>
+<li><p>Reusability: Allows the same code to be used multiple times without repetition.</p></li>
+<li><p>Organization: Makes the code more organized and easier to understand.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">function_name</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="n">kwarg1</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">kwarg2</span><span class="o">=</span><span class="s1">&#39;a&#39;</span><span class="p">):</span>
+    <span class="s2">&quot;A brief function description&quot;</span>
+
+    <span class="c1"># do something with inputs</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">arg1</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">arg2</span>
+
+    <span class="k">return</span> <span class="n">result</span>
+
+</pre></div>
+</div>
+<p>Instead of continually copy-paste-and-change, we should write a function.</p>
+<p>We’ve been using something like this to calculate the molarity from the concentration.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dna_molarity</span> <span class="o">=</span> <span class="n">dna_conc</span> <span class="o">*</span> <span class="mf">1E-9</span> <span class="o">/</span> <span class="n">template_weight</span> <span class="o">/</span> <span class="mf">1E-15</span> 
+
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calc_molarity</span><span class="p">(</span><span class="n">sample_concentration</span><span class="p">,</span> <span class="n">sample_length</span><span class="p">,</span> <span class="n">base_weight</span><span class="o">=</span><span class="mi">650</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculate molarity of samples.</span>
+
+<span class="sd">    sample_concentration : ng/ul</span>
+<span class="sd">    sample_length : bases</span>
+<span class="sd">    base_weight : g/mole/bp</span>
+
+<span class="sd">    returns molarity fmols/ul</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">nano</span> <span class="o">=</span> <span class="mf">1E-9</span>
+    <span class="n">fempto</span> <span class="o">=</span> <span class="mf">1E-15</span>
+
+    <span class="n">amplicon_weight</span> <span class="o">=</span> <span class="n">sample_length</span><span class="o">*</span><span class="n">base_weight</span>
+    <span class="n">molarity</span> <span class="o">=</span> <span class="n">sample_concentration</span> <span class="o">*</span> <span class="n">nano</span> <span class="o">/</span> <span class="n">amplicon_weight</span> <span class="o">/</span> <span class="n">fempto</span>
+
+    <span class="k">return</span> <span class="n">molarity</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Once created, we can use this function anywhere.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">paragon_molarity</span> <span class="o">=</span> <span class="n">calc_molarity</span><span class="p">(</span><span class="mf">50.6</span><span class="p">,</span> <span class="mi">280</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Function calculated paragon molarity </span><span class="si">{</span><span class="n">paragon_molarity</span><span class="si">:</span><span class="s1">0.1f</span><span class="si">}</span><span class="s1"> fmols/ul&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Function calculated paragon molarity 278.0 fmols/ul
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, if we had another sample with a different concentration.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_concentration</span> <span class="o">=</span> <span class="mf">150.6</span> <span class="c1"># ng/ul</span>
+
+<span class="n">new_paragon_molarity</span> <span class="o">=</span> <span class="n">calc_molarity</span><span class="p">(</span><span class="n">new_concentration</span><span class="p">,</span> <span class="mi">280</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Function calculated new molarity </span><span class="si">{</span><span class="n">new_paragon_molarity</span><span class="si">:</span><span class="s1">0.1f</span><span class="si">}</span><span class="s1"> fmols/ul&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Function calculated new molarity 827.5 fmols/ul
+</pre></div>
+</div>
+</div>
+</div>
+<p>Or, if <em>for some reason</em> you were making RNA, the <code class="docutils literal notranslate"><span class="pre">base_weight</span></code> would be different.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rna_paragon_molarity</span> <span class="o">=</span> <span class="n">calc_molarity</span><span class="p">(</span><span class="n">new_concentration</span><span class="p">,</span> <span class="mi">280</span><span class="p">,</span> <span class="n">base_weight</span><span class="o">=</span><span class="mi">320</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Function calculated rna molarity </span><span class="si">{</span><span class="n">rna_paragon_molarity</span><span class="si">:</span><span class="s1">0.1f</span><span class="si">}</span><span class="s1"> fmols/ul&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Function calculated rna molarity 1680.8 fmols/ul
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="q4-write-a-function-which-calculates-the-reaction-yield">
+<h2>Q4: Write a function which calculates the reaction yield<a class="headerlink" href="#q4-write-a-function-which-calculates-the-reaction-yield" title="Link to this heading">#</a></h2>
+<p>Use the function above as a template to create on that further calculates the reaction yield in <code class="docutils literal notranslate"><span class="pre">fmols</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calc_yield</span><span class="p">(</span><span class="n">sample_concentration</span><span class="p">,</span> <span class="n">sample_length</span><span class="p">,</span> <span class="n">sample_volume</span><span class="p">,</span> <span class="n">base_weight</span><span class="o">=</span><span class="mi">650</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Calculate molarity of samples.</span>
+
+<span class="sd">    sample_concentration : ng/ul</span>
+<span class="sd">    sample_length : bases</span>
+<span class="sd">    base_weight : g/mole/bp</span>
+
+<span class="sd">    returns sample_yield in fmols</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># BEGIN SOLUTION NO PROMPT</span>
+
+    <span class="n">molarity</span> <span class="o">=</span> <span class="n">calc_molarity</span><span class="p">(</span><span class="n">sample_concentration</span><span class="p">,</span> <span class="n">sample_length</span><span class="p">,</span> <span class="n">base_weight</span><span class="o">=</span><span class="n">base_weight</span><span class="p">)</span>
+    <span class="n">sample_yield</span> <span class="o">=</span> <span class="n">molarity</span><span class="o">*</span><span class="n">sample_volume</span>
+
+    <span class="k">return</span> <span class="n">sample_yield</span>
+
+    <span class="c1"># END SOLUTION</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">current_yield</span> <span class="o">=</span> <span class="n">calc_yield</span><span class="p">(</span><span class="mf">50.6</span><span class="p">,</span> <span class="mi">280</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Current reaction yield is </span><span class="si">{</span><span class="n">current_yield</span><span class="si">:</span><span class="s1">0.1f</span><span class="si">}</span><span class="s1"> fmols&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Current reaction yield is 6950.5 fmols
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Testing calc_yield(50.6, 280, 25) = </span><span class="si">{</span><span class="n">calc_yield</span><span class="p">(</span><span class="mf">50.6</span><span class="p">,</span><span class="w"> </span><span class="mi">280</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">)</span><span class="si">:</span><span class="s1">0.1f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Testing calc_yield(50.6, 280, 25) = 6950.5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Testing calc_yield(35, 263, 20, base_weight=320) = </span><span class="si">{</span><span class="n">calc_yield</span><span class="p">(</span><span class="mi">35</span><span class="p">,</span><span class="w"> </span><span class="mi">77</span><span class="p">,</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w"> </span><span class="n">base_weight</span><span class="o">=</span><span class="mi">320</span><span class="p">)</span><span class="si">:</span><span class="s1">0.1f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Testing calc_yield(35, 263, 20, base_weight=320) = 26988.6
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
+<p>In this walkthrough we have discussed a number of ways to perform basic math in Python.
+We also covered strategies to modularize processes into reusable functions.
+This week we worked with a ‘one number at a time’ strategy, in the next module we will explore using tables to work with multiple samples at the same time.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content/Module02"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Module02_book.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Module 2: Simple calculations</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="nanopore_description.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Nanopore Sequencing</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#programmatic-arithmetic-in-python">Programmatic Arithmetic in Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-problem">The Problem</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Walkthrough</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-template-weight">What is the template weight?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#q1-calculate-the-molarity-of-the-sample">Q1: Calculate the molarity of the sample</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#f-strings"><code class="docutils literal notranslate"><span class="pre">f-strings</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linting-through-color">Linting through color</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#q2-calculate-the-amount-of-sample-to-add">Q2: Calculate the amount of sample to add.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#q3-describing-the-reaction-yield">Q3: Describing the reaction yield</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions">Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#q4-write-a-function-which-calculates-the-reaction-yield">Q4: Write a function which calculates the reaction yield</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Will Dampier
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

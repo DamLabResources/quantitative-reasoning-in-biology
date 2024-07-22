@@ -190,6 +190,12 @@
 <li class="toctree-l2"><a class="reference internal" href="notebook_actions.html">Notebook basics</a></li>
 </ul>
 </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module02/Module02_book.html">Module 2: Simple calculations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module02/Module02_walkthrough_book.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module02/nanopore_description.html">Nanopore Sequencing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module02/dilution_calculations.html">Dilution calculations</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
@@ -579,9 +585,9 @@ I’ll also use it to give suggestions for common mistakes.</p>
     <span class="kn">import</span> <span class="nn">otter</span>
 
 <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;walkthrough-tests&#39;</span><span class="p">):</span>
-    <span class="n">zip_files</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">()]</span>
+    <span class="n">zip_files</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">()</span> <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.zip&#39;</span><span class="p">)]</span>
     <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">zip_files</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Could not find any zip files!&#39;</span>
-    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">zip_files</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Found multiple zip files!&#39;</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">zip_files</span><span class="p">)</span><span class="o">==</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Found multiple zip files!&#39;</span>
     <span class="o">!</span><span class="w"> </span>unzip<span class="w"> </span><span class="o">{</span>zip_files<span class="o">[</span><span class="m">0</span><span class="o">]}</span>
 
 <span class="n">grader</span> <span class="o">=</span> <span class="n">otter</span><span class="o">.</span><span class="n">Notebook</span><span class="p">(</span><span class="n">colab</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
