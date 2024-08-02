@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Introduction &#8212; Quantitative Reasoning in Biology</title>
+    <title>Module 3: DataFrames &#8212; Quantitative Reasoning in Biology</title>
   
   
   
@@ -58,12 +58,12 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'content/misc/book_intro';</script>
-    <link rel="canonical" href="https://damlabresources.github.io/quantitative-reasoning-in-biology/content/misc/book_intro.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/Module03/Module03_book';</script>
+    <link rel="canonical" href="https://damlabresources.github.io/quantitative-reasoning-in-biology/content/Module03/Module03_book.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Module 1: Hello World" href="../Module01/Module01_book.html" />
-    <link rel="prev" title="About this book" href="about_this_book.html" />
+    <link rel="next" title="Module 03 Walkthrough" href="Module03_walkthrough_book.html" />
+    <link rel="prev" title="Dilution calculations" href="../Module02/dilution_calculations.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -179,12 +179,12 @@
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 0: Introduction</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="about_this_book.html">About this book</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Introduction</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../misc/about_this_book.html">About this book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/book_intro.html">Introduction</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 1 : Hello World</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Module01/Module01_book.html">Module 1: Hello World</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Module01/Module01_walkthrough_book.html">Walkthrough</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Module01/notebook_actions.html">Notebook basics</a></li>
@@ -196,8 +196,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../Module02/dilution_calculations.html">Dilution calculations</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Module03/Module03_book.html">Module 3: DataFrames</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Module03/Module03_walkthrough_book.html">Module 03 Walkthrough</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Module 3: DataFrames</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Module03_walkthrough_book.html">Module 03 Walkthrough</a></li>
 
 </ul>
 </li>
@@ -255,7 +255,7 @@
       
       
       
-      <li><a href="../../_sources/content/misc/book_intro.md" target="_blank"
+      <li><a href="../../_sources/content/Module03/Module03_book.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -337,7 +337,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Introduction</h1>
+    <h1>Module 3: DataFrames</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -351,9 +351,11 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h1>
-<p>This will be the introduction for the book.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="module-3-dataframes">
+<h1>Module 3: DataFrames<a class="headerlink" href="#module-3-dataframes" title="Link to this heading">#</a></h1>
+<p>This chapter will discuss how to use Python and Pandas to load and summarize spreadsheet style data.</p>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -369,7 +371,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./content/misc"
+            path: "./content/Module03"
         },
         predefinedOutput: true
     }
@@ -387,20 +389,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="about_this_book.html"
+       href="../Module02/dilution_calculations.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">About this book</p>
+        <p class="prev-next-title">Dilution calculations</p>
       </div>
     </a>
     <a class="right-next"
-       href="../Module01/Module01_book.html"
+       href="Module03_walkthrough_book.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Module 1: Hello World</p>
+        <p class="prev-next-title">Module 03 Walkthrough</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
