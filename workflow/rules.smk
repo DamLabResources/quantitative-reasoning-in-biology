@@ -128,7 +128,13 @@ rule bookify_walkthrough:
     shell:
         "jupyter nbconvert {input} --to notebook --stdout --TagRemovePreprocessor.enabled=True --TagRemovePreprocessor.remove_cell_tags remove_cell > {output}"
 
-        
+rule bookify_lab:
+    input:
+        '_bblearn/{module}/{module}_lab.ipynb',
+    output:
+        "content/{module}/{module}_lab_book.ipynb"
+    shell:
+        "jupyter nbconvert {input} --to notebook --stdout --TagRemovePreprocessor.enabled=True --TagRemovePreprocessor.remove_cell_tags remove_cell > {output}"        
         
 rule render_book:
     input:
