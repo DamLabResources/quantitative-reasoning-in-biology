@@ -733,6 +733,11 @@ This is the main tool we will be using for data exploration.</p>
 </table>
 </div></div></div>
 </div>
+<div class="dropdown admonition note">
+<p class="admonition-title">Note</p>
+<p>I often use the suffix <code class="docutils literal notranslate"><span class="pre">_df</span></code> when I create <code class="docutils literal notranslate"><span class="pre">pd.DataFrames</span></code>.
+It is not required, but utilizing naming conventions makes your code easier to understand by yourself and others.</p>
+</div>
 <p>And we should see that this exactly matches the table we saw in Excel.</p>
 <p>The object we got back is called a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>.</p>
 <div class="cell docutils container">
@@ -991,7 +996,7 @@ dtype: float64
 <p class="admonition-title">Note</p>
 <p>Methods, are functions that are attached to an <code class="docutils literal notranslate"><span class="pre">object</span></code>.
 They usually act on the object to provide a summary, perform a transformation, or otherwise utilize the information within the object.
-In this case, these summarization methods utilize the information within the dataframe to summarize each column.</p>
+In this case, these summarization methods utilize the information within the <code class="docutils literal notranslate"><span class="pre">trial_df</span></code> dataframe to summarize each column.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1562,7 +1567,7 @@ Name: 0, dtype: object
 <h3>Boolean Indexing<a class="headerlink" href="#boolean-indexing" title="Link to this heading">#</a></h3>
 <p>If we do not know the row number ahead of time, but instead want to select rows based on their values, we can using boolean indexing.
 In this stragey we create a new <code class="docutils literal notranslate"><span class="pre">pd.Series</span></code> of True/False values where True corresponds to the ones we want.</p>
-<p>Start by finding all people over 50 years old.</p>
+<p>Start by finding everyone over 50 years old.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age_mask</span> <span class="o">=</span> <span class="n">trial_df</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">50</span>
