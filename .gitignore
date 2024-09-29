@@ -1,3 +1,4 @@
+_book
 content/*/_build/
 .ipynb_checkpoints*
 .snakemake/*
