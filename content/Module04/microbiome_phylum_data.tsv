@@ -1,0 +1,109 @@
+Patient	Location	CollectionType	Actinobacteria	Bacteroidetes	Firmicutes	Proteobacteria	num_otu	Predominant
+3062	Nasal Vestibule	Swab	2516	44	14987	0	16	Firmicutes
+3094	Nasal Vestibule	Swab	103	0	1397	0	15	Firmicutes
+3095	Nasal Vestibule	Swab	1474	0	5510	29	21	Firmicutes
+3115	Nasal Vestibule	Swab	0	0	5480	0	2	Firmicutes
+3116	Nasal Vestibule	Swab	2	0	2324	1	4	Firmicutes
+3117	Nasal Vestibule	Swab	426	0	1017	9	21	Firmicutes
+3120	Nasal Vestibule	Swab	107	0	515	3	13	Firmicutes
+3121	Nasal Vestibule	Swab	582	0	4295	7	28	Firmicutes
+3123	Nasal Vestibule	Swab	4186	81	5885	323	17	Firmicutes
+3124	Nasal Vestibule	Swab	2218	0	2320	7	24	Firmicutes
+3062	Head of Inferior Turbinate Tissue	Biopsy	232	6	1746	0	9	Firmicutes
+3094	Head of Inferior Turbinate Tissue	Biopsy	282	0	1089	32	14	Firmicutes
+3095	Head of Inferior Turbinate Tissue	Biopsy	444	1	760	69	24	Firmicutes
+3115	Head of Inferior Turbinate Tissue	Biopsy	1	0	4640	0	5	Firmicutes
+3116	Head of Inferior Turbinate Tissue	Biopsy	19	0	6261	21	5	Firmicutes
+3117	Head of Inferior Turbinate Tissue	Biopsy	521	0	1499	32	17	Firmicutes
+3118	Head of Inferior Turbinate Tissue	Biopsy	332	0	2962	102	20	Firmicutes
+3119	Head of Inferior Turbinate Tissue	Biopsy	245	0	1721	0	11	Firmicutes
+3120	Head of Inferior Turbinate Tissue	Biopsy	68	0	1136	9	15	Firmicutes
+3121	Head of Inferior Turbinate Tissue	Biopsy	452	0	863	2	23	Firmicutes
+3124	Head of Inferior Turbinate Tissue	Biopsy	891	0	1146	5	14	Firmicutes
+3062	Middle Meatus	Swab	292	0	1822	5	14	Firmicutes
+3094	Middle Meatus	Swab	1486	0	4316	50	17	Firmicutes
+3095	Middle Meatus	Swab	2010	0	2999	13	18	Firmicutes
+3115	Middle Meatus	Swab	13	0	3525	7	11	Firmicutes
+3116	Middle Meatus	Swab	5	0	988	2	10	Firmicutes
+3117	Middle Meatus	Swab	965	0	2810	96	18	Firmicutes
+3118	Middle Meatus	Swab	1465	0	5253	232	24	Firmicutes
+3119	Middle Meatus	Swab	3268	0	4372	18	15	Firmicutes
+3120	Middle Meatus	Swab	405	0	2342	33	14	Firmicutes
+3121	Middle Meatus	Swab	911	2	3686	12	33	Firmicutes
+3124	Middle Meatus	Swab	1922	0	2332	5	21	Firmicutes
+3062	Uncinate Process Tissue	Biopsy	106	0	1210	0	10	Firmicutes
+3094	Uncinate Process Tissue	Biopsy	621	0	1538	41	17	Firmicutes
+3095	Uncinate Process Tissue	Biopsy	1223	0	1244	2	14	Firmicutes
+3115	Uncinate Process Tissue	Biopsy	10	11	1531	58	14	Firmicutes
+3116	Uncinate Process Tissue	Biopsy	17	0	7249	79	12	Firmicutes
+3117	Uncinate Process Tissue	Biopsy	962	0	1233	21	16	Firmicutes
+3118	Uncinate Process Tissue	Biopsy	3709	6	4925	157	23	Firmicutes
+3119	Uncinate Process Tissue	Biopsy	159	0	457	0	8	Firmicutes
+3120	Uncinate Process Tissue	Biopsy	123	0	1301	30	12	Firmicutes
+3124	Uncinate Process Tissue	Biopsy	1759	0	1908	19	17	Firmicutes
+3116	Maxillary Sinus	Swab	34	0	5748	190	11	Firmicutes
+3119	Maxillary Sinus	Swab	1651	0	265	0	11	Actinobacteria
+3123	Maxillary Sinus	Swab	941	0	3865	287	19	Firmicutes
+3124	Maxillary Sinus	Swab	4138	0	2133	13	18	Actinobacteria
+3116	Maxillary Sinus Tissue	Biopsy	40	0	8038	211	8	Firmicutes
+3119	Maxillary Sinus Tissue	Biopsy	2625	0	412	3	10	Actinobacteria
+3124	Maxillary Sinus Tissue	Biopsy	265	0	448	17	19	Firmicutes
+3062	Ethmoid Culture (Deep to Ethmoid Bulla)	Swab	461	2	2714	3	14	Firmicutes
+3094	Ethmoid Culture (Deep to Ethmoid Bulla)	Swab	243	0	385	13	13	Firmicutes
+3095	Ethmoid Culture (Deep to Ethmoid Bulla)	Swab	1652	0	2300	15	16	Firmicutes
+3115	Ethmoid Culture (Deep to Ethmoid Bulla)	Swab	80	0	2168	0	14	Firmicutes
+3116	Ethmoid Culture (Deep to Ethmoid Bulla)	Swab	340	0	9796	1139	18	Firmicutes
+3117	Ethmoid Culture (Deep to Ethmoid Bulla)	Swab	1546	0	1800	102	20	Firmicutes
+3118	Ethmoid Culture (Deep to Ethmoid Bulla)	Swab	1802	12	2459	62	23	Firmicutes
+3119	Ethmoid Culture (Deep to Ethmoid Bulla)	Swab	4358	0	2494	0	13	Actinobacteria
+3120	Ethmoid Culture (Deep to Ethmoid Bulla)	Swab	2740	0	905	27	14	Actinobacteria
+3121	Ethmoid Culture (Deep to Ethmoid Bulla)	Swab	1971	27	3060	71	32	Firmicutes
+3123	Ethmoid Culture (Deep to Ethmoid Bulla)	Swab	1010	0	1029	8	13	Firmicutes
+3124	Ethmoid Culture (Deep to Ethmoid Bulla)	Swab	1602	0	3979	84	19	Firmicutes
+3094	Ethmoid Tissue (Deep to Ethmoid Bulla)	Biopsy	638	0	664	42	24	Firmicutes
+3095	Ethmoid Tissue (Deep to Ethmoid Bulla)	Biopsy	1038	0	651	133	17	Actinobacteria
+3116	Ethmoid Tissue (Deep to Ethmoid Bulla)	Biopsy	61	0	6357	277	10	Firmicutes
+3117	Ethmoid Tissue (Deep to Ethmoid Bulla)	Biopsy	1108	0	672	66	15	Actinobacteria
+3118	Ethmoid Tissue (Deep to Ethmoid Bulla)	Biopsy	824	7	380	18	23	Actinobacteria
+3119	Ethmoid Tissue (Deep to Ethmoid Bulla)	Biopsy	2605	0	1870	11	15	Actinobacteria
+3120	Ethmoid Tissue (Deep to Ethmoid Bulla)	Biopsy	3265	0	1614	36	15	Actinobacteria
+3123	Ethmoid Tissue (Deep to Ethmoid Bulla)	Biopsy	2263	0	914	63	15	Actinobacteria
+3124	Ethmoid Tissue (Deep to Ethmoid Bulla)	Biopsy	1243	0	2318	183	28	Firmicutes
+3062	Superior Meatus	Swab	863	2	2992	6	18	Firmicutes
+3094	Superior Meatus	Swab	1362	0	3463	113	18	Firmicutes
+3095	Superior Meatus	Swab	3926	0	10097	166	27	Firmicutes
+3115	Superior Meatus	Swab	67	0	982	3	13	Firmicutes
+3116	Superior Meatus	Swab	105	0	3866	177	10	Firmicutes
+3117	Superior Meatus	Swab	1602	0	3671	53	24	Firmicutes
+3118	Superior Meatus	Swab	1124	0	4144	771	23	Firmicutes
+3119	Superior Meatus	Swab	1910	0	138	0	11	Actinobacteria
+3120	Superior Meatus	Swab	3743	0	2037	27	12	Actinobacteria
+3121	Superior Meatus	Swab	1307	12	4740	13	34	Firmicutes
+3123	Superior Meatus	Swab	3478	0	4497	160	19	Firmicutes
+3124	Superior Meatus	Swab	966	0	1940	40	19	Firmicutes
+3094	Sphenoethmoidal Recess Tissue	Biopsy	4604	0	5559	406	29	Firmicutes
+3115	Sphenoethmoidal Recess Tissue	Biopsy	211	0	1861	108	21	Firmicutes
+3116	Sphenoethmoidal Recess Tissue	Biopsy	181	5	3673	844	19	Firmicutes
+3118	Sphenoethmoidal Recess Tissue	Biopsy	454	0	3724	148	23	Firmicutes
+3119	Sphenoethmoidal Recess Tissue	Biopsy	1102	0	301	7	9	Actinobacteria
+3120	Sphenoethmoidal Recess Tissue	Biopsy	468	0	415	0	8	Actinobacteria
+3121	Sphenoethmoidal Recess Tissue	Biopsy	399	26	1624	25	23	Firmicutes
+3123	Sphenoethmoidal Recess Tissue	Biopsy	226	5	358	4	14	Firmicutes
+3124	Sphenoethmoidal Recess Tissue	Biopsy	733	0	662	40	15	Actinobacteria
+3062	Sphenoid	Swab	623	0	6125	0	10	Firmicutes
+3094	Sphenoid	Swab	2690	1	4648	81	21	Firmicutes
+3095	Sphenoid	Swab	587	0	519	3	14	Actinobacteria
+3115	Sphenoid	Swab	17	0	13948	0	19	Firmicutes
+3116	Sphenoid	Swab	32	1	617	161	12	Firmicutes
+3117	Sphenoid	Swab	1537	0	2082	113	14	Firmicutes
+3118	Sphenoid	Swab	923	0	2322	305	22	Firmicutes
+3119	Sphenoid	Swab	7514	0	2796	11	20	Actinobacteria
+3120	Sphenoid	Swab	4195	0	2655	5	12	Actinobacteria
+3121	Sphenoid	Swab	2816	63	6135	78	34	Firmicutes
+3123	Sphenoid	Swab	861	0	1207	60	19	Firmicutes
+3124	Sphenoid	Swab	1902	0	2798	19	19	Firmicutes
+3094	Sphenoid Tissue	Biopsy	1540	0	784	13	14	Actinobacteria
+3095	Sphenoid Tissue	Biopsy	670	0	703	0	14	Firmicutes
+3116	Sphenoid Tissue	Biopsy	309	9	6709	495	17	Firmicutes
+3117	Sphenoid Tissue	Biopsy	1812	0	1954	129	18	Firmicutes
+3119	Sphenoid Tissue	Biopsy	4183	0	988	13	23	Actinobacteria

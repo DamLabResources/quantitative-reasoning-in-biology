@@ -1,0 +1,13 @@
+PID,severe_disease,disease_type
+3062,False,persistent
+3094,False,persistent
+3095,False,persistent
+3115,True,typical
+3116,True,typical
+3117,True,severe
+3118,True,severe
+3119,True,persistent
+3120,False,typical
+3121,False,severe
+3123,False,persistent
+3124,False,persistent
