@@ -37,6 +37,8 @@ import numpy as np
 import pandas as pd
 ```
 
+## Questions
+
 ### Q1: Load in the data from the CSV file.
 
 _Hint: Remember to use the `read_csv` function of the `pandas` library._
