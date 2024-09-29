@@ -25,3 +25,15 @@ parts:
       sections:
       - file: content/Module03/Module03_walkthrough_book
       - file: content/Module03/Module03_lab_book
+      
+  - caption: "Part 2 : Descriptive Statistics"
+    chapters:
+    - file: content/Module04/Module04_book
+      sections:
+      - file: content/Module04/Module04_walkthrough_book
+      - file: content/Module04/Module04_lab_book
+      
+    - file: content/Module05/Module05_book
+      sections:
+      - file: content/Module05/Module05_walkthrough_book
+      - file: content/Module05/Module05_lab_book
