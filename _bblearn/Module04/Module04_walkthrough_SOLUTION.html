@@ -1,0 +1,3057 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Walkthrough &#8212; Quantitative Reasoning in Biology</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_bblearn/Module04/Module04_walkthrough_SOLUTION';</script>
+    <link rel="canonical" href="https://damlabresources.github.io/quantitative-reasoning-in-biology/_bblearn/Module04/Module04_walkthrough_SOLUTION.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Lab" href="Module04_lab.html" />
+    <link rel="prev" title="Module 4: Analysis by groups" href="../../content/Module04/Module04_book.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">Work in progress!</div>
+  </div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../content/book_index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Quantitative Reasoning in Biology</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../content/book_index.html">
+                    Quantitative Reasoning in Biology
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 0: Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../content/misc/about_this_book.html">About this book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/misc/book_intro.html">Introduction</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 1 : Hello World</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../content/Module01/Module01_book.html">Module 1: Hello World</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../content/Module01/Module01_walkthrough.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/Module01/notebook_actions.html">Notebook basics</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../content/Module02/Module02_book.html">Module 2: Simple calculations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module02/Module02_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/Module02/nanopore_description.html">Nanopore Sequencing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/Module02/dilution_calculations.html">Dilution calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module02/Module02_lab.html">Lab</a></li>
+
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../content/Module03/Module03_book.html">Module 3: DataFrames</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module03/Module03_walkthrough_SOLUTION.html">Walkthrough</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Module03/Module03_lab.html">Lab</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 2 : Descriptive Statistics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../content/Module04/Module04_book.html">Module 4: Analysis by groups</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Module04_lab.html">Lab</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../content/Module05/Module05_book.html">Module 5: Plotting with Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module05/Module05_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module05/Module05_lab.html">Lab</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../content/Module06/Module06_book.html">Module 6: Visualizing with Confidence</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../content/Module06/grammar_of_graphics.html">Grammar of Graphics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module06/Module06_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module06/Module06_lab.html">Lab</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/_bblearn/Module04/Module04_walkthrough_SOLUTION.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Walkthrough</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-a-single-patient">Exploring a single patient</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q1-extract-the-information-for-patient-3116">Q1: Extract the information for patient 3116</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q2-calculate-the-average-count-across-regions-for-each-phylum-for-patient-3116">Q2: Calculate the average count across regions for each phylum for patient 3116.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summarizing-by-grouping">Summarizing by grouping</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q3-calculate-the-average-counts-of-each-phylum-by-body-site">Q3: Calculate the average counts of each phylum by body site.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#merging-data">Merging data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q4-calculate-the-average-counts-of-each-phylum-by-severe-disease">Q4: Calculate the average counts of each phylum by <code class="docutils literal notranslate"><span class="pre">severe_disease</span></code>.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pivoting-melting-dataframes">Pivoting &amp; Melting Dataframes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pivoting">Pivoting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melting">Melting</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submission">Submission</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="walkthrough">
+<h1>Walkthrough<a class="headerlink" href="#walkthrough" title="Link to this heading">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>An emerging area of biomedical research over the past decade as been the human microbiome.
+This field studies the commensal bacteria that inhabit our bodies and how they influence our health.
+These can be found everywhere from our digestive system, to our skin, to our ears, and to every part of our body.
+Often times hundreds of different bacterial species can be isolated from a single body site of a single individual.
+Disease can be caused or exacerbated by an imbalance in these species.</p>
+<p>This week, we will explore the data generated by researchers here at Drexel.
+From a collection of 12 patients they measured the microbiome of of 12 body sites of the inner ear.
+Some of these patients had inner ear infections (<em>otitis media</em>) and different disease outcomes.
+This week, we will use Python to generate pivot-tables and bar-plots to understand whether the microbiome is impacted by disease outcome.</p>
+</section>
+<section id="learning-objectives">
+<h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Link to this heading">#</a></h2>
+<p>At the end of this learning activity you will be able to:</p>
+<ul class="simple">
+<li><p>Practice using <code class="docutils literal notranslate"><span class="pre">query</span></code> to extract data from a larger table.</p></li>
+<li><p>Calculate summary values across a a <code class="docutils literal notranslate"><span class="pre">pd.DataFrame</span></code> using methods like sum, mean, and max.</p></li>
+<li><p>Utilize <code class="docutils literal notranslate"><span class="pre">pd.DataFrame.groupby</span></code> to aggregate and transform data by group.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">pd.merge</span></code> to combine data held in two different tables.</p></li>
+<li><p>Employ <code class="docutils literal notranslate"><span class="pre">pd.pivot_table</span></code> and <code class="docutils literal notranslate"><span class="pre">pd.melt</span></code> to reshape and summarize data.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;microbiome_phylum_data.csv&#39;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Patient</th>
+      <th>Location</th>
+      <th>CollectionType</th>
+      <th>Actinobacteria</th>
+      <th>Bacteroidetes</th>
+      <th>Firmicutes</th>
+      <th>Proteobacteria</th>
+      <th>num_otu</th>
+      <th>Predominant</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3062</td>
+      <td>Nasal Vestibule</td>
+      <td>Swab</td>
+      <td>2516</td>
+      <td>44</td>
+      <td>14987</td>
+      <td>0</td>
+      <td>16</td>
+      <td>Firmicutes</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3094</td>
+      <td>Nasal Vestibule</td>
+      <td>Swab</td>
+      <td>103</td>
+      <td>0</td>
+      <td>1397</td>
+      <td>0</td>
+      <td>15</td>
+      <td>Firmicutes</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3095</td>
+      <td>Nasal Vestibule</td>
+      <td>Swab</td>
+      <td>1474</td>
+      <td>0</td>
+      <td>5510</td>
+      <td>29</td>
+      <td>21</td>
+      <td>Firmicutes</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3115</td>
+      <td>Nasal Vestibule</td>
+      <td>Swab</td>
+      <td>0</td>
+      <td>0</td>
+      <td>5480</td>
+      <td>0</td>
+      <td>2</td>
+      <td>Firmicutes</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>3116</td>
+      <td>Nasal Vestibule</td>
+      <td>Swab</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2324</td>
+      <td>1</td>
+      <td>4</td>
+      <td>Firmicutes</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>103</th>
+      <td>3094</td>
+      <td>Sphenoid Tissue</td>
+      <td>Biopsy</td>
+      <td>1540</td>
+      <td>0</td>
+      <td>784</td>
+      <td>13</td>
+      <td>14</td>
+      <td>Actinobacteria</td>
+    </tr>
+    <tr>
+      <th>104</th>
+      <td>3095</td>
+      <td>Sphenoid Tissue</td>
+      <td>Biopsy</td>
+      <td>670</td>
+      <td>0</td>
+      <td>703</td>
+      <td>0</td>
+      <td>14</td>
+      <td>Firmicutes</td>
+    </tr>
+    <tr>
+      <th>105</th>
+      <td>3116</td>
+      <td>Sphenoid Tissue</td>
+      <td>Biopsy</td>
+      <td>309</td>
+      <td>9</td>
+      <td>6709</td>
+      <td>495</td>
+      <td>17</td>
+      <td>Firmicutes</td>
+    </tr>
+    <tr>
+      <th>106</th>
+      <td>3117</td>
+      <td>Sphenoid Tissue</td>
+      <td>Biopsy</td>
+      <td>1812</td>
+      <td>0</td>
+      <td>1954</td>
+      <td>129</td>
+      <td>18</td>
+      <td>Firmicutes</td>
+    </tr>
+    <tr>
+      <th>107</th>
+      <td>3119</td>
+      <td>Sphenoid Tissue</td>
+      <td>Biopsy</td>
+      <td>4183</td>
+      <td>0</td>
+      <td>988</td>
+      <td>13</td>
+      <td>23</td>
+      <td>Actinobacteria</td>
+    </tr>
+  </tbody>
+</table>
+<p>108 rows × 9 columns</p>
+</div></div></div>
+</div>
+</section>
+<section id="exploring-a-single-patient">
+<h2>Exploring a single patient<a class="headerlink" href="#exploring-a-single-patient" title="Link to this heading">#</a></h2>
+<p>First, we’ll explore the distribution of bacteria of a single individual across body site.</p>
+<section id="q1-extract-the-information-for-patient-3116">
+<h3>Q1: Extract the information for patient 3116<a class="headerlink" href="#q1-extract-the-information-for-patient-3116" title="Link to this heading">#</a></h3>
+<div class="cell tag_otter_assign_solution_cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pat_3116</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;Patient == 3116&#39;</span><span class="p">)</span>  <span class="c1"># SOLUTION</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_otter_assign_solution_cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pat_3116</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Patient</th>
+      <th>Location</th>
+      <th>CollectionType</th>
+      <th>Actinobacteria</th>
+      <th>Bacteroidetes</th>
+      <th>Firmicutes</th>
+      <th>Proteobacteria</th>
+      <th>num_otu</th>
+      <th>Predominant</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>4</th>
+      <td>3116</td>
+      <td>Nasal Vestibule</td>
+      <td>Swab</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2324</td>
+      <td>1</td>
+      <td>4</td>
+      <td>Firmicutes</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>3116</td>
+      <td>Head of Inferior Turbinate Tissue</td>
+      <td>Biopsy</td>
+      <td>19</td>
+      <td>0</td>
+      <td>6261</td>
+      <td>21</td>
+      <td>5</td>
+      <td>Firmicutes</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>3116</td>
+      <td>Middle Meatus</td>
+      <td>Swab</td>
+      <td>5</td>
+      <td>0</td>
+      <td>988</td>
+      <td>2</td>
+      <td>10</td>
+      <td>Firmicutes</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>3116</td>
+      <td>Uncinate Process Tissue</td>
+      <td>Biopsy</td>
+      <td>17</td>
+      <td>0</td>
+      <td>7249</td>
+      <td>79</td>
+      <td>12</td>
+      <td>Firmicutes</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>3116</td>
+      <td>Maxillary Sinus</td>
+      <td>Swab</td>
+      <td>34</td>
+      <td>0</td>
+      <td>5748</td>
+      <td>190</td>
+      <td>11</td>
+      <td>Firmicutes</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q1_extract_single&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="q2-calculate-the-average-count-across-regions-for-each-phylum-for-patient-3116">
+<h3>Q2: Calculate the average count across regions for each phylum for patient 3116.<a class="headerlink" href="#q2-calculate-the-average-count-across-regions-for-each-phylum-for-patient-3116" title="Link to this heading">#</a></h3>
+<div class="cell tag_otter_assign_solution_cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q2_Actinobacteria_mean</span> <span class="o">=</span> <span class="n">pat_3116</span><span class="p">[</span><span class="s1">&#39;Actinobacteria&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="c1"># SOLUTION</span>
+<span class="n">q2_Bacteroidetes_mean</span> <span class="o">=</span> <span class="n">pat_3116</span><span class="p">[</span><span class="s1">&#39;Bacteroidetes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="c1"># SOLUTION</span>
+<span class="n">q2_Firmicutes_mean</span> <span class="o">=</span> <span class="n">pat_3116</span><span class="p">[</span><span class="s1">&#39;Firmicutes&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="c1"># SOLUTION</span>
+<span class="n">q2_Proteobacteria_mean</span> <span class="o">=</span> <span class="n">pat_3116</span><span class="p">[</span><span class="s1">&#39;Proteobacteria&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="c1"># SOLUTION</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q2_summary_vals&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="summarizing-by-grouping">
+<h2>Summarizing by grouping<a class="headerlink" href="#summarizing-by-grouping" title="Link to this heading">#</a></h2>
+<p>Now that we’ve looked at the summary values for a single individual, how would we look at this for each individual?
+Copy-pasting that over and over is unsustainable, <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>s have useful methods for dealing with this problem.</p>
+<p>All of these fall into the same basic strategy.</p>
+<p><strong>Split</strong> - <strong>Apply</strong> - <strong>Combine</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Split</span>
+
+<span class="n">grouped_patients</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Patient&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Apply - Combine</span>
+
+<span class="c1"># Capitalizing constants is useful if you will re-use them often.</span>
+<span class="n">PHYLUM_COLS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Actinobacteria&#39;</span><span class="p">,</span> <span class="s1">&#39;Bacteroidetes&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;Firmicutes&#39;</span><span class="p">,</span> <span class="s1">&#39;Proteobacteria&#39;</span><span class="p">]</span>
+
+<span class="n">mean_vals</span> <span class="o">=</span> <span class="n">grouped_patients</span><span class="p">[</span><span class="n">PHYLUM_COLS</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">mean_vals</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Actinobacteria</th>
+      <th>Bacteroidetes</th>
+      <th>Firmicutes</th>
+      <th>Proteobacteria</th>
+    </tr>
+    <tr>
+      <th>Patient</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3062</th>
+      <td>727.571429</td>
+      <td>7.714286</td>
+      <td>4513.714286</td>
+      <td>2.000000</td>
+    </tr>
+    <tr>
+      <th>3094</th>
+      <td>1356.900000</td>
+      <td>0.100000</td>
+      <td>2384.300000</td>
+      <td>79.100000</td>
+    </tr>
+    <tr>
+      <th>3095</th>
+      <td>1447.111111</td>
+      <td>0.111111</td>
+      <td>2753.666667</td>
+      <td>47.777778</td>
+    </tr>
+    <tr>
+      <th>3115</th>
+      <td>49.875000</td>
+      <td>1.375000</td>
+      <td>4266.875000</td>
+      <td>22.000000</td>
+    </tr>
+    <tr>
+      <th>3116</th>
+      <td>95.416667</td>
+      <td>1.250000</td>
+      <td>5135.500000</td>
+      <td>299.750000</td>
+    </tr>
+    <tr>
+      <th>3117</th>
+      <td>1164.333333</td>
+      <td>0.000000</td>
+      <td>1859.777778</td>
+      <td>69.000000</td>
+    </tr>
+    <tr>
+      <th>3118</th>
+      <td>1329.125000</td>
+      <td>3.125000</td>
+      <td>3271.125000</td>
+      <td>224.375000</td>
+    </tr>
+    <tr>
+      <th>3119</th>
+      <td>2692.727273</td>
+      <td>0.000000</td>
+      <td>1437.636364</td>
+      <td>5.727273</td>
+    </tr>
+    <tr>
+      <th>3120</th>
+      <td>1679.333333</td>
+      <td>0.000000</td>
+      <td>1435.555556</td>
+      <td>18.888889</td>
+    </tr>
+    <tr>
+      <th>3121</th>
+      <td>1205.428571</td>
+      <td>18.571429</td>
+      <td>3486.142857</td>
+      <td>29.714286</td>
+    </tr>
+    <tr>
+      <th>3123</th>
+      <td>1852.142857</td>
+      <td>12.285714</td>
+      <td>2536.428571</td>
+      <td>129.285714</td>
+    </tr>
+    <tr>
+      <th>3124</th>
+      <td>1603.545455</td>
+      <td>0.000000</td>
+      <td>1998.545455</td>
+      <td>39.272727</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This is commonly done in a single &quot;sentence&quot;</span>
+
+<span class="n">mean_vals</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Patient&#39;</span><span class="p">)[</span><span class="n">PHYLUM_COLS</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="q3-calculate-the-average-counts-of-each-phylum-by-body-site">
+<h3>Q3: Calculate the average counts of each phylum by body site.<a class="headerlink" href="#q3-calculate-the-average-counts-of-each-phylum-by-body-site" title="Link to this heading">#</a></h3>
+<div class="cell tag_otter_assign_solution_cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q3_mean_phylum_site</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Location&#39;</span><span class="p">)[</span><span class="n">PHYLUM_COLS</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="c1"># SOLUTION</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_otter_assign_solution_cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q3_mean_phylum_site</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Actinobacteria</th>
+      <th>Bacteroidetes</th>
+      <th>Firmicutes</th>
+      <th>Proteobacteria</th>
+    </tr>
+    <tr>
+      <th>Location</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Ethmoid Culture (Deep to Ethmoid Bulla)</th>
+      <td>1483.750000</td>
+      <td>3.416667</td>
+      <td>2757.416667</td>
+      <td>127.000000</td>
+    </tr>
+    <tr>
+      <th>Ethmoid Tissue (Deep to Ethmoid Bulla)</th>
+      <td>1449.444444</td>
+      <td>0.777778</td>
+      <td>1715.555556</td>
+      <td>92.111111</td>
+    </tr>
+    <tr>
+      <th>Head of Inferior Turbinate Tissue</th>
+      <td>317.000000</td>
+      <td>0.636364</td>
+      <td>2165.727273</td>
+      <td>24.727273</td>
+    </tr>
+    <tr>
+      <th>Maxillary Sinus</th>
+      <td>1691.000000</td>
+      <td>0.000000</td>
+      <td>3002.750000</td>
+      <td>122.500000</td>
+    </tr>
+    <tr>
+      <th>Maxillary Sinus Tissue</th>
+      <td>976.666667</td>
+      <td>0.000000</td>
+      <td>2966.000000</td>
+      <td>77.000000</td>
+    </tr>
+    <tr>
+      <th>Middle Meatus</th>
+      <td>1158.363636</td>
+      <td>0.181818</td>
+      <td>3131.363636</td>
+      <td>43.000000</td>
+    </tr>
+    <tr>
+      <th>Nasal Vestibule</th>
+      <td>1161.400000</td>
+      <td>12.500000</td>
+      <td>4373.000000</td>
+      <td>37.900000</td>
+    </tr>
+    <tr>
+      <th>Sphenoethmoidal Recess Tissue</th>
+      <td>930.888889</td>
+      <td>4.000000</td>
+      <td>2019.666667</td>
+      <td>175.777778</td>
+    </tr>
+    <tr>
+      <th>Sphenoid</th>
+      <td>1974.750000</td>
+      <td>5.416667</td>
+      <td>3821.000000</td>
+      <td>69.666667</td>
+    </tr>
+    <tr>
+      <th>Sphenoid Tissue</th>
+      <td>1702.800000</td>
+      <td>1.800000</td>
+      <td>2227.600000</td>
+      <td>130.000000</td>
+    </tr>
+    <tr>
+      <th>Superior Meatus</th>
+      <td>1704.416667</td>
+      <td>1.166667</td>
+      <td>3547.250000</td>
+      <td>127.416667</td>
+    </tr>
+    <tr>
+      <th>Uncinate Process Tissue</th>
+      <td>868.900000</td>
+      <td>1.700000</td>
+      <td>2259.600000</td>
+      <td>40.700000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q3_mean_by_site&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are a number of different built-in summary functions like this.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Patient&#39;</span><span class="p">)[</span><span class="n">PHYLUM_COLS</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Actinobacteria</th>
+      <th>Bacteroidetes</th>
+      <th>Firmicutes</th>
+      <th>Proteobacteria</th>
+    </tr>
+    <tr>
+      <th>Patient</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3062</th>
+      <td>461.0</td>
+      <td>2.0</td>
+      <td>2714.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3094</th>
+      <td>1000.0</td>
+      <td>0.0</td>
+      <td>1467.5</td>
+      <td>41.5</td>
+    </tr>
+    <tr>
+      <th>3095</th>
+      <td>1223.0</td>
+      <td>0.0</td>
+      <td>1244.0</td>
+      <td>15.0</td>
+    </tr>
+    <tr>
+      <th>3115</th>
+      <td>15.0</td>
+      <td>0.0</td>
+      <td>2846.5</td>
+      <td>1.5</td>
+    </tr>
+    <tr>
+      <th>3116</th>
+      <td>37.0</td>
+      <td>0.0</td>
+      <td>6004.5</td>
+      <td>183.5</td>
+    </tr>
+    <tr>
+      <th>3117</th>
+      <td>1108.0</td>
+      <td>0.0</td>
+      <td>1800.0</td>
+      <td>66.0</td>
+    </tr>
+    <tr>
+      <th>3118</th>
+      <td>1023.5</td>
+      <td>0.0</td>
+      <td>3343.0</td>
+      <td>152.5</td>
+    </tr>
+    <tr>
+      <th>3119</th>
+      <td>2605.0</td>
+      <td>0.0</td>
+      <td>988.0</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>3120</th>
+      <td>468.0</td>
+      <td>0.0</td>
+      <td>1301.0</td>
+      <td>27.0</td>
+    </tr>
+    <tr>
+      <th>3121</th>
+      <td>911.0</td>
+      <td>12.0</td>
+      <td>3686.0</td>
+      <td>13.0</td>
+    </tr>
+    <tr>
+      <th>3123</th>
+      <td>1010.0</td>
+      <td>0.0</td>
+      <td>1207.0</td>
+      <td>63.0</td>
+    </tr>
+    <tr>
+      <th>3124</th>
+      <td>1602.0</td>
+      <td>0.0</td>
+      <td>2133.0</td>
+      <td>19.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Patient&#39;</span><span class="p">)[</span><span class="n">PHYLUM_COLS</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Actinobacteria</th>
+      <th>Bacteroidetes</th>
+      <th>Firmicutes</th>
+      <th>Proteobacteria</th>
+    </tr>
+    <tr>
+      <th>Patient</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3062</th>
+      <td>7</td>
+      <td>7</td>
+      <td>7</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>3094</th>
+      <td>10</td>
+      <td>10</td>
+      <td>10</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>3095</th>
+      <td>9</td>
+      <td>9</td>
+      <td>9</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>3115</th>
+      <td>8</td>
+      <td>8</td>
+      <td>8</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>3116</th>
+      <td>12</td>
+      <td>12</td>
+      <td>12</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>3117</th>
+      <td>9</td>
+      <td>9</td>
+      <td>9</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>3118</th>
+      <td>8</td>
+      <td>8</td>
+      <td>8</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>3119</th>
+      <td>11</td>
+      <td>11</td>
+      <td>11</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>3120</th>
+      <td>9</td>
+      <td>9</td>
+      <td>9</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>3121</th>
+      <td>7</td>
+      <td>7</td>
+      <td>7</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>3123</th>
+      <td>7</td>
+      <td>7</td>
+      <td>7</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>3124</th>
+      <td>11</td>
+      <td>11</td>
+      <td>11</td>
+      <td>11</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Patient&#39;</span><span class="p">)[</span><span class="n">PHYLUM_COLS</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Actinobacteria</th>
+      <th>Bacteroidetes</th>
+      <th>Firmicutes</th>
+      <th>Proteobacteria</th>
+    </tr>
+    <tr>
+      <th>Patient</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3062</th>
+      <td>2516</td>
+      <td>44</td>
+      <td>14987</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>3094</th>
+      <td>4604</td>
+      <td>1</td>
+      <td>5559</td>
+      <td>406</td>
+    </tr>
+    <tr>
+      <th>3095</th>
+      <td>3926</td>
+      <td>1</td>
+      <td>10097</td>
+      <td>166</td>
+    </tr>
+    <tr>
+      <th>3115</th>
+      <td>211</td>
+      <td>11</td>
+      <td>13948</td>
+      <td>108</td>
+    </tr>
+    <tr>
+      <th>3116</th>
+      <td>340</td>
+      <td>9</td>
+      <td>9796</td>
+      <td>1139</td>
+    </tr>
+    <tr>
+      <th>3117</th>
+      <td>1812</td>
+      <td>0</td>
+      <td>3671</td>
+      <td>129</td>
+    </tr>
+    <tr>
+      <th>3118</th>
+      <td>3709</td>
+      <td>12</td>
+      <td>5253</td>
+      <td>771</td>
+    </tr>
+    <tr>
+      <th>3119</th>
+      <td>7514</td>
+      <td>0</td>
+      <td>4372</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>3120</th>
+      <td>4195</td>
+      <td>0</td>
+      <td>2655</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <th>3121</th>
+      <td>2816</td>
+      <td>63</td>
+      <td>6135</td>
+      <td>78</td>
+    </tr>
+    <tr>
+      <th>3123</th>
+      <td>4186</td>
+      <td>81</td>
+      <td>5885</td>
+      <td>323</td>
+    </tr>
+    <tr>
+      <th>3124</th>
+      <td>4138</td>
+      <td>0</td>
+      <td>3979</td>
+      <td>183</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>You can see an extensive list of available summary functions at the <a class="reference external" href="https://pandas.pydata.org/docs/reference/groupby.html#dataframegroupby-computations-descriptive-stats">Pandas Documentation</a></p>
+<p>If there isn’t a function that does what you want, you can also make your own.</p>
+<p>Here is a simple one that scales the data to a <em>unit-norm</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">unit_norm</span><span class="p">(</span><span class="n">values</span><span class="p">):</span>
+    <span class="s2">&quot;Given a series, return a scaled version&quot;</span>
+
+    <span class="n">mu</span> <span class="o">=</span> <span class="n">values</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="n">std</span> <span class="o">=</span> <span class="n">values</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="p">(</span><span class="n">values</span><span class="o">-</span><span class="n">mu</span><span class="p">)</span><span class="o">/</span><span class="n">std</span>
+
+<span class="n">unit_normed_data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Patient&#39;</span><span class="p">,</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="n">PHYLUM_COLS</span><span class="p">]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">unit_norm</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">unit_normed_data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Actinobacteria</th>
+      <th>Bacteroidetes</th>
+      <th>Firmicutes</th>
+      <th>Proteobacteria</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2.158109</td>
+      <td>2.247876</td>
+      <td>2.140374</td>
+      <td>-0.755929</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>-0.901854</td>
+      <td>-0.316228</td>
+      <td>-0.515722</td>
+      <td>-0.660942</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.025250</td>
+      <td>-0.333333</td>
+      <td>0.862714</td>
+      <td>-0.303077</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>-0.694809</td>
+      <td>-0.353553</td>
+      <td>0.287822</td>
+      <td>-0.549657</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>-0.790041</td>
+      <td>-0.441315</td>
+      <td>-0.985677</td>
+      <td>-0.838082</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>103</th>
+      <td>0.131693</td>
+      <td>-0.316228</td>
+      <td>-0.835926</td>
+      <td>-0.552316</td>
+    </tr>
+    <tr>
+      <th>104</th>
+      <td>-0.729756</td>
+      <td>-0.333333</td>
+      <td>-0.641845</td>
+      <td>-0.771142</td>
+    </tr>
+    <tr>
+      <th>105</th>
+      <td>1.806312</td>
+      <td>2.736155</td>
+      <td>0.551650</td>
+      <td>0.547734</td>
+    </tr>
+    <tr>
+      <th>106</th>
+      <td>1.315743</td>
+      <td>NaN</td>
+      <td>0.101533</td>
+      <td>1.390656</td>
+    </tr>
+    <tr>
+      <th>107</th>
+      <td>0.700800</td>
+      <td>NaN</td>
+      <td>-0.331381</td>
+      <td>1.106277</td>
+    </tr>
+  </tbody>
+</table>
+<p>108 rows × 4 columns</p>
+</div></div></div>
+</div>
+<p>Notice I used the <code class="docutils literal notranslate"><span class="pre">transform</span></code> method here instead of a common name.</p>
+<p>When applying custom functions to groups of data there are three different methods depending on your final output shape:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">.aggregate()</span></code> or <code class="docutils literal notranslate"><span class="pre">.agg()</span></code> - Each group of data produces a single summary number. Commonly used to summarize groups.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.transform()</span></code> - The output will have the same number (and order) of rows as the input. Commonly used for normalizations.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.apply()</span></code> - Everything else.</p></li>
+</ul>
+</section>
+</section>
+<section id="merging-data">
+<h2>Merging data<a class="headerlink" href="#merging-data" title="Link to this heading">#</a></h2>
+<p>Now we come to a common problem, our sample information is in a different file.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_info</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;sample_info.csv&#39;</span><span class="p">)</span>
+<span class="n">sample_info</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>PID</th>
+      <th>severe_disease</th>
+      <th>disease_type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3062</td>
+      <td>False</td>
+      <td>persistent</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3094</td>
+      <td>False</td>
+      <td>persistent</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3095</td>
+      <td>False</td>
+      <td>persistent</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3115</td>
+      <td>True</td>
+      <td>typical</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>3116</td>
+      <td>True</td>
+      <td>typical</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Now that we have two <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>s with a common key we can use <code class="docutils literal notranslate"><span class="pre">pd.merge</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">merged_info</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">sample_info</span><span class="p">,</span>
+                       <span class="n">left_on</span> <span class="o">=</span> <span class="s1">&#39;Patient&#39;</span><span class="p">,</span> <span class="c1"># The column of the key in biome_data</span>
+                       <span class="n">right_on</span> <span class="o">=</span> <span class="s1">&#39;PID&#39;</span><span class="p">,</span> <span class="c1"># The column of the key in sample_info</span>
+                       <span class="n">how</span> <span class="o">=</span> <span class="s1">&#39;inner&#39;</span><span class="p">)</span> <span class="c1"># Keep only those in both</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">merged_info</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Patient</th>
+      <th>Location</th>
+      <th>CollectionType</th>
+      <th>Actinobacteria</th>
+      <th>Bacteroidetes</th>
+      <th>Firmicutes</th>
+      <th>Proteobacteria</th>
+      <th>num_otu</th>
+      <th>Predominant</th>
+      <th>PID</th>
+      <th>severe_disease</th>
+      <th>disease_type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3062</td>
+      <td>Nasal Vestibule</td>
+      <td>Swab</td>
+      <td>2516</td>
+      <td>44</td>
+      <td>14987</td>
+      <td>0</td>
+      <td>16</td>
+      <td>Firmicutes</td>
+      <td>3062</td>
+      <td>False</td>
+      <td>persistent</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3094</td>
+      <td>Nasal Vestibule</td>
+      <td>Swab</td>
+      <td>103</td>
+      <td>0</td>
+      <td>1397</td>
+      <td>0</td>
+      <td>15</td>
+      <td>Firmicutes</td>
+      <td>3094</td>
+      <td>False</td>
+      <td>persistent</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3095</td>
+      <td>Nasal Vestibule</td>
+      <td>Swab</td>
+      <td>1474</td>
+      <td>0</td>
+      <td>5510</td>
+      <td>29</td>
+      <td>21</td>
+      <td>Firmicutes</td>
+      <td>3095</td>
+      <td>False</td>
+      <td>persistent</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3115</td>
+      <td>Nasal Vestibule</td>
+      <td>Swab</td>
+      <td>0</td>
+      <td>0</td>
+      <td>5480</td>
+      <td>0</td>
+      <td>2</td>
+      <td>Firmicutes</td>
+      <td>3115</td>
+      <td>True</td>
+      <td>typical</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>3116</td>
+      <td>Nasal Vestibule</td>
+      <td>Swab</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2324</td>
+      <td>1</td>
+      <td>4</td>
+      <td>Firmicutes</td>
+      <td>3116</td>
+      <td>True</td>
+      <td>typical</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<section id="q4-calculate-the-average-counts-of-each-phylum-by-severe-disease">
+<h3>Q4: Calculate the average counts of each phylum by <code class="docutils literal notranslate"><span class="pre">severe_disease</span></code>.<a class="headerlink" href="#q4-calculate-the-average-counts-of-each-phylum-by-severe-disease" title="Link to this heading">#</a></h3>
+<div class="cell tag_otter_assign_solution_cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q4_severe_means</span> <span class="o">=</span> <span class="n">merged_info</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;severe_disease&#39;</span><span class="p">)[</span><span class="n">PHYLUM_COLS</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="c1"># SOLUTION</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q4_servere&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can also do more advanced things like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">merged_info</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Location&#39;</span><span class="p">,</span> <span class="s1">&#39;severe_disease&#39;</span><span class="p">])[</span><span class="n">PHYLUM_COLS</span><span class="p">]</span><span class="o">.</span><span class="n">aggregate</span><span class="p">([</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="s1">&#39;std&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th colspan="2" halign="left">Actinobacteria</th>
+      <th colspan="2" halign="left">Bacteroidetes</th>
+      <th colspan="2" halign="left">Firmicutes</th>
+      <th colspan="2" halign="left">Proteobacteria</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th></th>
+      <th>mean</th>
+      <th>std</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>mean</th>
+      <th>std</th>
+    </tr>
+    <tr>
+      <th>Location</th>
+      <th>severe_disease</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="2" valign="top">Ethmoid Culture (Deep to Ethmoid Bulla)</th>
+      <th>False</th>
+      <td>1382.714286</td>
+      <td>875.245435</td>
+      <td>4.142857</td>
+      <td>10.106575</td>
+      <td>2053.142857</td>
+      <td>1314.670989</td>
+      <td>31.571429</td>
+      <td>32.444091</td>
+    </tr>
+    <tr>
+      <th>True</th>
+      <td>1625.200000</td>
+      <td>1698.904706</td>
+      <td>2.400000</td>
+      <td>5.366563</td>
+      <td>3743.400000</td>
+      <td>3394.971988</td>
+      <td>260.600000</td>
+      <td>492.952127</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Ethmoid Tissue (Deep to Ethmoid Bulla)</th>
+      <th>False</th>
+      <td>1689.400000</td>
+      <td>1065.430570</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1232.200000</td>
+      <td>722.258403</td>
+      <td>91.400000</td>
+      <td>64.103822</td>
+    </tr>
+    <tr>
+      <th>True</th>
+      <td>1149.500000</td>
+      <td>1066.299676</td>
+      <td>1.750000</td>
+      <td>3.500000</td>
+      <td>2319.750000</td>
+      <td>2767.632728</td>
+      <td>93.000000</td>
+      <td>125.078642</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Head of Inferior Turbinate Tissue</th>
+      <th>False</th>
+      <td>394.833333</td>
+      <td>282.110912</td>
+      <td>1.166667</td>
+      <td>2.401388</td>
+      <td>1123.333333</td>
+      <td>343.322395</td>
+      <td>19.500000</td>
+      <td>26.883080</td>
+    </tr>
+    <tr>
+      <th>True</th>
+      <td>223.600000</td>
+      <td>219.127360</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>3416.600000</td>
+      <td>2021.523510</td>
+      <td>31.000000</td>
+      <td>42.023803</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Maxillary Sinus</th>
+      <th>False</th>
+      <td>2539.500000</td>
+      <td>2260.620379</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>2999.000000</td>
+      <td>1224.708945</td>
+      <td>150.000000</td>
+      <td>193.747258</td>
+    </tr>
+    <tr>
+      <th>True</th>
+      <td>842.500000</td>
+      <td>1143.391665</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>3006.500000</td>
+      <td>3877.066481</td>
+      <td>95.000000</td>
+      <td>134.350288</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Maxillary Sinus Tissue</th>
+      <th>False</th>
+      <td>265.000000</td>
+      <td>NaN</td>
+      <td>0.000000</td>
+      <td>NaN</td>
+      <td>448.000000</td>
+      <td>NaN</td>
+      <td>17.000000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>True</th>
+      <td>1332.500000</td>
+      <td>1827.871029</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>4225.000000</td>
+      <td>5392.396313</td>
+      <td>107.000000</td>
+      <td>147.078210</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Middle Meatus</th>
+      <th>False</th>
+      <td>1171.000000</td>
+      <td>747.548527</td>
+      <td>0.333333</td>
+      <td>0.816497</td>
+      <td>2916.166667</td>
+      <td>940.973627</td>
+      <td>19.666667</td>
+      <td>18.062853</td>
+    </tr>
+    <tr>
+      <th>True</th>
+      <td>1143.200000</td>
+      <td>1343.776097</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>3389.600000</td>
+      <td>1624.755459</td>
+      <td>71.000000</td>
+      <td>97.739450</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Nasal Vestibule</th>
+      <th>False</th>
+      <td>1598.000000</td>
+      <td>1496.139811</td>
+      <td>17.857143</td>
+      <td>32.313199</td>
+      <td>4987.000000</td>
+      <td>4857.272383</td>
+      <td>52.714286</td>
+      <td>119.600326</td>
+    </tr>
+    <tr>
+      <th>True</th>
+      <td>142.666667</td>
+      <td>245.375902</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>2940.333333</td>
+      <td>2294.448154</td>
+      <td>3.333333</td>
+      <td>4.932883</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Sphenoethmoidal Recess Tissue</th>
+      <th>False</th>
+      <td>1286.000000</td>
+      <td>1863.761385</td>
+      <td>6.200000</td>
+      <td>11.278298</td>
+      <td>1723.600000</td>
+      <td>2203.662020</td>
+      <td>95.000000</td>
+      <td>174.608133</td>
+    </tr>
+    <tr>
+      <th>True</th>
+      <td>487.000000</td>
+      <td>427.834080</td>
+      <td>1.250000</td>
+      <td>2.500000</td>
+      <td>2389.750000</td>
+      <td>1640.061660</td>
+      <td>276.750000</td>
+      <td>382.792698</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Sphenoid</th>
+      <th>False</th>
+      <td>1953.428571</td>
+      <td>1362.865958</td>
+      <td>9.142857</td>
+      <td>23.751692</td>
+      <td>3441.000000</td>
+      <td>2253.827337</td>
+      <td>35.142857</td>
+      <td>36.503098</td>
+    </tr>
+    <tr>
+      <th>True</th>
+      <td>2004.600000</td>
+      <td>3145.778966</td>
+      <td>0.200000</td>
+      <td>0.447214</td>
+      <td>4353.000000</td>
+      <td>5425.135298</td>
+      <td>118.000000</td>
+      <td>124.715677</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Sphenoid Tissue</th>
+      <th>False</th>
+      <td>1105.000000</td>
+      <td>615.182900</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>743.500000</td>
+      <td>57.275649</td>
+      <td>6.500000</td>
+      <td>9.192388</td>
+    </tr>
+    <tr>
+      <th>True</th>
+      <td>2101.333333</td>
+      <td>1953.139609</td>
+      <td>3.000000</td>
+      <td>5.196152</td>
+      <td>3217.000000</td>
+      <td>3062.488694</td>
+      <td>212.333333</td>
+      <td>251.573714</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Superior Meatus</th>
+      <th>False</th>
+      <td>2235.000000</td>
+      <td>1402.061102</td>
+      <td>2.000000</td>
+      <td>4.472136</td>
+      <td>4252.285714</td>
+      <td>2796.542014</td>
+      <td>75.000000</td>
+      <td>69.622793</td>
+    </tr>
+    <tr>
+      <th>True</th>
+      <td>961.600000</td>
+      <td>847.056846</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>2560.200000</td>
+      <td>1857.766186</td>
+      <td>200.800000</td>
+      <td>326.720370</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">Uncinate Process Tissue</th>
+      <th>False</th>
+      <td>766.400000</td>
+      <td>718.500383</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1440.200000</td>
+      <td>291.232210</td>
+      <td>18.400000</td>
+      <td>17.700282</td>
+    </tr>
+    <tr>
+      <th>True</th>
+      <td>971.400000</td>
+      <td>1580.324745</td>
+      <td>3.400000</td>
+      <td>4.979960</td>
+      <td>3079.000000</td>
+      <td>2892.901658</td>
+      <td>63.000000</td>
+      <td>60.930288</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Here I’ve broken things down by body-site and disease status and calculated both a mean and standard deviation.
+In future lectures we will explore how to quantify this with a significance test.
+For now, we’ll leave it as a visual comparison.</p>
+</section>
+</section>
+<section id="pivoting-melting-dataframes">
+<h2>Pivoting &amp; Melting Dataframes<a class="headerlink" href="#pivoting-melting-dataframes" title="Link to this heading">#</a></h2>
+<p>This is a process of reshaping, and optionally summarizing, your data as you convert it between <code class="docutils literal notranslate"><span class="pre">wide</span></code> and <code class="docutils literal notranslate"><span class="pre">long</span></code> format.
+These techniques are often required for generating different types of plots.</p>
+<p>These are best shown by example.</p>
+<section id="pivoting">
+<h3>Pivoting<a class="headerlink" href="#pivoting" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">long</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">wide</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">merged_info</span><span class="p">,</span>
+               <span class="n">index</span> <span class="o">=</span> <span class="s1">&#39;Patient&#39;</span><span class="p">,</span>
+               <span class="n">columns</span> <span class="o">=</span> <span class="s1">&#39;Location&#39;</span><span class="p">,</span>
+               <span class="n">values</span> <span class="o">=</span> <span class="s1">&#39;Firmicutes&#39;</span><span class="p">,</span>
+               <span class="n">aggfunc</span> <span class="o">=</span> <span class="s1">&#39;mean&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Location</th>
+      <th>Ethmoid Culture (Deep to Ethmoid Bulla)</th>
+      <th>Ethmoid Tissue (Deep to Ethmoid Bulla)</th>
+      <th>Head of Inferior Turbinate Tissue</th>
+      <th>Maxillary Sinus</th>
+      <th>Maxillary Sinus Tissue</th>
+      <th>Middle Meatus</th>
+      <th>Nasal Vestibule</th>
+      <th>Sphenoethmoidal Recess Tissue</th>
+      <th>Sphenoid</th>
+      <th>Sphenoid Tissue</th>
+      <th>Superior Meatus</th>
+      <th>Uncinate Process Tissue</th>
+    </tr>
+    <tr>
+      <th>Patient</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3062</th>
+      <td>2714.0</td>
+      <td>NaN</td>
+      <td>1746.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1822.0</td>
+      <td>14987.0</td>
+      <td>NaN</td>
+      <td>6125.0</td>
+      <td>NaN</td>
+      <td>2992.0</td>
+      <td>1210.0</td>
+    </tr>
+    <tr>
+      <th>3094</th>
+      <td>385.0</td>
+      <td>664.0</td>
+      <td>1089.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>4316.0</td>
+      <td>1397.0</td>
+      <td>5559.0</td>
+      <td>4648.0</td>
+      <td>784.0</td>
+      <td>3463.0</td>
+      <td>1538.0</td>
+    </tr>
+    <tr>
+      <th>3095</th>
+      <td>2300.0</td>
+      <td>651.0</td>
+      <td>760.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2999.0</td>
+      <td>5510.0</td>
+      <td>NaN</td>
+      <td>519.0</td>
+      <td>703.0</td>
+      <td>10097.0</td>
+      <td>1244.0</td>
+    </tr>
+    <tr>
+      <th>3115</th>
+      <td>2168.0</td>
+      <td>NaN</td>
+      <td>4640.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>3525.0</td>
+      <td>5480.0</td>
+      <td>1861.0</td>
+      <td>13948.0</td>
+      <td>NaN</td>
+      <td>982.0</td>
+      <td>1531.0</td>
+    </tr>
+    <tr>
+      <th>3116</th>
+      <td>9796.0</td>
+      <td>6357.0</td>
+      <td>6261.0</td>
+      <td>5748.0</td>
+      <td>8038.0</td>
+      <td>988.0</td>
+      <td>2324.0</td>
+      <td>3673.0</td>
+      <td>617.0</td>
+      <td>6709.0</td>
+      <td>3866.0</td>
+      <td>7249.0</td>
+    </tr>
+    <tr>
+      <th>3117</th>
+      <td>1800.0</td>
+      <td>672.0</td>
+      <td>1499.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2810.0</td>
+      <td>1017.0</td>
+      <td>NaN</td>
+      <td>2082.0</td>
+      <td>1954.0</td>
+      <td>3671.0</td>
+      <td>1233.0</td>
+    </tr>
+    <tr>
+      <th>3118</th>
+      <td>2459.0</td>
+      <td>380.0</td>
+      <td>2962.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>5253.0</td>
+      <td>NaN</td>
+      <td>3724.0</td>
+      <td>2322.0</td>
+      <td>NaN</td>
+      <td>4144.0</td>
+      <td>4925.0</td>
+    </tr>
+    <tr>
+      <th>3119</th>
+      <td>2494.0</td>
+      <td>1870.0</td>
+      <td>1721.0</td>
+      <td>265.0</td>
+      <td>412.0</td>
+      <td>4372.0</td>
+      <td>NaN</td>
+      <td>301.0</td>
+      <td>2796.0</td>
+      <td>988.0</td>
+      <td>138.0</td>
+      <td>457.0</td>
+    </tr>
+    <tr>
+      <th>3120</th>
+      <td>905.0</td>
+      <td>1614.0</td>
+      <td>1136.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2342.0</td>
+      <td>515.0</td>
+      <td>415.0</td>
+      <td>2655.0</td>
+      <td>NaN</td>
+      <td>2037.0</td>
+      <td>1301.0</td>
+    </tr>
+    <tr>
+      <th>3121</th>
+      <td>3060.0</td>
+      <td>NaN</td>
+      <td>863.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>3686.0</td>
+      <td>4295.0</td>
+      <td>1624.0</td>
+      <td>6135.0</td>
+      <td>NaN</td>
+      <td>4740.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3123</th>
+      <td>1029.0</td>
+      <td>914.0</td>
+      <td>NaN</td>
+      <td>3865.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>5885.0</td>
+      <td>358.0</td>
+      <td>1207.0</td>
+      <td>NaN</td>
+      <td>4497.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3124</th>
+      <td>3979.0</td>
+      <td>2318.0</td>
+      <td>1146.0</td>
+      <td>2133.0</td>
+      <td>448.0</td>
+      <td>2332.0</td>
+      <td>2320.0</td>
+      <td>662.0</td>
+      <td>2798.0</td>
+      <td>NaN</td>
+      <td>1940.0</td>
+      <td>1908.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>This took our “long” data format in which each row represented the observation at a different site of a different person
+and converted it into a “wide” data format such that each row is a patient and each column is a number of Firmicutes at a location.
+<code class="docutils literal notranslate"><span class="pre">NaNs</span></code> represent missing information.</p>
+<p>We also had to “give up” some information for this transformation … this is only Firmicutes.</p>
+<p>One <em>can</em> do this to include more information:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">merged_info</span><span class="p">,</span>
+               <span class="n">index</span> <span class="o">=</span> <span class="s1">&#39;Patient&#39;</span><span class="p">,</span>
+               <span class="n">columns</span> <span class="o">=</span> <span class="s1">&#39;Location&#39;</span><span class="p">,</span>
+               <span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Actinobacteria&#39;</span><span class="p">,</span> <span class="s1">&#39;Firmicutes&#39;</span><span class="p">],</span>
+               <span class="n">aggfunc</span> <span class="o">=</span> <span class="s1">&#39;mean&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead tr th {
+        text-align: left;
+    }
+
+    .dataframe thead tr:last-of-type th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="10" halign="left">Actinobacteria</th>
+      <th>...</th>
+      <th colspan="10" halign="left">Firmicutes</th>
+    </tr>
+    <tr>
+      <th>Location</th>
+      <th>Ethmoid Culture (Deep to Ethmoid Bulla)</th>
+      <th>Ethmoid Tissue (Deep to Ethmoid Bulla)</th>
+      <th>Head of Inferior Turbinate Tissue</th>
+      <th>Maxillary Sinus</th>
+      <th>Maxillary Sinus Tissue</th>
+      <th>Middle Meatus</th>
+      <th>Nasal Vestibule</th>
+      <th>Sphenoethmoidal Recess Tissue</th>
+      <th>Sphenoid</th>
+      <th>Sphenoid Tissue</th>
+      <th>...</th>
+      <th>Head of Inferior Turbinate Tissue</th>
+      <th>Maxillary Sinus</th>
+      <th>Maxillary Sinus Tissue</th>
+      <th>Middle Meatus</th>
+      <th>Nasal Vestibule</th>
+      <th>Sphenoethmoidal Recess Tissue</th>
+      <th>Sphenoid</th>
+      <th>Sphenoid Tissue</th>
+      <th>Superior Meatus</th>
+      <th>Uncinate Process Tissue</th>
+    </tr>
+    <tr>
+      <th>Patient</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3062</th>
+      <td>461.0</td>
+      <td>NaN</td>
+      <td>232.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>292.0</td>
+      <td>2516.0</td>
+      <td>NaN</td>
+      <td>623.0</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>1746.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1822.0</td>
+      <td>14987.0</td>
+      <td>NaN</td>
+      <td>6125.0</td>
+      <td>NaN</td>
+      <td>2992.0</td>
+      <td>1210.0</td>
+    </tr>
+    <tr>
+      <th>3094</th>
+      <td>243.0</td>
+      <td>638.0</td>
+      <td>282.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1486.0</td>
+      <td>103.0</td>
+      <td>4604.0</td>
+      <td>2690.0</td>
+      <td>1540.0</td>
+      <td>...</td>
+      <td>1089.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>4316.0</td>
+      <td>1397.0</td>
+      <td>5559.0</td>
+      <td>4648.0</td>
+      <td>784.0</td>
+      <td>3463.0</td>
+      <td>1538.0</td>
+    </tr>
+    <tr>
+      <th>3095</th>
+      <td>1652.0</td>
+      <td>1038.0</td>
+      <td>444.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2010.0</td>
+      <td>1474.0</td>
+      <td>NaN</td>
+      <td>587.0</td>
+      <td>670.0</td>
+      <td>...</td>
+      <td>760.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2999.0</td>
+      <td>5510.0</td>
+      <td>NaN</td>
+      <td>519.0</td>
+      <td>703.0</td>
+      <td>10097.0</td>
+      <td>1244.0</td>
+    </tr>
+    <tr>
+      <th>3115</th>
+      <td>80.0</td>
+      <td>NaN</td>
+      <td>1.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>13.0</td>
+      <td>0.0</td>
+      <td>211.0</td>
+      <td>17.0</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>4640.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>3525.0</td>
+      <td>5480.0</td>
+      <td>1861.0</td>
+      <td>13948.0</td>
+      <td>NaN</td>
+      <td>982.0</td>
+      <td>1531.0</td>
+    </tr>
+    <tr>
+      <th>3116</th>
+      <td>340.0</td>
+      <td>61.0</td>
+      <td>19.0</td>
+      <td>34.0</td>
+      <td>40.0</td>
+      <td>5.0</td>
+      <td>2.0</td>
+      <td>181.0</td>
+      <td>32.0</td>
+      <td>309.0</td>
+      <td>...</td>
+      <td>6261.0</td>
+      <td>5748.0</td>
+      <td>8038.0</td>
+      <td>988.0</td>
+      <td>2324.0</td>
+      <td>3673.0</td>
+      <td>617.0</td>
+      <td>6709.0</td>
+      <td>3866.0</td>
+      <td>7249.0</td>
+    </tr>
+    <tr>
+      <th>3117</th>
+      <td>1546.0</td>
+      <td>1108.0</td>
+      <td>521.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>965.0</td>
+      <td>426.0</td>
+      <td>NaN</td>
+      <td>1537.0</td>
+      <td>1812.0</td>
+      <td>...</td>
+      <td>1499.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2810.0</td>
+      <td>1017.0</td>
+      <td>NaN</td>
+      <td>2082.0</td>
+      <td>1954.0</td>
+      <td>3671.0</td>
+      <td>1233.0</td>
+    </tr>
+    <tr>
+      <th>3118</th>
+      <td>1802.0</td>
+      <td>824.0</td>
+      <td>332.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1465.0</td>
+      <td>NaN</td>
+      <td>454.0</td>
+      <td>923.0</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>2962.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>5253.0</td>
+      <td>NaN</td>
+      <td>3724.0</td>
+      <td>2322.0</td>
+      <td>NaN</td>
+      <td>4144.0</td>
+      <td>4925.0</td>
+    </tr>
+    <tr>
+      <th>3119</th>
+      <td>4358.0</td>
+      <td>2605.0</td>
+      <td>245.0</td>
+      <td>1651.0</td>
+      <td>2625.0</td>
+      <td>3268.0</td>
+      <td>NaN</td>
+      <td>1102.0</td>
+      <td>7514.0</td>
+      <td>4183.0</td>
+      <td>...</td>
+      <td>1721.0</td>
+      <td>265.0</td>
+      <td>412.0</td>
+      <td>4372.0</td>
+      <td>NaN</td>
+      <td>301.0</td>
+      <td>2796.0</td>
+      <td>988.0</td>
+      <td>138.0</td>
+      <td>457.0</td>
+    </tr>
+    <tr>
+      <th>3120</th>
+      <td>2740.0</td>
+      <td>3265.0</td>
+      <td>68.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>405.0</td>
+      <td>107.0</td>
+      <td>468.0</td>
+      <td>4195.0</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>1136.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>2342.0</td>
+      <td>515.0</td>
+      <td>415.0</td>
+      <td>2655.0</td>
+      <td>NaN</td>
+      <td>2037.0</td>
+      <td>1301.0</td>
+    </tr>
+    <tr>
+      <th>3121</th>
+      <td>1971.0</td>
+      <td>NaN</td>
+      <td>452.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>911.0</td>
+      <td>582.0</td>
+      <td>399.0</td>
+      <td>2816.0</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>863.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>3686.0</td>
+      <td>4295.0</td>
+      <td>1624.0</td>
+      <td>6135.0</td>
+      <td>NaN</td>
+      <td>4740.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3123</th>
+      <td>1010.0</td>
+      <td>2263.0</td>
+      <td>NaN</td>
+      <td>941.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>4186.0</td>
+      <td>226.0</td>
+      <td>861.0</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>3865.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>5885.0</td>
+      <td>358.0</td>
+      <td>1207.0</td>
+      <td>NaN</td>
+      <td>4497.0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3124</th>
+      <td>1602.0</td>
+      <td>1243.0</td>
+      <td>891.0</td>
+      <td>4138.0</td>
+      <td>265.0</td>
+      <td>1922.0</td>
+      <td>2218.0</td>
+      <td>733.0</td>
+      <td>1902.0</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>1146.0</td>
+      <td>2133.0</td>
+      <td>448.0</td>
+      <td>2332.0</td>
+      <td>2320.0</td>
+      <td>662.0</td>
+      <td>2798.0</td>
+      <td>NaN</td>
+      <td>1940.0</td>
+      <td>1908.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>12 rows × 24 columns</p>
+</div></div></div>
+</div>
+<p>But that is usually not a great idea.</p>
+</section>
+<section id="melting">
+<h3>Melting<a class="headerlink" href="#melting" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">wide</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">long</span></code></p>
+<p>Our data is part <code class="docutils literal notranslate"><span class="pre">long</span></code> and part <code class="docutils literal notranslate"><span class="pre">wide</span></code> (like most real datasets).
+In some plotting instances we may want to make it “longer” by having each bacteria be a diffent row instead of a different column.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">merged_info</span><span class="p">,</span>
+        <span class="n">id_vars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Patient&#39;</span><span class="p">,</span> <span class="s1">&#39;Location&#39;</span><span class="p">],</span> <span class="c1"># The things you want preserved in each row</span>
+        <span class="n">value_vars</span> <span class="o">=</span> <span class="n">PHYLUM_COLS</span><span class="p">,</span> <span class="c1"># The columns you want to melt</span>
+        <span class="n">var_name</span> <span class="o">=</span> <span class="s1">&#39;Phylum&#39;</span><span class="p">,</span> <span class="c1"># The name of the column that will have the value_var name</span>
+        <span class="n">value_name</span> <span class="o">=</span> <span class="s1">&#39;Counts&#39;</span><span class="p">)</span> <span class="c1"># The name of the column that will have the value</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Patient</th>
+      <th>Location</th>
+      <th>Phylum</th>
+      <th>Counts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3062</td>
+      <td>Nasal Vestibule</td>
+      <td>Actinobacteria</td>
+      <td>2516</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3094</td>
+      <td>Nasal Vestibule</td>
+      <td>Actinobacteria</td>
+      <td>103</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3095</td>
+      <td>Nasal Vestibule</td>
+      <td>Actinobacteria</td>
+      <td>1474</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3115</td>
+      <td>Nasal Vestibule</td>
+      <td>Actinobacteria</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>3116</td>
+      <td>Nasal Vestibule</td>
+      <td>Actinobacteria</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>427</th>
+      <td>3094</td>
+      <td>Sphenoid Tissue</td>
+      <td>Proteobacteria</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>428</th>
+      <td>3095</td>
+      <td>Sphenoid Tissue</td>
+      <td>Proteobacteria</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>429</th>
+      <td>3116</td>
+      <td>Sphenoid Tissue</td>
+      <td>Proteobacteria</td>
+      <td>495</td>
+    </tr>
+    <tr>
+      <th>430</th>
+      <td>3117</td>
+      <td>Sphenoid Tissue</td>
+      <td>Proteobacteria</td>
+      <td>129</td>
+    </tr>
+    <tr>
+      <th>431</th>
+      <td>3119</td>
+      <td>Sphenoid Tissue</td>
+      <td>Proteobacteria</td>
+      <td>13</td>
+    </tr>
+  </tbody>
+</table>
+<p>432 rows × 4 columns</p>
+</div></div></div>
+</div>
+<p>We’ll explore these in more detail as we move into plotting next week.
+This is just a taste.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="submission">
+<h2>Submission<a class="headerlink" href="#submission" title="Link to this heading">#</a></h2>
+<p>Submit this assignment through BBLearn.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./_bblearn/Module04"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../content/Module04/Module04_book.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Module 4: Analysis by groups</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Module04_lab.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lab</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploring-a-single-patient">Exploring a single patient</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q1-extract-the-information-for-patient-3116">Q1: Extract the information for patient 3116</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q2-calculate-the-average-count-across-regions-for-each-phylum-for-patient-3116">Q2: Calculate the average count across regions for each phylum for patient 3116.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summarizing-by-grouping">Summarizing by grouping</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q3-calculate-the-average-counts-of-each-phylum-by-body-site">Q3: Calculate the average counts of each phylum by body site.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#merging-data">Merging data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q4-calculate-the-average-counts-of-each-phylum-by-severe-disease">Q4: Calculate the average counts of each phylum by <code class="docutils literal notranslate"><span class="pre">severe_disease</span></code>.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pivoting-melting-dataframes">Pivoting &amp; Melting Dataframes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pivoting">Pivoting</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#melting">Melting</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submission">Submission</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Will Dampier
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
