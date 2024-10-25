@@ -37,3 +37,8 @@ parts:
       sections:
       - file: content/Module05/Module05_walkthrough_book
       - file: content/Module05/Module05_lab_book
+      
+    - file: content/Module06/Module06_book
+      sections:
+      - file: content/Module06/Module06_walkthrough_book
+      - file: content/Module06/Module06_lab_book
