@@ -108,6 +108,7 @@ rule:
         "cp {input} {output}"
         
 
+
 def get_files_from_book_config(wildcards):
     
     book_yaml_path = f'tocs/{wildcards["book"]}_toc.yml'
@@ -122,11 +123,11 @@ def get_files_from_book_config(wildcards):
 
 rule bookify_walkthrough:
     input:
-        "content/{module}/{module}_walkthrough.ipynb"
+        '_bblearn/{module}/{module}_walkthrough_SOLUTION.ipynb'
     output:
         "content/{module}/{module}_walkthrough_book.ipynb"
     shell:
-        "jupyter nbconvert {input} --to notebook --stdout --TagRemovePreprocessor.enabled=True --TagRemovePreprocessor.remove_cell_tags remove_cell > {output}"
+        "cp {input} {output}"
 
 rule bookify_lab:
     input:
@@ -134,7 +135,7 @@ rule bookify_lab:
     output:
         "content/{module}/{module}_lab_book.ipynb"
     shell:
-        "jupyter nbconvert {input} --to notebook --stdout --TagRemovePreprocessor.enabled=True --TagRemovePreprocessor.remove_cell_tags remove_cell > {output}"        
+        "cp {input} {output}"
         
 rule render_book:
     input:
@@ -143,7 +144,5 @@ rule render_book:
         config = '_config.yml'
     output:
         directory('_book/{book}/')
-        
-    
     shell:
         "jupyter-book build --config {input.config} --toc {input.toc_file} --path-output {output} ."
