@@ -43,3 +43,9 @@ parts:
       - file: content/Module06/grammar_of_graphics
       - file: _bblearn/Module06/Module06_walkthrough_SOLUTION
       - file: _bblearn/Module06/Module06_lab
+      
+    - file: content/Module07/Module07_book
+      sections:
+      - file: content/Module07/common_biological_distributions
+      - file: _bblearn/Module07/Module07_walkthrough_SOLUTION
+      - file: _bblearn/Module07/Module07_lab      

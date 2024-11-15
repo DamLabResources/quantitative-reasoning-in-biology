@@ -59,8 +59,15 @@ parts:
 #      sections:
 #      - file: content/Module06/walkthrough
 #      - file: content/Module06/lab 
-    
-    # Week 9 & 10
+
+    # Week 9
+    # Samples and Replicates
+#    - file: content/Module07/course
+#      sections:
+#      - file: content/Module07/walkthrough
+#      - file: content/Module07/lab 
+
+    # Week 10 & 11
     # Project 2: Descriptive Visualization
 #    - file: content/F2F_project2/course
 #      sections:
@@ -69,48 +76,41 @@ parts:
     
 #  - caption: Part 3 : Inferential Analysis
 #    chapters:
-    
-    # Week 11
-    # Categorical comparisons
-#    - file: content/Module07/course
-#      sections:
-#      - file: content/Module07/walkthrough
-#      - file: content/Module07/lab 
+   
     
     # Week 12
-    # Comparison across groups
+    # Categorical comparisons
 #    - file: content/Module08/course
 #      sections:
 #      - file: content/Module08/walkthrough
 #      - file: content/Module08/lab 
     
     # Week 13
-    # Regression
+    # Comparison across groups
 #    - file: content/Module09/course
 #      sections:
 #      - file: content/Module09/walkthrough
 #      - file: content/Module09/lab 
     
     # Week 14
-    # Power Analysis
+    # Regression
 #    - file: content/Module10/course
 #      sections:
 #      - file: content/Module10/walkthrough
 #      - file: content/Module10/lab 
-      
+    
     # Week 15
-    # Machine Learning
+    # Power Analysis
 #    - file: content/Module11/course
 #      sections:
 #      - file: content/Module11/walkthrough
 #      - file: content/Module11/lab 
-    
+         
     # Week 16 & 17
     # Project 3: Inferential Analysis
 #    - file: content/F2F_project3/course
 #      sections:
-#      - file: content/F2F_project3/TemplateNotebook    
-
+#      - file: content/F2F_project3/TemplateNotebook
 
   # Extra side-panel items to render for BBLearn.
   - caption: Extra Items
