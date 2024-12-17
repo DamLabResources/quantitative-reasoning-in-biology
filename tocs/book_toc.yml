@@ -48,4 +48,16 @@ parts:
       sections:
       - file: content/Module07/common_biological_distributions
       - file: _bblearn/Module07/Module07_walkthrough_SOLUTION
-      - file: _bblearn/Module07/Module07_lab      
+      - file: _bblearn/Module07/Module07_lab
+
+  - caption: "Part 3 : Inferential Statistics"
+    chapters:
+    - file: content/Module08/Module08_book
+      sections:
+      - file: _bblearn/Module08/Module08_walkthrough_SOLUTION
+      - file: _bblearn/Module08/Module08_lab
+      
+    - file: content/Module09/Module09_book
+      sections:
+      - file: _bblearn/Module09/Module09_walkthrough_SOLUTION
+      - file: _bblearn/Module09/Module09_lab

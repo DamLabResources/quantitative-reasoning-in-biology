@@ -1,3 +1,3 @@
-# Module 7: Samples and Replicates
+# Module 8: Hypothesis Testing
 
-This chapter will discuss the importance of replicates in biological experiments.
+This chapter will discuss basic strategies for hypothesis testing in biological experiments.
