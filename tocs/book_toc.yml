@@ -61,3 +61,8 @@ parts:
       sections:
       - file: _bblearn/Module09/Module09_walkthrough_SOLUTION
       - file: _bblearn/Module09/Module09_lab
+      
+    - file: content/Module10/Module10_book
+      sections:
+      - file: _bblearn/Module10/Module10_walkthrough_SOLUTION
+      - file: _bblearn/Module10/Module10_lab
