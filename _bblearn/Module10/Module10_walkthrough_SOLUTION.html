@@ -1,0 +1,1079 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Walkthrough &#8212; Quantitative Reasoning in Biology</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_bblearn/Module10/Module10_walkthrough_SOLUTION';</script>
+    <link rel="canonical" href="https://damlabresources.github.io/quantitative-reasoning-in-biology/_bblearn/Module10/Module10_walkthrough_SOLUTION.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Lab" href="Module10_lab.html" />
+    <link rel="prev" title="Module 10: Power Analysis" href="../../content/Module10/Module10_book.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">Work in progress!</div>
+  </div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../content/book_index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Quantitative Reasoning in Biology</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../content/book_index.html">
+                    Quantitative Reasoning in Biology
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 0: Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../content/misc/about_this_book.html">About this book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/misc/book_intro.html">Introduction</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 1 : Hello World</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../content/Module01/Module01_book.html">Module 1: Hello World</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../content/Module01/Module01_walkthrough.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/Module01/notebook_actions.html">Notebook basics</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../content/Module02/Module02_book.html">Module 2: Simple calculations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module02/Module02_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/Module02/nanopore_description.html">Nanopore Sequencing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/Module02/dilution_calculations.html">Dilution calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module02/Module02_lab.html">Lab</a></li>
+
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../content/Module03/Module03_book.html">Module 3: DataFrames</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module03/Module03_walkthrough_SOLUTION.html">Walkthrough</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Module03/Module03_lab.html">Lab</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 2 : Descriptive Statistics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../content/Module04/Module04_book.html">Module 4: Analysis by groups</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module04/Module04_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module04/Module04_lab.html">Lab</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../content/Module05/Module05_book.html">Module 5: Plotting with Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module05/Module05_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module05/Module05_lab.html">Lab</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../content/Module06/Module06_book.html">Module 6: Visualizing with Confidence</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../content/Module06/grammar_of_graphics.html">Grammar of Graphics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module06/Module06_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module06/Module06_lab.html">Lab</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../content/Module07/Module07_book.html">Module 7: Samples and Replicates</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../content/Module07/common_biological_distributions.html">Common Biological Distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module07/Module07_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module07/Module07_lab.html">Lab</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 3 : Inferential Statistics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../content/Module08/Module08_book.html">Module 8: Hypothesis Testing</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module08/Module08_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module08/Module08_lab.html">Lab</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../content/Module09/Module09_book.html">Module 9: Linear Regression</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module09/Module09_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module09/Module09_lab.html">Lab</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../content/Module10/Module10_book.html">Module 10: Power Analysis</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Module10_lab.html">Lab</a></li>
+
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/_bblearn/Module10/Module10_walkthrough_SOLUTION.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Walkthrough</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-power-analysis-in-6-steps">A Power Analysis in 6 steps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-define-success">Step 2: Define success</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-define-your-tolerance-for-risk">Step 3: Define your tolerance for risk</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-define-a-budget">Step 4: Define a budget</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-calculate">Step 5: Calculate</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q1-calculate-the-power-if-there-are-only-two-animals-in-each-group">Q1: Calculate the power if there are only two animals in each group.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q2-calculate-the-smallest-effect-size-if-there-are-12-animals-in-each-group">Q2: Calculate the smallest effect size if there are 12 animals in each group.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-summarize">Step 6: Summarize</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-other-use-of-power-tests">The other use of Power Tests</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="walkthrough">
+<h1>Walkthrough<a class="headerlink" href="#walkthrough" title="Link to this heading">#</a></h1>
+<section id="learning-objectives">
+<h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Link to this heading">#</a></h2>
+<p>At the end of this learning activity you will be able to:</p>
+<ul class="simple">
+<li><p>Describe a generic strategy for power calculations.</p></li>
+<li><p>Define the terms <code class="docutils literal notranslate"><span class="pre">effect_size</span></code>, <code class="docutils literal notranslate"><span class="pre">alpha</span></code>, and <code class="docutils literal notranslate"><span class="pre">power</span></code>.</p></li>
+<li><p>Describe the trade-off of <code class="docutils literal notranslate"><span class="pre">effect_size</span></code>, <code class="docutils literal notranslate"><span class="pre">alpha</span></code>, <code class="docutils literal notranslate"><span class="pre">power</span></code>, and <code class="docutils literal notranslate"><span class="pre">sample_size</span></code>.</p></li>
+<li><p>Calculate the fourth value given the other three.</p></li>
+<li><p>Interpret a power-plot of multiple experimental choices.</p></li>
+<li><p>Rigorously choose the appropriate experimental design for the best chance of success.</p></li>
+</ul>
+<p>For this last week, we are going to look at experimental design.
+In particular, sample size calculations.</p>
+<p>As a test-case we will imagine that we are helping Dr. Kortagere evaluate a new formulation of her SK609 compound.
+It is a selective dopamine receptor activator that has been shown to improve attention in animal models.
+You can review her paper <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6424628/"><strong>Selective activation of Dopamine D3 receptors and Norepinephrine Transporter blockade enhance sustained attention</strong></a>
+on pubmed.
+We’ll be reviewing snippets through the assignment.</p>
+<p>As part of this new testing we will have to evaluate her new formulation in the same animal model.
+In this assignment we are going to determine an appropriate sample size.</p>
+</section>
+<section id="a-power-analysis-in-6-steps">
+<h2>A Power Analysis in 6 steps<a class="headerlink" href="#a-power-analysis-in-6-steps" title="Link to this heading">#</a></h2>
+<p>As the “biostats guy” most people know, I’m often the first person someone comes to looking for this answer.
+So, over the years I’ve developed a bit of a script.
+It is part art, part math, and relies on domain knowledge and assumptions.</p>
+<p>Before you can determine a sample size you need to devise a <em>specific</em>, <strong>quantitative</strong>, and <strong>TESTABLE</strong> hypothesis.
+Over the past few weeks we’ve covered the main ones:</p>
+<ul class="simple">
+<li><p>Linked categories - chi2 test</p></li>
+<li><p>Difference in means - t-test</p></li>
+<li><p>Regression-based analysis</p></li>
+</ul>
+<p>With enough Googling you can find a calculator for almost any type of test, and simulation strategies can be used to estimate weird or complex tests if needed.</p>
+<p>During the signal trials, animals were trained to press a lever in response to a stimulus, which was a cue light. During the non-signal trials, the animals were trained to press the opposite lever in the absence of a cue light. [Methods]
+Over a 45 minute attention assay cued at psueodorandom times, their success in this task was quantified as a Vigilance Index (VI), with larger numbers indicating improved attention.</p>
+<p>Figure 1 shows the design.</p>
+<p><img alt="Figure 1" src="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/7ad9/6424628/c5af74734da6/nihms-1006809-f0001.jpg" /></p>
+<p>Our hypothesis is that this new formulation increases the vigilance index relative to vehicle treated animals.</p>
+</section>
+<section id="step-2-define-success">
+<h2>Step 2: Define success<a class="headerlink" href="#step-2-define-success" title="Link to this heading">#</a></h2>
+<p>Next, we need to find the <code class="docutils literal notranslate"><span class="pre">effect_size</span></code>.
+Different tests calculate this differently, but it always means the same thing:
+<strong>the degree of change divided by the noise in the measurement.</strong></p>
+<p>These are things that rely on domain knowledge of the problem.
+The amount of change should be as close to something that is clinically meaningful.
+The amount of noise in the measurement is defined by your problem and your experimental setup.</p>
+<p>If you have access to raw data, it is ideal to calculate the difference in means and the standard deviations exactly.
+But often, you don’t have that data.
+For this exercise I’ll teach you how to find and estimate it.</p>
+<p>In this simple example, we’ll imagine replicating the analysis considered in <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6424628/figure/F3/">Figure 3B</a>.</p>
+<p><img alt="Figure 3" src="https://cdn.ncbi.nlm.nih.gov/pmc/blobs/7ad9/6424628/98810d3bec35/nihms-1006809-f0003.jpg" /></p>
+<p>We’ll start with B. This compares the effect of SK609 VI vs a vehicle control. Parsing through the figure caption we come to:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">B</span><span class="p">)</span> <span class="n">Paired</span> <span class="n">t</span><span class="o">-</span><span class="n">test</span> <span class="n">indicated</span> <span class="n">that</span> <span class="mi">4</span> <span class="n">mg</span><span class="o">/</span><span class="n">kg</span> <span class="n">SK609</span> <span class="n">significantly</span> <span class="n">increased</span> <span class="n">sustained</span> <span class="n">attention</span> <span class="n">performance</span> <span class="k">as</span> <span class="n">measured</span> <span class="n">by</span> <span class="n">average</span> <span class="n">VI</span> <span class="n">score</span> <span class="n">relative</span> <span class="n">to</span> <span class="n">vehicle</span> <span class="n">treatment</span> <span class="p">(</span><span class="n">t</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="o">=</span><span class="mf">3.1</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="mf">0.017</span><span class="p">;</span> <span class="mi">95</span><span class="o">%</span> <span class="n">CI</span><span class="p">[</span><span class="mf">0.14</span><span class="p">,</span> <span class="mf">0.19</span><span class="p">])</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>This was a <em>paired</em> t-test, since it is measuring the difference between vehicle and SK609 in the same animal. The p=0.017 tells use this difference is unlikely due to chance and the CI tells us that the difference in VI between control and SK609 is between 0.14 and 0.19.</p>
+<p>If we’re testing a new formulation of SK609 we know we need to be able to detect a difference as low as 0.14. We should get a VI of ~0.8 for control and ~0.95 for SK609. If the difference is smaller than this, it probably isn’t worth the switch.</p>
+<p>Therefore we’ll define success as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SK609a</span> <span class="n">will</span> <span class="n">increase</span> <span class="n">the</span> <span class="n">VI</span> <span class="n">of</span> <span class="n">an</span> <span class="n">animal</span> <span class="n">by</span> <span class="n">at</span> <span class="n">least</span> <span class="mf">0.14</span> <span class="n">units</span><span class="o">.</span> 
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">min_change</span> <span class="o">=</span> <span class="mf">0.14</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Then we need an estimate of the error in the measurement.
+In an ideal world, we would calculate the standard deviation.
+But I don’t have that.
+So, I’ll make an assumption that we’ll adjust as we go.</p>
+<p>I like to consider two pieces of evidence when I need to guess like this.
+First, looking at the figure above, the error bars.
+From my vision they look to be about ~0.02-0.04 units.
+Or, if we considered a ~20% measurement error 0.8 x 0.2 = 0.16.
+So, an estimate of 0.08 error would seem <em>reasonable</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">error</span> <span class="o">=</span> <span class="mf">0.08</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Our estimate of the <code class="docutils literal notranslate"><span class="pre">effect_size</span></code> is the ratio of the change and the error.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">effect_size</span> <span class="o">=</span> <span class="n">min_change</span><span class="o">/</span><span class="n">error</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Effect Size&#39;</span><span class="p">,</span> <span class="n">effect_size</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Effect Size 1.7500000000000002
+</pre></div>
+</div>
+</div>
+</div>
+<p>You’ll notice that the <code class="docutils literal notranslate"><span class="pre">effect_size</span></code> is unit-less and similar to a z-scale.</p>
+</section>
+<section id="step-3-define-your-tolerance-for-risk">
+<h2>Step 3: Define your tolerance for risk<a class="headerlink" href="#step-3-define-your-tolerance-for-risk" title="Link to this heading">#</a></h2>
+<p>When doing an experiment we consider two types of failures.</p>
+<ul class="simple">
+<li><p>False Positives - Detecting a difference when there truly isn’t one - <code class="docutils literal notranslate"><span class="pre">alpha</span></code></p></li>
+<li><p>False Negatives - Not detecting a true difference - <code class="docutils literal notranslate"><span class="pre">power</span></code></p></li>
+</ul>
+<p>We’ve been mostly considering rejecting false-positives (p&lt;0.05).
+The power of a test is the converse.
+It is the likelihood of detecting a difference if there truly is one.
+A traditional cutoff is <code class="docutils literal notranslate"><span class="pre">&gt;0.8</span></code>; implying there is an 80% chance of detecting an effect if there truly is one.</p>
+</section>
+<section id="step-4-define-a-budget">
+<h2>Step 4: Define a budget<a class="headerlink" href="#step-4-define-a-budget" title="Link to this heading">#</a></h2>
+<p>You need to have <em>some</em> idea on the scale and cost of the proposed experiment.
+How much for 2 samples, 20 samples, 50 samples, 200 samples.</p>
+<p>This will be an exercise in trade-offs you need to have reasonable estimates of how much you are trading off.
+This is where you should also consider things like sample dropouts. outlier rates, and other considerations.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># In each group</span>
+<span class="n">exp_nobs</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-5-calculate">
+<h2>Step 5: Calculate<a class="headerlink" href="#step-5-calculate" title="Link to this heading">#</a></h2>
+<p>With our 4 pieces of information:</p>
+<ul class="simple">
+<li><p>effect_size</p></li>
+<li><p>power</p></li>
+<li><p>alpha</p></li>
+<li><p>nobs</p></li>
+</ul>
+<p>We can start calculating.
+A power analysis is like a balancing an <strong>X</strong> with 4 different weights at each point.
+At any time, 3 of the weights are fixed and we can use a calculator to determine the appropriate weight of the fourth.</p>
+<p>Our goal is to estimate the cost and likely success of a range of different experiment choices.
+Considering that we have made a <em>lot</em> of assumptions and so we should consider noise in our estimate.</p>
+<p>Each type of test has a different calculator that can perform this 4-way balance.</p>
+<p>We’ll use the <code class="docutils literal notranslate"><span class="pre">pingouin</span></code> Python library to do this (<a class="reference external" href="https://pingouin-stats.org/build/html/api.html#power-analysis">https://pingouin-stats.org/build/html/api.html#power-analysis</a>).
+However, a simple Google search for: “statistical power calculator” will also find similar online tools for quick checks.
+Try to look for one that “draws” as well as calculates.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">pingouin</span> <span class="k">as</span> <span class="nn">pg</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>All Python power calculators I’ve seen work the same way.
+They accept 4 parameters, one of which, must be <code class="docutils literal notranslate"><span class="pre">None</span></code>.
+The tool will then use the other 3 parameters to estimate the 4th.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">min_change</span> <span class="o">=</span> <span class="mf">0.14</span>
+<span class="n">error</span> <span class="o">=</span> <span class="mf">0.08</span>
+
+<span class="n">effect_size</span> <span class="o">=</span> <span class="n">min_change</span><span class="o">/</span><span class="n">error</span>
+
+<span class="n">power</span> <span class="o">=</span> <span class="mf">0.8</span>
+<span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.05</span>
+
+<span class="n">pg</span><span class="o">.</span><span class="n">power_ttest</span><span class="p">(</span><span class="n">d</span> <span class="o">=</span> <span class="n">effect_size</span><span class="p">,</span>
+               <span class="n">n</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+               <span class="n">power</span> <span class="o">=</span> <span class="n">power</span><span class="p">,</span>
+               <span class="n">alpha</span> <span class="o">=</span> <span class="n">alpha</span><span class="p">,</span>
+               <span class="n">contrast</span> <span class="o">=</span> <span class="s1">&#39;paired&#39;</span><span class="p">,</span>
+               <span class="n">alternative</span> <span class="o">=</span> <span class="s1">&#39;greater&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.7683525901861725
+</pre></div>
+</div>
+</div>
+</div>
+<p>So, in order to have an 80% likelihood of detecting an effect of 0.14 (or more) at a p&lt;0.05 we need at least 4 animals in each group.</p>
+<section id="q1-calculate-the-power-if-there-are-only-two-animals-in-each-group">
+<h3>Q1: Calculate the power if there are only two animals in each group.<a class="headerlink" href="#q1-calculate-the-power-if-there-are-only-two-animals-in-each-group" title="Link to this heading">#</a></h3>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Total Points</strong></p></th>
+<th class="head"><p>5</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Included Checks</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+<p><em>Points:</em> 5</p>
+<div class="cell tag_otter_assign_solution_cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># BEGIN SOLUTION NO PROMPT</span>
+
+<span class="n">q1p</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">power_ttest</span><span class="p">(</span><span class="n">d</span> <span class="o">=</span> <span class="n">effect_size</span><span class="p">,</span>
+                     <span class="n">n</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+                     <span class="n">power</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                     <span class="n">alpha</span> <span class="o">=</span> <span class="n">alpha</span><span class="p">,</span>
+                     <span class="n">contrast</span> <span class="o">=</span> <span class="s1">&#39;paired&#39;</span><span class="p">,</span>
+                     <span class="n">alternative</span> <span class="o">=</span> <span class="s1">&#39;greater&#39;</span><span class="p">)</span>
+<span class="c1"># END SOLUTION</span>
+
+<span class="n">q1_power</span> <span class="o">=</span> <span class="n">q1p</span> <span class="c1"># SOLUTION</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;With two animals per group. The likelihood of detecting an effect drops to </span><span class="si">{</span><span class="n">q1_power</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s1">0.0f</span><span class="si">}</span><span class="s1">%&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>With two animals per group. The likelihood of detecting an effect drops to 30%
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q1_twosample_power&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>What if we’re worried this formulation only has a small effect or a highly noisy measurement. So, we’ve prepared 12 animals, what is the smallest difference we can detect? Assuming the same 80% power and 0.05 alpha.</p>
+</section>
+<section id="q2-calculate-the-smallest-effect-size-if-there-are-12-animals-in-each-group">
+<h3>Q2: Calculate the smallest effect size if there are 12 animals in each group.<a class="headerlink" href="#q2-calculate-the-smallest-effect-size-if-there-are-12-animals-in-each-group" title="Link to this heading">#</a></h3>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Total Points</strong></p></th>
+<th class="head"><p>5</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Included Checks</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+<p><em>Points:</em> 5</p>
+<div class="cell tag_otter_assign_solution_cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># BEGIN SOLUTION NO PROMPT</span>
+
+<span class="n">q2e</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">power_ttest</span><span class="p">(</span><span class="n">n</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span>
+                     <span class="n">power</span> <span class="o">=</span> <span class="n">power</span><span class="p">,</span>
+                     <span class="n">alpha</span> <span class="o">=</span> <span class="n">alpha</span><span class="p">,</span>
+                     <span class="n">contrast</span> <span class="o">=</span> <span class="s1">&#39;paired&#39;</span><span class="p">,</span>
+                     <span class="n">alternative</span> <span class="o">=</span> <span class="s1">&#39;greater&#39;</span><span class="p">)</span>
+<span class="c1"># END SOLUTION</span>
+
+<span class="n">q2_effect</span> <span class="o">=</span> <span class="n">q2e</span> <span class="c1"># SOLUTION</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;With 12 animals per group. You can detect an effect </span><span class="si">{</span><span class="n">effect_size</span><span class="o">/</span><span class="n">q2_effect</span><span class="si">:</span><span class="s1">0.3f</span><span class="si">}</span><span class="s1">X smaller than the minimum effect.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>With 12 animals per group. You can detect an effect 2.283X smaller than the minimum effect.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q2_12sample_effect&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The solver method is great when you have a specific calculation.
+But it doesn’t tell you much beyond a cold number with little context.
+How does it change as we make different assumptions about our effect size or our budget?</p>
+</section>
+</section>
+<section id="step-6-summarize">
+<h2>Step 6: Summarize<a class="headerlink" href="#step-6-summarize" title="Link to this heading">#</a></h2>
+<p>Let’s “propose” a number of different experiments different experiments.
+We’ll keep the power and alpha the same but consider different group sizes 2, 4, 6, 10, and 15 each.
+How do these choices impact our ability to detect different effect sizes?
+We’ll also assume our true effect size could be 2X too high or 2X too low.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># I find the whitegrid style to be the best for this type of visualization</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s1">&#39;whitegrid&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># How many animals in each proposed experiment</span>
+<span class="n">nobs_sizes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">])</span>
+
+<span class="c1"># power_ttest accepts arrays in any parameter</span>
+<span class="n">calced_power</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">power_ttest</span><span class="p">(</span><span class="n">n</span> <span class="o">=</span> <span class="n">nobs_sizes</span><span class="p">,</span>
+                              <span class="n">d</span> <span class="o">=</span> <span class="n">effect_size</span><span class="p">,</span>
+                              <span class="n">power</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                              <span class="n">alpha</span> <span class="o">=</span> <span class="n">alpha</span><span class="p">,</span>
+                              <span class="n">contrast</span> <span class="o">=</span> <span class="s1">&#39;paired&#39;</span><span class="p">,</span>
+                              <span class="n">alternative</span> <span class="o">=</span> <span class="s1">&#39;greater&#39;</span><span class="p">)</span>
+
+<span class="c1"># Then I can plot the power vs the number of animals</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">nobs_sizes</span><span class="p">,</span> <span class="n">calced_power</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Cd=</span><span class="si">{</span><span class="n">effect_size</span><span class="si">:</span><span class="s1">0.1f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Power&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Number observations&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fce3506bb20&gt;
+</pre></div>
+</div>
+<img alt="../../_images/b45cdc82a1a5c002e3fce8ba4f386250feb595751b98f447d4e3e7805df7b2ae.png" src="../../_images/b45cdc82a1a5c002e3fce8ba4f386250feb595751b98f447d4e3e7805df7b2ae.png" />
+</div>
+</div>
+<p>Since we can plot multiple assumptions on the same graph, we can make complex reasonings about our experimental design.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pick multiple different assumptions about the effect-size</span>
+<span class="n">effect_sizes</span> <span class="o">=</span> <span class="p">[</span><span class="n">effect_size</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">effect_size</span><span class="p">,</span> <span class="n">effect_size</span><span class="o">*</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="n">nobs_sizes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">])</span>
+
+<span class="k">for</span> <span class="n">ef</span> <span class="ow">in</span> <span class="n">effect_sizes</span><span class="p">:</span>
+    <span class="n">calced_power</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">power_ttest</span><span class="p">(</span><span class="n">n</span> <span class="o">=</span> <span class="n">nobs_sizes</span><span class="p">,</span>
+                                  <span class="n">d</span> <span class="o">=</span> <span class="n">ef</span><span class="p">,</span>
+                                  <span class="n">power</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                                  <span class="n">alpha</span> <span class="o">=</span> <span class="n">alpha</span><span class="p">,</span>
+                                  <span class="n">contrast</span> <span class="o">=</span> <span class="s1">&#39;paired&#39;</span><span class="p">,</span>
+                                  <span class="n">alternative</span> <span class="o">=</span> <span class="s1">&#39;greater&#39;</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">nobs_sizes</span><span class="p">,</span> <span class="n">calced_power</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Cd=</span><span class="si">{</span><span class="n">ef</span><span class="si">:</span><span class="s1">0.1f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Power&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Number observations&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fcdc41a08b0&gt;
+</pre></div>
+</div>
+<img alt="../../_images/92b7b21e6c8b368939a237b44b3fc9ceda3f8dfa0ced0b51ac6956d90ee93d8c.png" src="../../_images/92b7b21e6c8b368939a237b44b3fc9ceda3f8dfa0ced0b51ac6956d90ee93d8c.png" />
+</div>
+</div>
+<p>With this graph we can make some decisions with better knowledge about the context.</p>
+<p>If we’re confident our effect size estimate is correct or an ‘under-estimate’, then we should do 4-6 animals.
+This will give us a &gt;80% chance of finding an effect if it truly exists.
+However, if we have any doubt that our estimate may be high, then we see that 4-6 animals would put us in the 50:50 range.
+Then maybe it is better to spend the money for ~10 animals to obtain a high degree of confidence in a worst-case scenario.</p>
+</section>
+<section id="the-other-use-of-power-tests">
+<h2>The other use of Power Tests<a class="headerlink" href="#the-other-use-of-power-tests" title="Link to this heading">#</a></h2>
+<p>T-tests estimate whether there is a difference between two populations.
+However, a p&gt;0.05 <strong>does not mean the two distributions are the same</strong>.
+It means that either they are the same <strong>or</strong> you did not have enough <em>power</em> to detect a difference this small.
+If we want to measure whether two distributions are statistically “the same” we need a different test.</p>
+<p>Enter, the <strong>TOST</strong>, Two one-sided test for <em>equivelence</em>.</p>
+<p>This test is more algorithm than equation.
+Here is the basic idea:</p>
+<ul class="simple">
+<li><p>Specify the Equivalence Margin (<code class="docutils literal notranslate"><span class="pre">bound</span></code>): Before conducting the test, researchers must define an equivalence margin, which is the maximum difference between the treatments that can be considered practically equivalent. This margin should be determined based on clinical or practical relevance.</p></li>
+<li><p>Conduct Two One-Sided Tests: TOST involves conducting two one-sided t-tests:</p>
+<ul>
+<li><p>The first test checks if the upper confidence limit of the difference between treatments is less than the positive equivalence margin.</p></li>
+<li><p>The second test verifies that the lower confidence limit is greater than the negative equivalence margin.</p></li>
+</ul>
+</li>
+<li><p>Interpret the Results: Equivalence is concluded if both one-sided tests reject their respective null hypotheses at a predetermined significance level.</p></li>
+</ul>
+<p>This means that the confidence interval for the difference between treatments lies entirely within the equivalence margin.
+Thus, they are the <em>same</em>.</p>
+<p>Imagine we were testing two different batches and wanted to ensure there was no difference between them.
+A meaninful difference would be anything above 5% in the VI.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hyp_batchA_res</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.80</span><span class="p">,</span> <span class="mf">0.76</span><span class="p">,</span> <span class="mf">0.81</span><span class="p">,</span> <span class="mf">0.83</span><span class="p">,</span> <span class="mf">0.88</span><span class="p">,</span> <span class="mf">0.78</span><span class="p">,</span> <span class="mf">0.77</span><span class="p">,</span> <span class="mf">0.82</span><span class="p">,</span> <span class="mf">0.76</span><span class="p">,</span> <span class="mf">0.72</span><span class="p">])</span>
+<span class="n">hyp_batchB_res</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.81</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">,</span> <span class="mf">0.78</span><span class="p">,</span> <span class="mf">0.85</span><span class="p">,</span> <span class="mf">0.88</span><span class="p">,</span> <span class="mf">0.82</span><span class="p">,</span> <span class="mf">0.78</span><span class="p">,</span> <span class="mf">0.81</span><span class="p">,</span> <span class="mf">0.79</span><span class="p">,</span> <span class="mf">0.70</span><span class="p">])</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">ctl</span><span class="p">,</span> <span class="n">sk</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">hyp_batchA_res</span><span class="p">,</span> <span class="n">hyp_batchB_res</span><span class="p">):</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="n">ctl</span><span class="p">,</span> <span class="n">sk</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mf">.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">([</span><span class="s1">&#39;Control&#39;</span><span class="p">,</span> <span class="s1">&#39;Exp&#39;</span><span class="p">])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;VI&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;VI&#39;)
+</pre></div>
+</div>
+<img alt="../../_images/9b726382c20a511fab08e520fc28467fc3829aed099dfc6dc089c00f7179de26.png" src="../../_images/9b726382c20a511fab08e520fc28467fc3829aed099dfc6dc089c00f7179de26.png" />
+</div>
+</div>
+<p>Perform a t-test, just to see what happens.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pg</span><span class="o">.</span><span class="n">ttest</span><span class="p">(</span><span class="n">hyp_batchA_res</span><span class="p">,</span> <span class="n">hyp_batchB_res</span><span class="p">,</span> <span class="n">paired</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>T</th>
+      <th>dof</th>
+      <th>alternative</th>
+      <th>p-val</th>
+      <th>CI95%</th>
+      <th>cohen-d</th>
+      <th>BF10</th>
+      <th>power</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>T-test</th>
+      <td>-0.569495</td>
+      <td>9</td>
+      <td>two-sided</td>
+      <td>0.582953</td>
+      <td>[-0.02, 0.01]</td>
+      <td>0.083791</td>
+      <td>0.354</td>
+      <td>0.056513</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>As expected, we cannot reject the hypothesis that they are the same.
+But this doesn’t mean they are the same, just that they are <em>not different</em>.</p>
+<p>Now, for the TOST.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bound</span> <span class="o">=</span> <span class="mf">0.05</span> <span class="c1"># Should be in same units as the input</span>
+
+<span class="n">pg</span><span class="o">.</span><span class="n">tost</span><span class="p">(</span><span class="n">hyp_batchA_res</span><span class="p">,</span> <span class="n">hyp_batchB_res</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span> <span class="n">paired</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>bound</th>
+      <th>dof</th>
+      <th>pval</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>TOST</th>
+      <td>0.05</td>
+      <td>9</td>
+      <td>0.000053</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>So, if we use a bound of 5% VI, then the likelihood that there is a difference <strong>5% or larger</strong> is <code class="docutils literal notranslate"><span class="pre">0.000053</span></code>.
+Therefore we can statistically say that they are the same <em>within this bound</em>.</p>
+<hr class="docutils" />
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check_all</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./_bblearn/Module10"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../content/Module10/Module10_book.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Module 10: Power Analysis</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Module10_lab.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lab</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-power-analysis-in-6-steps">A Power Analysis in 6 steps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-define-success">Step 2: Define success</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-define-your-tolerance-for-risk">Step 3: Define your tolerance for risk</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-define-a-budget">Step 4: Define a budget</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-calculate">Step 5: Calculate</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q1-calculate-the-power-if-there-are-only-two-animals-in-each-group">Q1: Calculate the power if there are only two animals in each group.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q2-calculate-the-smallest-effect-size-if-there-are-12-animals-in-each-group">Q2: Calculate the smallest effect size if there are 12 animals in each group.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-summarize">Step 6: Summarize</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-other-use-of-power-tests">The other use of Power Tests</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Will Dampier
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

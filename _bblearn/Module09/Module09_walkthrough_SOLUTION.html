@@ -1,0 +1,2421 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Walkthrough &#8212; Quantitative Reasoning in Biology</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_bblearn/Module09/Module09_walkthrough_SOLUTION';</script>
+    <link rel="canonical" href="https://damlabresources.github.io/quantitative-reasoning-in-biology/_bblearn/Module09/Module09_walkthrough_SOLUTION.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Lab" href="Module09_lab.html" />
+    <link rel="prev" title="Module 9: Linear Regression" href="../../content/Module09/Module09_book.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+
+  <div class="bd-header-announcement container-fluid bd-header-announcement">
+    <div class="bd-header-announcement__content">Work in progress!</div>
+  </div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../content/book_index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Quantitative Reasoning in Biology</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../content/book_index.html">
+                    Quantitative Reasoning in Biology
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 0: Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../content/misc/about_this_book.html">About this book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/misc/book_intro.html">Introduction</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 1 : Hello World</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../content/Module01/Module01_book.html">Module 1: Hello World</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../content/Module01/Module01_walkthrough.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/Module01/notebook_actions.html">Notebook basics</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../content/Module02/Module02_book.html">Module 2: Simple calculations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module02/Module02_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/Module02/nanopore_description.html">Nanopore Sequencing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/Module02/dilution_calculations.html">Dilution calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module02/Module02_lab.html">Lab</a></li>
+
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../content/Module03/Module03_book.html">Module 3: DataFrames</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module03/Module03_walkthrough_SOLUTION.html">Walkthrough</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Module03/Module03_lab.html">Lab</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 2 : Descriptive Statistics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../content/Module04/Module04_book.html">Module 4: Analysis by groups</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module04/Module04_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module04/Module04_lab.html">Lab</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../content/Module05/Module05_book.html">Module 5: Plotting with Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module05/Module05_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module05/Module05_lab.html">Lab</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../content/Module06/Module06_book.html">Module 6: Visualizing with Confidence</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../content/Module06/grammar_of_graphics.html">Grammar of Graphics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module06/Module06_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module06/Module06_lab.html">Lab</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../content/Module07/Module07_book.html">Module 7: Samples and Replicates</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../content/Module07/common_biological_distributions.html">Common Biological Distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module07/Module07_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module07/Module07_lab.html">Lab</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 3 : Inferential Statistics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../content/Module08/Module08_book.html">Module 8: Hypothesis Testing</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module08/Module08_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module08/Module08_lab.html">Lab</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../content/Module09/Module09_book.html">Module 9: Linear Regression</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Module09_lab.html">Lab</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../content/Module10/Module10_book.html">Module 10: Power Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module10/Module10_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module10/Module10_lab.html">Lab</a></li>
+
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/_bblearn/Module09/Module09_walkthrough_SOLUTION.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Walkthrough</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploration">Exploration</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q1-by-inspection-which-variable-is-most-correlated">Q1: By inspection, which variable is most correlated?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q2-by-inspection-which-variable-has-the-most-between-class-difference">Q2: By inspection, which variable has the most between class difference?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-regression">Basic regression</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#residuals">Residuals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q3-are-the-residuals-normally-distributed">Q3: Are the residuals normally distributed?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-regression">Multiple Regression</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ancova"><em>ANCOVA</em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-first">Standard first</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q4-perform-an-anova-between-art-on-the-executive-domain-z-score">Q4: Perform an ANOVA between ART on the Executive Domain Z-score.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#with-correction">With correction</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regression-with-categories">Regression with categories</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#over-fitting">Over fitting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#even-more-regression">Even more regression</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="walkthrough">
+<h1>Walkthrough<a class="headerlink" href="#walkthrough" title="Link to this heading">#</a></h1>
+<section id="learning-objectives">
+<h2>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Link to this heading">#</a></h2>
+<p>At the end of this learning activity you will be able to:</p>
+<ul class="simple">
+<li><p>Practice using <code class="docutils literal notranslate"><span class="pre">pg.normality</span></code> and <code class="docutils literal notranslate"><span class="pre">pg.qqplot</span></code> to assess normality.</p></li>
+<li><p>Practice using <code class="docutils literal notranslate"><span class="pre">pg.linear_regression</span></code> to perform multiple regression.</p></li>
+<li><p>Interpret the results of linear regression such as the coefficient, p-value, R^2, and confidence intervals.</p></li>
+<li><p>Describe a <em>residual</em> and how to interpret it.</p></li>
+<li><p>Relate the <em>dummy variable trap</em> and how to avoid it during regression.</p></li>
+<li><p>Describe <em>overfitting</em> and how to avoid it.</p></li>
+</ul>
+<p>As we discussed with Dr. Devlin in the introduction video, this week and next we are going to look at HIV neurocognitive impairment data from a cohort here at Drexel.
+Each person was given a full-scale neuropsychological exam and the resulting values were aggregated and normalized into Z-scores based on demographically matched healthy individuals.</p>
+<p>In this walkthrough we will explore the effects of antiretroviral medications on neurological impairment.
+In our cohort, we have two major drug regimens, d4T (Stavudine) and the newer Emtricitabine/tenofovir (Truvada).
+The older Stavudine is suspected to have neurotoxic effects that are not found in the newer Truvada.
+We will use inferential statistics to understand this effect.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="kn">import</span> <span class="nn">pingouin</span> <span class="k">as</span> <span class="nn">pg</span>
+
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;hiv_neuro_data.csv&#39;</span><span class="p">)</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;education&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;education&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sex</th>
+      <th>age</th>
+      <th>education</th>
+      <th>race</th>
+      <th>processing_domain_z</th>
+      <th>exec_domain_z</th>
+      <th>language_domain_z</th>
+      <th>visuospatial_domain_z</th>
+      <th>learningmemory_domain_z</th>
+      <th>motor_domain_z</th>
+      <th>ART</th>
+      <th>YearsSeropositive</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>male</td>
+      <td>62</td>
+      <td>10.0</td>
+      <td>AA</td>
+      <td>0.5</td>
+      <td>0.6</td>
+      <td>0.151646</td>
+      <td>-1.0</td>
+      <td>-1.152131</td>
+      <td>-1.364306</td>
+      <td>Stavudine</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>male</td>
+      <td>56</td>
+      <td>10.0</td>
+      <td>AA</td>
+      <td>-0.5</td>
+      <td>1.2</td>
+      <td>-0.255505</td>
+      <td>-2.0</td>
+      <td>-0.086376</td>
+      <td>-0.348600</td>
+      <td>Truvada</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>female</td>
+      <td>51</td>
+      <td>10.0</td>
+      <td>AA</td>
+      <td>0.5</td>
+      <td>0.1</td>
+      <td>0.902004</td>
+      <td>-0.4</td>
+      <td>-1.139892</td>
+      <td>0.112215</td>
+      <td>Stavudine</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>female</td>
+      <td>47</td>
+      <td>12.0</td>
+      <td>AA</td>
+      <td>-0.6</td>
+      <td>-1.2</td>
+      <td>-0.119866</td>
+      <td>-2.1</td>
+      <td>0.803619</td>
+      <td>-2.276768</td>
+      <td>Truvada</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>male</td>
+      <td>46</td>
+      <td>13.0</td>
+      <td>AA</td>
+      <td>-0.4</td>
+      <td>1.3</td>
+      <td>0.079129</td>
+      <td>-1.3</td>
+      <td>-0.533607</td>
+      <td>-0.330541</td>
+      <td>Truvada</td>
+      <td>14</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Before we start, we need to talk about assumptions.</p>
+<p>Basic linear regression has a number assumptions baked into itself:</p>
+<ul class="simple">
+<li><p><strong>Linearity</strong>: The relationship between the independent variables (predictors) and the dependent variable (outcome) is linear. This means that changes in the predictors lead to proportional changes in the dependent variable.</p></li>
+<li><p><strong>The relationship between the independent variables and the dependent variable is additive</strong>: The effect of changes in an independent variable X on the dependent variable Y is consistent, regardless of the values of other independent variables. This assumption might not hold if there are interaction effects between independent variables that affect the dependent variable.</p></li>
+<li><p><strong>Independence</strong>: Observations are independent of each other. This means that the observations do not influence each other, an assumption that is particularly important in time-series data where time-related dependencies can violate this assumption.</p></li>
+<li><p><strong>Homoscedasticity</strong>: The variance of error terms (residuals) is constant across all levels of the independent variables. In other words, as the predictor variable increases, the spread (variance) of the residuals remains constant. This is evaluated at the <strong>end</strong> of the fit.</p></li>
+<li><p><strong>Normal Distribution of Errors</strong>: The residuals (errors) of the model are normally distributed. This assumption is especially important for hypothesis testing (e.g., t-tests of coefficients) and confidence interval construction. It’s worth noting that for large sample sizes, the Central Limit Theorem helps mitigate the violation of this assumption. This is evaluated at the <strong>end</strong> of the fit.</p></li>
+<li><p><strong>Minimal Multicollinearity</strong>: The independent variables need to be independent of each other. Multicollinearity doesn’t affect the fit of the model as much as it affects the coefficients’ estimates, making them unstable and difficult to interpret.</p></li>
+<li><p><strong>No perfect multicollinearity</strong>: Also called the <em>dummy variable trap</em>. It states that none of the independent variables should be a perfect linear function of other independent variables. We’ll talk more about this when we run into it.</p></li>
+</ul>
+<p>Biology itself is highly non-linear.
+That doesn’t mean we can’t use linear assumptions to explore biological questions, it just means that we need to be mindful when interpretting the results.</p>
+</section>
+<section id="exploration">
+<h2>Exploration<a class="headerlink" href="#exploration" title="Link to this heading">#</a></h2>
+<p>Let’s start by plotting the each variable against EDZ.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">age_ax</span><span class="p">,</span> <span class="n">edu_ax</span><span class="p">,</span> <span class="n">ys_ax</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">,</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;age&#39;</span><span class="p">,</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;exec_domain_z&#39;</span><span class="p">,</span>
+            <span class="n">ax</span><span class="o">=</span><span class="n">age_ax</span><span class="p">)</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">,</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;education&#39;</span><span class="p">,</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;exec_domain_z&#39;</span><span class="p">,</span>
+            <span class="n">ax</span><span class="o">=</span><span class="n">edu_ax</span><span class="p">)</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">,</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;YearsSeropositive&#39;</span><span class="p">,</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;exec_domain_z&#39;</span><span class="p">,</span>
+            <span class="n">ax</span><span class="o">=</span><span class="n">ys_ax</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/89ac3ff550cfae1dd4a04454b3cc9252547d77e54cd65e82ec77a20b766c9b01.png" src="../../_images/89ac3ff550cfae1dd4a04454b3cc9252547d77e54cd65e82ec77a20b766c9b01.png" />
+</div>
+</div>
+<section id="q1-by-inspection-which-variable-is-most-correlated">
+<h3>Q1: By inspection, which variable is most correlated?<a class="headerlink" href="#q1-by-inspection-which-variable-is-most-correlated" title="Link to this heading">#</a></h3>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Points</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Public Checks</p></td>
+<td><p>3</p></td>
+</tr>
+</tbody>
+</table>
+<p><em>Points:</em> 5</p>
+<div class="cell tag_otter_assign_solution_cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Answer: age, education, YearsSeropositive</span>
+<span class="n">q1_most_correlated</span> <span class="o">=</span> <span class="s1">&#39;YearsSeropositive&#39;</span> <span class="c1"># SOLUTION</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q1_initial_correlation&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">race_ax</span><span class="p">,</span> <span class="n">sex_ax</span><span class="p">,</span> <span class="n">art_ax</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">stripplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;race&#39;</span><span class="p">,</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;exec_domain_z&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">race_ax</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;race&#39;</span><span class="p">,</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;exec_domain_z&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">race_ax</span><span class="p">)</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">stripplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;sex&#39;</span><span class="p">,</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;exec_domain_z&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">sex_ax</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;sex&#39;</span><span class="p">,</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;exec_domain_z&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">sex_ax</span><span class="p">)</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">stripplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;ART&#39;</span><span class="p">,</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;exec_domain_z&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">art_ax</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;ART&#39;</span><span class="p">,</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;exec_domain_z&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">art_ax</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;ART&#39;, ylabel=&#39;exec_domain_z&#39;&gt;
+</pre></div>
+</div>
+<img alt="../../_images/969965f6122227500606d8eb50a3b6ca2207a1e9d75c7df0ed0f4c254d2dea75.png" src="../../_images/969965f6122227500606d8eb50a3b6ca2207a1e9d75c7df0ed0f4c254d2dea75.png" />
+</div>
+</div>
+</section>
+<section id="q2-by-inspection-which-variable-has-the-most-between-class-difference">
+<h3>Q2: By inspection, which variable has the most between class difference?<a class="headerlink" href="#q2-by-inspection-which-variable-has-the-most-between-class-difference" title="Link to this heading">#</a></h3>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Points</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Public Checks</p></td>
+<td><p>3</p></td>
+</tr>
+</tbody>
+</table>
+<p><em>Points:</em> 5</p>
+<div class="cell tag_otter_assign_solution_cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Answer: race, sex, ART</span>
+<span class="n">q2_most_bcd</span> <span class="o">=</span> <span class="s1">&#39;race&#39;</span> <span class="c1"># SOLUTION</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q2_initial_bcd&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="basic-regression">
+<h2>Basic regression<a class="headerlink" href="#basic-regression" title="Link to this heading">#</a></h2>
+<p>We’ll start by taking the simplest approach and regress the most correlated value first.</p>
+<p><code class="docutils literal notranslate"><span class="pre">pg.linear_regression</span></code> works by regressing all columns in the first parameter against the single column in the second.
+By convention, we usually use the variables <code class="docutils literal notranslate"><span class="pre">X</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
+<p>You’ll often see this written as:</p>
+<p><span class="math notranslate nohighlight">\(\mathbf{y} = \mathbf{X} \boldsymbol{\beta} + \boldsymbol{\epsilon}\)</span></p>
+<p>In the case of <code class="docutils literal notranslate"><span class="pre">pg.linear_regression</span></code> the <span class="math notranslate nohighlight">\(\boldsymbol{\epsilon}\)</span> is added by default and we do not need to specify it.</p>
+<p>You do not have to use the variable names <code class="docutils literal notranslate"><span class="pre">X</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>, in many cases you might have multiple <code class="docutils literal notranslate"><span class="pre">X</span></code>s and <code class="docutils literal notranslate"><span class="pre">y</span></code>s, but for simplicity, I will stick with this simple convention.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;YearsSeropositive&#39;</span><span class="p">]</span> <span class="c1"># Our independent variables</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;exec_domain_z&#39;</span><span class="p">]</span>     <span class="c1"># Our dependent variable</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">linear_regression</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">res</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>names</th>
+      <th>coef</th>
+      <th>se</th>
+      <th>T</th>
+      <th>pval</th>
+      <th>r2</th>
+      <th>adj_r2</th>
+      <th>CI[2.5%]</th>
+      <th>CI[97.5%]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Intercept</td>
+      <td>0.711625</td>
+      <td>0.105822</td>
+      <td>6.724733</td>
+      <td>7.994463e-11</td>
+      <td>0.236815</td>
+      <td>0.234453</td>
+      <td>0.503437</td>
+      <td>0.919812</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>YearsSeropositive</td>
+      <td>-0.035258</td>
+      <td>0.003522</td>
+      <td>-10.011320</td>
+      <td>1.000644e-20</td>
+      <td>0.236815</td>
+      <td>0.234453</td>
+      <td>-0.042186</td>
+      <td>-0.028329</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>This has fit the equation:</p>
+<p><code class="docutils literal notranslate"><span class="pre">PDZ</span> <span class="pre">=</span> <span class="pre">-0.035*YS</span> <span class="pre">+</span> <span class="pre">0.712</span></code></p>
+<p>It tells us that the likelihood of this slope being zero is 1.0E-20 and that years-seropositive explains ~23.6% of variation in EDZ that we observe.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">,</span>
+                 <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;YearsSeropositive&#39;</span><span class="p">,</span>
+                 <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;exec_domain_z&#39;</span><span class="p">)</span>
+
+<span class="c1"># Pick &quot;years seropositive&quot; from 0 to 70</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">70</span><span class="p">)</span>
+
+<span class="c1"># Use the coefficients from above in a linear equation</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;coef&#39;</span><span class="p">]</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">res</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;coef&#39;</span><span class="p">]</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fafb72201f0&gt;]
+</pre></div>
+</div>
+<img alt="../../_images/a4cbf376070178b287ef42066dcf23598f86a4f9a5b5d1ce4ed57891ab0ab3c0.png" src="../../_images/a4cbf376070178b287ef42066dcf23598f86a4f9a5b5d1ce4ed57891ab0ab3c0.png" />
+</div>
+</div>
+</section>
+<section id="residuals">
+<h2>Residuals<a class="headerlink" href="#residuals" title="Link to this heading">#</a></h2>
+<p><em>Residuals</em> are the difference between the observed value and the predicted value.
+In the case of a simple linear regression, this is the y-distance between each point and the best-fit line.
+Examining these is an import step in assessing the fit for any biases.
+You can think of the residual as what is “left over” after the regression.</p>
+<p>We could calculate these ourselves from the regression coefficients, but, <code class="docutils literal notranslate"><span class="pre">pingouin</span></code> conviently provides them for us.
+The result <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> from <code class="docutils literal notranslate"><span class="pre">pg.linear_regression</span></code> has a special attribute <code class="docutils literal notranslate"><span class="pre">.residuals_</span></code> which stores the difference between the prediction and reality for each point in the dataset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">residuals_</span><span class="p">[:</span><span class="mi">5</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 0.34672285  1.15826787 -0.29430717 -1.06544462  1.08198035]
+</pre></div>
+</div>
+</div>
+</div>
+<p>In order to test the <strong>Homoscedasticity</strong> we want to ensure that these residuals are <em>not correlated with the depenendant variable</em>.</p>
+<p>In our case, this means that the model is equally good predicting the EDZ of people recently infected with HIV and those who have been living with HIV for a long time.</p>
+<p>To do this, we plot the residuals vs each independent variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;YearsSeropositive&#39;</span><span class="p">],</span>  <span class="n">y</span><span class="o">=</span><span class="n">res</span><span class="o">.</span><span class="n">residuals_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;YearsSeropositive&#39;&gt;
+</pre></div>
+</div>
+<img alt="../../_images/398ace28cb7992fdeceb81ba3fc65492e76fd1439a2a3dba97a4f3c455089c66.png" src="../../_images/398ace28cb7992fdeceb81ba3fc65492e76fd1439a2a3dba97a4f3c455089c66.png" />
+</div>
+</div>
+<p>This is an ideal residual plot.
+It should look like a random “stary-night sky” centered around 0.
+This implies that the model is not better or worse for any given X value.</p>
+<p>Let’s also test our assumption about a normal distribution of errors of the residuals.</p>
+<section id="q3-are-the-residuals-normally-distributed">
+<h3>Q3: Are the residuals normally distributed?<a class="headerlink" href="#q3-are-the-residuals-normally-distributed" title="Link to this heading">#</a></h3>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Points</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Public Checks</p></td>
+<td><p>5</p></td>
+</tr>
+</tbody>
+</table>
+<p><em>Points:</em> 5</p>
+<div class="cell tag_otter_assign_solution_cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a Q-Q plot of the residuals</span>
+
+<span class="n">q3_plot</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">qqplot</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">residuals_</span><span class="p">)</span>  <span class="c1"># SOLUTION</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/fc6c9263b60697d1ffe4675baf4701866c2026c7b55b054e58d5e8ff7dc1cdda.png" src="../../_images/fc6c9263b60697d1ffe4675baf4701866c2026c7b55b054e58d5e8ff7dc1cdda.png" />
+</div>
+</div>
+<div class="cell tag_otter_assign_solution_cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use the Jarque-Bera normal test for large sample sizes</span>
+
+<span class="n">q3_norm_res</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">normality</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">residuals_</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;jarque_bera&#39;</span><span class="p">)</span>  <span class="c1"># SOLUTION</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_otter_assign_solution_cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Are the residuals normally distributed? &#39;yes&#39; or &#39;no&#39;</span>
+
+<span class="n">q3_is_norm</span> <span class="o">=</span> <span class="s1">&#39;yes&#39;</span> <span class="c1"># SOLUTION</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q3_resid_normality&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You don’t need to do this test at every stage, but it is a good test to do before you are <em>done</em>.</p>
+</section>
+</section>
+<section id="multiple-regression">
+<h2>Multiple Regression<a class="headerlink" href="#multiple-regression" title="Link to this heading">#</a></h2>
+<p>Regression is not limited to a single independent variable, you can add as many as you’d like.</p>
+<p>In our case, there are two others that we should consider: <code class="docutils literal notranslate"><span class="pre">age</span></code> and <code class="docutils literal notranslate"><span class="pre">education</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="p">[[</span><span class="s1">&#39;YearsSeropositive&#39;</span><span class="p">,</span> <span class="s1">&#39;education&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">]]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;exec_domain_z&#39;</span><span class="p">]</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">linear_regression</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">res</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>names</th>
+      <th>coef</th>
+      <th>se</th>
+      <th>T</th>
+      <th>pval</th>
+      <th>r2</th>
+      <th>adj_r2</th>
+      <th>CI[2.5%]</th>
+      <th>CI[97.5%]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Intercept</td>
+      <td>0.977449</td>
+      <td>0.404718</td>
+      <td>2.415135</td>
+      <td>1.628781e-02</td>
+      <td>0.318207</td>
+      <td>0.311835</td>
+      <td>0.181214</td>
+      <td>1.773685</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>YearsSeropositive</td>
+      <td>-0.037462</td>
+      <td>0.003390</td>
+      <td>-11.049854</td>
+      <td>2.853764e-24</td>
+      <td>0.318207</td>
+      <td>0.311835</td>
+      <td>-0.044132</td>
+      <td>-0.030792</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>education</td>
+      <td>-0.102647</td>
+      <td>0.020406</td>
+      <td>-5.030176</td>
+      <td>8.170366e-07</td>
+      <td>0.318207</td>
+      <td>0.311835</td>
+      <td>-0.142794</td>
+      <td>-0.062500</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>age</td>
+      <td>0.019297</td>
+      <td>0.005546</td>
+      <td>3.479295</td>
+      <td>5.721793e-04</td>
+      <td>0.318207</td>
+      <td>0.311835</td>
+      <td>0.008385</td>
+      <td>0.030209</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Now, it has fit the equation:</p>
+<p><code class="docutils literal notranslate"><span class="pre">EDZ</span> <span class="pre">=</span> <span class="pre">-0.037*YS</span> <span class="pre">-</span> <span class="pre">0.103*edu</span> <span class="pre">+</span> <span class="pre">0.019*age</span> <span class="pre">+</span> <span class="pre">0.977</span></code></p>
+<p>The education is significant at p=8.17E-7.
+Be caution when comparing coefficients, we might be tempted to compare -0.0422 and -0.0506 and say that education has a more negative effect than YS …
+But, remember that education ranges from 0-12 and YS ranges from 0-60, these are not on the same scale and are not directly comparable.
+We’ll talk about how to compare relative importance later.</p>
+<p>As before, we should check the residuals of the model against <em>each</em> independent variable in the regression to check for homoscedasticity.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ys_ax</span><span class="p">,</span> <span class="n">edu_ax</span><span class="p">,</span> <span class="n">age_ax</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;YearsSeropositive&#39;</span><span class="p">],</span>  <span class="n">y</span><span class="o">=</span><span class="n">res</span><span class="o">.</span><span class="n">residuals_</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ys_ax</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;education&#39;</span><span class="p">],</span>  <span class="n">y</span><span class="o">=</span><span class="n">res</span><span class="o">.</span><span class="n">residuals_</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">edu_ax</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">],</span>  <span class="n">y</span><span class="o">=</span><span class="n">res</span><span class="o">.</span><span class="n">residuals_</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">age_ax</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;age&#39;&gt;
+</pre></div>
+</div>
+<img alt="../../_images/c3dfa0baf557f75c479b9252f5daced8362dcaec2d1f6c493ef8beb5185fb658.png" src="../../_images/c3dfa0baf557f75c479b9252f5daced8362dcaec2d1f6c493ef8beb5185fb658.png" />
+</div>
+</div>
+<p>Three more stary night skies. Perfect.</p>
+<p>Remember, the residual is the difference between the prediction of the model and reality.
+Therefore, we can also use the residual plots to see how well the regression is handling other variables we have not included in the model.
+If the model has properly accounted for something, the residual plot should stay centered around 0.</p>
+<p>This can be done for categorical or continious variables.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">race_ax</span><span class="p">,</span> <span class="n">sex_ax</span><span class="p">,</span> <span class="n">art_ax</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="n">race_ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;residual&#39;</span><span class="p">)</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;race&#39;</span><span class="p">],</span>  <span class="n">y</span><span class="o">=</span><span class="n">res</span><span class="o">.</span><span class="n">residuals_</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">race_ax</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sex&#39;</span><span class="p">],</span>  <span class="n">y</span><span class="o">=</span><span class="n">res</span><span class="o">.</span><span class="n">residuals_</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">sex_ax</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;ART&#39;</span><span class="p">],</span>  <span class="n">y</span><span class="o">=</span><span class="n">res</span><span class="o">.</span><span class="n">residuals_</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">art_ax</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;ART&#39;&gt;
+</pre></div>
+</div>
+<img alt="../../_images/46389da22a7519abc032d7ae286f5ac44541346eb5280506013babc5f94e10c5.png" src="../../_images/46389da22a7519abc032d7ae286f5ac44541346eb5280506013babc5f94e10c5.png" />
+</div>
+</div>
+<p>Here we see some interesting patterns:</p>
+<ul class="simple">
+<li><p>The graph of race against residuals shows us that our model is signifacntly racially biased. AA individuals are significantly ‘under-estimated’ by the model, C individauals are significantly over-estimated, and H individuals are significantly over-estimated.</p></li>
+<li><p>The graph of sex shows that there is no real difference in the residuals. It has accounted for sex already.</p></li>
+<li><p>It looks like there is a real difference across ART.</p></li>
+</ul>
+</section>
+<section id="ancova">
+<h2><em>ANCOVA</em><a class="headerlink" href="#ancova" title="Link to this heading">#</a></h2>
+<p>What we have done above is create a model that <em>accounts</em> for the effects of age, education, and YS on EDZ.
+We <strong>subtracted</strong> that effect (the predicted value) from the observed value thus creating the <em>residual</em>.
+This is what is “left over” in the observed value after accounting for covariates or nuisance variables.
+Then we plotted the <em>residual</em> against each of our categorical variables.
+If we then took the ANOVA of these residuals we’d be testing the hypothesis:
+<em>When accounting for age, education, and YS is there a difference across race.</em></p>
+<p>This process is called an <em>Analysis of covariance</em> or an <strong>ANCOVA</strong>.</p>
+<section id="standard-first">
+<h3>Standard first<a class="headerlink" href="#standard-first" title="Link to this heading">#</a></h3>
+</section>
+<section id="q4-perform-an-anova-between-art-on-the-executive-domain-z-score">
+<h3>Q4: Perform an ANOVA between ART on the Executive Domain Z-score.<a class="headerlink" href="#q4-perform-an-anova-between-art-on-the-executive-domain-z-score" title="Link to this heading">#</a></h3>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Points</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Public Checks</p></td>
+<td><p>4</p></td>
+</tr>
+</tbody>
+</table>
+<p><em>Points:</em> 5</p>
+<div class="cell tag_otter_assign_solution_cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a plot showing the effect of ART on EDZ</span>
+<span class="n">q4_plot</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;ART&#39;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;exec_domain_z&#39;</span><span class="p">)</span> <span class="c1"># SOLUTION</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/637d07d5070fdc67fe705200fbff3e293dd48346f402f17abd24a3d665de5dd4.png" src="../../_images/637d07d5070fdc67fe705200fbff3e293dd48346f402f17abd24a3d665de5dd4.png" />
+</div>
+</div>
+<div class="cell tag_otter_assign_solution_cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Perform an ANOVA testing the impact of ART on EDZ</span>
+<span class="n">q4_res</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">anova</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">dv</span> <span class="o">=</span> <span class="s1">&#39;exec_domain_z&#39;</span><span class="p">,</span> <span class="n">between</span> <span class="o">=</span> <span class="s1">&#39;ART&#39;</span><span class="p">)</span> <span class="c1"># SOLUTION</span>
+<span class="n">q4_res</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Source</th>
+      <th>ddof1</th>
+      <th>ddof2</th>
+      <th>F</th>
+      <th>p-unc</th>
+      <th>np2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ART</td>
+      <td>1</td>
+      <td>323</td>
+      <td>7.809699</td>
+      <td>0.005507</td>
+      <td>0.023608</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell tag_otter_assign_solution_cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Does ART have a significant impact on Executive Domain? &#39;yes&#39; or &#39;no&#39;?</span>
+
+<span class="n">q4_art_impact</span> <span class="o">=</span> <span class="s1">&#39;yes&#39;</span> <span class="c1"># SOLUTION</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check</span><span class="p">(</span><span class="s2">&quot;q4_art_test&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="with-correction">
+<h3>With correction<a class="headerlink" href="#with-correction" title="Link to this heading">#</a></h3>
+<p>Nicely <code class="docutils literal notranslate"><span class="pre">pingouin</span></code> has something built right in to do this whole process.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;ART&#39;</span><span class="p">],</span>  <span class="n">y</span><span class="o">=</span><span class="n">res</span><span class="o">.</span><span class="n">residuals_</span><span class="p">)</span>
+
+<span class="c1"># An ANCOVA testing the impact of ART on EDZ</span>
+<span class="c1"># after correcting for the impace of age, education and YS</span>
+<span class="n">pg</span><span class="o">.</span><span class="n">ancova</span><span class="p">(</span><span class="n">data</span><span class="p">,</span>
+          <span class="n">dv</span> <span class="o">=</span> <span class="s1">&#39;exec_domain_z&#39;</span><span class="p">,</span>
+          <span class="n">between</span> <span class="o">=</span> <span class="s1">&#39;ART&#39;</span><span class="p">,</span>
+          <span class="n">covar</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;YearsSeropositive&#39;</span><span class="p">,</span> <span class="s1">&#39;education&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Source</th>
+      <th>SS</th>
+      <th>DF</th>
+      <th>F</th>
+      <th>p-unc</th>
+      <th>np2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ART</td>
+      <td>11.879147</td>
+      <td>1</td>
+      <td>17.470083</td>
+      <td>3.770731e-05</td>
+      <td>0.051768</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>YearsSeropositive</td>
+      <td>79.888814</td>
+      <td>1</td>
+      <td>117.488585</td>
+      <td>1.585741e-23</td>
+      <td>0.268552</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>education</td>
+      <td>20.033725</td>
+      <td>1</td>
+      <td>29.462623</td>
+      <td>1.128191e-07</td>
+      <td>0.084308</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>age</td>
+      <td>17.992537</td>
+      <td>1</td>
+      <td>26.460747</td>
+      <td>4.697743e-07</td>
+      <td>0.076374</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Residual</td>
+      <td>217.590675</td>
+      <td>320</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><img alt="../../_images/6ea10fd9420b437a042b88ab6c1872d87809ea377f616435b36ea039e6483d76.png" src="../../_images/6ea10fd9420b437a042b88ab6c1872d87809ea377f616435b36ea039e6483d76.png" />
+</div>
+</div>
+<p>We can notice that after correction for covaraites the F-value has increased and the p-value has decreased.
+This means the analysis is attributing more difference to race after correction and is more sure this is not due to noise.</p>
+<p>The <em>advantage</em> of using the <code class="docutils literal notranslate"><span class="pre">pg.ancova</span></code> function is that you can easily and quickly do your analysis.
+The <em>disadvantage</em> is that you cannot examine the internal regression for Normality and Homoscedasticity.</p>
+<p>But, what if we wanted to have a covariate that is a category like race?</p>
+</section>
+</section>
+<section id="regression-with-categories">
+<h2>Regression with categories<a class="headerlink" href="#regression-with-categories" title="Link to this heading">#</a></h2>
+<p>So, how do you do regression with a category like race?</p>
+<p>Could it be as simple as adding it the <code class="docutils literal notranslate"><span class="pre">X</span></code> matrix?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># X = data[[&#39;YearsSeropositive&#39;, &#39;education&#39;, &#39;age&#39;, &#39;race&#39;]]</span>
+<span class="c1"># y = data[&#39;processing_domain_z&#39;]</span>
+<span class="c1"># res = pg.linear_regression(X, y)</span>
+<span class="c1"># res</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Would have been nice, but we need to get a little tricky and use <em>dummy</em> variables.</p>
+<p>In their simplest terms, dummy variables are binary representations of categories.
+Like so.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;race&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>AA</th>
+      <th>C</th>
+      <th>H</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Extracting the same continious variables</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="p">[[</span><span class="s1">&#39;YearsSeropositive&#39;</span><span class="p">,</span> <span class="s1">&#39;education&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">]]</span>
+
+<span class="c1"># Creating new dummy variables for race</span>
+<span class="n">dummy_vals</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;race&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+
+
+<span class="c1"># Adding them the end</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">X</span><span class="p">,</span> <span class="n">dummy_vals</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;exec_domain_z&#39;</span><span class="p">]</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">linear_regression</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">res</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/tljh/user/lib/python3.9/site-packages/pingouin/regression.py:420: UserWarning: Design matrix supplied with `X` parameter is rank deficient (rank 6 with 7 columns). That means that one or more of the columns in `X` are a linear combination of one of more of the other columns.
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>names</th>
+      <th>coef</th>
+      <th>se</th>
+      <th>T</th>
+      <th>pval</th>
+      <th>r2</th>
+      <th>adj_r2</th>
+      <th>CI[2.5%]</th>
+      <th>CI[97.5%]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Intercept</td>
+      <td>-0.194</td>
+      <td>0.294</td>
+      <td>-0.661</td>
+      <td>0.509</td>
+      <td>0.453</td>
+      <td>0.444</td>
+      <td>-0.772</td>
+      <td>0.383</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>YearsSeropositive</td>
+      <td>-0.046</td>
+      <td>0.003</td>
+      <td>-14.133</td>
+      <td>0.000</td>
+      <td>0.453</td>
+      <td>0.444</td>
+      <td>-0.052</td>
+      <td>-0.039</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>education</td>
+      <td>-0.054</td>
+      <td>0.019</td>
+      <td>-2.795</td>
+      <td>0.006</td>
+      <td>0.453</td>
+      <td>0.444</td>
+      <td>-0.092</td>
+      <td>-0.016</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>age</td>
+      <td>0.031</td>
+      <td>0.005</td>
+      <td>5.868</td>
+      <td>0.000</td>
+      <td>0.453</td>
+      <td>0.444</td>
+      <td>0.021</td>
+      <td>0.041</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>AA</td>
+      <td>0.410</td>
+      <td>0.104</td>
+      <td>3.941</td>
+      <td>0.000</td>
+      <td>0.453</td>
+      <td>0.444</td>
+      <td>0.205</td>
+      <td>0.615</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>C</td>
+      <td>-0.583</td>
+      <td>0.149</td>
+      <td>-3.914</td>
+      <td>0.000</td>
+      <td>0.453</td>
+      <td>0.444</td>
+      <td>-0.876</td>
+      <td>-0.290</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>H</td>
+      <td>-0.021</td>
+      <td>0.132</td>
+      <td>-0.162</td>
+      <td>0.871</td>
+      <td>0.453</td>
+      <td>0.444</td>
+      <td>-0.282</td>
+      <td>0.239</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>This <em>Warning</em> is telling us that our model has fallen into the <em>dummy variable trap</em>.
+The dummy variable trap occurs when dummy variables created for categorical data in a regression model are perfectly collinear, meaning one variable can be predicted from the others, leading to redundancy.
+This happens because the inclusion of all dummy variables for a category along with a constant term (intercept) creates a situation where the sum of the dummy variables plus the intercept equals one, introducing perfect multicollinearity.
+To avoid this, one dummy variable should be dropped to serve as the reference category, ensuring the model’s design matrix is full rank and the regression coefficients are estimable and interpretable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;race&#39;</span><span class="p">],</span> <span class="n">drop_first</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>C</th>
+      <th>H</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>False</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="p">[[</span><span class="s1">&#39;YearsSeropositive&#39;</span><span class="p">,</span> <span class="s1">&#39;education&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">]]</span>
+<span class="n">dummy_vals</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;race&#39;</span><span class="p">],</span> <span class="n">drop_first</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">X</span><span class="p">,</span> <span class="n">dummy_vals</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;exec_domain_z&#39;</span><span class="p">]</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">linear_regression</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">res</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>names</th>
+      <th>coef</th>
+      <th>se</th>
+      <th>T</th>
+      <th>pval</th>
+      <th>r2</th>
+      <th>adj_r2</th>
+      <th>CI[2.5%]</th>
+      <th>CI[97.5%]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Intercept</td>
+      <td>0.216</td>
+      <td>0.381</td>
+      <td>0.567</td>
+      <td>0.571</td>
+      <td>0.453</td>
+      <td>0.444</td>
+      <td>-0.534</td>
+      <td>0.966</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>YearsSeropositive</td>
+      <td>-0.046</td>
+      <td>0.003</td>
+      <td>-14.133</td>
+      <td>0.000</td>
+      <td>0.453</td>
+      <td>0.444</td>
+      <td>-0.052</td>
+      <td>-0.039</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>education</td>
+      <td>-0.054</td>
+      <td>0.019</td>
+      <td>-2.795</td>
+      <td>0.006</td>
+      <td>0.453</td>
+      <td>0.444</td>
+      <td>-0.092</td>
+      <td>-0.016</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>age</td>
+      <td>0.031</td>
+      <td>0.005</td>
+      <td>5.868</td>
+      <td>0.000</td>
+      <td>0.453</td>
+      <td>0.444</td>
+      <td>0.021</td>
+      <td>0.041</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>C</td>
+      <td>-0.993</td>
+      <td>0.115</td>
+      <td>-8.642</td>
+      <td>0.000</td>
+      <td>0.453</td>
+      <td>0.444</td>
+      <td>-1.219</td>
+      <td>-0.767</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>H</td>
+      <td>-0.432</td>
+      <td>0.147</td>
+      <td>-2.942</td>
+      <td>0.004</td>
+      <td>0.453</td>
+      <td>0.444</td>
+      <td>-0.720</td>
+      <td>-0.143</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>We can notice a few things here:</p>
+<ul class="simple">
+<li><p><strong>AA</strong> has become the ‘reference’, the coefficients of C and H are relative to AA, which is set at 0.</p>
+<ul>
+<li><p>C individuals have a decreased score (relative to AA), which is significant.</p></li>
+<li><p>H individuals have an decreased score (relative to AA), which is significant.</p></li>
+</ul>
+</li>
+</ul>
+<p>We can look at the residuals.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">race_ax</span><span class="p">,</span> <span class="n">sex_ax</span><span class="p">,</span> <span class="n">art_ax</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="n">race_ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;residual&#39;</span><span class="p">)</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;race&#39;</span><span class="p">],</span>  <span class="n">y</span><span class="o">=</span><span class="n">res</span><span class="o">.</span><span class="n">residuals_</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">race_ax</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sex&#39;</span><span class="p">],</span>  <span class="n">y</span><span class="o">=</span><span class="n">res</span><span class="o">.</span><span class="n">residuals_</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">sex_ax</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;ART&#39;</span><span class="p">],</span>  <span class="n">y</span><span class="o">=</span><span class="n">res</span><span class="o">.</span><span class="n">residuals_</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">art_ax</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;ART&#39;&gt;
+</pre></div>
+</div>
+<img alt="../../_images/ca8e38a39fba588d9c549b9d9bea8bfde335652b9009e02581d8c2473ca15dbd.png" src="../../_images/ca8e38a39fba588d9c549b9d9bea8bfde335652b9009e02581d8c2473ca15dbd.png" />
+</div>
+</div>
+<p>Let’s merge everything into a single analysis.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">data</span><span class="p">[[</span><span class="s1">&#39;YearsSeropositive&#39;</span><span class="p">,</span> <span class="s1">&#39;education&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">]],</span>
+               <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;race&#39;</span><span class="p">],</span> <span class="n">drop_first</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">),</span>
+               <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sex&#39;</span><span class="p">],</span> <span class="n">drop_first</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">),</span>
+               <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;ART&#39;</span><span class="p">],</span> <span class="n">drop_first</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">),</span>
+              <span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;exec_domain_z&#39;</span><span class="p">]</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">linear_regression</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">res</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>names</th>
+      <th>coef</th>
+      <th>se</th>
+      <th>T</th>
+      <th>pval</th>
+      <th>r2</th>
+      <th>adj_r2</th>
+      <th>CI[2.5%]</th>
+      <th>CI[97.5%]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Intercept</td>
+      <td>-0.367</td>
+      <td>0.419</td>
+      <td>-0.877</td>
+      <td>0.381</td>
+      <td>0.47</td>
+      <td>0.458</td>
+      <td>-1.191</td>
+      <td>0.456</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>YearsSeropositive</td>
+      <td>-0.044</td>
+      <td>0.003</td>
+      <td>-13.747</td>
+      <td>0.000</td>
+      <td>0.47</td>
+      <td>0.458</td>
+      <td>-0.051</td>
+      <td>-0.038</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>education</td>
+      <td>-0.060</td>
+      <td>0.019</td>
+      <td>-3.107</td>
+      <td>0.002</td>
+      <td>0.47</td>
+      <td>0.458</td>
+      <td>-0.098</td>
+      <td>-0.022</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>age</td>
+      <td>0.039</td>
+      <td>0.006</td>
+      <td>6.746</td>
+      <td>0.000</td>
+      <td>0.47</td>
+      <td>0.458</td>
+      <td>0.028</td>
+      <td>0.051</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>C</td>
+      <td>-0.940</td>
+      <td>0.115</td>
+      <td>-8.189</td>
+      <td>0.000</td>
+      <td>0.47</td>
+      <td>0.458</td>
+      <td>-1.165</td>
+      <td>-0.714</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>H</td>
+      <td>-0.382</td>
+      <td>0.146</td>
+      <td>-2.612</td>
+      <td>0.009</td>
+      <td>0.47</td>
+      <td>0.458</td>
+      <td>-0.670</td>
+      <td>-0.094</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>male</td>
+      <td>-0.014</td>
+      <td>0.092</td>
+      <td>-0.158</td>
+      <td>0.875</td>
+      <td>0.47</td>
+      <td>0.458</td>
+      <td>-0.195</td>
+      <td>0.166</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Truvada</td>
+      <td>0.315</td>
+      <td>0.098</td>
+      <td>3.203</td>
+      <td>0.001</td>
+      <td>0.47</td>
+      <td>0.458</td>
+      <td>0.122</td>
+      <td>0.508</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Here our <em>reference</em> is an AA, female taking Stavudine.</p>
+<ul class="simple">
+<li><p>Everything is signifiant except for sex.</p></li>
+<li><p>We see that Truvada has a <em>significant positive</em> effect on EDZ relative to Stavudine.</p></li>
+</ul>
+<p>Since this is our final model, let’s test our last normality assumption.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pg</span><span class="o">.</span><span class="n">qqplot</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">residuals_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;Theoretical quantiles&#39;, ylabel=&#39;Ordered quantiles&#39;&gt;
+</pre></div>
+</div>
+<img alt="../../_images/2aea3ce208391390ec8f00592ef7ca4b28c5ebf2cdc409c3a45d03f77d0894fd.png" src="../../_images/2aea3ce208391390ec8f00592ef7ca4b28c5ebf2cdc409c3a45d03f77d0894fd.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pg</span><span class="o">.</span><span class="n">normality</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">residuals_</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;normaltest&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>W</th>
+      <th>pval</th>
+      <th>normal</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.832024</td>
+      <td>0.659672</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Perfect, now we know that our final model passes the <em>Normal Distribution of Errors</em> assumption.</p>
+<p>What about understanding which parameters have the largest impact on the model?
+Stated another way: which features are most important to determing EDZ?</p>
+<p>Nicely, <code class="docutils literal notranslate"><span class="pre">pingouin</span></code> can do this for us.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res_with_imp</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">linear_regression</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">relimp</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">res_with_imp</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>names</th>
+      <th>coef</th>
+      <th>se</th>
+      <th>T</th>
+      <th>pval</th>
+      <th>r2</th>
+      <th>adj_r2</th>
+      <th>CI[2.5%]</th>
+      <th>CI[97.5%]</th>
+      <th>relimp</th>
+      <th>relimp_perc</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Intercept</td>
+      <td>-0.367108</td>
+      <td>0.418546</td>
+      <td>-0.877105</td>
+      <td>3.810941e-01</td>
+      <td>0.46984</td>
+      <td>0.458133</td>
+      <td>-1.190587</td>
+      <td>0.456370</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>YearsSeropositive</td>
+      <td>-0.044294</td>
+      <td>0.003222</td>
+      <td>-13.746688</td>
+      <td>4.748977e-34</td>
+      <td>0.46984</td>
+      <td>0.458133</td>
+      <td>-0.050633</td>
+      <td>-0.037954</td>
+      <td>0.275883</td>
+      <td>58.718414</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>education</td>
+      <td>-0.059910</td>
+      <td>0.019281</td>
+      <td>-3.107223</td>
+      <td>2.059458e-03</td>
+      <td>0.46984</td>
+      <td>0.458133</td>
+      <td>-0.097844</td>
+      <td>-0.021975</td>
+      <td>0.039358</td>
+      <td>8.376948</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>age</td>
+      <td>0.039215</td>
+      <td>0.005813</td>
+      <td>6.745778</td>
+      <td>7.231020e-11</td>
+      <td>0.46984</td>
+      <td>0.458133</td>
+      <td>0.027777</td>
+      <td>0.050652</td>
+      <td>0.039614</td>
+      <td>8.431478</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>C</td>
+      <td>-0.939704</td>
+      <td>0.114749</td>
+      <td>-8.189228</td>
+      <td>6.513749e-15</td>
+      <td>0.46984</td>
+      <td>0.458133</td>
+      <td>-1.165470</td>
+      <td>-0.713939</td>
+      <td>0.075652</td>
+      <td>16.101683</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>H</td>
+      <td>-0.382354</td>
+      <td>0.146409</td>
+      <td>-2.611538</td>
+      <td>9.442348e-03</td>
+      <td>0.46984</td>
+      <td>0.458133</td>
+      <td>-0.670411</td>
+      <td>-0.094297</td>
+      <td>0.015979</td>
+      <td>3.400943</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>male</td>
+      <td>-0.014446</td>
+      <td>0.091578</td>
+      <td>-0.157748</td>
+      <td>8.747561e-01</td>
+      <td>0.46984</td>
+      <td>0.458133</td>
+      <td>-0.194624</td>
+      <td>0.165732</td>
+      <td>0.000484</td>
+      <td>0.102939</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Truvada</td>
+      <td>0.314984</td>
+      <td>0.098327</td>
+      <td>3.203452</td>
+      <td>1.495929e-03</td>
+      <td>0.46984</td>
+      <td>0.458133</td>
+      <td>0.121529</td>
+      <td>0.508440</td>
+      <td>0.022870</td>
+      <td>4.867595</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># After filtering and sorting</span>
+<span class="n">res_with_imp</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;pval&lt;0.01&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;relimp_perc&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>names</th>
+      <th>coef</th>
+      <th>se</th>
+      <th>T</th>
+      <th>pval</th>
+      <th>r2</th>
+      <th>adj_r2</th>
+      <th>CI[2.5%]</th>
+      <th>CI[97.5%]</th>
+      <th>relimp</th>
+      <th>relimp_perc</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>YearsSeropositive</td>
+      <td>-0.044294</td>
+      <td>0.003222</td>
+      <td>-13.746688</td>
+      <td>4.748977e-34</td>
+      <td>0.46984</td>
+      <td>0.458133</td>
+      <td>-0.050633</td>
+      <td>-0.037954</td>
+      <td>0.275883</td>
+      <td>58.718414</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>C</td>
+      <td>-0.939704</td>
+      <td>0.114749</td>
+      <td>-8.189228</td>
+      <td>6.513749e-15</td>
+      <td>0.46984</td>
+      <td>0.458133</td>
+      <td>-1.165470</td>
+      <td>-0.713939</td>
+      <td>0.075652</td>
+      <td>16.101683</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>age</td>
+      <td>0.039215</td>
+      <td>0.005813</td>
+      <td>6.745778</td>
+      <td>7.231020e-11</td>
+      <td>0.46984</td>
+      <td>0.458133</td>
+      <td>0.027777</td>
+      <td>0.050652</td>
+      <td>0.039614</td>
+      <td>8.431478</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>education</td>
+      <td>-0.059910</td>
+      <td>0.019281</td>
+      <td>-3.107223</td>
+      <td>2.059458e-03</td>
+      <td>0.46984</td>
+      <td>0.458133</td>
+      <td>-0.097844</td>
+      <td>-0.021975</td>
+      <td>0.039358</td>
+      <td>8.376948</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Truvada</td>
+      <td>0.314984</td>
+      <td>0.098327</td>
+      <td>3.203452</td>
+      <td>1.495929e-03</td>
+      <td>0.46984</td>
+      <td>0.458133</td>
+      <td>0.121529</td>
+      <td>0.508440</td>
+      <td>0.022870</td>
+      <td>4.867595</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>H</td>
+      <td>-0.382354</td>
+      <td>0.146409</td>
+      <td>-2.611538</td>
+      <td>9.442348e-03</td>
+      <td>0.46984</td>
+      <td>0.458133</td>
+      <td>-0.670411</td>
+      <td>-0.094297</td>
+      <td>0.015979</td>
+      <td>3.400943</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="over-fitting">
+<h2>Over fitting<a class="headerlink" href="#over-fitting" title="Link to this heading">#</a></h2>
+<p>In principle we can continue to add more and more variables to the <code class="docutils literal notranslate"><span class="pre">X</span></code> and just let the computer figure out the p-value of each.</p>
+<p>There are a few reasons we shouldn’t take this tack.</p>
+<ul class="simple">
+<li><p><strong>Overfitting</strong> : A larger model will <strong>ALWAYS</strong> fit better than a smaller model. This doesn’t mean the larger model is <strong>better</strong> at predicting <em>all samples</em>, it just means it fits <strong>these</strong> samples better.</p></li>
+<li><p><strong>Explainability</strong> : Large models with many parameters are difficult to explain and reason about. We are biologists, not data scientists. Our job is to reason about the <em>result</em> of the analysis, not create the best fitting model.</p></li>
+<li><p><strong>Statistical power</strong> : As you add more noise features you lose the power to detect real features.</p></li>
+</ul>
+<p>So, you should limit yourself to only those features that you think are biologically meaningful.</p>
+<p>When planning experiments there are a couple of things you can do to avoid overfitting:</p>
+<ul class="simple">
+<li><p><strong>Sample size</strong> : While there is no strict rule, you should plan to have <em>at least</em> 10 samples per feature in your model.</p></li>
+<li><p><strong>Even sampling</strong> : It is ideal to have a roughly equal representation of the entire parameter space. If you have categories, you should have an equal number of each. If you have continious data, you should have both high and low values. If you have many parameters, you should have an equal number of each of their interactions as well.</p></li>
+</ul>
+<p>These are good guidelines for all model-fitting style analyses.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Features:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Obs:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">index</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Features: 7
+Obs: 325
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="even-more-regression">
+<h2>Even more regression<a class="headerlink" href="#even-more-regression" title="Link to this heading">#</a></h2>
+<p>There are a number of regression based tools in <code class="docutils literal notranslate"><span class="pre">pingouin</span></code> that we didn’t cover that may be useful to explore.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pg.logistic_regression</span></code> : This works similar to linear regression but is for binary dependent variables.
+Each feature is regressed to create an equation that estimates the likelihood of the <code class="docutils literal notranslate"><span class="pre">dv</span></code> being <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pg.partial_corr</span></code> : Like the ANCOVA, this is a tool for removing the effect of covariates and then calculating a correlation coefficient.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pg.rm_corr</span></code> : Correlation with repeated measures. This is useful if you have measured the same <em>sample</em> multiple times and want to account for intermeasurment variability.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pg.mediation_analysis</span></code> : Tests the hypothesis that the independent variable <code class="docutils literal notranslate"><span class="pre">X</span></code> influences the dependent variable <code class="docutils literal notranslate"><span class="pre">Y</span></code> by a change in mediator <code class="docutils literal notranslate"><span class="pre">M</span></code>; like so <code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">-&gt;</span> <span class="pre">M</span> <span class="pre">-&gt;</span> <span class="pre">Y</span></code>.
+This is useful to disentangle causal effects from covariation.</p></li>
+</ul>
+<hr class="docutils" />
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">grader</span><span class="o">.</span><span class="n">check_all</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./_bblearn/Module09"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../content/Module09/Module09_book.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Module 9: Linear Regression</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Module09_lab.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lab</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploration">Exploration</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q1-by-inspection-which-variable-is-most-correlated">Q1: By inspection, which variable is most correlated?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q2-by-inspection-which-variable-has-the-most-between-class-difference">Q2: By inspection, which variable has the most between class difference?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-regression">Basic regression</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#residuals">Residuals</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q3-are-the-residuals-normally-distributed">Q3: Are the residuals normally distributed?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-regression">Multiple Regression</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ancova"><em>ANCOVA</em></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#standard-first">Standard first</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q4-perform-an-anova-between-art-on-the-executive-domain-z-score">Q4: Perform an ANOVA between ART on the Executive Domain Z-score.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#with-correction">With correction</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regression-with-categories">Regression with categories</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#over-fitting">Over fitting</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#even-more-regression">Even more regression</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Will Dampier
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
