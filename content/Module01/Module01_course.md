@@ -58,6 +58,16 @@ The learning objectives are an essential instructional element as they tell you 
 Therefore, this course will post weekly learning objectives with the associated learning activities to provide you with better guidance.
 At the end of each week or assignment, re-read the learning objectives and make sure that you have completed them.
 
+## Discussion Board
+
+Use this link to the weekly discussion board.
+This is a space you can ask conceptual questions and ask for clarifcations about the assignments.
+
+The discussion board is not a great place to ask about coding difficulties.
+Diagnosing errors requires seeing your code running live and is very difficult to do asynchronously.
+Each Thurdsay, Dr. Dampier will host an 8 PM office hours at the course Zoom link and the teaching assistants are available by Zoom.
+
+
 ## Learning Activities
 
 This section contains the learning activities you need to complete by the end of each week.
