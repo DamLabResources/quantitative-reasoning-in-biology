@@ -2,7 +2,13 @@
 format: jb-book
 root: content/course_index
 parts:
-  
+  - caption: "Side Bar"
+    chapters:
+      - file: content/bblearn/sidebar
+        sections:
+          - file: content/bblearn/start_here
+          - file: content/bblearn/course_info_key_policies
+          - file: content/bblearn/instructors
 
   - caption: "Part 1 : Hello World"
     chapters:

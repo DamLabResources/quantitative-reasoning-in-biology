@@ -2,8 +2,12 @@ all:
 	make uploads
 	make books
 
-books:
-	snakemake -c 1 build_all_books
+book:
+	snakemake -c 1 _book/book
+
+bblearn:
+	snakemake -c 1 _bblearn/website
+
 
 uploads:
 	snakemake -c 1 build_bblearn_uploads

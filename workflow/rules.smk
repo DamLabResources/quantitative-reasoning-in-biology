@@ -119,6 +119,17 @@ def get_files_from_book_config(wildcards):
     found, missing = search_files_in_yaml(book_structure)
     
     return [root_index_file] + found+missing
+    
+    
+def get_files_from_bblearn_config(wildcards):
+    book_yaml_path = f'tocs/bblearn_toc.yml'
+    book_structure = yaml.full_load(open(book_yaml_path))
+    
+    root_index_file = book_structure['root'] + '.md' # Assumption
+    
+    found, missing = search_files_in_yaml(book_structure)
+    
+    return [root_index_file] + found+missing
 
 
 rule bookify_walkthrough:
@@ -144,5 +155,15 @@ rule render_book:
         config = '_config.yml'
     output:
         directory('_book/{book}/')
+    shell:
+        "jupyter-book build --config {input.config} --toc {input.toc_file} --path-output {output} ."
+        
+rule render_bblearn:
+    input:
+        toc_file = 'tocs/bblearn_toc.yml',
+        book_files = get_files_from_bblearn_config,
+        config = '_config.yml'
+    output:
+        directory('_bblearn/website/')
     shell:
         "jupyter-book build --config {input.config} --toc {input.toc_file} --path-output {output} ."

@@ -18,6 +18,5 @@ rule build_bblearn_uploads:
 rule build_all_books:
     input:
         '_book/book/',
-        '_book/F2F/',
-        '_book/online/',
+        '_bblearn/website/'
     
