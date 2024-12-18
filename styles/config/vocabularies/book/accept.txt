@@ -6,3 +6,6 @@ Colab
 HIV
 [Ww]alkthrough
 [Nn]anopore
+DNA
+RNA
+COVID
