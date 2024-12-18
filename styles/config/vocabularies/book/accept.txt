@@ -2,3 +2,7 @@ Drexel
 [Bb]iostatistics
 BBLearn
 MIIM
+Colab
+HIV
+[Ww]alkthrough
+[Nn]anopore
