@@ -16,16 +16,10 @@ parts:
     # Week 1
     # Introduction to Colab and Otter
     - file: content/Module01/Module01_course
-      sections:
-      - file: content/Module01/Module01_walkthrough
-      - file: content/Module01/Module01_lab 
     
     # Week 2
     # Variables and functions
 #    - file: content/Module02/course
-#      sections:
-#      - file: content/Module02/walkthrough
-#      - file: content/Module02/lab 
     
     # Week 3
     # Pandas

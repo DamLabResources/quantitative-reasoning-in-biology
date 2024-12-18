@@ -45,7 +45,7 @@ Access the syllabus (including the schedule) from the quick link above or from t
 When reviewing the syllabus, make a note of the following items:
 * Name and contact information for your course director(s) Note: All courses have one and sometimes two course directors. The course director may also be your primary instructor. Additional instructors may join the course director for some courses to teach one or more topics. You will see the instructors' names and contact information on the syllabus and the course "Instructors" page, accessible from the course menu. 
 
-* The instructional week for this course. Note: The instructional week may vary from course to course. For example, the instructional week for one course may be Monday 8:00 am to Sunday 11:59 pm, and another course, Wednesday 8:00 pm to Tuesday 11:59 pm. Furthermore, note that the due dates for assignments, exams, and other learning activities are based on the instructional week. 
+* This course runs a Wed->Tue instructional week. I expect that you will start working on the Week's material on Wednesday to turn in the assignments by Tuesday. 
 
 * Course Requirements and General Guidelines.
 
