@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Dilution calculations &#8212; Quantitative Reasoning in Biology</title>
+    <title>Molarity Calculations &#8212; Quantitative Reasoning in Biology</title>
   
   
   
@@ -58,12 +58,14 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/Module02/dilution_calculations';</script>
     <link rel="canonical" href="https://damlabresources.github.io/quantitative-reasoning-in-biology/content/Module02/dilution_calculations.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Lab" href="../../_bblearn/Module02/Module02_lab.html" />
-    <link rel="prev" title="Nanopore Sequencing" href="nanopore_description.html" />
+    <link rel="next" title="Walkthrough" href="../../_bblearn/Module02/Module02_walkthrough_SOLUTION.html" />
+    <link rel="prev" title="Module 2: Simple calculations" href="Module02_book.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -191,15 +193,15 @@
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="Module02_book.html">Module 2: Simple calculations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Molarity Calculations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module02/Module02_walkthrough_SOLUTION.html">Walkthrough</a></li>
-<li class="toctree-l2"><a class="reference internal" href="nanopore_description.html">Nanopore Sequencing</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Dilution calculations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module02/Module02_lab.html">Lab</a></li>
 
 
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Module03/Module03_book.html">Module 3: DataFrames</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module03/spreadsheet_organization.html">Spreadsheet Organization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module03/Module03_walkthrough_SOLUTION.html">Walkthrough</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module03/Module03_lab.html">Lab</a></li>
@@ -247,6 +249,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module10/Module10_walkthrough_SOLUTION.html">Walkthrough</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module10/Module10_lab.html">Lab</a></li>
 
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Extra</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../misc/resources.html">Resources</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../changelog.html">Change Log</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../misc/works_cited.html">Works Cited</a></li>
 </ul>
 </li>
 </ul>
@@ -374,7 +384,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -385,11 +397,21 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Dilution calculations</h1>
+    <h1>Molarity Calculations</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-concentration">Calculating Concentration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calulating-molarity">Calulating Molarity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extra-resources">Extra Resources</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -399,10 +421,65 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="dilution-calculations">
-<h1>Dilution calculations<a class="headerlink" href="#dilution-calculations" title="Link to this heading">#</a></h1>
-<p>This will be some content reviewing calculating DNA dilutions.</p>
-<p>If it has been a while since you’ve done unit conversions, you can review this <a class="reference external" href="https://www.khanacademy.org/math/cc-fourth-grade-math/imp-measurement-and-data-2/imp-conversion-word-problems/v/multi-step-unit-conversion-examples">link</a> for a refresher. And for a more DNA-focused explanation you can look at this <a class="reference external" href="https://bitesizebio.com/20669/how-to-calculate-the-number-of-molecules-in-any-piece-of-dna/">link</a>. When I need a quick calculation I tend to use this <a class="reference external" href="https://nebiocalculator.neb.com/#!/dsdnaamt">NEB Calculator</a>.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="molarity-calculations">
+<h1>Molarity Calculations<a class="headerlink" href="#molarity-calculations" title="Link to this heading">#</a></h1>
+<p>When collecting DNA/RNA from a sample it is important to measure the amount that you have.
+In biology labs, this is typically done by measuring the absorbance of light at specific wavelengths.</p>
+<section id="calculating-concentration">
+<h2>Calculating Concentration<a class="headerlink" href="#calculating-concentration" title="Link to this heading">#</a></h2>
+<p>Nucleic acids absorb light at 260 nanometers.
+This can be used to <em>weigh</em> the amount of DNA in a sample like so:</p>
+<p><span class="math notranslate nohighlight">\(\text{Concentration (ng/μL)} = A_{260} \times \text{Conversion Factor}\)</span></p>
+<p>With the following standard conversion factors.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Nucleic Acid</p></th>
+<th class="head"><p>Conversion Factor</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>DS-DNA</p></td>
+<td><p>50 ng/uL</p></td>
+</tr>
+<tr class="row-odd"><td><p>SS-DNA</p></td>
+<td><p>33 ng/uL</p></td>
+</tr>
+<tr class="row-even"><td><p>SS-RNA</p></td>
+<td><p>40 ng/uL</p></td>
+</tr>
+</tbody>
+</table>
+<p><span id="id1">[<a class="reference internal" href="../misc/works_cited.html#id3" title="New England Biolabs. NEBioCalculator: Nucleic Acid Calculations and Conversions. 2024. Accessed: 2024-12-18. URL: https://nebiocalculator.neb.com/#!/formulas.">New England Biolabs, 2024</a>]</span></p>
+</section>
+<section id="calulating-molarity">
+<h2>Calulating Molarity<a class="headerlink" href="#calulating-molarity" title="Link to this heading">#</a></h2>
+<p>Oftentimes when performing enzymatic reactions it is important to know the <strong>number</strong> of molecules per unit volume.
+This is called the <em>molarity</em> of a sample.
+By controling the number of DNA molecules added to a sample we can ensure they are enough enzyme <strong>molecules</strong> to properly cataylze the reaction.</p>
+<p>Since DNA fragments can be different lengths, we need to employ a conversion that calculates the weight of each molecule of DNA.
+This will be specific to each experiment as different protocols will generate DNA fragments of different lengths.</p>
+<p>Assume we have a 250 basepair double-stranded piece of DNA and we want to add 25 femptomoles of DNA to our reaction.</p>
+<p>We can calculate how much each mole weighs using:</p>
+<p><span class="math notranslate nohighlight">\(250bp×660g/mol=165,000g/mol\)</span></p>
+<p>Using this, we can calculate the number of moles per μL in our sample:</p>
+<p><span class="math notranslate nohighlight">\(\text{Moles/μL} = \frac{\text{Mass/μL}}{\text{Molar Mass}} = \frac{100 \times 10^{-12}}{165,000}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\text{Moles/μL} = 6.06 \times 10^{-16} \, \text{mol/μL}\)</span></p>
+<p>6.06E-16 moles/μL is a valid answer, however, most protocols use femptomoles as the unit of choice.</p>
+<p><span class="math notranslate nohighlight">\( 1 \text{mol}=10^{15} \text{femptomols} \)</span></p>
+<p><span class="math notranslate nohighlight">\(\text{Molarity of the DNA sample} = 6.06 \, \text{fmols/μL}\)</span></p>
+<p>Therefore, to add 25 femptomoles of our DNA to a solution we would:</p>
+<p><span class="math notranslate nohighlight">\(  \frac{25 μL}{6.06 \text{fmols/μL}} = 4.1 μL\)</span></p>
+<p>In the walkthrough and lab you will employ these techniques to determine the efficiency of different protocols.</p>
+</section>
+<section id="extra-resources">
+<h2>Extra Resources<a class="headerlink" href="#extra-resources" title="Link to this heading">#</a></h2>
+<p>Below are additional links to review unit conversion.</p>
+<ul class="simple">
+<li><p>Khan Academy’s <a class="reference external" href="https://www.khanacademy.org/math/cc-fourth-grade-math/imp-measurement-and-data-2/imp-conversion-word-problems/v/multi-step-unit-conversion-examples">Unit Conversions</a></p></li>
+<li><p>Bite Size Bio has a <a class="reference external" href="https://bitesizebio.com/20669/how-to-calculate-the-number-of-molecules-in-any-piece-of-dna/">DNA focused example</a>.</p></li>
+<li><p>New England Biosciences <a class="reference external" href="https://nebiocalculator.neb.com/#!/dsdnaamt">Calculators</a> are a great in-lab resource.</p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -436,20 +513,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="nanopore_description.html"
+       href="Module02_book.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Nanopore Sequencing</p>
+        <p class="prev-next-title">Module 2: Simple calculations</p>
       </div>
     </a>
     <a class="right-next"
-       href="../../_bblearn/Module02/Module02_lab.html"
+       href="../../_bblearn/Module02/Module02_walkthrough_SOLUTION.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Lab</p>
+        <p class="prev-next-title">Walkthrough</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -460,7 +537,22 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"></div>
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculating-concentration">Calculating Concentration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calulating-molarity">Calulating Molarity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#extra-resources">Extra Resources</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
