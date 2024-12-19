@@ -22,4 +22,11 @@ html:
     utterances              : false
   announcement              : "Work in progress!" # A banner announcement at the top of the site.
 
+# Bibliography settings
+bibtex_bibfiles:
+  - content/references.bib
+
+sphinx:
+  config:
+    bibtex_reference_style: author_year
 # Add a bibtex file so that we can create citations

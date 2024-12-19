@@ -23,6 +23,7 @@ parts:
     
     - file: content/Module03/Module03_book
       sections:
+      - file: content/Module03/spreadsheet_organization
       - file: _bblearn/Module03/Module03_walkthrough_SOLUTION
       - file: _bblearn/Module03/Module03_lab
       
@@ -66,3 +67,11 @@ parts:
       sections:
       - file: _bblearn/Module10/Module10_walkthrough_SOLUTION
       - file: _bblearn/Module10/Module10_lab
+      
+  - caption: "Extra"
+    chapters:
+    - file: content/misc/resources
+      sections:
+      - file: content/changelog
+      - file: content/misc/works_cited
+      
