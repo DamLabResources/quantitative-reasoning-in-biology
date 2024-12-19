@@ -16,9 +16,8 @@ parts:
       
     - file: content/Module02/Module02_book
       sections:
-      - file: _bblearn/Module02/Module02_walkthrough_SOLUTION
-      - file: content/Module02/nanopore_description
       - file: content/Module02/dilution_calculations
+      - file: _bblearn/Module02/Module02_walkthrough_SOLUTION
       - file: _bblearn/Module02/Module02_lab
     
     - file: content/Module03/Module03_book
