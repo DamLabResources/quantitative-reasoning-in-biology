@@ -71,6 +71,7 @@ parts:
     chapters:
     - file: content/misc/resources
       sections:
+      - file: content/faq
       - file: content/changelog
       - file: content/misc/works_cited
       
