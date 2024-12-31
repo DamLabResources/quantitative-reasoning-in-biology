@@ -20,7 +20,7 @@ html:
   comments:
     hypothesis              : true
     utterances              : false
-  announcement              : "Work in progress!" # A banner announcement at the top of the site.
+  announcement              : "Welcome Spring 2025 Students!" # A banner announcement at the top of the site.
 
 # Bibliography settings
 bibtex_bibfiles:
