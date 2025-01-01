@@ -118,7 +118,7 @@
 
 
   <div class="bd-header-announcement container-fluid bd-header-announcement">
-    <div class="bd-header-announcement__content">Work in progress!</div>
+    <div class="bd-header-announcement__content">Welcome Spring 2025 Students!</div>
   </div>
 
   
@@ -186,8 +186,8 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 1 : Hello World</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../content/Module01/Module01_book.html">Module 1: Hello World</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../content/Module01/Module01_walkthrough.html">Walkthrough</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../content/Module01/notebook_actions.html">Notebook basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/Module01/Module01_walkthrough.html">Walkthrough</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../content/Module02/Module02_book.html">Module 2: Simple calculations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -253,6 +253,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Extra</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../content/misc/resources.html">Resources</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../content/faq.html">Frequently Asked Questions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../content/changelog.html">Change Log</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../content/misc/works_cited.html">Works Cited</a></li>
 </ul>
@@ -534,25 +535,6 @@ To do this, we need to first classify each patient into one of three groups:</p>
 <h3>Q3: Which body site has the largest increase in Actinobacteria when comparing typical and severe disease outcomes?<a class="headerlink" href="#q3-which-body-site-has-the-largest-increase-in-actinobacteria-when-comparing-typical-and-severe-disease-outcomes" title="Link to this heading">#</a></h3>
 <p>Find which body site has the largest increase in Actinobacteria when comparing typical and severe disease outcomes.
 Utilize pivot tables to compare the relative abundances of Actinobacteria across disease states and body sites.</p>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p></p></th>
-<th class="head"><p></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Points</p></td>
-<td><p>5</p></td>
-</tr>
-<tr class="row-odd"><td><p>Public Checks</p></td>
-<td><p>8</p></td>
-</tr>
-<tr class="row-even"><td><p>Hidden Testss</p></td>
-<td><p>1</p></td>
-</tr>
-</tbody>
-</table>
-<p><em>Points:</em> 5</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a pivot table which averages the count of Actinobacteria across each patient</span>
@@ -602,25 +584,6 @@ Let’s reframe this into a clinical application.</p>
 <p>If we would like to use microbiome sampling as a clinical assay to detect severe infections, it would be helpful if those areas are “easy to access”.
 This dataset is a collection of samples that came from both biopsies and swabs.
 Create a subset of the data that only contains <code class="docutils literal notranslate"><span class="pre">Swab</span></code> samples.</p>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p></p></th>
-<th class="head"><p></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Points</p></td>
-<td><p>2</p></td>
-</tr>
-<tr class="row-odd"><td><p>Public Checks</p></td>
-<td><p>6</p></td>
-</tr>
-<tr class="row-even"><td><p>Hidden Testss</p></td>
-<td><p>1</p></td>
-</tr>
-</tbody>
-</table>
-<p><em>Points:</em> 2</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use boolean indexing or a query create a new table with only samples that came from samples with data from swabs.</span>
@@ -658,25 +621,6 @@ Create a subset of the data that only contains <code class="docutils literal not
 <p>Previously, we saw that there was more Actinobacteria in across certain regions in severe disease.
 In this case, we’ll consider <strong>high</strong> as being 1 standard-deviation above the average of typical patients for that region.</p>
 <p>Create a new column in <code class="docutils literal notranslate"><span class="pre">swabbable_data</span></code> called <code class="docutils literal notranslate"><span class="pre">is_high</span></code> that is true if the Actinobacteria is 1 standard-deviation above the average for that region.</p>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p></p></th>
-<th class="head"><p></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Points</p></td>
-<td><p>5</p></td>
-</tr>
-<tr class="row-odd"><td><p>Public Checks</p></td>
-<td><p>2</p></td>
-</tr>
-<tr class="row-even"><td><p>Hidden Testss</p></td>
-<td><p>0</p></td>
-</tr>
-</tbody>
-</table>
-<p><em>Points:</em> 5</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Isolate the subset of swabbable_data that come from typical disease types</span>
@@ -739,25 +683,6 @@ This makes PPV one of the most useful metrics when describing diagnostic tests t
 <p>Use the <code class="docutils literal notranslate"><span class="pre">is_high</span></code> column as a prediction of whether a patient has a persistent infection.
 Calculate the PPV for each region.
 In the provided space, place the most accurate region and its calculated PPV.</p>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p></p></th>
-<th class="head"><p></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Points</p></td>
-<td><p>10</p></td>
-</tr>
-<tr class="row-odd"><td><p>Public Checks</p></td>
-<td><p>3</p></td>
-</tr>
-<tr class="row-even"><td><p>Hidden Testss</p></td>
-<td><p>2</p></td>
-</tr>
-</tbody>
-</table>
-<p><em>Points:</em> 10</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># There are a number of ways to approach this problem</span>

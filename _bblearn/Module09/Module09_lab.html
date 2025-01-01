@@ -118,7 +118,7 @@
 
 
   <div class="bd-header-announcement container-fluid bd-header-announcement">
-    <div class="bd-header-announcement__content">Work in progress!</div>
+    <div class="bd-header-announcement__content">Welcome Spring 2025 Students!</div>
   </div>
 
   
@@ -186,8 +186,8 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 1 : Hello World</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../content/Module01/Module01_book.html">Module 1: Hello World</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../content/Module01/Module01_walkthrough.html">Walkthrough</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../content/Module01/notebook_actions.html">Notebook basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../content/Module01/Module01_walkthrough.html">Walkthrough</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../content/Module02/Module02_book.html">Module 2: Simple calculations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -253,6 +253,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Extra</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../content/misc/resources.html">Resources</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../content/faq.html">Frequently Asked Questions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../content/changelog.html">Change Log</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../content/misc/works_cited.html">Works Cited</a></li>
 </ul>
@@ -467,25 +468,6 @@ document.write(`
 <p>We will explore whether these two domains are correllated after controlling for co-variates.</p>
 <section id="q1-are-processing-domain-and-executive-domain-scores-correlated">
 <h3>Q1: Are Processing domain and Executive domain scores correlated?<a class="headerlink" href="#q1-are-processing-domain-and-executive-domain-scores-correlated" title="Link to this heading">#</a></h3>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p></p></th>
-<th class="head"><p></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Points</p></td>
-<td><p>5</p></td>
-</tr>
-<tr class="row-odd"><td><p>Public Checks</p></td>
-<td><p>3</p></td>
-</tr>
-<tr class="row-even"><td><p>Hidden Tests</p></td>
-<td><p>1</p></td>
-</tr>
-</tbody>
-</table>
-<p><em>Points:</em> 5</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generate a plot between processing_domain_z and exec_domain_z</span>
@@ -531,25 +513,6 @@ document.write(`
 <li><p>Years Seropositive</p></li>
 <li><p>ART</p></li>
 </ul>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p></p></th>
-<th class="head"><p></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Points</p></td>
-<td><p>10</p></td>
-</tr>
-<tr class="row-odd"><td><p>Public Checks</p></td>
-<td><p>7</p></td>
-</tr>
-<tr class="row-even"><td><p>Hidden Tests</p></td>
-<td><p>7</p></td>
-</tr>
-</tbody>
-</table>
-<p><em>Points:</em> 10</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Perform the regression using `pg.linear_regression`</span>
@@ -603,25 +566,6 @@ document.write(`
 </section>
 <section id="q3-is-covariate-controlled-edz-still-correlated-with-pdz">
 <h3>Q3: Is covariate controlled EDZ still correlated with PDZ?<a class="headerlink" href="#q3-is-covariate-controlled-edz-still-correlated-with-pdz" title="Link to this heading">#</a></h3>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p></p></th>
-<th class="head"><p></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Points</p></td>
-<td><p>10</p></td>
-</tr>
-<tr class="row-odd"><td><p>Public Checks</p></td>
-<td><p>7</p></td>
-</tr>
-<tr class="row-even"><td><p>Hidden Tests</p></td>
-<td><p>7</p></td>
-</tr>
-</tbody>
-</table>
-<p><em>Points:</em> 10</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generate a plot between covariate controlled processing_domain_z and exec_domain_z</span>
@@ -686,25 +630,6 @@ However, <code class="docutils literal notranslate"><span class="pre">pg.partial
 </section>
 <section id="q4-are-edz-and-pdz-correlated-after-controlling-for-covariates">
 <h3>Q4: Are EDZ and PDZ correlated after controlling for covariates?<a class="headerlink" href="#q4-are-edz-and-pdz-correlated-after-controlling-for-covariates" title="Link to this heading">#</a></h3>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p></p></th>
-<th class="head"><p></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Points</p></td>
-<td><p>10</p></td>
-</tr>
-<tr class="row-odd"><td><p>Public Checks</p></td>
-<td><p>7</p></td>
-</tr>
-<tr class="row-even"><td><p>Hidden Tests</p></td>
-<td><p>7</p></td>
-</tr>
-</tbody>
-</table>
-<p><em>Points:</em> 10</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Find the residuals for exec_domain_z after controlling for covariates</span>
