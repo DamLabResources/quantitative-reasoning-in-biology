@@ -5,14 +5,14 @@ parts:
   - caption: "Part 0: Introduction"
     chapters:
     - file: content/misc/about_this_book
-    - file: content/misc/book_intro
+    #- file: content/misc/book_intro
 
   - caption: "Part 1 : Hello World"
     chapters:
     - file: content/Module01/Module01_book
       sections:
+      - file: content/Module01/notebook_actions      
       - file: content/Module01/Module01_walkthrough
-      - file: content/Module01/notebook_actions
       
     - file: content/Module02/Module02_book
       sections:
