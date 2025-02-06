@@ -115,12 +115,6 @@
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
-
-
-  <div class="bd-header-announcement container-fluid bd-header-announcement">
-    <div class="bd-header-announcement__content">Welcome Spring 2025 Students!</div>
-  </div>
-
   
     <header class="bd-header navbar navbar-expand-lg bd-navbar">
     </header>
@@ -460,10 +454,10 @@ In this lab we will explore a collection of cytokines and chemokines measured by
 </div>
 <section id="q1-explore-the-neurological-function-of-the-participants-in-the-dataset">
 <h3>Q1: Explore the neurological function of the participants in the dataset.<a class="headerlink" href="#q1-explore-the-neurological-function-of-the-participants-in-the-dataset" title="Link to this heading">#</a></h3>
-<p>Create a barplot for the <code class="docutils literal notranslate"><span class="pre">neuro_screen_impairment_level</span></code> level categories.</p>
+<p>Create a barplot of the counts for each of the <code class="docutils literal notranslate"><span class="pre">neuro_screen_impairment_level</span></code> level categories.</p>
 <ul class="simple">
-<li><p>Adjust the y-axis to have a limit of 0 to 150 and the label to Participants</p></li>
-<li><p>Adjust the x-label to Impairement Level</p></li>
+<li><p>Adjust the y-axis to have a limit of 0 to 150 and the label to <code class="docutils literal notranslate"><span class="pre">'Participants'</span></code></p></li>
+<li><p>Adjust the x-label to <code class="docutils literal notranslate"><span class="pre">'Impairment</span> <span class="pre">Level'</span></code></p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -504,21 +498,32 @@ In this lab we will explore a collection of cytokines and chemokines measured by
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q2_cytokine_summary</span> <span class="o">=</span> <span class="o">...</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use data.groupby(...) to take mean of each cytokines for each neuro_screen_impairment_level</span>
+<span class="c1"># The table should have each of the 4 cytokines as columns </span>
+<span class="c1">#  and each row should be each of the different impairment levels.</span>
+
+
+<span class="n">q2_cytokine_summary</span> <span class="o">=</span> <span class="o">...</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q2_axs</span> <span class="o">=</span> <span class="o">...</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use `.plot(kind = &#39;box&#39;, ...)` to create a set of boxplots for each cytokine split across each `neuro_screen_impairment_level` value.</span>
+<span class="c1"># Each axis should be a cytokine</span>
+<span class="c1"># Each category in each axis should be a neuro_screen_impairment_level</span>
+
+
+<span class="n">q2_axs</span> <span class="o">=</span> <span class="o">...</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Answer as a string</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Which cytokine has the largest absolute difference in mean expression between `mild` and `none`?</span>
+<span class="c1"># Answer as a string</span>
 
 <span class="n">q2_ans</span> <span class="o">=</span> <span class="o">...</span>
 </pre></div>
@@ -550,7 +555,17 @@ Use the <code class="docutils literal notranslate"><span class="pre">.corr()</sp
 Then, generate a hypothesis about which top-5 cytokines are worth a followup.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate the cross correlation matrix that only includes bmi and other cytokines</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Use this list of all cytokines in the dataset to answer the following questions</span>
+<span class="n">all_cytokines</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="o">-</span><span class="mi">5</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">all_cytokines</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate the cross correlation matrix that only includes bmi and all_cytokines</span>
+
 
 <span class="n">q3_cross_cor</span> <span class="o">=</span> <span class="o">...</span>
 </pre></div>
@@ -559,7 +574,7 @@ Then, generate a hypothesis about which top-5 cytokines are worth a followup.</p
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot the correlation between BMI and all other columns</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot the correlation between BMI and all other columns as a bar plot</span>
 
 <span class="n">q3_bar_ax</span> <span class="o">=</span> <span class="o">...</span>
 </pre></div>
@@ -568,7 +583,9 @@ Then, generate a hypothesis about which top-5 cytokines are worth a followup.</p
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Extract a Series of the top 5 cytokines </span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Extract a Series of the top 5 cytokines</span>
+<span class="c1"># Be sure to remove BMI</span>
+
 <span class="n">q3_top5</span> <span class="o">=</span> <span class="o">...</span>
 </pre></div>
 </div>
@@ -579,6 +596,7 @@ Then, generate a hypothesis about which top-5 cytokines are worth a followup.</p
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a scatterplot between the bmi (on the x-axis) and the most correlated cytokine (on the y-axis)</span>
 
 <span class="n">q3_scatter_ax</span> <span class="o">=</span> <span class="o">...</span>
+
 <span class="c1"># Leave the axes labels as defaults for the grader</span>
 </pre></div>
 </div>
