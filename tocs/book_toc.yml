@@ -31,6 +31,7 @@ parts:
     - file: content/Module04/Module04_book
       sections:
       - file: _bblearn/Module04/Module04_walkthrough_SOLUTION
+      - file: content/Module04/reshaping_data
       - file: _bblearn/Module04/Module04_lab
       
     - file: content/Module05/Module05_book

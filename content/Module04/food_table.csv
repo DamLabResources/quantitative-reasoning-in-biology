@@ -1,21 +1,21 @@
 Food,Category,Price,Color
 Apple,Fruit,1.20,Red
 Banana,Fruit,0.90,Yellow
-Carrot,Vegetable,0.50,Orange
+Carrot,Vegetable,0.50,Yellow
 Tomato,Vegetable,0.70,Red
-Chicken,Protein,3.00,White
-Salmon,Protein,4.50,Pink
+Chicken,Protein,3.00,Brown
+Salmon,Protein,4.50,Red
 Brown Rice,Grain,2.00,Brown
 Broccoli,Vegetable,1.10,Green
 Strawberry,Fruit,2.00,Red
 Cheddar Cheese,Dairy,2.50,Yellow
-Yogurt,Dairy,1.00,White
-Blueberry,Fruit,2.20,Blue
+Yogurt,Dairy,1.00,Yellow
+Blueberry,Fruit,2.20,Red
 Lentils,Protein,1.60,Brown
 Spinach,Vegetable,1.20,Green
-Tofu,Protein,1.80,White
-Quinoa,Grain,3.10,Beige
-Oatmeal,Grain,2.50,Beige
-Egg,Protein,0.20,White
-Grapes,Fruit,2.00,Purple
+Tofu,Protein,1.80,Brown
+Quinoa,Grain,3.10,Brown
+Oatmeal,Grain,2.50,Brown
+Egg,Protein,0.20,Yellow
+Grapes,Fruit,2.00,Red
 Potato,Vegetable,0.70,Brown
