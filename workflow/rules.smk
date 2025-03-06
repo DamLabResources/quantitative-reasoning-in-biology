@@ -31,8 +31,13 @@ checkpoint otter_assign:
         'otter assign {input} {output.stem}'
 
 def get_extra_paths(wildcards):
-    data_files = glob_wildcards(f"content/{wildcards.module}/{{data_file}}.csv").data_file
-    return expand(f"content/{wildcards.module}/{{data_file}}.csv", data_file=data_files)
+    csv_globs = glob_wildcards(f"content/{wildcards.module}/{{data_file}}.csv").data_file
+    csv_files = expand(f"content/{wildcards.module}/{{data_file}}.csv", data_file=csv_globs)
+    
+    tsv_globs = glob_wildcards(f"content/{wildcards.module}/{{data_file}}.tsv").data_file
+    tsv_files = expand(f"content/{wildcards.module}/{{data_file}}.tsv", data_file=tsv_globs)
+    
+    return csv_files + tsv_files
 
 
 def get_otter_tests(learning_activity, wildcards, scope='student'):
