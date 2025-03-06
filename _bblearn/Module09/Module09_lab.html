@@ -401,7 +401,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q1-are-processing-domain-and-executive-domain-scores-correlated">Q1: Are Processing domain and Executive domain scores correlated?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q2-create-a-regression-for-the-processing-domain-that-accounts-for-demographic-covariates">Q2: Create a regression for the processing domain that accounts for demographic covariates.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q2-create-a-regression-for-the-processing-domain-that-accounts-for-the-following-demographic-covariates">Q2: Create a regression for the processing domain that accounts for the following demographic covariates.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q3-is-covariate-controlled-edz-still-correlated-with-pdz">Q3: Is covariate controlled EDZ still correlated with PDZ?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q4-are-edz-and-pdz-correlated-after-controlling-for-covariates">Q4: Are EDZ and PDZ correlated after controlling for covariates?</a></li>
 </ul>
@@ -461,6 +461,31 @@ document.write(`
 <p>We will explore whether these two domains are correllated after controlling for co-variates.</p>
 <section id="q1-are-processing-domain-and-executive-domain-scores-correlated">
 <h3>Q1: Are Processing domain and Executive domain scores correlated?<a class="headerlink" href="#q1-are-processing-domain-and-executive-domain-scores-correlated" title="Link to this heading">#</a></h3>
+<p>Checked variables:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">q1_plot</span></code> - A regression plot between <code class="docutils literal notranslate"><span class="pre">processing_domain_z</span></code> and <code class="docutils literal notranslate"><span class="pre">exec_domain_z</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">q1_corr_res</span></code> - The result of running <code class="docutils literal notranslate"><span class="pre">pg.corr</span></code> on <code class="docutils literal notranslate"><span class="pre">processing_domain_z</span></code> and <code class="docutils literal notranslate"><span class="pre">exec_domain_z</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">q1_is_corr</span></code> - A yes/no assessment of the correlation between <code class="docutils literal notranslate"><span class="pre">processing_domain_z</span></code> and <code class="docutils literal notranslate"><span class="pre">exec_domain_z</span></code>.</p></li>
+</ul>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Points</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Public Checks</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-even"><td><p>Hidden Tests</p></td>
+<td><p>1</p></td>
+</tr>
+</tbody>
+</table>
+<p><em>Points:</em> 5</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generate a plot between processing_domain_z and exec_domain_z</span>
@@ -496,8 +521,8 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="q2-create-a-regression-for-the-processing-domain-that-accounts-for-demographic-covariates">
-<h3>Q2: Create a regression for the processing domain that accounts for demographic covariates.<a class="headerlink" href="#q2-create-a-regression-for-the-processing-domain-that-accounts-for-demographic-covariates" title="Link to this heading">#</a></h3>
+<section id="q2-create-a-regression-for-the-processing-domain-that-accounts-for-the-following-demographic-covariates">
+<h3>Q2: Create a regression for the processing domain that accounts for the following demographic covariates.<a class="headerlink" href="#q2-create-a-regression-for-the-processing-domain-that-accounts-for-the-following-demographic-covariates" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Age</p></li>
 <li><p>Race</p></li>
@@ -506,6 +531,34 @@ document.write(`
 <li><p>Years Seropositive</p></li>
 <li><p>ART</p></li>
 </ul>
+<p>Checked variables:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">q2_model_resid_normal</span></code> - A yes/no assessment of the normality of the residuals after building the model. It should be supported by qqplots and normality tests.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">q2_processing_age</span></code> - A yes/no assessment on where age has a significant impact on <code class="docutils literal notranslate"><span class="pre">processing_domain_z</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">q2_processing_race</span></code> - A yes/no assessment on where race has a significant impact on <code class="docutils literal notranslate"><span class="pre">processing_domain_z</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">q2_processing_sex</span></code> - A yes/no assessment on where sex has a significant impact on <code class="docutils literal notranslate"><span class="pre">processing_domain_z</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">q2_processing_edu</span></code> - A yes/no assessment on where education has a significant impact on <code class="docutils literal notranslate"><span class="pre">processing_domain_z</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">q2_processing_ys</span></code> - A yes/no assessment on where infection length has a significant impact on <code class="docutils literal notranslate"><span class="pre">processing_domain_z</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">q2_processing_art</span></code> - A yes/no assessment on where ART has a significant impact on <code class="docutils literal notranslate"><span class="pre">processing_domain_z</span></code>.</p></li>
+</ul>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Points</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-odd"><td><p>Public Checks</p></td>
+<td><p>7</p></td>
+</tr>
+<tr class="row-even"><td><p>Hidden Tests</p></td>
+<td><p>7</p></td>
+</tr>
+</tbody>
+</table>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Perform the regression using `pg.linear_regression`</span>
@@ -559,6 +612,32 @@ document.write(`
 </section>
 <section id="q3-is-covariate-controlled-edz-still-correlated-with-pdz">
 <h3>Q3: Is covariate controlled EDZ still correlated with PDZ?<a class="headerlink" href="#q3-is-covariate-controlled-edz-still-correlated-with-pdz" title="Link to this heading">#</a></h3>
+<p>After removing the effects of Age, Race, Sex, Education, Years Seropositive, and ART is processing domain score still correlated with executive domain score.</p>
+<p>Checked variables:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">q3_plot</span></code> - A regression plot between <code class="docutils literal notranslate"><span class="pre">exec_domain_z</span></code> and the covariate controlled <code class="docutils literal notranslate"><span class="pre">processing_domain_z</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">q3_corr_res</span></code> - The result of running <code class="docutils literal notranslate"><span class="pre">pg.corr</span></code> on <code class="docutils literal notranslate"><span class="pre">processing_domain_z</span></code> and <code class="docutils literal notranslate"><span class="pre">exec_domain_z</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">q3_corr_r</span></code> - The correlation coefficient between <code class="docutils literal notranslate"><span class="pre">exec_domain_z</span></code> and the covariate controlled <code class="docutils literal notranslate"><span class="pre">processing_domain_z</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">q3_corr_sig</span></code> - A yes/no assessment of the correlation between <code class="docutils literal notranslate"><span class="pre">processing_domain_z</span></code> and <code class="docutils literal notranslate"><span class="pre">exec_domain_z</span></code>.</p></li>
+</ul>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Points</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-odd"><td><p>Public Checks</p></td>
+<td><p>7</p></td>
+</tr>
+<tr class="row-even"><td><p>Hidden Tests</p></td>
+<td><p>7</p></td>
+</tr>
+</tbody>
+</table>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generate a plot between covariate controlled processing_domain_z and exec_domain_z</span>
@@ -623,6 +702,33 @@ However, <code class="docutils literal notranslate"><span class="pre">pg.partial
 </section>
 <section id="q4-are-edz-and-pdz-correlated-after-controlling-for-covariates">
 <h3>Q4: Are EDZ and PDZ correlated after controlling for covariates?<a class="headerlink" href="#q4-are-edz-and-pdz-correlated-after-controlling-for-covariates" title="Link to this heading">#</a></h3>
+<p>Create a similar regression model for <code class="docutils literal notranslate"><span class="pre">exec_domain_z</span></code> that controls for Age, Race, Sex, Education, Years Seropositive, and ART.
+Thus creating a measure of <code class="docutils literal notranslate"><span class="pre">exec_domain_z</span></code> independent of these covariates.
+Measure the corlation of the adjusted metrics for both EDZ and PDZ.</p>
+<p>Checked variables:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">q4_plot</span></code> - A regression plot between covariate controlled <code class="docutils literal notranslate"><span class="pre">exec_domain_z</span></code> and the covariate controlled <code class="docutils literal notranslate"><span class="pre">processing_domain_z</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">q4_sig_cor</span></code> -  A yes/no assessment of the correlation between covariate controlled <code class="docutils literal notranslate"><span class="pre">exec_domain_z</span></code> and the covariate controlled <code class="docutils literal notranslate"><span class="pre">processing_domain_z</span></code>.</p></li>
+</ul>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Points</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-odd"><td><p>Public Checks</p></td>
+<td><p>7</p></td>
+</tr>
+<tr class="row-even"><td><p>Hidden Tests</p></td>
+<td><p>7</p></td>
+</tr>
+</tbody>
+</table>
+<p><em>Points:</em> 10</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Find the residuals for exec_domain_z after controlling for covariates</span>
@@ -752,7 +858,7 @@ However, <code class="docutils literal notranslate"><span class="pre">pg.partial
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-objectives">Learning Objectives</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q1-are-processing-domain-and-executive-domain-scores-correlated">Q1: Are Processing domain and Executive domain scores correlated?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q2-create-a-regression-for-the-processing-domain-that-accounts-for-demographic-covariates">Q2: Create a regression for the processing domain that accounts for demographic covariates.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q2-create-a-regression-for-the-processing-domain-that-accounts-for-the-following-demographic-covariates">Q2: Create a regression for the processing domain that accounts for the following demographic covariates.</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q3-is-covariate-controlled-edz-still-correlated-with-pdz">Q3: Is covariate controlled EDZ still correlated with PDZ?</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#q4-are-edz-and-pdz-correlated-after-controlling-for-covariates">Q4: Are EDZ and PDZ correlated after controlling for covariates?</a></li>
 </ul>
