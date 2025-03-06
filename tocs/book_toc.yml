@@ -47,7 +47,7 @@ parts:
       
     - file: content/Module07/Module07_book
       sections:
-      - file: content/Module07/common_biological_distributions
+      #- file: content/Module07/common_biological_distributions
       - file: _bblearn/Module07/Module07_walkthrough_SOLUTION
       - file: _bblearn/Module07/Module07_lab
 
