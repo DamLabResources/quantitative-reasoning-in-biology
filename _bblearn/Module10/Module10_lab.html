@@ -593,7 +593,8 @@ It shows that SK609 is improving attention by reducing the number of misses.</p>
 <h2>Step 5: Calculate<a class="headerlink" href="#step-5-calculate" title="Link to this heading">#</a></h2>
 <section id="q4-calculate-the-minimum-change-detectable-with-16-animals">
 <h3>Q4: Calculate the minimum <strong>change</strong> detectable with 16 animals.<a class="headerlink" href="#q4-calculate-the-minimum-change-detectable-with-16-animals" title="Link to this heading">#</a></h3>
-<p>Use <code class="docutils literal notranslate"><span class="pre">alternative='two-sided'</span></code> as we do not know whether the number of misses is always increasing.</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">alternative='two-sided'</span></code> and as we do not know whether the number of misses is always increasing.
+Also, use <code class="docutils literal notranslate"><span class="pre">contrast='paired'</span></code> as we are doing a <em>paired</em> test we are compairing the same mice across each category.</p>
 <p><em>Hint: Use the power-calculator, and then use that effect size to calculate the min_change.</em></p>
 <p>Checked variables:</p>
 <ul class="simple">
@@ -694,11 +695,13 @@ As before, we’ll keep the power and alpha the same, but we’ll add the follow
 </div>
 </div>
 </div>
-<p>Use the power-plot below to answer the next question.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check many different nobs sizes</span>
-<span class="n">nobs_sizes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">31</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># DO NOT EDIT</span>
+
+
+<span class="c1"># Check many different sample sizes</span>
+<span class="n">sample_sizes</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">31</span><span class="p">)</span>
 
 
 <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Expected&#39;</span><span class="p">,</span> <span class="s1">&#39;High-Noise&#39;</span><span class="p">,</span> <span class="s1">&#39;New-Assay&#39;</span><span class="p">]</span>
@@ -711,13 +714,12 @@ As before, we’ll keep the power and alpha the same, but we’ll add the follow
 <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">effect</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">colors</span><span class="p">,</span> <span class="n">effect_sizes</span><span class="p">):</span>
     <span class="c1"># Calculate the power across the range</span>
     <span class="n">powers</span> <span class="o">=</span> <span class="n">pg</span><span class="o">.</span><span class="n">power_ttest</span><span class="p">(</span><span class="n">d</span> <span class="o">=</span> <span class="n">effect</span><span class="p">,</span>
-                            <span class="n">n</span> <span class="o">=</span> <span class="n">nobs_sizes</span><span class="p">,</span>
+                            <span class="n">n</span> <span class="o">=</span> <span class="n">sample_sizes</span><span class="p">,</span>
                             <span class="n">power</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
                             <span class="n">alpha</span> <span class="o">=</span> <span class="n">alpha</span><span class="p">,</span>
                             <span class="n">contrast</span> <span class="o">=</span> <span class="s1">&#39;paired&#39;</span><span class="p">)</span>
 
-    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">nobs_sizes</span><span class="p">,</span> <span class="n">powers</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="n">name</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">color</span><span class="p">)</span>
-
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">sample_sizes</span><span class="p">,</span> <span class="n">powers</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="n">name</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">color</span><span class="p">)</span>
 
 
 
@@ -729,14 +731,19 @@ As before, we’ll keep the power and alpha the same, but we’ll add the follow
 </div>
 </div>
 </div>
+<p>The plot above shows the expected power, the likelihood of detecting an effect, as a function of the sample size of the experiment.
+The black line represents the current experimental system.
+The red line indicates the high noise worst-case scenario presented by the grant reviewer.
+And the blue line shows the effect of the newly designed system.
+Use this to answer the questions below.</p>
 </section>
 <section id="q6-summary-questions">
 <h2>Q6 Summary Questions<a class="headerlink" href="#q6-summary-questions" title="Link to this heading">#</a></h2>
-<p><em>Hint: Remember, the power level is 80%, so examine the nobs at 0.8 at the specified effect size to determine sufficient power of the question being asked.</em></p>
+<p>Assume an 80% power threshold for the following questions.</p>
 <p>Checked variables:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">q6a</span></code> - Would an experiment that had nobs=15 be sufficiently powered to detect an effect under the <strong>expected</strong> assumption? yes/no</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">q6b</span></code> - Would an experiment that had nobs=15 be sufficiently powered to detect an effect under the <strong>high-noise</strong> assumption? yes/no</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">q6a</span></code> - Would an experiment that had sample size of 15 be sufficiently powered to detect an effect under the <strong>expected</strong> assumption? yes/no</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">q6b</span></code> - Would an experiment that had sample size of 15 be sufficiently powered to detect an effect under the <strong>high-noise</strong> assumption? yes/no</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">q6c</span></code> - How many fewer animals could be used if the <strong>new experiment</strong> was implemented vs. the expected/current one (using 80% power)? (number)</p></li>
 </ul>
 <table class="table">
@@ -769,7 +776,6 @@ As before, we’ll keep the power and alpha the same, but we’ll add the follow
 
 <span class="c1"># How many fewer animals could be used if the new experiment was implemented</span>
 <span class="c1"># vs. the expected/current one (using 80% power)?</span>
-<span class="c1"># Hint: Use the power calculator. Round up.</span>
 
 
 <span class="n">q6c</span> <span class="o">=</span> <span class="o">...</span>
