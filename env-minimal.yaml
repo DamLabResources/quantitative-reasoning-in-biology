@@ -1,15 +1,14 @@
 channels:
   - conda-forge
-  - bioconda
 dependencies:
   - python=3.10
   - pandas=2.2.2
   - seaborn=0.13.2
-  - pingouin
-  - snakemake
   - jupyter-book
   - ipykernel
   - pip
   - pip:
+    - pingouin
+    - snakemake
     - otter-grader==4.0.0
-    - applied-biostats-helper
+    - applied-biostats-helper 

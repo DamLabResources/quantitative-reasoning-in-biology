@@ -21,4 +21,4 @@ clean:
 	rm -r content/Module*/_build
 
 install:
-	mamba env create -f env.yaml -p ./venv
+	mamba env create -f env-minimal.yaml -p ./venv
