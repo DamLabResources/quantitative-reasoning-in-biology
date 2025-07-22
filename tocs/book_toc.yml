@@ -4,7 +4,7 @@ parts:
 
   - caption: "Part 0: Introduction"
     chapters:
-    - file: content/misc/about_this_book
+    - file: content/misc/how_to
     #- file: content/misc/book_intro
 
   - caption: "Part 1 : Hello World"
@@ -72,6 +72,9 @@ parts:
     chapters:
     - file: content/misc/resources
       sections:
+      - file: content/misc/about_this_book
+      - file: content/misc/course_info
+      - file: content/misc/author_bio
       - file: content/faq
       - file: content/changelog
       - file: content/misc/works_cited

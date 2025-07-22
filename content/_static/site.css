@@ -1,0 +1,309 @@
+/* Google Colab-inspired Landing Page */
+
+/* Global Colab-like styling */
+body {
+    background-color: #fafafa !important;
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+/* Hero Section - Colab header style */
+.hero-section {
+    background: #ffffff;
+    color: #3c4043;
+    padding: 3rem 2rem;
+    margin: 0 0 1rem 0;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(60,64,67,.12), 0 1px 2px rgba(60,64,67,.24);
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: #4285f4;
+    border-radius: 4px 0 0 4px;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    color: #3c4043;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #5f6368;
+    line-height: 1.6;
+}
+
+/* Notebook cell-like sections */
+.content-section {
+    background: #ffffff;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    margin: 1rem 0;
+    box-shadow: 0 1px 3px rgba(60,64,67,.12);
+}
+
+/* Grid cards - Colab cell style */
+.sd-card {
+    background: #ffffff !important;
+    border: 1px solid #dadce0 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 1px 3px rgba(60,64,67,.12) !important;
+    transition: all 0.2s ease !important;
+    margin-bottom: 1rem;
+}
+
+.hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(60,64,67,.15) !important;
+    border-color: #4285f4 !important;
+}
+
+/* Colab-style headers */
+.sd-card-header {
+    font-weight: 500 !important;
+    font-size: 1rem !important;
+    background: #f8f9fa !important;
+    border-bottom: 1px solid #e8eaed !important;
+    color: #3c4043 !important;
+}
+
+/* Featured card - Colab blue */
+.featured-card {
+    background: #4285f4 !important;
+    color: white !important;
+    border: 1px solid #4285f4 !important;
+}
+
+.featured-card .sd-card-header {
+    background: #4285f4 !important;
+    color: white !important;
+    border-bottom: 1px solid rgba(255,255,255,0.2) !important;
+}
+
+.featured-card:hover {
+    background: #3367d6 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(66,133,244,0.3) !important;
+}
+
+/* Learning outcomes cards - Colab accent colors */
+.sd-card-header.bg-primary {
+    background: #4285f4 !important;
+}
+
+.sd-card-header.bg-success {
+    background: #34a853 !important;
+}
+
+.sd-card-header.bg-info {
+    background: #fbbc04 !important;
+    color: #3c4043 !important;
+}
+
+.sd-card-header.bg-warning {
+    background: #ea4335 !important;
+}
+
+/* Features Section - Notebook cell style */
+.features-section {
+    background: #ffffff;
+    padding: 2rem;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    margin: 1rem 0;
+    box-shadow: 0 1px 3px rgba(60,64,67,.12);
+}
+
+.feature-highlight {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border: 1px solid #e8eaed;
+    border-radius: 8px;
+    border-left: 4px solid #4285f4;
+    position: relative;
+}
+
+.feature-highlight h3 {
+    color: #3c4043;
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.feature-highlight p {
+    color: #5f6368;
+    margin-bottom: 0;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Code-like sections */
+.course-info, .license-info {
+    background: #ffffff;
+    padding: 2rem;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(60,64,67,.12);
+    margin: 1rem 0;
+}
+
+.license-info {
+    background: #f8f9fa;
+    border-left: 4px solid #34a853;
+}
+
+.license-info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.license-info li {
+    margin-bottom: 0.5rem;
+    padding-left: 0;
+    color: #5f6368;
+    font-size: 0.95rem;
+}
+
+/* Section dividers - Colab style */
+hr {
+    border: none;
+    height: 1px;
+    background: #e8eaed;
+    margin: 2rem 0;
+}
+
+/* Typography - Colab fonts */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif !important;
+    color: #3c4043 !important;
+    font-weight: 400 !important;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500 !important;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: 500 !important;
+}
+
+/* Colab-style buttons and links */
+a[href*="faculty"] {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #4285f4;
+    color: white !important;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: background 0.2s ease;
+    border: 1px solid #4285f4;
+}
+
+a[href*="faculty"]:hover {
+    background: #3367d6;
+    border-color: #3367d6;
+    text-decoration: none;
+    box-shadow: 0 1px 3px rgba(60,64,67,.12);
+}
+
+/* Notebook-like content wrapper */
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Colab cell indicators */
+.sd-card::before {
+    content: '';
+    position: absolute;
+    left: -1px;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: transparent;
+    border-radius: 3px 0 0 3px;
+    transition: background 0.2s ease;
+}
+
+.hover-lift:hover::before {
+    background: #4285f4;
+}
+
+/* Mobile responsiveness - Colab style */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 2rem 1rem;
+        margin: 0 0 1rem 0;
+    }
+    
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    
+    .features-section {
+        padding: 1.5rem;
+    }
+    
+    .feature-highlight {
+        padding: 1rem;
+    }
+}
+
+/* Subtle animations - Colab-like */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sd-card {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Code block styling for any code elements */
+code {
+    background: #f1f3f4;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.875rem;
+    color: #3c4043;
+}
+
+/* Extra section styling */
+.extra-section {
+    background: #ffffff;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 1rem 0;
+    box-shadow: 0 1px 3px rgba(60,64,67,.12);
+} 

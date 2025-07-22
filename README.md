@@ -68,3 +68,5 @@ Indvidual parts can be made with:
 make books
 make uploads
 ```
+
+<img src="https://img.shields.io/badge/dynamic/json?url=https://api.github.com/repos/DamLabResources/quantitative-reasoning-in-biology/commits?path=notebooks/Module02_lab.ipynb&query=$[0].commit.author.date&label=Last%20Updated&style=flat-square&color=brightgreen" alt="File Last Updated">
