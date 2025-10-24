@@ -1,0 +1,772 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Python Syntax Quick Reference &#8212; Quantitative Reasoning in Biology</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/misc/python_syntax_guide';</script>
+    <link rel="canonical" href="https://damlabresources.github.io/quantitative-reasoning-in-biology/content/misc/python_syntax_guide.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Troubleshooting Common Errors" href="troubleshooting_errors.html" />
+    <link rel="prev" title="Python Types Reference Guide" href="python_types_reference.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../book_index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Quantitative Reasoning in Biology</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../book_index.html">
+                    Quantitative Reasoning in Biology
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 0: Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="how_to.html">How to use this book</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 1 : Hello World</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module01/Module01_book.html">Module 1: Hello World</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module01/notebook_actions.html">Notebook basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module01/Module01_walkthrough.html">Walkthrough</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module02/Module02_book.html">Module 2: Simple calculations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module02/dilution_calculations.html">Molarity Calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module02/Module02_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module02/Module02_lab.html">Lab</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module03/Module03_book.html">Module 3: DataFrames</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module03/spreadsheet_organization.html">Spreadsheet Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module03/Module03_walkthrough_SOLUTION.html">Walkthrough</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module03/Module03_lab.html">Lab</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 2 : Descriptive Statistics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module04/Module04_book.html">Module 4: Analysis by groups</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module04/Module04_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module04/reshaping_data.html">Reshaping Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module04/Module04_lab.html">Lab</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module05/Module05_book.html">Module 5: Plotting with Pandas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module05/Module05_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module05/Module05_lab.html">Lab</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module06/Module06_book.html">Module 6: Visualizing with Confidence</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module06/grammar_of_graphics.html">Grammar of Graphics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module06/Module06_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module06/Module06_lab.html">Lab</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module07/Module07_book.html">Module 7: Samples and Replicates</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module07/Module07_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module07/Module07_lab.html">Lab</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 3 : Inferential Statistics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module08/Module08_book.html">Module 8: Hypothesis Testing</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module08/Module08_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module08/Module08_lab.html">Lab</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module09/Module09_book.html">Module 9: Linear Regression</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module09/Module09_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module09/Module09_lab.html">Lab</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module10/Module10_book.html">Module 10: Power Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module10/Module10_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module10/Module10_lab.html">Lab</a></li>
+
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Extra</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="python_types_reference.html">Python Types Reference Guide</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Python Syntax Quick Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting_errors.html">Troubleshooting Common Errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about_this_book.html">About this book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="run_your_own_jupyter.html">Running Your Own Jupyter Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Change Log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="course_info.html">Course Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="author_bio.html">About the Author</a></li>
+<li class="toctree-l1"><a class="reference internal" href="works_cited.html">Works Cited</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/content/misc/python_syntax_guide.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Python Syntax Quick Reference</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bracket-types-when-to-use-what">Bracket Types: When to Use What</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-mistakes">Common Mistakes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframe-column-selection">DataFrame Column Selection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframe-indexing-loc-vs-iloc">DataFrame Indexing: <code class="docutils literal notranslate"><span class="pre">.loc[]</span></code> vs <code class="docutils literal notranslate"><span class="pre">.iloc[]</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-difference">Key Difference</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spacing-and-formatting">Spacing and Formatting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spaces-don-t-matter-mostly">Spaces DON’T Matter (Mostly)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commas-do-matter">Commas DO Matter</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quotes-single-vs-double">Quotes: Single vs Double</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-string-operations">Common String Operations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#method-chaining">Method Chaining</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-troubleshooting-checklist">Quick Troubleshooting Checklist</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">Resources</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="python-syntax-quick-reference">
+<h1>Python Syntax Quick Reference<a class="headerlink" href="#python-syntax-quick-reference" title="Link to this heading">#</a></h1>
+<p>This page provides a quick reference for Python and pandas syntax commonly used in this course.</p>
+<section id="bracket-types-when-to-use-what">
+<h2>Bracket Types: When to Use What<a class="headerlink" href="#bracket-types-when-to-use-what" title="Link to this heading">#</a></h2>
+<p>Python uses three types of brackets, each with a specific purpose:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Bracket Type</p></th>
+<th class="head"><p>Symbol</p></th>
+<th class="head"><p>Primary Uses</p></th>
+<th class="head"><p>Examples</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Square brackets</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]</span></code></p></td>
+<td><p>Lists, indexing, selecting columns</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">my_list</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3]</span></code><br><code class="docutils literal notranslate"><span class="pre">df['column_name']</span></code><br><code class="docutils literal notranslate"><span class="pre">df.loc[0:5]</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Parentheses</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">(</span> <span class="pre">)</span></code></p></td>
+<td><p>Function calls, tuples, grouping</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">print('Hello')</span></code><br><code class="docutils literal notranslate"><span class="pre">my_tuple</span> <span class="pre">=</span> <span class="pre">(1,</span> <span class="pre">2,</span> <span class="pre">3)</span></code><br><code class="docutils literal notranslate"><span class="pre">(x</span> <span class="pre">+</span> <span class="pre">y)</span> <span class="pre">*</span> <span class="pre">z</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Curly braces</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">}</span></code></p></td>
+<td><p>Dictionaries, sets</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">my_dict</span> <span class="pre">=</span> <span class="pre">{'key':</span> <span class="pre">'value'}</span></code><br><code class="docutils literal notranslate"><span class="pre">my_set</span> <span class="pre">=</span> <span class="pre">{1,</span> <span class="pre">2,</span> <span class="pre">3}</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="common-mistakes">
+<h3>Common Mistakes<a class="headerlink" href="#common-mistakes" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ❌ WRONG: Using parentheses for column selection</span>
+<span class="n">df</span><span class="p">(</span><span class="s1">&#39;column_name&#39;</span><span class="p">)</span>  <span class="c1"># This won&#39;t work!</span>
+
+<span class="c1"># ✅ CORRECT: Use square brackets</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;column_name&#39;</span><span class="p">]</span>
+
+<span class="c1"># ❌ WRONG: Using square brackets for function calls</span>
+<span class="nb">print</span><span class="p">[</span><span class="s1">&#39;Hello&#39;</span><span class="p">]</span>  <span class="c1"># This won&#39;t work!</span>
+
+<span class="c1"># ✅ CORRECT: Use parentheses</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="dataframe-column-selection">
+<h2>DataFrame Column Selection<a class="headerlink" href="#dataframe-column-selection" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Select a single column (returns a Series)</span>
+<span class="n">ages</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>
+
+<span class="c1"># Select multiple columns (returns a DataFrame)</span>
+<span class="n">subset</span> <span class="o">=</span> <span class="n">data</span><span class="p">[[</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;sex&#39;</span><span class="p">,</span> <span class="s1">&#39;education&#39;</span><span class="p">]]</span>
+<span class="c1"># Note the double square brackets: outer for indexing, inner for the list</span>
+
+<span class="c1"># Select columns by condition</span>
+<span class="n">numeric_cols</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="n">data</span><span class="o">.</span><span class="n">dtypes</span> <span class="o">==</span> <span class="s1">&#39;float64&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</section>
+<section id="dataframe-indexing-loc-vs-iloc">
+<h2>DataFrame Indexing: <code class="docutils literal notranslate"><span class="pre">.loc[]</span></code> vs <code class="docutils literal notranslate"><span class="pre">.iloc[]</span></code><a class="headerlink" href="#dataframe-indexing-loc-vs-iloc" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Method</p></th>
+<th class="head"><p>What it uses</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">.loc[]</span></code></p></td>
+<td><p>Labels/names</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">df.loc[0:5,</span> <span class="pre">'column_name']</span></code><br><code class="docutils literal notranslate"><span class="pre">df.loc[df['age']</span> <span class="pre">&gt;</span> <span class="pre">30]</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">.iloc[]</span></code></p></td>
+<td><p>Integer positions</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">df.iloc[0:5,</span> <span class="pre">0:3]</span></code><br><code class="docutils literal notranslate"><span class="pre">df.iloc[0,</span> <span class="pre">1]</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="key-difference">
+<h3>Key Difference<a class="headerlink" href="#key-difference" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># .loc[] uses LABELS (inclusive on both ends)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>  <span class="c1"># Includes rows 0, 1, 2, 3, 4, AND 5</span>
+
+<span class="c1"># .iloc[] uses INTEGER POSITIONS (exclusive on the end)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>  <span class="c1"># Includes rows 0, 1, 2, 3, 4 (NOT 5)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="spacing-and-formatting">
+<h2>Spacing and Formatting<a class="headerlink" href="#spacing-and-formatting" title="Link to this heading">#</a></h2>
+<section id="spaces-don-t-matter-mostly">
+<h3>Spaces DON’T Matter (Mostly)<a class="headerlink" href="#spaces-don-t-matter-mostly" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># These are all equivalent:</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>
+<span class="n">data</span><span class="p">[</span> <span class="s1">&#39;age&#39;</span> <span class="p">]</span>
+<span class="n">data</span>  <span class="p">[</span>  <span class="s1">&#39;age&#39;</span>  <span class="p">]</span>
+
+<span class="c1"># Function arguments with spaces</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="s1">&#39;World&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="s1">&#39;Hello&#39;</span> <span class="p">,</span> <span class="s1">&#39;World&#39;</span> <span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="commas-do-matter">
+<h3>Commas DO Matter<a class="headerlink" href="#commas-do-matter" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ❌ WRONG: Missing comma</span>
+<span class="n">df</span><span class="p">[[</span><span class="s1">&#39;age&#39;</span> <span class="s1">&#39;sex&#39;</span><span class="p">]]</span>  <span class="c1"># This will cause an error!</span>
+
+<span class="c1"># ✅ CORRECT: Comma separates items in a list</span>
+<span class="n">df</span><span class="p">[[</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;sex&#39;</span><span class="p">]]</span>
+
+<span class="c1"># ❌ WRONG: Extra comma at the end (in some contexts)</span>
+<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,]</span>  <span class="c1"># Works but not recommended</span>
+
+<span class="c1"># ✅ CORRECT: No trailing comma</span>
+<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="quotes-single-vs-double">
+<h3>Quotes: Single vs Double<a class="headerlink" href="#quotes-single-vs-double" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Both work the same for strings</span>
+<span class="n">name1</span> <span class="o">=</span> <span class="s1">&#39;Alice&#39;</span>
+<span class="n">name2</span> <span class="o">=</span> <span class="s2">&quot;Alice&quot;</span>
+
+<span class="c1"># Use the opposite quote type for nested quotes</span>
+<span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;She said &#39;Hello&#39;&quot;</span>
+<span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;She said &quot;Hello&quot;&#39;</span>
+
+<span class="c1"># Or use escape characters</span>
+<span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;She said </span><span class="se">\&#39;</span><span class="s1">Hello</span><span class="se">\&#39;</span><span class="s1">&#39;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="common-string-operations">
+<h2>Common String Operations<a class="headerlink" href="#common-string-operations" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Column names are strings</span>
+<span class="n">column_name</span> <span class="o">=</span> <span class="s1">&#39;age&#39;</span>
+<span class="n">data</span><span class="p">[</span><span class="n">column_name</span><span class="p">]</span>  <span class="c1"># Same as data[&#39;age&#39;]</span>
+
+<span class="c1"># String values need quotes</span>
+<span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sex&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Male&#39;</span><span class="p">]</span>  <span class="c1"># ✅ CORRECT</span>
+
+<span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sex&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">Male</span><span class="p">]</span>  <span class="c1"># ❌ WRONG: Male without quotes is a variable</span>
+</pre></div>
+</div>
+</section>
+<section id="method-chaining">
+<h2>Method Chaining<a class="headerlink" href="#method-chaining" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># You can chain multiple operations</span>
+<span class="n">result</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span>
+          <span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;age &gt; 30&#39;</span><span class="p">)</span>
+          <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;ART&#39;</span><span class="p">)</span>
+          <span class="p">[</span><span class="s1">&#39;visuospatial_domain_z&#39;</span><span class="p">]</span>
+          <span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+
+<span class="c1"># Same as:</span>
+<span class="n">temp1</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;age &gt; 30&#39;</span><span class="p">)</span>
+<span class="n">temp2</span> <span class="o">=</span> <span class="n">temp1</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;ART&#39;</span><span class="p">)</span>
+<span class="n">temp3</span> <span class="o">=</span> <span class="n">temp2</span><span class="p">[</span><span class="s1">&#39;visuospatial_domain_z&#39;</span><span class="p">]</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">temp3</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="quick-troubleshooting-checklist">
+<h2>Quick Troubleshooting Checklist<a class="headerlink" href="#quick-troubleshooting-checklist" title="Link to this heading">#</a></h2>
+<p>When you encounter an error, check:</p>
+<ol class="arabic simple">
+<li><p>✅ Are you using the right bracket type?</p></li>
+<li><p>✅ Do you have matching opening and closing brackets?</p></li>
+<li><p>✅ Are all your commas in the right places?</p></li>
+<li><p>✅ Are strings surrounded by quotes?</p></li>
+<li><p>✅ Are you using <code class="docutils literal notranslate"><span class="pre">.loc[]</span></code> or <code class="docutils literal notranslate"><span class="pre">.iloc[]</span></code> correctly?</p></li>
+<li><p>✅ Do column names match exactly (including capitalization)?</p></li>
+</ol>
+</section>
+<section id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong><a class="reference internal" href="python_types_reference.html"><span class="std std-doc">Python Types Reference</span></a></strong> - Learn about common types (int, str, list, Series, DataFrame, Axes)</p></li>
+<li><p><strong><a class="reference internal" href="troubleshooting_errors.html"><span class="std std-doc">Troubleshooting Common Errors</span></a></strong> - Understand and fix Python errors</p></li>
+<li><p><a class="reference external" href="https://pandas.pydata.org/docs/">Official pandas documentation</a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/tutorial/">Python official tutorial</a></p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content/misc"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="python_types_reference.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Python Types Reference Guide</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="troubleshooting_errors.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Troubleshooting Common Errors</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bracket-types-when-to-use-what">Bracket Types: When to Use What</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#common-mistakes">Common Mistakes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframe-column-selection">DataFrame Column Selection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframe-indexing-loc-vs-iloc">DataFrame Indexing: <code class="docutils literal notranslate"><span class="pre">.loc[]</span></code> vs <code class="docutils literal notranslate"><span class="pre">.iloc[]</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-difference">Key Difference</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spacing-and-formatting">Spacing and Formatting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#spaces-don-t-matter-mostly">Spaces DON’T Matter (Mostly)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commas-do-matter">Commas DO Matter</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quotes-single-vs-double">Quotes: Single vs Double</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-string-operations">Common String Operations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#method-chaining">Method Chaining</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-troubleshooting-checklist">Quick Troubleshooting Checklist</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">Resources</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Will Dampier
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -248,12 +248,15 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Extra</span></p>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../content/misc/python_types_reference.html">Python Types Reference Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/misc/python_syntax_guide.html">Python Syntax Quick Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/misc/troubleshooting_errors.html">Troubleshooting Common Errors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../content/misc/about_this_book.html">About this book</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../content/misc/course_info.html">Course Information</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../content/misc/author_bio.html">About the Author</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../content/misc/run_your_own_jupyter.html">Running Your Own Jupyter Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../content/faq.html">Frequently Asked Questions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../content/changelog.html">Change Log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/misc/course_info.html">Course Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/misc/author_bio.html">About the Author</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../content/misc/works_cited.html">Works Cited</a></li>
 </ul>
 
@@ -469,6 +472,16 @@ To do this, we need to first classify each patient into one of three groups:</p>
 <p>By assigning each row of our table with the appropriate outcome, we can begin to compare the microbiomes of these different groups and consider the potential clinical implications of our analysis.</p>
 <p>This step is crucial because it allows us to accurately analyze and interpret the data, and is a necessary foundation for the rest of the lab.</p>
 <p>Use Pandas to load the <code class="docutils literal notranslate"><span class="pre">sample_info.csv</span></code> file and merge it with the <code class="docutils literal notranslate"><span class="pre">biome_data</span></code>.</p>
+<p><strong>Checked variables:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">merged_data</span></code> - A DataFrame created by merging the biome data with sample_info.csv</p>
+<ul>
+<li><p>Should contain columns from both datasets including disease_type information</p></li>
+</ul>
+</li>
+</ul>
+<details><summary>Hint</summary>
+Use pd.read_csv() to load sample_info.csv, then use pd.merge() with left_on='Patient' and right_on='PID'. See Module 4 walkthrough for merge examples.</details>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
@@ -507,6 +520,21 @@ To do this, we need to first classify each patient into one of three groups:</p>
 <section id="q2-determine-the-predomininant-phylum-across-regions">
 <h3>Q2: Determine the predomininant phylum across regions.<a class="headerlink" href="#q2-determine-the-predomininant-phylum-across-regions" title="Link to this heading">#</a></h3>
 <p>Use a pivot table to count the number of unique patients that have <code class="docutils literal notranslate"><span class="pre">Actinobacteria</span></code> or <code class="docutils literal notranslate"><span class="pre">Firmicutes</span></code> as the <code class="docutils literal notranslate"><span class="pre">Predominant</span></code> phylum at each body site.</p>
+<p><strong>Checked variables:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">q2_pivot</span></code> - A pivot table with locations as rows and predominant phyla as columns</p>
+<ul>
+<li><p>Should use pd.pivot_table() with aggfunc=’nunique’ to count unique patients</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">q2_firmi_regions</span></code> - A subset of q2_pivot with only Actinobacteria and Firmicutes columns</p>
+<ul>
+<li><p>Filter to rows where Firmicutes predominates</p></li>
+</ul>
+</li>
+</ul>
+<details><summary>Hint</summary>
+Create a pivot table with index='Location', columns='Predominant', values='Patient', aggfunc='nunique'. Then filter to keep only Actinobacteria and Firmicutes columns. See Module 4 walkthrough for pivot table examples.</details>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
@@ -569,6 +597,17 @@ To do this, we need to first classify each patient into one of three groups:</p>
 <h3>Q3: Which body site has the largest increase in Actinobacteria when comparing typical and severe disease outcomes?<a class="headerlink" href="#q3-which-body-site-has-the-largest-increase-in-actinobacteria-when-comparing-typical-and-severe-disease-outcomes" title="Link to this heading">#</a></h3>
 <p>Find which body site has the largest increase in Actinobacteria when comparing typical and severe disease outcomes.
 Utilize pivot tables to compare the relative abundances of Actinobacteria across disease states and body sites.</p>
+<p><strong>Checked variables:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">q3_pivot</span></code> - A pivot table with locations as rows and disease_type as columns showing Actinobacteria levels</p>
+<ul>
+<li><p>Should have a ‘relative_abundance’ column (difference between severe and typical)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">q3_ans</span></code> - The body site with the largest increase in Actinobacteria (string)</p></li>
+</ul>
+<details><summary>Hint</summary>
+Create a pivot table with index='Location', columns='disease_type', values='Actinobacteria'. Add a column for the difference (severe - typical). Find the location with the maximum difference. See Module 4 walkthrough for pivot table examples.</details>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
@@ -638,6 +677,13 @@ Let’s reframe this into a clinical application.</p>
 <p>If we would like to use microbiome sampling as a clinical assay to detect severe infections, it would be helpful if those areas are “easy to access”.
 This dataset is a collection of samples that came from both biopsies and swabs.
 Create a subset of the data that only contains <code class="docutils literal notranslate"><span class="pre">Swab</span></code> samples.</p>
+<p><strong>Checked variables:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">swabbable_data</span></code> - A DataFrame containing only rows where CollectionType == ‘Swab’</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">q4_fraction_swabbable</span></code> - The fraction of all samples that are swabs (number between 0 and 1)</p></li>
+</ul>
+<details><summary>Hint</summary>
+Use .query() or boolean indexing to filter merged_data for CollectionType == "Swab". Calculate the fraction by using .mean() on a boolean comparison. See Module 3 and 4 walkthroughs for filtering examples.</details>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
@@ -695,6 +741,16 @@ Create a subset of the data that only contains <code class="docutils literal not
 <p>Previously, we saw that there was more Actinobacteria in across certain regions in severe disease.
 In this case, we’ll consider <strong>high</strong> as being 1 standard-deviation above the average of typical patients for that region.</p>
 <p>Create a new column in <code class="docutils literal notranslate"><span class="pre">swabbable_data</span></code> called <code class="docutils literal notranslate"><span class="pre">is_high</span></code> that is true if the Actinobacteria is 1 standard-deviation above the average for that region.</p>
+<p><strong>Checked variables:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">swabbable_data['is_high']</span></code> - A new boolean column indicating if Actinobacteria is high</p>
+<ul>
+<li><p>High = more than 1 std dev above the mean for typical patients in that location</p></li>
+</ul>
+</li>
+</ul>
+<details><summary>Hint</summary>
+Calculate mean and std of Actinobacteria for typical patients at each location using groupby. Then compare each sample's Actinobacteria level to (mean + std) for its location. See Module 4 walkthrough for groupby examples.</details>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
@@ -777,6 +833,17 @@ This makes PPV one of the most useful metrics when describing diagnostic tests t
 <p>Use the <code class="docutils literal notranslate"><span class="pre">is_high</span></code> column as a prediction of whether a patient has a persistent infection.
 Calculate the PPV for each region.
 In the provided space, place the most accurate region and its calculated PPV.</p>
+<p><strong>Checked variables:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">q6_ppv</span></code> - A Series or dict with the PPV for each swabbable region</p>
+<ul>
+<li><p>PPV = (true positives) / (all positive tests)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">q6_highest_region</span></code> - The region name with the highest PPV for persistent disease (string)</p></li>
+</ul>
+<details><summary>Hint</summary>
+Filter for is_high==True, then calculate for each location: count where disease_type=='persistent' divided by total count. Find the location with max PPV. See Module 4 walkthrough for groupby and aggregation examples.</details>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>

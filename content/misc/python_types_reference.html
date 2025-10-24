@@ -1,0 +1,1238 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Python Types Reference Guide &#8212; Quantitative Reasoning in Biology</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/misc/python_types_reference';</script>
+    <link rel="canonical" href="https://damlabresources.github.io/quantitative-reasoning-in-biology/content/misc/python_types_reference.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Python Syntax Quick Reference" href="python_syntax_guide.html" />
+    <link rel="prev" title="Lab" href="../../_bblearn/Module10/Module10_lab.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../book_index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Quantitative Reasoning in Biology</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../book_index.html">
+                    Quantitative Reasoning in Biology
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 0: Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="how_to.html">How to use this book</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 1 : Hello World</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module01/Module01_book.html">Module 1: Hello World</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module01/notebook_actions.html">Notebook basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module01/Module01_walkthrough.html">Walkthrough</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module02/Module02_book.html">Module 2: Simple calculations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module02/dilution_calculations.html">Molarity Calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module02/Module02_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module02/Module02_lab.html">Lab</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module03/Module03_book.html">Module 3: DataFrames</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module03/spreadsheet_organization.html">Spreadsheet Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module03/Module03_walkthrough_SOLUTION.html">Walkthrough</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module03/Module03_lab.html">Lab</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 2 : Descriptive Statistics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module04/Module04_book.html">Module 4: Analysis by groups</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module04/Module04_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module04/reshaping_data.html">Reshaping Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module04/Module04_lab.html">Lab</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module05/Module05_book.html">Module 5: Plotting with Pandas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module05/Module05_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module05/Module05_lab.html">Lab</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module06/Module06_book.html">Module 6: Visualizing with Confidence</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module06/grammar_of_graphics.html">Grammar of Graphics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module06/Module06_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module06/Module06_lab.html">Lab</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module07/Module07_book.html">Module 7: Samples and Replicates</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module07/Module07_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module07/Module07_lab.html">Lab</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 3 : Inferential Statistics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module08/Module08_book.html">Module 8: Hypothesis Testing</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module08/Module08_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module08/Module08_lab.html">Lab</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module09/Module09_book.html">Module 9: Linear Regression</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module09/Module09_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module09/Module09_lab.html">Lab</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module10/Module10_book.html">Module 10: Power Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module10/Module10_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module10/Module10_lab.html">Lab</a></li>
+
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Extra</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Python Types Reference Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_syntax_guide.html">Python Syntax Quick Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting_errors.html">Troubleshooting Common Errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about_this_book.html">About this book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="run_your_own_jupyter.html">Running Your Own Jupyter Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Change Log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="course_info.html">Course Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="author_bio.html">About the Author</a></li>
+<li class="toctree-l1"><a class="reference internal" href="works_cited.html">Works Cited</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/content/misc/python_types_reference.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Python Types Reference Guide</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-check-a-type">How to Check a Type</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-built-in-types">Python Built-in Types</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numbers">Numbers</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#int-integer">int (Integer)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#float-floating-point-number">float (Floating Point Number)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#text">Text</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#str-string">str (String)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#collections">Collections</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#list">list</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tuple">tuple</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dict-dictionary">dict (Dictionary)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#set">set</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bool-boolean">bool (Boolean)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-types">pandas Types</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pd-series">pd.Series</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pd-dataframe">pd.DataFrame</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib-types">matplotlib Types</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plt-figure">plt.Figure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plt-axes">plt.Axes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-type-check-cheatsheet">Quick Type Check Cheatsheet</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-type-confusions">Common Type Confusions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-is-this-a-series-and-not-a-dataframe">“Why is this a Series and not a DataFrame?”</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-s-the-difference-between-a-list-and-a-series">“What’s the difference between a list and a Series?”</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#when-do-i-get-figure-vs-axes">“When do I get Figure vs Axes?”</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-resources">Additional Resources</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="python-types-reference-guide">
+<h1>Python Types Reference Guide<a class="headerlink" href="#python-types-reference-guide" title="Link to this heading">#</a></h1>
+<p>This guide explains the common data types you’ll encounter in this course and what you can do with them.</p>
+<section id="how-to-check-a-type">
+<h2>How to Check a Type<a class="headerlink" href="#how-to-check-a-type" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Check the type of any variable</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">my_variable</span><span class="p">)</span>
+
+<span class="c1"># Example</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>  <span class="c1"># Output: &lt;class &#39;int&#39;&gt;</span>
+
+<span class="c1"># Check if something is a specific type</span>
+<span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">int</span><span class="p">)</span>  <span class="c1"># Returns True or False</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="python-built-in-types">
+<h2>Python Built-in Types<a class="headerlink" href="#python-built-in-types" title="Link to this heading">#</a></h2>
+<section id="numbers">
+<h3>Numbers<a class="headerlink" href="#numbers" title="Link to this heading">#</a></h3>
+<section id="int-integer">
+<h4>int (Integer)<a class="headerlink" href="#int-integer" title="Link to this heading">#</a></h4>
+<p><strong>What it is:</strong> Whole numbers (no decimal point)</p>
+<p><strong>Examples:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">negative</span> <span class="o">=</span> <span class="o">-</span><span class="mi">5</span>
+</pre></div>
+</div>
+<p><strong>Common operations:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="c1"># Arithmetic</span>
+<span class="n">x</span> <span class="o">+</span> <span class="n">y</span>    <span class="c1"># Addition: 13</span>
+<span class="n">x</span> <span class="o">-</span> <span class="n">y</span>    <span class="c1"># Subtraction: 7</span>
+<span class="n">x</span> <span class="o">*</span> <span class="n">y</span>    <span class="c1"># Multiplication: 30</span>
+<span class="n">x</span> <span class="o">/</span> <span class="n">y</span>    <span class="c1"># Division: 3.333...</span>
+<span class="n">x</span> <span class="o">//</span> <span class="n">y</span>   <span class="c1"># Integer division: 3</span>
+<span class="n">x</span> <span class="o">%</span> <span class="n">y</span>    <span class="c1"># Modulo (remainder): 1</span>
+<span class="n">x</span> <span class="o">**</span> <span class="n">y</span>   <span class="c1"># Power: 1000</span>
+
+<span class="c1"># Comparison</span>
+<span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span>    <span class="c1"># Greater than: True</span>
+<span class="n">x</span> <span class="o">==</span> <span class="n">y</span>   <span class="c1"># Equal to: False</span>
+</pre></div>
+</div>
+</section>
+<section id="float-floating-point-number">
+<h4>float (Floating Point Number)<a class="headerlink" href="#float-floating-point-number" title="Link to this heading">#</a></h4>
+<p><strong>What it is:</strong> Numbers with decimal points</p>
+<p><strong>Examples:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">height</span> <span class="o">=</span> <span class="mf">1.75</span>
+<span class="n">temperature</span> <span class="o">=</span> <span class="mf">98.6</span>
+<span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14159</span>
+</pre></div>
+</div>
+<p><strong>Common operations:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Same as int, plus:</span>
+<span class="nb">round</span><span class="p">(</span><span class="mf">3.14159</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># Round to 2 decimals: 3.14</span>
+<span class="nb">abs</span><span class="p">(</span><span class="o">-</span><span class="mf">5.5</span><span class="p">)</span>          <span class="c1"># Absolute value: 5.5</span>
+</pre></div>
+</div>
+<p><strong>Converting between types:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="mf">3.9</span><span class="p">)</span>      <span class="c1"># Converts to int: 3 (truncates, doesn&#39;t round)</span>
+<span class="nb">float</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>      <span class="c1"># Converts to float: 5.0</span>
+<span class="nb">int</span><span class="p">(</span><span class="s1">&#39;42&#39;</span><span class="p">)</span>     <span class="c1"># String to int: 42</span>
+<span class="nb">float</span><span class="p">(</span><span class="s1">&#39;3.14&#39;</span><span class="p">)</span> <span class="c1"># String to float: 3.14</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="text">
+<h3>Text<a class="headerlink" href="#text" title="Link to this heading">#</a></h3>
+<section id="str-string">
+<h4>str (String)<a class="headerlink" href="#str-string" title="Link to this heading">#</a></h4>
+<p><strong>What it is:</strong> Text data</p>
+<p><strong>Examples:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Alice&#39;</span>
+<span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Hello, World!&quot;</span>
+<span class="n">column_name</span> <span class="o">=</span> <span class="s1">&#39;age&#39;</span>
+</pre></div>
+</div>
+<p><strong>Common operations:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;Hello World&#39;</span>
+
+<span class="c1"># Concatenation</span>
+<span class="s1">&#39;Hello&#39;</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="s1">&#39;World&#39;</span>  <span class="c1"># &#39;Hello World&#39;</span>
+
+<span class="c1"># Length</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>  <span class="c1"># 11</span>
+
+<span class="c1"># Case conversion</span>
+<span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>  <span class="c1"># &#39;hello world&#39;</span>
+<span class="n">text</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>  <span class="c1"># &#39;HELLO WORLD&#39;</span>
+
+<span class="c1"># Splitting</span>
+<span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>  <span class="c1"># [&#39;Hello&#39;, &#39;World&#39;]</span>
+
+<span class="c1"># Checking contents</span>
+<span class="s1">&#39;Hello&#39;</span> <span class="ow">in</span> <span class="n">text</span>     <span class="c1"># True</span>
+<span class="n">text</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">)</span> <span class="c1"># True</span>
+<span class="n">text</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;d&#39;</span><span class="p">)</span>   <span class="c1"># True</span>
+
+<span class="c1"># Replacing</span>
+<span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;World&#39;</span><span class="p">,</span> <span class="s1">&#39;Python&#39;</span><span class="p">)</span>  <span class="c1"># &#39;Hello Python&#39;</span>
+
+<span class="c1"># Stripping whitespace</span>
+<span class="s1">&#39;  hello  &#39;</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>  <span class="c1"># &#39;hello&#39;</span>
+</pre></div>
+</div>
+<p><strong>F-strings (formatted strings):</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Alice&#39;</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">25</span>
+
+<span class="c1"># Modern way (Python 3.6+)</span>
+<span class="n">message</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s1"> is </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s1"> years old&#39;</span>
+<span class="c1"># Output: &#39;Alice is 25 years old&#39;</span>
+
+<span class="c1"># With formatting</span>
+<span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14159</span>
+<span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">pi</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">&#39;</span>  <span class="c1"># &#39;3.14&#39; (2 decimal places)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="collections">
+<h3>Collections<a class="headerlink" href="#collections" title="Link to this heading">#</a></h3>
+<section id="list">
+<h4>list<a class="headerlink" href="#list" title="Link to this heading">#</a></h4>
+<p><strong>What it is:</strong> Ordered, mutable collection</p>
+<p><strong>Examples:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="s1">&#39;Charlie&#39;</span><span class="p">]</span>
+<span class="n">mixed</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><strong>Common operations:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+
+<span class="c1"># Accessing elements (0-indexed)</span>
+<span class="n">my_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>      <span class="c1"># First element: 1</span>
+<span class="n">my_list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>     <span class="c1"># Last element: 3</span>
+<span class="n">my_list</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>    <span class="c1"># Slice: [1, 2]</span>
+
+<span class="c1"># Adding elements</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>         <span class="c1"># Add to end: [1, 2, 3, 4]</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>      <span class="c1"># Insert at position: [0, 1, 2, 3, 4]</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>    <span class="c1"># Add multiple: [0, 1, 2, 3, 4, 5, 6]</span>
+
+<span class="c1"># Removing elements</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>    <span class="c1"># Remove first occurrence of value</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>        <span class="c1"># Remove and return last element</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>       <span class="c1"># Remove and return element at index</span>
+
+<span class="c1"># Other operations</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>         <span class="c1"># Length</span>
+<span class="mi">3</span> <span class="ow">in</span> <span class="n">my_list</span>         <span class="c1"># Check if contains: True/False</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>       <span class="c1"># Sort in place</span>
+<span class="nb">sorted</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>      <span class="c1"># Return sorted copy</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>    <span class="c1"># Reverse in place</span>
+</pre></div>
+</div>
+</section>
+<section id="tuple">
+<h4>tuple<a class="headerlink" href="#tuple" title="Link to this heading">#</a></h4>
+<p><strong>What it is:</strong> Ordered, immutable collection (can’t be changed after creation)</p>
+<p><strong>Examples:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">coordinates</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">rgb</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Common operations:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+
+<span class="c1"># Accessing (same as list)</span>
+<span class="n">my_tuple</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>   <span class="c1"># 1</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">my_tuple</span><span class="p">)</span> <span class="c1"># 3</span>
+
+<span class="c1"># Cannot modify!</span>
+<span class="c1"># my_tuple[0] = 5  # This will cause an error!</span>
+
+<span class="c1"># Unpacking</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>  <span class="c1"># x=10, y=20</span>
+</pre></div>
+</div>
+<p><strong>When to use:</strong> Function returns, dictionary keys, when you want to prevent modification</p>
+</section>
+<section id="dict-dictionary">
+<h4>dict (Dictionary)<a class="headerlink" href="#dict-dictionary" title="Link to this heading">#</a></h4>
+<p><strong>What it is:</strong> Unordered collection of key-value pairs</p>
+<p><strong>Examples:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">person</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="s1">&#39;city&#39;</span><span class="p">:</span> <span class="s1">&#39;Boston&#39;</span><span class="p">}</span>
+<span class="n">settings</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;debug&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;timeout&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Common operations:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">}</span>
+
+<span class="c1"># Accessing values</span>
+<span class="n">my_dict</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span>         <span class="c1"># &#39;Alice&#39;</span>
+<span class="n">my_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span>     <span class="c1"># &#39;Alice&#39; (safer - won&#39;t error if key missing)</span>
+<span class="n">my_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;city&#39;</span><span class="p">,</span> <span class="s1">&#39;Unknown&#39;</span><span class="p">)</span>  <span class="c1"># &#39;Unknown&#39; (default if not found)</span>
+
+<span class="c1"># Adding/modifying</span>
+<span class="n">my_dict</span><span class="p">[</span><span class="s1">&#39;city&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Boston&#39;</span>    <span class="c1"># Add new key-value</span>
+<span class="n">my_dict</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">26</span>           <span class="c1"># Update existing</span>
+
+<span class="c1"># Checking</span>
+<span class="s1">&#39;name&#39;</span> <span class="ow">in</span> <span class="n">my_dict</span>             <span class="c1"># Check if key exists: True</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">my_dict</span><span class="p">)</span>                  <span class="c1"># Number of key-value pairs</span>
+
+<span class="c1"># Getting all keys/values</span>
+<span class="n">my_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>                <span class="c1"># dict_keys([&#39;name&#39;, &#39;age&#39;, &#39;city&#39;])</span>
+<span class="n">my_dict</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>              <span class="c1"># dict_values([&#39;Alice&#39;, 26, &#39;Boston&#39;])</span>
+<span class="n">my_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>               <span class="c1"># key-value pairs</span>
+
+<span class="c1"># Removing</span>
+<span class="n">my_dict</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;city&#39;</span><span class="p">)</span>           <span class="c1"># Remove and return value</span>
+<span class="k">del</span> <span class="n">my_dict</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>            <span class="c1"># Remove key-value pair</span>
+</pre></div>
+</div>
+<p><strong>Iterating:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Over keys</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">my_dict</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+
+<span class="c1"># Over values</span>
+<span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">my_dict</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+<span class="c1"># Over key-value pairs</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">my_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s1">: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="set">
+<h4>set<a class="headerlink" href="#set" title="Link to this heading">#</a></h4>
+<p><strong>What it is:</strong> Unordered collection of unique values</p>
+<p><strong>Examples:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">unique_numbers</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span>
+<span class="n">categories</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Common operations:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_set</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+
+<span class="c1"># Adding</span>
+<span class="n">my_set</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>           <span class="c1"># {1, 2, 3, 4}</span>
+
+<span class="c1"># Removing</span>
+<span class="n">my_set</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>        <span class="c1"># Removes 2, errors if not found</span>
+<span class="n">my_set</span><span class="o">.</span><span class="n">discard</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>       <span class="c1"># Removes 2, no error if not found</span>
+
+<span class="c1"># Checking</span>
+<span class="mi">3</span> <span class="ow">in</span> <span class="n">my_set</span>             <span class="c1"># True</span>
+
+<span class="c1"># Set operations</span>
+<span class="n">set1</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+<span class="n">set2</span> <span class="o">=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">}</span>
+
+<span class="n">set1</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">set2</span><span class="p">)</span>        <span class="c1"># {1, 2, 3, 4, 5}</span>
+<span class="n">set1</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">set2</span><span class="p">)</span> <span class="c1"># {3}</span>
+<span class="n">set1</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">set2</span><span class="p">)</span>   <span class="c1"># {1, 2}</span>
+</pre></div>
+</div>
+<p><strong>When to use:</strong> Remove duplicates, test membership, mathematical set operations</p>
+</section>
+<section id="bool-boolean">
+<h4>bool (Boolean)<a class="headerlink" href="#bool-boolean" title="Link to this heading">#</a></h4>
+<p><strong>What it is:</strong> True or False values</p>
+<p><strong>Examples:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">is_valid</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">has_error</span> <span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+<p><strong>Common uses:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># In conditions</span>
+<span class="k">if</span> <span class="n">is_valid</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Valid!&#39;</span><span class="p">)</span>
+
+<span class="c1"># Comparisons return booleans</span>
+<span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">3</span>        <span class="c1"># True</span>
+<span class="s1">&#39;a&#39;</span> <span class="o">==</span> <span class="s1">&#39;b&#39;</span>   <span class="c1"># False</span>
+
+<span class="c1"># Logical operations</span>
+<span class="kc">True</span> <span class="ow">and</span> <span class="kc">False</span>   <span class="c1"># False</span>
+<span class="kc">True</span> <span class="ow">or</span> <span class="kc">False</span>    <span class="c1"># True</span>
+<span class="ow">not</span> <span class="kc">True</span>         <span class="c1"># False</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="pandas-types">
+<h2>pandas Types<a class="headerlink" href="#pandas-types" title="Link to this heading">#</a></h2>
+<section id="pd-series">
+<h3>pd.Series<a class="headerlink" href="#pd-series" title="Link to this heading">#</a></h3>
+<p><strong>What it is:</strong> One-dimensional labeled array (like a column in Excel)</p>
+<p><strong>Examples:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="c1"># From a list</span>
+<span class="n">ages</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">40</span><span class="p">])</span>
+
+<span class="c1"># From a dictionary (keys become index)</span>
+<span class="n">grades</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span><span class="s1">&#39;Alice&#39;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span> <span class="s1">&#39;Bob&#39;</span><span class="p">:</span> <span class="mi">85</span><span class="p">,</span> <span class="s1">&#39;Charlie&#39;</span><span class="p">:</span> <span class="mi">92</span><span class="p">})</span>
+
+<span class="c1"># Single column from DataFrame</span>
+<span class="n">age_column</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>  <span class="c1"># This is a Series</span>
+</pre></div>
+</div>
+<p><strong>Common operations:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+
+<span class="c1"># Accessing elements</span>
+<span class="n">series</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>           <span class="c1"># First element</span>
+<span class="n">series</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>      <span class="c1"># First element by position</span>
+<span class="n">series</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>       <span class="c1"># First 5 elements</span>
+
+<span class="c1"># Statistics</span>
+<span class="n">series</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>       <span class="c1"># Average</span>
+<span class="n">series</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>     <span class="c1"># Median</span>
+<span class="n">series</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>        <span class="c1"># Standard deviation</span>
+<span class="n">series</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>        <span class="c1"># Minimum</span>
+<span class="n">series</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>        <span class="c1"># Maximum</span>
+<span class="n">series</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>        <span class="c1"># Sum</span>
+<span class="n">series</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>   <span class="c1"># Summary statistics</span>
+
+<span class="c1"># Boolean operations</span>
+<span class="n">series</span> <span class="o">&gt;</span> <span class="mi">3</span>          <span class="c1"># Returns Series of True/False</span>
+<span class="n">series</span><span class="p">[</span><span class="n">series</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">]</span>  <span class="c1"># Filter: elements &gt; 3</span>
+
+<span class="c1"># Other operations</span>
+<span class="n">series</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>     <span class="c1"># Unique values</span>
+<span class="n">series</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>  <span class="c1"># Count of each unique value</span>
+<span class="n">series</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span>       <span class="c1"># Check for missing values</span>
+<span class="n">series</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>     <span class="c1"># Remove missing values</span>
+</pre></div>
+</div>
+<p><strong>Key attributes:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">series</span><span class="o">.</span><span class="n">values</span>       <span class="c1"># Get underlying numpy array</span>
+<span class="n">series</span><span class="o">.</span><span class="n">index</span>        <span class="c1"># Get index</span>
+<span class="n">series</span><span class="o">.</span><span class="n">shape</span>        <span class="c1"># Shape (number of elements,)</span>
+<span class="n">series</span><span class="o">.</span><span class="n">dtype</span>        <span class="c1"># Data type</span>
+</pre></div>
+</div>
+</section>
+<section id="pd-dataframe">
+<h3>pd.DataFrame<a class="headerlink" href="#pd-dataframe" title="Link to this heading">#</a></h3>
+<p><strong>What it is:</strong> Two-dimensional labeled data structure (like a spreadsheet)</p>
+<p><strong>Examples:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="c1"># From a dictionary</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="s1">&#39;Bob&#39;</span><span class="p">,</span> <span class="s1">&#39;Charlie&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">35</span><span class="p">],</span>
+    <span class="s1">&#39;city&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Boston&#39;</span><span class="p">,</span> <span class="s1">&#39;NYC&#39;</span><span class="p">,</span> <span class="s1">&#39;LA&#39;</span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="c1"># Reading data</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Common operations:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Viewing data</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>           <span class="c1"># First 5 rows</span>
+<span class="n">df</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>           <span class="c1"># Last 5 rows</span>
+<span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>           <span class="c1"># Summary info</span>
+<span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>       <span class="c1"># Statistical summary</span>
+<span class="n">df</span><span class="o">.</span><span class="n">shape</span>            <span class="c1"># (rows, columns)</span>
+
+<span class="c1"># Selecting columns</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>           <span class="c1"># Single column (Series)</span>
+<span class="n">df</span><span class="p">[[</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">]]</span> <span class="c1"># Multiple columns (DataFrame)</span>
+
+<span class="c1"># Selecting rows</span>
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>           <span class="c1"># Row by label</span>
+<span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>          <span class="c1"># Row by position</span>
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>         <span class="c1"># Rows 0 through 5 (inclusive)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>        <span class="c1"># Rows 0 through 4 (exclusive)</span>
+
+<span class="c1"># Filtering</span>
+<span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">]</span>              <span class="c1"># Rows where age &gt; 30</span>
+<span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;age &gt; 30&#39;</span><span class="p">)</span>            <span class="c1"># Same using query</span>
+<span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;city&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;NYC&#39;</span><span class="p">)]</span>  <span class="c1"># Multiple conditions</span>
+
+<span class="c1"># Adding columns</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;age_squared&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span>
+
+<span class="c1"># Grouping</span>
+<span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;city&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>       <span class="c1"># Average by city</span>
+<span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;city&#39;</span><span class="p">)[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="c1"># Average age by city</span>
+
+<span class="c1"># Sorting</span>
+<span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">)</span>            <span class="c1"># Sort by age</span>
+<span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># Descending</span>
+
+<span class="c1"># Missing data</span>
+<span class="n">df</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span>           <span class="c1"># Check for missing values</span>
+<span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>         <span class="c1"># Remove rows with missing values</span>
+<span class="n">df</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>        <span class="c1"># Replace missing with 0</span>
+</pre></div>
+</div>
+<p><strong>Key attributes:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span>          <span class="c1"># Column names</span>
+<span class="n">df</span><span class="o">.</span><span class="n">index</span>            <span class="c1"># Row index</span>
+<span class="n">df</span><span class="o">.</span><span class="n">shape</span>            <span class="c1"># (rows, columns)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>           <span class="c1"># Data type of each column</span>
+<span class="n">df</span><span class="o">.</span><span class="n">values</span>           <span class="c1"># Underlying numpy array</span>
+</pre></div>
+</div>
+<p><strong>Checking type:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Is it a Series?</span>
+<span class="nb">isinstance</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">],</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)</span>  <span class="c1"># True</span>
+
+<span class="c1"># Is it a DataFrame?</span>
+<span class="nb">isinstance</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">)</span>  <span class="c1"># True</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="matplotlib-types">
+<h2>matplotlib Types<a class="headerlink" href="#matplotlib-types" title="Link to this heading">#</a></h2>
+<section id="plt-figure">
+<h3>plt.Figure<a class="headerlink" href="#plt-figure" title="Link to this heading">#</a></h3>
+<p><strong>What it is:</strong> The entire window/page that holds your plot(s)</p>
+<p><strong>Creating:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="c1"># Automatically created when you plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>  <span class="c1"># Creates figure automatically</span>
+
+<span class="c1"># Explicitly create</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># Create figure with subplots</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>           <span class="c1"># 1 plot</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>    <span class="c1"># 2x2 grid of plots</span>
+</pre></div>
+</div>
+<p><strong>Common operations:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+
+<span class="c1"># Size</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+
+<span class="c1"># Saving</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;my_plot.png&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;my_plot.pdf&#39;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+
+<span class="c1"># Showing</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="plt-axes">
+<h3>plt.Axes<a class="headerlink" href="#plt-axes" title="Link to this heading">#</a></h3>
+<p><strong>What it is:</strong> A single plot area within a figure (the actual plot)</p>
+<p><strong>Creating:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Method 1: Automatically created</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>  <span class="c1"># Creates both figure and axes</span>
+
+<span class="c1"># Method 2: Explicit creation</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="c1"># Method 3: From seaborn/pandas</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;category&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;value&#39;</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Common operations:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="c1"># Plotting on axes</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>          <span class="c1"># Line plot</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>       <span class="c1"># Scatter plot</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">([</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">],</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">15</span><span class="p">])</span>  <span class="c1"># Bar plot</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>         <span class="c1"># Histogram</span>
+
+<span class="c1"># Labels and titles</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;X Label&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Y Label&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;My Plot&#39;</span><span class="p">)</span>
+
+<span class="c1"># Limits</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="c1"># Legend</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;Series 1&#39;</span><span class="p">,</span> <span class="s1">&#39;Series 2&#39;</span><span class="p">])</span>
+
+<span class="c1"># Grid</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Checking type:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="nb">isinstance</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">plt</span><span class="o">.</span><span class="n">Figure</span><span class="p">)</span>  <span class="c1"># True</span>
+<span class="nb">isinstance</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">plt</span><span class="o">.</span><span class="n">Axes</span><span class="p">)</span>     <span class="c1"># True</span>
+
+<span class="c1"># Many plotting functions return Axes</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;group&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;value&#39;</span><span class="p">)</span>
+<span class="nb">isinstance</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">plt</span><span class="o">.</span><span class="n">Axes</span><span class="p">)</span>  <span class="c1"># True</span>
+</pre></div>
+</div>
+<p><strong>Key difference:</strong></p>
+<ul class="simple">
+<li><p><strong>Figure</strong> = The whole canvas</p></li>
+<li><p><strong>Axes</strong> = The plot itself (yes, confusing name - it’s not just the axes!)</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># One figure with multiple axes</span>
+<span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># 1 row, 2 columns</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Plot 1&#39;</span><span class="p">)</span>
+
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Plot 2&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="quick-type-check-cheatsheet">
+<h2>Quick Type Check Cheatsheet<a class="headerlink" href="#quick-type-check-cheatsheet" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Numbers</span>
+<span class="nb">type</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>              <span class="c1"># &lt;class &#39;int&#39;&gt;</span>
+<span class="nb">type</span><span class="p">(</span><span class="mf">5.0</span><span class="p">)</span>            <span class="c1"># &lt;class &#39;float&#39;&gt;</span>
+
+<span class="c1"># Text</span>
+<span class="nb">type</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>        <span class="c1"># &lt;class &#39;str&#39;&gt;</span>
+
+<span class="c1"># Collections</span>
+<span class="nb">type</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>      <span class="c1"># &lt;class &#39;list&#39;&gt;</span>
+<span class="nb">type</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>      <span class="c1"># &lt;class &#39;tuple&#39;&gt;</span>
+<span class="nb">type</span><span class="p">({</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">})</span>      <span class="c1"># &lt;class &#39;set&#39;&gt;</span>
+<span class="nb">type</span><span class="p">({</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>       <span class="c1"># &lt;class &#39;dict&#39;&gt;</span>
+
+<span class="c1"># Boolean</span>
+<span class="nb">type</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>           <span class="c1"># &lt;class &#39;bool&#39;&gt;</span>
+
+<span class="c1"># pandas</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">])</span>      <span class="c1"># &lt;class &#39;pandas.core.series.Series&#39;&gt;</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>             <span class="c1"># &lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;</span>
+
+<span class="c1"># matplotlib</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>            <span class="c1"># &lt;class &#39;matplotlib.figure.Figure&#39;&gt;</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>             <span class="c1"># &lt;class &#39;matplotlib.axes._axes.Axes&#39;&gt;</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="common-type-confusions">
+<h2>Common Type Confusions<a class="headerlink" href="#common-type-confusions" title="Link to this heading">#</a></h2>
+<section id="why-is-this-a-series-and-not-a-dataframe">
+<h3>“Why is this a Series and not a DataFrame?”<a class="headerlink" href="#why-is-this-a-series-and-not-a-dataframe" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Single bracket returns Series</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>          <span class="c1"># Series</span>
+
+<span class="c1"># Double bracket returns DataFrame  </span>
+<span class="n">df</span><span class="p">[[</span><span class="s1">&#39;age&#39;</span><span class="p">]]</span>        <span class="c1"># DataFrame</span>
+</pre></div>
+</div>
+</section>
+<section id="what-s-the-difference-between-a-list-and-a-series">
+<h3>“What’s the difference between a list and a Series?”<a class="headerlink" href="#what-s-the-difference-between-a-list-and-a-series" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>List</strong>: Basic Python, no labels, fewer methods</p></li>
+<li><p><strong>Series</strong>: pandas, has index labels, many statistical methods</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># List</span>
+<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">my_list</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>  <span class="c1"># ERROR! Lists don&#39;t have mean()</span>
+
+<span class="c1"># Series</span>
+<span class="n">my_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="n">my_series</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>  <span class="c1"># 2.0 - Works!</span>
+</pre></div>
+</div>
+</section>
+<section id="when-do-i-get-figure-vs-axes">
+<h3>“When do I get Figure vs Axes?”<a class="headerlink" href="#when-do-i-get-figure-vs-axes" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Returns Axes only</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="s1">&#39;group&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;value&#39;</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+
+<span class="c1"># Returns both Figure and Axes</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="c1"># To get figure from axes</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">get_figure</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="additional-resources">
+<h2>Additional Resources<a class="headerlink" href="#additional-resources" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html">Python Built-in Types Documentation</a></p></li>
+<li><p><a class="reference external" href="https://pandas.pydata.org/docs/reference/index.html">pandas API Reference</a></p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/stable/api/index.html">matplotlib API Reference</a></p></li>
+<li><p><a class="reference internal" href="python_syntax_guide.html"><span class="std std-doc">Python Syntax Quick Reference</span></a></p></li>
+<li><p><a class="reference internal" href="troubleshooting_errors.html"><span class="std std-doc">Troubleshooting Common Errors</span></a></p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content/misc"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../_bblearn/Module10/Module10_lab.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lab</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="python_syntax_guide.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Python Syntax Quick Reference</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-check-a-type">How to Check a Type</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-built-in-types">Python Built-in Types</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#numbers">Numbers</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#int-integer">int (Integer)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#float-floating-point-number">float (Floating Point Number)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#text">Text</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#str-string">str (String)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#collections">Collections</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#list">list</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tuple">tuple</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dict-dictionary">dict (Dictionary)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#set">set</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bool-boolean">bool (Boolean)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pandas-types">pandas Types</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pd-series">pd.Series</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pd-dataframe">pd.DataFrame</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matplotlib-types">matplotlib Types</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plt-figure">plt.Figure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plt-axes">plt.Axes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-type-check-cheatsheet">Quick Type Check Cheatsheet</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-type-confusions">Common Type Confusions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-is-this-a-series-and-not-a-dataframe">“Why is this a Series and not a DataFrame?”</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-s-the-difference-between-a-list-and-a-series">“What’s the difference between a list and a Series?”</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#when-do-i-get-figure-vs-axes">“When do I get Figure vs Axes?”</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-resources">Additional Resources</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Will Dampier
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

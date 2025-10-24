@@ -248,12 +248,15 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Extra</span></p>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../content/misc/python_types_reference.html">Python Types Reference Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/misc/python_syntax_guide.html">Python Syntax Quick Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/misc/troubleshooting_errors.html">Troubleshooting Common Errors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../content/misc/about_this_book.html">About this book</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../content/misc/course_info.html">Course Information</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../content/misc/author_bio.html">About the Author</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../content/misc/run_your_own_jupyter.html">Running Your Own Jupyter Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../content/faq.html">Frequently Asked Questions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../content/changelog.html">Change Log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/misc/course_info.html">Course Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/misc/author_bio.html">About the Author</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../content/misc/works_cited.html">Works Cited</a></li>
 </ul>
 
@@ -469,8 +472,12 @@ Through this activity, you will practice using Python methods to append a column
 <h2>Questions<a class="headerlink" href="#questions" title="Link to this heading">#</a></h2>
 <section id="q1-load-in-the-data-from-the-csv-file">
 <h3>Q1: Load in the data from the CSV file.<a class="headerlink" href="#q1-load-in-the-data-from-the-csv-file" title="Link to this heading">#</a></h3>
-<p><em>Hint: Remember to use the <code class="docutils literal notranslate"><span class="pre">read_csv</span></code> function of the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> library.</em></p>
-<div class="cell docutils container">
+<p><strong>Checked variables:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">trial_df</span></code> - A pandas DataFrame containing the trial data from ‘trial_data.csv’</p></li>
+</ul>
+<details><summary>Hint</summary>
+Use the pd.read_csv() function from the pandas library as shown in the Module 3 walkthrough.</details><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">trial_df</span> <span class="o">=</span> <span class="o">...</span>
 <span class="n">trial_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -489,7 +496,12 @@ Through this activity, you will practice using Python methods to append a column
 <section id="q2-calculate-the-length-of-for-each-row">
 <h3>Q2: Calculate the length of for each row.<a class="headerlink" href="#q2-calculate-the-length-of-for-each-row" title="Link to this heading">#</a></h3>
 <p>Create a derived column in <code class="docutils literal notranslate"><span class="pre">trial_df</span></code> with the column name <code class="docutils literal notranslate"><span class="pre">infection_time</span></code> that indicates the length of the the infection.</p>
-<p><em>Hint: You can extract two columns and subtract them. And you can do this in one line or many.</em></p>
+<p><strong>Checked variables:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">trial_df</span></code> with a new column <code class="docutils literal notranslate"><span class="pre">'infection_time'</span></code> - The length of infection for each participant (DataFrame with new column)</p></li>
+</ul>
+<details><summary>Hint</summary>
+Subtract the 'age_initial_infection' column from the 'age' column to get the infection duration. You can do this directly: trial_df['infection_time'] = trial_df['age'] - trial_df['age_initial_infection']</details>
 <p><em>Points:</em> 3</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -511,7 +523,12 @@ By examining this group specifically, you can better understand how factors such
 <section id="q3-create-a-new-dataframe-that-includes-only-the-treated-individuals">
 <h3>Q3: Create a new <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> that includes only the treated individuals.<a class="headerlink" href="#q3-create-a-new-dataframe-that-includes-only-the-treated-individuals" title="Link to this heading">#</a></h3>
 <p>Create a new table that includes only the treated individuals, you can use the <code class="docutils literal notranslate"><span class="pre">query</span></code> method to filter the original table by the value of the <code class="docutils literal notranslate"><span class="pre">treatment</span></code> column.</p>
-<div class="cell docutils container">
+<p><strong>Checked variables:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">treated_df</span></code> - A DataFrame containing only rows where treatment == True</p></li>
+</ul>
+<details><summary>Hint</summary>
+Use the .query() method on trial_df to filter for rows where treatment == True, as shown in the Module 3 walkthrough.</details><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">treated_df</span> <span class="o">=</span> <span class="o">...</span>
 <span class="n">treated_df</span>
@@ -534,7 +551,13 @@ This will allow us to compare the effectiveness of the treatment between partici
 To do this, we can use the <code class="docutils literal notranslate"><span class="pre">DataFrame.query</span></code> method to filter the <code class="docutils literal notranslate"><span class="pre">treated_df</span></code> <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> we created earlier based on the value of the initial_viral_load column.
 Create two tables, one for treated participants with high initial viral load <strong>(defined as &gt;= 50 copies/ul)</strong> and one for treated participants with low initial viral load <strong>(defined as &lt; 50 copies/ul)</strong>.
 This will allow us to see if the treatment is more or less effective for participants with different levels of disease severity at the start of the treatment.</p>
-<div class="cell docutils container">
+<p><strong>Checked variables:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">high_treated_df</span></code> - DataFrame with treated individuals where initial_viral_load &gt;= 50</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">low_treated_df</span></code> - DataFrame with treated individuals where initial_viral_load &lt; 50</p></li>
+</ul>
+<details><summary>Hint</summary>
+Use .query() on treated_df twice: once to filter for initial_viral_load >= 50 and once for initial_viral_load < 50.</details><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">high_treated_df</span> <span class="o">=</span> <span class="o">...</span>
 <span class="n">low_treated_df</span> <span class="o">=</span> <span class="o">...</span>
@@ -570,8 +593,15 @@ This will allow us to see if the treatment is more or less effective for partici
 <p>To better understand the impact of initial viral load on the effectiveness of the treatment, we will compare the weeks_to_failure data for treated participants with high and low initial viral loads.
 By calculating descriptive statistics such as mean, median, and standard deviation, we can determine whether there are significant differences between the two groups and gain insights into how initial viral load may affect the success of the treatment.
 To do this, we will first need to create two separate tables for treated participants with high and low initial viral loads, and then calculate the relevant statistics for each group.</p>
-<p><em>Hint: Remember methods like <code class="docutils literal notranslate"><span class="pre">.mean()</span></code> and <code class="docutils literal notranslate"><span class="pre">.min()</span></code> can be called on extracted columns.</em></p>
-<div class="cell docutils container">
+<p><strong>Checked variables:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">low_mean</span></code> - Mean weeks_to_failure for low viral load participants (number)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">low_min</span></code> - Minimum weeks_to_failure for low viral load participants (number)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">high_mean</span></code> - Mean weeks_to_failure for high viral load participants (number)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">high_min</span></code> - Minimum weeks_to_failure for high viral load participants (number)</p></li>
+</ul>
+<details><summary>Hint</summary>
+Extract the 'weeks_to_failure' column from each DataFrame and use .mean() and .min() methods as shown in the Module 3 walkthrough.</details><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># average weeks_to_failure for low viral load participants</span>
 <span class="n">low_mean</span> <span class="o">=</span> <span class="o">...</span>
@@ -616,8 +646,15 @@ Specifically, we will compare the weeks to failure for treated participants with
 For this analysis, we will consider participants with less than 10 years of infection to have a short infection length, and those with 10 years or more to have a long infection length.
 It is important to note that these arbitrary cut-offs were chosen for the purpose of this analysis and may not necessarily reflect the clinical definitions of short and long infection lengths.</p>
 <p>To answer this question, we will need to calculate the descriptive statistics on the <code class="docutils literal notranslate"><span class="pre">weeks_to_failure</span></code> column for treated participants with short and long infection lengths.</p>
-<p><em>Remember, it is helpful to break down the problem into smaller steps and create intermediate cells to better understand and debug the analysis.</em></p>
-<div class="cell docutils container">
+<p><strong>Checked variables:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">short_mean</span></code> - Mean weeks_to_failure for treated participants with short infections (&lt; 10 years) (number)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">short_min</span></code> - Minimum weeks_to_failure for treated participants with short infections (number)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">long_mean</span></code> - Mean weeks_to_failure for treated participants with long infections (&gt;= 10 years) (number)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">long_min</span></code> - Minimum weeks_to_failure for treated participants with long infections (number)</p></li>
+</ul>
+<details><summary>Hint</summary>
+First filter treated_df by infection_time (< 10 for short, >= 10 for long), then calculate .mean() and .min() on the 'weeks_to_failure' column like you did in Q5.</details><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># average weeks_to_failure for short infection lengths</span>
 <span class="n">short_mean</span> <span class="o">=</span> <span class="o">...</span>

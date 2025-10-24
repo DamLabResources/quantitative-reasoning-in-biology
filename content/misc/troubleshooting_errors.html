@@ -1,0 +1,891 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Troubleshooting Common Errors &#8212; Quantitative Reasoning in Biology</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/misc/troubleshooting_errors';</script>
+    <link rel="canonical" href="https://damlabresources.github.io/quantitative-reasoning-in-biology/content/misc/troubleshooting_errors.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="About this book" href="about_this_book.html" />
+    <link rel="prev" title="Python Syntax Quick Reference" href="python_syntax_guide.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../book_index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Quantitative Reasoning in Biology</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../book_index.html">
+                    Quantitative Reasoning in Biology
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 0: Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="how_to.html">How to use this book</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 1 : Hello World</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module01/Module01_book.html">Module 1: Hello World</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module01/notebook_actions.html">Notebook basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module01/Module01_walkthrough.html">Walkthrough</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module02/Module02_book.html">Module 2: Simple calculations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module02/dilution_calculations.html">Molarity Calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module02/Module02_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module02/Module02_lab.html">Lab</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module03/Module03_book.html">Module 3: DataFrames</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module03/spreadsheet_organization.html">Spreadsheet Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module03/Module03_walkthrough_SOLUTION.html">Walkthrough</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module03/Module03_lab.html">Lab</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 2 : Descriptive Statistics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module04/Module04_book.html">Module 4: Analysis by groups</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module04/Module04_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module04/reshaping_data.html">Reshaping Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module04/Module04_lab.html">Lab</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module05/Module05_book.html">Module 5: Plotting with Pandas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module05/Module05_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module05/Module05_lab.html">Lab</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module06/Module06_book.html">Module 6: Visualizing with Confidence</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module06/grammar_of_graphics.html">Grammar of Graphics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module06/Module06_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module06/Module06_lab.html">Lab</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module07/Module07_book.html">Module 7: Samples and Replicates</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module07/Module07_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module07/Module07_lab.html">Lab</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 3 : Inferential Statistics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module08/Module08_book.html">Module 8: Hypothesis Testing</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module08/Module08_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module08/Module08_lab.html">Lab</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module09/Module09_book.html">Module 9: Linear Regression</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module09/Module09_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module09/Module09_lab.html">Lab</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module10/Module10_book.html">Module 10: Power Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module10/Module10_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module10/Module10_lab.html">Lab</a></li>
+
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Extra</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="python_types_reference.html">Python Types Reference Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_syntax_guide.html">Python Syntax Quick Reference</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Troubleshooting Common Errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="about_this_book.html">About this book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="run_your_own_jupyter.html">Running Your Own Jupyter Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Change Log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="course_info.html">Course Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="author_bio.html">About the Author</a></li>
+<li class="toctree-l1"><a class="reference internal" href="works_cited.html">Works Cited</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/content/misc/troubleshooting_errors.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Troubleshooting Common Errors</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-read-error-messages">How to Read Error Messages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-error-types">Common Error Types</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#keyerror">KeyError</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#typeerror">TypeError</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#syntaxerror">SyntaxError</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attributeerror">AttributeError</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nameerror">NameError</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#indexerror">IndexError</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#valueerror">ValueError</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting-workflow">Troubleshooting Workflow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prevention-tips">Prevention Tips</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-resources">Additional Resources</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="troubleshooting-common-errors">
+<h1>Troubleshooting Common Errors<a class="headerlink" href="#troubleshooting-common-errors" title="Link to this heading">#</a></h1>
+<p>This guide helps you understand and fix common Python and pandas errors you might encounter in this course.</p>
+<section id="how-to-read-error-messages">
+<h2>How to Read Error Messages<a class="headerlink" href="#how-to-read-error-messages" title="Link to this heading">#</a></h2>
+<p>Python error messages follow a pattern. Here’s an example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span>                                  <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">5</span><span class="o">-</span><span class="n">abc123def456</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+      <span class="mi">1</span> <span class="c1"># Select the age column</span>
+<span class="o">----&gt;</span> <span class="mi">2</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span>
+
+<span class="ne">KeyError</span><span class="p">:</span> <span class="s1">&#39;Age&#39;</span>
+</pre></div>
+</div>
+<p><strong>Reading the error:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Error Type</strong> (top): <code class="docutils literal notranslate"><span class="pre">KeyError</span></code> - tells you what went wrong</p></li>
+<li><p><strong>Traceback</strong> (middle): Shows which line caused the error (marked with <code class="docutils literal notranslate"><span class="pre">----&gt;</span></code>)</p></li>
+<li><p><strong>Error Message</strong> (bottom): <code class="docutils literal notranslate"><span class="pre">'Age'</span></code> - gives specific details</p></li>
+</ol>
+<p>The arrow (<code class="docutils literal notranslate"><span class="pre">----&gt;</span></code>) points to the exact line that caused the problem.</p>
+</section>
+<section id="common-error-types">
+<h2>Common Error Types<a class="headerlink" href="#common-error-types" title="Link to this heading">#</a></h2>
+<section id="keyerror">
+<h3>KeyError<a class="headerlink" href="#keyerror" title="Link to this heading">#</a></h3>
+<p><strong>What it means:</strong> You’re trying to access a dictionary key or DataFrame column that doesn’t exist.</p>
+<p><strong>Common causes:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ❌ Wrong column name (case sensitive!)</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span>  <span class="c1"># Column is actually &#39;age&#39; (lowercase)</span>
+
+<span class="c1"># ❌ Typo in column name</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;ART_regimen&#39;</span><span class="p">]</span>  <span class="c1"># Column is actually &#39;ART&#39;</span>
+
+<span class="c1"># ❌ Column doesn&#39;t exist at all</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;nonexistent_column&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><strong>How to fix:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1. Check available columns</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+
+<span class="c1"># 2. Use the exact column name (case matters!)</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>  <span class="c1"># ✅ CORRECT</span>
+
+<span class="c1"># 3. For complex names, copy-paste from the columns list</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
+</pre></div>
+</div>
+<p><strong>Real example from our course:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ❌ WRONG</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Processing_Domain_Z&#39;</span><span class="p">]</span>
+
+<span class="c1"># ✅ CORRECT (check the actual column name)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>  <span class="c1"># Shows: &#39;processing_domain_z&#39;</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;processing_domain_z&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<hr class="docutils" />
+<section id="typeerror">
+<h3>TypeError<a class="headerlink" href="#typeerror" title="Link to this heading">#</a></h3>
+<p><strong>What it means:</strong> You’re using an operation on the wrong type of data.</p>
+<p><strong>Common causes:</strong></p>
+<p><strong>Example 1: Using + on incompatible types</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ❌ Can&#39;t add string and number</span>
+<span class="n">age</span> <span class="o">=</span> <span class="s1">&#39;25&#39;</span> <span class="o">+</span> <span class="mi">5</span>  <span class="c1"># TypeError: can only concatenate str (not &quot;int&quot;) to str</span>
+
+<span class="c1"># ✅ Convert to same type first</span>
+<span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;25&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="mi">5</span>  <span class="c1"># Returns 30</span>
+<span class="n">age</span> <span class="o">=</span> <span class="s1">&#39;25&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>  <span class="c1"># Returns &#39;255&#39;</span>
+</pre></div>
+</div>
+<p><strong>Example 2: Wrong bracket type</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ❌ Using () instead of [] for indexing</span>
+<span class="n">data</span><span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">)</span>  <span class="c1"># TypeError: &#39;DataFrame&#39; object is not callable</span>
+
+<span class="c1"># ✅ Use square brackets</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><strong>Example 3: Missing quotes on strings</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ❌ Treating variable as string</span>
+<span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sex&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">Male</span><span class="p">]</span>  <span class="c1"># TypeError or NameError</span>
+
+<span class="c1"># ✅ Add quotes for string values</span>
+<span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;sex&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Male&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><strong>How to fix:</strong></p>
+<ol class="arabic simple">
+<li><p>Check if you’re using the right bracket type (<code class="docutils literal notranslate"><span class="pre">[]</span></code> vs <code class="docutils literal notranslate"><span class="pre">()</span></code>)</p></li>
+<li><p>Ensure strings have quotes</p></li>
+<li><p>Check data types: <code class="docutils literal notranslate"><span class="pre">type(variable)</span></code> or <code class="docutils literal notranslate"><span class="pre">data.dtypes</span></code></p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="syntaxerror">
+<h3>SyntaxError<a class="headerlink" href="#syntaxerror" title="Link to this heading">#</a></h3>
+<p><strong>What it means:</strong> Python can’t understand your code because of a typo or missing punctuation.</p>
+<p><strong>Common causes:</strong></p>
+<p><strong>Missing closing bracket/parenthesis</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ❌ Missing closing bracket</span>
+<span class="n">subset</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">30</span>
+<span class="c1"># SyntaxError: unexpected EOF while parsing</span>
+
+<span class="c1"># ✅ Add the closing bracket</span>
+<span class="n">subset</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><strong>Missing comma</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ❌ Missing comma between list items</span>
+<span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;age&#39;</span> <span class="s1">&#39;sex&#39;</span> <span class="s1">&#39;education&#39;</span><span class="p">]</span>
+<span class="c1"># SyntaxError: invalid syntax</span>
+
+<span class="c1"># ✅ Add commas</span>
+<span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;sex&#39;</span><span class="p">,</span> <span class="s1">&#39;education&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><strong>Mismatched quotes</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ❌ Starting with &quot; but ending with &#39;</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Alice&#39;</span>
+<span class="c1"># SyntaxError: EOL while scanning string literal</span>
+
+<span class="c1"># ✅ Match your quotes</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Alice&quot;</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Alice&#39;</span>  <span class="c1"># Both work, just be consistent</span>
+</pre></div>
+</div>
+<p><strong>How to fix:</strong></p>
+<ol class="arabic simple">
+<li><p>Look at the line indicated by the arrow (<code class="docutils literal notranslate"><span class="pre">----&gt;</span></code>)</p></li>
+<li><p>Count your brackets: each <code class="docutils literal notranslate"><span class="pre">(</span></code> needs a <code class="docutils literal notranslate"><span class="pre">)</span></code>, each <code class="docutils literal notranslate"><span class="pre">[</span></code> needs a <code class="docutils literal notranslate"><span class="pre">]</span></code></p></li>
+<li><p>Check for missing commas in lists</p></li>
+<li><p>Ensure quotes match (both single <code class="docutils literal notranslate"><span class="pre">'</span></code> or both double <code class="docutils literal notranslate"><span class="pre">&quot;</span></code>)</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="attributeerror">
+<h3>AttributeError<a class="headerlink" href="#attributeerror" title="Link to this heading">#</a></h3>
+<p><strong>What it means:</strong> You’re trying to use a method or attribute that doesn’t exist for that object type.</p>
+<p><strong>Common causes:</strong></p>
+<p><strong>Wrong method name (typo)</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ❌ Method doesn&#39;t exist (typo: groupby vs groupBy)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">groupBy</span><span class="p">(</span><span class="s1">&#39;ART&#39;</span><span class="p">)</span>
+<span class="c1"># AttributeError: &#39;DataFrame&#39; object has no attribute &#39;groupBy&#39;</span>
+
+<span class="c1"># ✅ Correct method name</span>
+<span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;ART&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Using DataFrame method on Series (or vice versa)</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ❌ .query() only works on DataFrames, not Series</span>
+<span class="n">ages</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>
+<span class="n">young_ages</span> <span class="o">=</span> <span class="n">ages</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;age &lt; 30&#39;</span><span class="p">)</span>
+<span class="c1"># AttributeError: &#39;Series&#39; object has no attribute &#39;query&#39;</span>
+
+<span class="c1"># ✅ Filter the DataFrame first, then select column</span>
+<span class="n">young_data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;age &lt; 30&#39;</span><span class="p">)</span>
+<span class="n">young_ages</span> <span class="o">=</span> <span class="n">young_data</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>
+
+<span class="c1"># OR use boolean indexing</span>
+<span class="n">young_ages</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="p">][</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><strong>Calling a result instead of a method</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ❌ Missing parentheses to call the method</span>
+<span class="n">data_copy</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">copy</span>
+<span class="c1"># This assigns the function itself, not the result</span>
+
+<span class="c1"># ✅ Add () to call the method</span>
+<span class="n">data_copy</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>How to fix:</strong></p>
+<ol class="arabic simple">
+<li><p>Check spelling of method names (case matters!)</p></li>
+<li><p>Verify you’re using a DataFrame vs Series method correctly</p></li>
+<li><p>Don’t forget parentheses <code class="docutils literal notranslate"><span class="pre">()</span></code> when calling methods</p></li>
+<li><p>Check the documentation: <code class="docutils literal notranslate"><span class="pre">help(data.groupby)</span></code> or online docs</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="nameerror">
+<h3>NameError<a class="headerlink" href="#nameerror" title="Link to this heading">#</a></h3>
+<p><strong>What it means:</strong> You’re using a variable or function name that Python doesn’t recognize.</p>
+<p><strong>Common causes:</strong></p>
+<p><strong>Typo in variable name</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ❌ Variable name misspelled</span>
+<span class="n">my_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;file.csv&#39;</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">mydata</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>
+<span class="c1"># NameError: name &#39;mydata&#39; is not defined</span>
+
+<span class="c1"># ✅ Use exact variable name</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">my_data</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><strong>Forgot to import a library</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ❌ Using pd before importing pandas</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;file.csv&#39;</span><span class="p">)</span>
+<span class="c1"># NameError: name &#39;pd&#39; is not defined</span>
+
+<span class="c1"># ✅ Import first</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;file.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Variable not defined yet</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ❌ Using variable before creating it</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="c1"># NameError: name &#39;result&#39; is not defined</span>
+
+<span class="c1"># ✅ Create variable first</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>How to fix:</strong></p>
+<ol class="arabic simple">
+<li><p>Check spelling of variable names</p></li>
+<li><p>Ensure you’ve run all necessary cells (especially imports!)</p></li>
+<li><p>Make sure you’ve run cells in order (top to bottom)</p></li>
+<li><p>In Colab, use <code class="docutils literal notranslate"><span class="pre">Runtime</span></code> → <code class="docutils literal notranslate"><span class="pre">Restart</span> <span class="pre">and</span> <span class="pre">Run</span> <span class="pre">All</span></code> to start fresh</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="indexerror">
+<h3>IndexError<a class="headerlink" href="#indexerror" title="Link to this heading">#</a></h3>
+<p><strong>What it means:</strong> You’re trying to access a position in a list or array that doesn’t exist.</p>
+<p><strong>Common causes:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ❌ List only has 3 items (indices 0, 1, 2)</span>
+<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+<span class="c1"># IndexError: list index out of range</span>
+
+<span class="c1"># ✅ Use valid indices</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>  <span class="c1"># Last item</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># Also gets last item</span>
+</pre></div>
+</div>
+<p><strong>How to fix:</strong></p>
+<ol class="arabic simple">
+<li><p>Remember Python uses 0-based indexing (first item is <code class="docutils literal notranslate"><span class="pre">[0]</span></code>)</p></li>
+<li><p>Check the length: <code class="docutils literal notranslate"><span class="pre">len(my_list)</span></code></p></li>
+<li><p>Use negative indices to count from the end: <code class="docutils literal notranslate"><span class="pre">[-1]</span></code> is the last item</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="valueerror">
+<h3>ValueError<a class="headerlink" href="#valueerror" title="Link to this heading">#</a></h3>
+<p><strong>What it means:</strong> You passed the right type of argument, but an invalid value.</p>
+<p><strong>Common causes:</strong></p>
+<p><strong>Wrong value in function argument</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ❌ &#39;median&#39; is not a valid method for normality test</span>
+<span class="n">pg</span><span class="o">.</span><span class="n">normality</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">],</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;median&#39;</span><span class="p">)</span>
+<span class="c1"># ValueError: method must be &#39;normaltest&#39; or &#39;jarque_bera&#39;</span>
+
+<span class="c1"># ✅ Use a valid method</span>
+<span class="n">pg</span><span class="o">.</span><span class="n">normality</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">],</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;normaltest&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Incompatible array shapes</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># ❌ Arrays have different lengths</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="c1"># ValueError: x and y must have same first dimension</span>
+
+<span class="c1"># ✅ Make sure arrays match</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>How to fix:</strong></p>
+<ol class="arabic simple">
+<li><p>Read the error message carefully - it often tells you valid options</p></li>
+<li><p>Check function documentation: <code class="docutils literal notranslate"><span class="pre">help(function_name)</span></code></p></li>
+<li><p>Verify data dimensions match when required</p></li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section id="troubleshooting-workflow">
+<h2>Troubleshooting Workflow<a class="headerlink" href="#troubleshooting-workflow" title="Link to this heading">#</a></h2>
+<p>When you encounter an error, follow these steps:</p>
+<ol class="arabic simple">
+<li><p><strong>Read the error type</strong> - What kind of error is it?</p></li>
+<li><p><strong>Find the line</strong> - Look for the arrow <code class="docutils literal notranslate"><span class="pre">----&gt;</span></code> in the traceback</p></li>
+<li><p><strong>Check the error message</strong> - What specific detail does it give?</p></li>
+<li><p><strong>Consult this guide</strong> - Find your error type above</p></li>
+<li><p><strong>Try the fixes</strong> - Work through the suggested solutions</p></li>
+<li><p><strong>Still stuck?</strong></p>
+<ul class="simple">
+<li><p>Print intermediate values: <code class="docutils literal notranslate"><span class="pre">print(variable)</span></code></p></li>
+<li><p>Check types: <code class="docutils literal notranslate"><span class="pre">type(variable)</span></code> or <code class="docutils literal notranslate"><span class="pre">data.dtypes</span></code></p></li>
+<li><p>Review earlier cells - did they all run successfully?</p></li>
+<li><p>Restart and run all: <code class="docutils literal notranslate"><span class="pre">Runtime</span></code> → <code class="docutils literal notranslate"><span class="pre">Restart</span> <span class="pre">and</span> <span class="pre">Run</span> <span class="pre">All</span></code></p></li>
+<li><p>Ask for help in office hours or discussion board</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="prevention-tips">
+<h2>Prevention Tips<a class="headerlink" href="#prevention-tips" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Run cells in order</strong> - Start from the top and work down</p></li>
+<li><p><strong>Check column names</strong> - Use <code class="docutils literal notranslate"><span class="pre">data.columns</span></code> frequently</p></li>
+<li><p><strong>Use tab completion</strong> - Start typing and press Tab to autocomplete</p></li>
+<li><p><strong>Match the examples</strong> - Follow the pattern from walkthroughs</p></li>
+<li><p><strong>Test as you go</strong> - Don’t write lots of code before running it</p></li>
+<li><p><strong>Read error messages</strong> - They often tell you exactly what’s wrong</p></li>
+</ol>
+</section>
+<section id="additional-resources">
+<h2>Additional Resources<a class="headerlink" href="#additional-resources" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="python_syntax_guide.html"><span class="std std-doc">Python Syntax Quick Reference</span></a> - For syntax questions</p></li>
+<li><p>Official pandas documentation: <a class="reference external" href="https://pandas.pydata.org/docs/">https://pandas.pydata.org/docs/</a></p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content/misc"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="python_syntax_guide.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Python Syntax Quick Reference</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="about_this_book.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">About this book</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-read-error-messages">How to Read Error Messages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-error-types">Common Error Types</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#keyerror">KeyError</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#typeerror">TypeError</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#syntaxerror">SyntaxError</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#attributeerror">AttributeError</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nameerror">NameError</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#indexerror">IndexError</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#valueerror">ValueError</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting-workflow">Troubleshooting Workflow</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prevention-tips">Prevention Tips</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-resources">Additional Resources</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Will Dampier
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

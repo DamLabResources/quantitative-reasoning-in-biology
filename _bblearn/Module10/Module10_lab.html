@@ -62,7 +62,7 @@
     <link rel="canonical" href="https://damlabresources.github.io/quantitative-reasoning-in-biology/_bblearn/Module10/Module10_lab.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="About this book" href="../../content/misc/about_this_book.html" />
+    <link rel="next" title="Python Types Reference Guide" href="../../content/misc/python_types_reference.html" />
     <link rel="prev" title="Walkthrough" href="Module10_walkthrough_SOLUTION.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -248,12 +248,15 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Extra</span></p>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../content/misc/python_types_reference.html">Python Types Reference Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/misc/python_syntax_guide.html">Python Syntax Quick Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/misc/troubleshooting_errors.html">Troubleshooting Common Errors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../content/misc/about_this_book.html">About this book</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../content/misc/course_info.html">Course Information</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../content/misc/author_bio.html">About the Author</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../content/misc/run_your_own_jupyter.html">Running Your Own Jupyter Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../content/faq.html">Frequently Asked Questions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../content/changelog.html">Change Log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/misc/course_info.html">Course Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/misc/author_bio.html">About the Author</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../content/misc/works_cited.html">Works Cited</a></li>
 </ul>
 
@@ -515,10 +518,16 @@ It shows that SK609 is improving attention by reducing the number of misses.</p>
 <h3>Q2: Calculate the effect size.<a class="headerlink" href="#q2-calculate-the-effect-size" title="Link to this heading">#</a></h3>
 <p><em>Hint: Use the change just defined in Q1.</em></p>
 <p>Assume from our domain knowledge and inspection of the figure that there is an error of 3.5 misses.</p>
-<p>Checked variables:</p>
+<p><strong>Checked variables:</strong></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">q2_effect_size</span></code> - The cohen’s-D effect size for this experiment.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">q2_effect_size</span></code> - The cohen’s-D effect size for this experiment.</p>
+<ul>
+<li><p>Should be a number (float)</p></li>
 </ul>
+</li>
+</ul>
+<details><summary>Hint</summary>
+The effect size is the ratio of the change to the error. Use the q1_change calculated above.</details>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Total Points</strong></p></th>
@@ -556,10 +565,10 @@ It shows that SK609 is improving attention by reducing the number of misses.</p>
 <section id="step-3-define-your-tolerance-for-risk">
 <h2>Step 3: Define your tolerance for risk<a class="headerlink" href="#step-3-define-your-tolerance-for-risk" title="Link to this heading">#</a></h2>
 <p>For this assignment consider that we want to have 80% chance of detecting a true effect and a 1% chance of falsely accepting an effect.</p>
-<p>Checked variables:</p>
+<p><strong>Checked variables:</strong></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">power</span></code> - The desired <em>power</em>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">alpha</span></code> - The desired <em>alpha</em> threshold.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">power</span></code> - The desired <em>power</em>. Should be a number: <code class="docutils literal notranslate"><span class="pre">0.7</span></code> (representing 70%)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">alpha</span></code> - The desired <em>alpha</em> threshold. Should be a number: <code class="docutils literal notranslate"><span class="pre">0.05</span></code> (representing 5%)</p></li>
 </ul>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
@@ -593,7 +602,7 @@ It shows that SK609 is improving attention by reducing the number of misses.</p>
 </section>
 <section id="step-4-define-a-budget">
 <h2>Step 4: Define a budget<a class="headerlink" href="#step-4-define-a-budget" title="Link to this heading">#</a></h2>
-<p>In the figure caption we see that the paper used a nobs of 16 mice:</p>
+<p>In the figure caption we see that the paper used a total of 16 mice:</p>
 <p>“Difference in VI measurements calculated against previous day vehicle performance in rats (n=16) showed SK609 improved sustained attention performance …”</p>
 </section>
 <section id="step-5-calculate">
@@ -603,11 +612,22 @@ It shows that SK609 is improving attention by reducing the number of misses.</p>
 <p>Use <code class="docutils literal notranslate"><span class="pre">alternative='two-sided'</span></code> and as we do not know whether the number of misses is always increasing.
 Also, use <code class="docutils literal notranslate"><span class="pre">contrast='paired'</span></code> as we are doing a <em>paired</em> test we are compairing the same mice across each category.</p>
 <p><em>Hint: Use the power-calculator, and then use that effect size to calculate the min_change.</em></p>
-<p>Checked variables:</p>
+<p><strong>Checked variables:</strong></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">q4_effect_size</span></code> - The minimum detectable effect size given N, alpha, and power.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">q4_min_change</span></code> - The minimum change in misses that we can detect.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">q4_effect_size</span></code> - The minimum detectable effect size given N, alpha, and power.</p>
+<ul>
+<li><p>Should be a number (the result from <code class="docutils literal notranslate"><span class="pre">pg.power_ttest()</span></code>)</p></li>
+<li><p>Leave <code class="docutils literal notranslate"><span class="pre">d</span> <span class="pre">=</span> <span class="pre">None</span></code> when calling <code class="docutils literal notranslate"><span class="pre">pg.power_ttest()</span></code> (this is what we’re solving for)</p></li>
 </ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">q4_min_change</span></code> - The minimum change in misses that we can detect.</p>
+<ul>
+<li><p>Should be a number calculated as: <code class="docutils literal notranslate"><span class="pre">q4_effect_size</span> <span class="pre">*</span> <span class="pre">error</span></code></p></li>
+</ul>
+</li>
+</ul>
+<details><summary>Hint</summary>
+Refer to the Module 10 Walkthough Step 5 for a review of how to use `pg.power_ttest`</details>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Total Points</strong></p></th>
@@ -666,11 +686,22 @@ As before, we’ll keep the power and alpha the same, but we’ll add the follow
 <h2>Q5: Calculate new effect sizes for these conditions.<a class="headerlink" href="#q5-calculate-new-effect-sizes-for-these-conditions" title="Link to this heading">#</a></h2>
 <p><em>Hint: Refer to the bolded experimental changes above and adjust the errors then the effect sizes, keeping in mind the q1_change variable.</em></p>
 <p><em>This can be done in two steps if needed.</em></p>
-<p>Checked variables:</p>
+<p><strong>Checked variables:</strong></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">q5_high_noise_effect_size</span></code> - The minimum detectable effect size in a high error consideration.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">q5_new_assay_effect_size</span></code> - The minimum detectable effect size in a new assay configuration.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">q5_high_noise_effect_size</span></code> - The minimum detectable effect size in a high error consideration.</p>
+<ul>
+<li><p>Should be a number (int or float)</p></li>
+<li><p>High noise scenario: error increases by 50%, so <code class="docutils literal notranslate"><span class="pre">new_error</span> <span class="pre">=</span> <span class="pre">error</span> <span class="pre">*</span> <span class="pre">1.5</span></code></p></li>
 </ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">q5_new_assay_effect_size</span></code> - The minimum detectable effect size in a new assay configuration.</p>
+<ul>
+<li><p>Should be a number (int or float)</p></li>
+<li><p>New assay scenario: error decreases by 25%, so <code class="docutils literal notranslate"><span class="pre">new_error</span> <span class="pre">=</span> <span class="pre">error</span> <span class="pre">*</span> <span class="pre">0.75</span></code></p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Note:</strong> Use <code class="docutils literal notranslate"><span class="pre">q1_change</span></code> from Q1 and <code class="docutils literal notranslate"><span class="pre">error</span> <span class="pre">=</span> <span class="pre">3.5</span></code> from Q2</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p><strong>Total Points</strong></p></th>
@@ -749,11 +780,32 @@ Use this to answer the questions below.</p>
 <section id="q6-summary-questions">
 <h2>Q6 Summary Questions<a class="headerlink" href="#q6-summary-questions" title="Link to this heading">#</a></h2>
 <p>Assume an 80% power threshold for the following questions.</p>
-<p>Checked variables:</p>
+<p><strong>Checked variables:</strong></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">q6a</span></code> - Would an experiment that had sample size of 15 be sufficiently powered to detect an effect under the <strong>expected</strong> assumption? yes/no</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">q6b</span></code> - Would an experiment that had sample size of 15 be sufficiently powered to detect an effect under the <strong>high-noise</strong> assumption? yes/no</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">q6c</span></code> - How many fewer animals could be used if the <strong>new experiment</strong> was implemented vs. the expected/current one (using 80% power)? (number)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">q6a</span></code> - Would an experiment that had sample size of 15 be sufficiently powered to detect an effect under the <strong>expected</strong> assumption? yes/no</p>
+<ul>
+<li><p>Should be a string: either <code class="docutils literal notranslate"><span class="pre">'yes'</span></code> or <code class="docutils literal notranslate"><span class="pre">'no'</span></code> (lowercase)</p></li>
+<li><p>Look at the plot above to see if n=15 reaches 80% power for the expected (black line) scenario</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">q6b</span></code> - Would an experiment that had sample size of 15 be sufficiently powered to detect an effect under the <strong>high-noise</strong> assumption? yes/no</p>
+<ul>
+<li><p>Should be a string: either <code class="docutils literal notranslate"><span class="pre">'yes'</span></code> or <code class="docutils literal notranslate"><span class="pre">'no'</span></code> (lowercase)</p></li>
+<li><p>Look at the plot above to see if n=15 reaches 80% power for the high-noise (red line) scenario</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">q6c</span></code> - How many fewer animals could be used if the <strong>new experiment</strong> was implemented vs. the expected/current one (using 80% power)? (number)</p>
+<ul>
+<li><p>Should be a number (round up to whole animals)</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">pg.power_ttest()</span></code> twice to calculate the required sample sizes for:</p>
+<ol class="arabic simple">
+<li><p>Standard assay (using <code class="docutils literal notranslate"><span class="pre">q2_effect_size</span></code>)</p></li>
+<li><p>New assay (using <code class="docutils literal notranslate"><span class="pre">q5_new_assay_effect_size</span></code>)</p></li>
+</ol>
+</li>
+<li><p>Then find the difference and round up</p></li>
+</ul>
+</li>
 </ul>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
@@ -861,11 +913,11 @@ Use this to answer the questions below.</p>
       </div>
     </a>
     <a class="right-next"
-       href="../../content/misc/about_this_book.html"
+       href="../../content/misc/python_types_reference.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">About this book</p>
+        <p class="prev-next-title">Python Types Reference Guide</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

@@ -248,12 +248,15 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Extra</span></p>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../content/misc/python_types_reference.html">Python Types Reference Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/misc/python_syntax_guide.html">Python Syntax Quick Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/misc/troubleshooting_errors.html">Troubleshooting Common Errors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../content/misc/about_this_book.html">About this book</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../content/misc/course_info.html">Course Information</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../content/misc/author_bio.html">About the Author</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../content/misc/run_your_own_jupyter.html">Running Your Own Jupyter Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../content/faq.html">Frequently Asked Questions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../content/changelog.html">Change Log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/misc/course_info.html">Course Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/misc/author_bio.html">About the Author</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../content/misc/works_cited.html">Works Cited</a></li>
 </ul>
 
@@ -495,7 +498,13 @@ These longer fragments help with understanding the linkage between more distant 
 In order to accurately compare the yield of each method, it is important to know the molecular weight of the templates being used.
 Therefore, as a part of this lab, we need to calculate the molecular weight of each template.
 This will allow us to accurately compare the yield of each method and understand how the different characteristics of each method may impact the overall results.</p>
-<p><em>Feeling stuck?</em></p>
+<p><strong>Checked variables:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">paragon_template_weight</span></code> - The molecular weight of a Paragon template in g/mole (number)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pacbio_template_weight</span></code> - The molecular weight of a PacBio template in g/mole (number)</p></li>
+</ul>
+<details><summary>Hint</summary>
+Multiply the amplicon length (in base pairs) by the DNA weight per base pair. Use the variables you defined in Q1 and the provided dna_weight constant.</details><p><em>Feeling stuck?</em></p>
 <p>Try doing it on <strong>paper</strong> first.</p>
 <p><em>Points:</em> 4</p>
 <div class="cell docutils container">
@@ -548,7 +557,13 @@ We then ran each sample according to the manufacturer’s guidelines.</p>
 </section>
 <section id="q3-what-is-the-molarity-of-each-paragon-sample">
 <h2>Q3: What is the <em>molarity</em> of each <em>Paragon</em> sample?<a class="headerlink" href="#q3-what-is-the-molarity-of-each-paragon-sample" title="Link to this heading">#</a></h2>
-<p><em>Feeling stuck?</em></p>
+<p><strong>Checked variables:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">paragon_fresh_molarity</span></code> - The molarity of the fresh Paragon sample in fmoles/ul (number)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">paragon_degraded_molarity</span></code> - The molarity of the degraded Paragon sample in fmoles/ul (number)</p></li>
+</ul>
+<details><summary>Hint</summary>
+Convert the concentration from ng/ul to fmoles/ul. First convert ng to grams (multiply by 1E-9), divide by the template weight to get moles, then convert to fmoles (divide by 1E-15). See Module 2 walkthrough for a similar calculation.</details><p><em>Feeling stuck?</em></p>
 <p>Try doing it on <strong>paper</strong> first.</p>
 <p>A typical molarity for this protocol is between 50 and 500 fmols/ul.</p>
 <p><em>Points:</em> 4</p>
@@ -585,6 +600,15 @@ We then ran each sample according to the manufacturer’s guidelines.</p>
 <p>Now, let’s calculate the yield of the fresh and degraded PacBio samples.
 The yield is the total amount of DNA produced in the reaction (as measured in femptomoles).
 This information is important because it allows us to compare the efficiency of the PacBio system in both fresh and degraded samples and determine whether it is a suitable method for our purposes.</p>
+<p><strong>Checked variables:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pacbio_fresh_molarity</span></code> - The molarity of the fresh PacBio sample in fmoles/ul (number)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pacbio_degraded_molarity</span></code> - The molarity of the degraded PacBio sample in fmoles/ul (number)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pacbio_fresh_yield</span></code> - The total yield of the fresh PacBio sample in fmoles (number)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pacbio_degraded_yield</span></code> - The total yield of the degraded PacBio sample in fmoles (number)</p></li>
+</ul>
+<details><summary>Hint</summary>
+First calculate molarity like in Q3 but with the PacBio template weight. Then calculate yield by multiplying molarity by the total volume (15 ul).</details>
 <p><em>Points:</em> 5</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -643,7 +667,15 @@ This information is important because it allows us to compare the efficiency of 
 As stated in the protocol, you need to provide 200 fmoles of DNA in 10 ul of dH20.
 Based on the yield data that you calculated for the fresh and degraded PacBio and Paragon samples, you will need to determine which samples have a concentration of DNA that meets or exceeds this requirement.
 In other words, you will need to determine which samples are usable for the sequencing protocol based on their DNA concentration.</p>
-<div class="cell docutils container">
+<p><strong>Checked variables:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">paragon_fresh_usable</span></code> - Is the fresh Paragon sample usable? String: <code class="docutils literal notranslate"><span class="pre">'yes'</span></code> or <code class="docutils literal notranslate"><span class="pre">'no'</span></code> (lowercase)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">paragon_degraded_usable</span></code> - Is the degraded Paragon sample usable? String: <code class="docutils literal notranslate"><span class="pre">'yes'</span></code> or <code class="docutils literal notranslate"><span class="pre">'no'</span></code> (lowercase)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pacbio_fresh_usable</span></code> - Is the fresh PacBio sample usable? String: <code class="docutils literal notranslate"><span class="pre">'yes'</span></code> or <code class="docutils literal notranslate"><span class="pre">'no'</span></code> (lowercase)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pacbio_degraded_usable</span></code> - Is the degraded PacBio sample usable? String: <code class="docutils literal notranslate"><span class="pre">'yes'</span></code> or <code class="docutils literal notranslate"><span class="pre">'no'</span></code> (lowercase)</p></li>
+</ul>
+<details><summary>Hint</summary>
+Calculate how much volume you need to provide 200 fmoles (divide 200 by the molarity). If that volume is less than or equal to 10 ul, the sample is usable ('yes'). If you need more than 10 ul, it's not usable ('no').</details><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Do the necessary calculations in this cell or the create more above.</span>
 <span class="c1"># Remember, you can use variables that you have calculated in cells before.</span>
