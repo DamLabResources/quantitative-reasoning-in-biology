@@ -336,8 +336,6 @@ When you encounter an error, follow these steps:
 
 ## Additional Resources
 
-- **[Python Types Reference](python_types_reference.md)** - Learn about common types (int, str, list, Series, DataFrame, Axes)
-- **[Python Syntax Quick Reference](python_syntax_guide.md)** - For syntax questions
+- [Python Syntax Quick Reference](python_syntax_guide.md) - For syntax questions
 - Official pandas documentation: https://pandas.pydata.org/docs/
-- pingouin documentation: https://pingouin-stats.org/
 

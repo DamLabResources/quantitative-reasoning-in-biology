@@ -2,14 +2,6 @@
 
 ## Syntax and Error Help
 
-### Python Types Reference
-Not sure what an `int`, `Series`, or `Axes` object is? The [Python Types Reference](python_types_reference.md) covers:
-- Common Python types (int, float, str, list, dict, set)
-- pandas types (Series, DataFrame)
-- matplotlib types (Figure, Axes)
-- What you can do with each type
-- How to convert between types
-
 ### Python Syntax Quick Reference
 Having trouble remembering which brackets to use? Confused about pandas indexing? Check out the [Python Syntax Quick Reference](python_syntax_guide.md) for:
 - Bracket types and when to use them

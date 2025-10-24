@@ -70,14 +70,15 @@ parts:
       
   - caption: "Extra"
     chapters:
-    #- file: content/misc/resources
-      
+    - file: content/misc/python_types_reference
+    - file: content/misc/python_syntax_guide
+    - file: content/misc/troubleshooting_errors
     - file: content/misc/about_this_book
-    - file: content/misc/course_info
-    - file: content/misc/author_bio
     - file: content/misc/run_your_own_jupyter
     - file: content/faq
     - file: content/changelog
+    - file: content/misc/course_info
+    - file: content/misc/author_bio
     - file: content/misc/works_cited
       
       
