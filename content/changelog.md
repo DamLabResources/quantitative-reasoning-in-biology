@@ -2,6 +2,13 @@
 
 This page notes all of the major changes introduced since the initial launch of this book.
 
+- 2026-01-18 - **Testing Improvements and project ideas**
+  - Adjusted the Module 5 testing to ask questions about figures instead of prescribing particular figures.
+  - Created [Project Ideas](project/project1_dataset_ideas.md) to describe how to pick projects.
+  - Created a [Synthetic Data Explanation](project/synthetic_data.md) to describe synthetic data, its uses, and drawbacks.
+  - Fixed course-wide copy-paste typo of 'Hidden Testss'.
+  - Added Github Readme re-direct incase students land in the wrong place.
+
 - 2025-10-24 - **Enhanced all lab notebooks with clearer expectations:**
   - Added "Checked variables" sections with detailed format expectations and types to all lab questions (Modules 2-10).
   - Added collapsible hints linking to relevant walkthrough sections.

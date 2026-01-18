@@ -104,7 +104,7 @@ rule deploy_notebook:
         cp {input.solution_notebook} {output.solution_notebook};
         """
         
-rule:
+rule deploy_zip:
     input:
         'content/{module}/_build/{module}_files.zip'
     output:
