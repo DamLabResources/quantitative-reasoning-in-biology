@@ -1,0 +1,730 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Picking a dataset &#8212; Quantitative Reasoning in Biology</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/project/project1_dataset_ideas';</script>
+    <link rel="canonical" href="https://damlabresources.github.io/quantitative-reasoning-in-biology/content/project/project1_dataset_ideas.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Synthetic Data: What You Need to Know" href="synthetic_data.html" />
+    <link rel="prev" title="Running Your Own Jupyter Environment" href="../misc/run_your_own_jupyter.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../book_index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Quantitative Reasoning in Biology</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../book_index.html">
+                    Quantitative Reasoning in Biology
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 0: Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../misc/how_to.html">How to use this book</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 1 : Hello World</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module01/Module01_book.html">Module 1: Hello World</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module01/notebook_actions.html">Notebook basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module01/Module01_walkthrough.html">Walkthrough</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module02/Module02_book.html">Module 2: Simple calculations</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module02/dilution_calculations.html">Molarity Calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module02/Module02_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module02/Module02_lab.html">Lab</a></li>
+
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module03/Module03_book.html">Module 3: DataFrames</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module03/spreadsheet_organization.html">Spreadsheet Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module03/Module03_walkthrough_SOLUTION.html">Walkthrough</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module03/Module03_lab.html">Lab</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 2 : Descriptive Statistics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module04/Module04_book.html">Module 4: Analysis by groups</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module04/Module04_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module04/reshaping_data.html">Reshaping Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module04/Module04_lab.html">Lab</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module05/Module05_book.html">Module 5: Plotting with Pandas</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module05/Module05_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module05/Module05_lab.html">Lab</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module06/Module06_book.html">Module 6: Visualizing with Confidence</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module06/grammar_of_graphics.html">Grammar of Graphics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module06/Module06_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module06/Module06_lab.html">Lab</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module07/Module07_book.html">Module 7: Samples and Replicates</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module07/Module07_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module07/Module07_lab.html">Lab</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 3 : Inferential Statistics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module08/Module08_book.html">Module 8: Hypothesis Testing</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module08/Module08_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module08/Module08_lab.html">Lab</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module09/Module09_book.html">Module 9: Linear Regression</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module09/Module09_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module09/Module09_lab.html">Lab</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module10/Module10_book.html">Module 10: Power Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module10/Module10_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module10/Module10_lab.html">Lab</a></li>
+
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Extra</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../misc/python_types_reference.html">Python Types Reference Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/python_syntax_guide.html">Python Syntax Quick Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/troubleshooting_errors.html">Troubleshooting Common Errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/about_this_book.html">About this book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/run_your_own_jupyter.html">Running Your Own Jupyter Environment</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Picking a dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="synthetic_data.html">Synthetic Data: What You Need to Know</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Change Log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/course_info.html">Course Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/author_bio.html">About the Author</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/works_cited.html">Works Cited</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/content/project/project1_dataset_ideas.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Picking a dataset</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-to-find-datasets">Where to Find Datasets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tidytuesday-github-repository">TidyTuesday GitHub Repository</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kaggle">Kaggle</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-makes-a-good-dataset-for-statistical-analysis">What Makes a Good Dataset for Statistical Analysis?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#event-level-data-vs-pre-aggregated-data">Event-Level Data vs. Pre-Aggregated Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-identify-event-level-data">How to Identify Event-Level Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-good-vs-bad-dataset-structure">Example: Good vs. Bad Dataset Structure</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checklist-for-dataset-selection">Checklist for Dataset Selection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#red-flags-to-avoid">Red Flags to Avoid</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-help">Getting Help</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="picking-a-dataset">
+<h1>Picking a dataset<a class="headerlink" href="#picking-a-dataset" title="Link to this heading">#</a></h1>
+<p>Finding the right dataset is a crucial first step in any data analysis project. This guide will help you locate appropriate datasets from popular repositories and understand what makes a dataset suitable for statistical analysis.</p>
+<section id="where-to-find-datasets">
+<h2>Where to Find Datasets<a class="headerlink" href="#where-to-find-datasets" title="Link to this heading">#</a></h2>
+<section id="tidytuesday-github-repository">
+<h3>TidyTuesday GitHub Repository<a class="headerlink" href="#tidytuesday-github-repository" title="Link to this heading">#</a></h3>
+<p><strong>TidyTuesday</strong> is an excellent source for high-quality, real-world datasets. It’s a weekly data project organized by the R for Data Science online learning community.</p>
+<ul class="simple">
+<li><p><strong>Location</strong>: <a class="github reference external" href="https://github.com/rfordatascience/tidytuesday">rfordatascience/tidytuesday</a></p></li>
+<li><p><strong>How to browse</strong>: Navigate to the <code class="docutils literal notranslate"><span class="pre">data</span></code> folder, where you’ll find weekly datasets organized by year</p></li>
+<li><p><strong>Advantages</strong>:</p>
+<ul>
+<li><p>All datasets are real-world data from reputable sources</p></li>
+<li><p>Datasets are well-documented with clear data dictionaries</p></li>
+<li><p>Many datasets include event-level observations</p></li>
+<li><p>Community discussions provide context and analysis examples</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Example datasets to explore</strong>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">2024/2024-01-09/</span></code> - Various datasets from different weeks</p></li>
+<li><p>Look for datasets with individual records (e.g., individual animals, patients, transactions, measurements)</p></li>
+</ul>
+</section>
+<section id="kaggle">
+<h3>Kaggle<a class="headerlink" href="#kaggle" title="Link to this heading">#</a></h3>
+<p><strong>Kaggle</strong> is a popular platform for data science competitions and datasets, but requires careful evaluation.</p>
+<ul class="simple">
+<li><p><strong>Location</strong>: <a class="reference external" href="https://www.kaggle.com/datasets">https://www.kaggle.com/datasets</a></p></li>
+<li><p><strong>How to browse</strong>: Use the search function and filter by topic, file type, or license</p></li>
+<li><p><strong>Advantages</strong>:</p>
+<ul>
+<li><p>Large variety of datasets across many domains</p></li>
+<li><p>Many datasets include detailed descriptions</p></li>
+<li><p>Download options for different formats (CSV, JSON, etc.)</p></li>
+</ul>
+</li>
+<li><p><strong>Cautions</strong>:</p>
+<ul>
+<li><p><strong>Many datasets are synthetic</strong> - Always check the dataset description carefully</p></li>
+<li><p>Some datasets may be pre-aggregated or summary statistics rather than raw data</p></li>
+<li><p>Verify data provenance and source information</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Important</strong>: Before using a Kaggle dataset, read our guide on <a class="reference internal" href="synthetic_data.html"><span class="std std-doc">synthetic data</span></a> to understand the risks and how to identify synthetic datasets.</p>
+</section>
+</section>
+<section id="what-makes-a-good-dataset-for-statistical-analysis">
+<h2>What Makes a Good Dataset for Statistical Analysis?<a class="headerlink" href="#what-makes-a-good-dataset-for-statistical-analysis" title="Link to this heading">#</a></h2>
+<section id="event-level-data-vs-pre-aggregated-data">
+<h3>Event-Level Data vs. Pre-Aggregated Data<a class="headerlink" href="#event-level-data-vs-pre-aggregated-data" title="Link to this heading">#</a></h3>
+<p><strong>Event-level data</strong> (also called “raw” or “transactional” data) contains individual observations or records. Each row represents a single event, measurement, or entity. This is what you want for statistical analysis.</p>
+<p><strong>Examples of event-level data</strong>:</p>
+<ul class="simple">
+<li><p>Individual patient records with measurements (one row per patient)</p></li>
+<li><p>Daily weather observations (one row per day per location)</p></li>
+<li><p>Individual animal sightings or captures (one row per observation)</p></li>
+<li><p>Individual transactions or purchases (one row per transaction)</p></li>
+<li><p>Individual experimental measurements (one row per replicate)</p></li>
+</ul>
+<p><strong>Pre-aggregated data</strong> contains summary statistics or already-computed aggregations. This is <strong>not suitable</strong> for statistical analysis because:</p>
+<ul class="simple">
+<li><p>You cannot perform your own statistical tests</p></li>
+<li><p>You cannot explore relationships between variables</p></li>
+<li><p>You cannot assess variability or uncertainty</p></li>
+<li><p>The data has already been processed, losing important information</p></li>
+</ul>
+<p><strong>Examples of pre-aggregated data to avoid</strong>:</p>
+<ul class="simple">
+<li><p>Tables showing only means, medians, or summary statistics</p></li>
+<li><p>Data where each row represents a group average (e.g., “average height by country”)</p></li>
+<li><p>Datasets described as “summary” or “aggregated”</p></li>
+<li><p>Data that has been “pre-processed” or “cleaned” to the point where individual observations are lost</p></li>
+</ul>
+</section>
+<section id="how-to-identify-event-level-data">
+<h3>How to Identify Event-Level Data<a class="headerlink" href="#how-to-identify-event-level-data" title="Link to this heading">#</a></h3>
+<p>When evaluating a dataset, ask yourself:</p>
+<ol class="arabic simple">
+<li><p><strong>What does each row represent?</strong></p>
+<ul class="simple">
+<li><p>Good: Each row is an individual observation (patient, animal, measurement, event)</p></li>
+<li><p>Bad: Each row is a summary or aggregate (average, total, percentage)</p></li>
+</ul>
+</li>
+<li><p><strong>Can you see variability in the data?</strong></p>
+<ul class="simple">
+<li><p>Good: Multiple rows with different values for the same variable</p></li>
+<li><p>Bad: Only one value per category or group</p></li>
+</ul>
+</li>
+<li><p><strong>Does the dataset description mention individual records?</strong></p>
+<ul class="simple">
+<li><p>Good: “Contains 1,000 patient records” or “Individual measurements from experiments”</p></li>
+<li><p>Bad: “Summary statistics” or “Aggregated by region”</p></li>
+</ul>
+</li>
+<li><p><strong>Can you perform statistical tests?</strong></p>
+<ul class="simple">
+<li><p>Good: You can calculate means, standard deviations, run t-tests, etc.</p></li>
+<li><p>Bad: The data is already summarized, leaving no room for analysis</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="example-good-vs-bad-dataset-structure">
+<h3>Example: Good vs. Bad Dataset Structure<a class="headerlink" href="#example-good-vs-bad-dataset-structure" title="Link to this heading">#</a></h3>
+<p><strong>Good (Event-Level)</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">patient_id</span> <span class="o">|</span> <span class="n">age</span> <span class="o">|</span> <span class="n">height</span> <span class="o">|</span> <span class="n">weight</span> <span class="o">|</span> <span class="n">diagnosis</span>
+<span class="o">-----------|-----|--------|--------|----------</span>
+<span class="mi">001</span>        <span class="o">|</span> <span class="mi">45</span>  <span class="o">|</span> <span class="mi">165</span>    <span class="o">|</span> <span class="mi">70</span>     <span class="o">|</span> <span class="n">Type</span> <span class="n">A</span>
+<span class="mi">002</span>        <span class="o">|</span> <span class="mi">32</span>  <span class="o">|</span> <span class="mi">172</span>    <span class="o">|</span> <span class="mi">68</span>     <span class="o">|</span> <span class="n">Type</span> <span class="n">B</span>
+<span class="mi">003</span>        <span class="o">|</span> <span class="mi">28</span>  <span class="o">|</span> <span class="mi">158</span>    <span class="o">|</span> <span class="mi">65</span>     <span class="o">|</span> <span class="n">Type</span> <span class="n">A</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p><strong>Bad (Pre-Aggregated)</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">diagnosis</span> <span class="o">|</span> <span class="n">avg_age</span> <span class="o">|</span> <span class="n">avg_height</span> <span class="o">|</span> <span class="n">avg_weight</span> <span class="o">|</span> <span class="n">n_patients</span>
+<span class="o">----------|---------|------------|------------|------------</span>
+<span class="n">Type</span> <span class="n">A</span>    <span class="o">|</span> <span class="mf">38.5</span>    <span class="o">|</span> <span class="mf">162.3</span>      <span class="o">|</span> <span class="mf">68.2</span>       <span class="o">|</span> <span class="mi">150</span>
+<span class="n">Type</span> <span class="n">B</span>    <span class="o">|</span> <span class="mf">42.1</span>    <span class="o">|</span> <span class="mf">170.8</span>      <span class="o">|</span> <span class="mf">72.5</span>       <span class="o">|</span> <span class="mi">120</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="checklist-for-dataset-selection">
+<h2>Checklist for Dataset Selection<a class="headerlink" href="#checklist-for-dataset-selection" title="Link to this heading">#</a></h2>
+<p>Before committing to a dataset, verify:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Event-level data</strong>: Each row represents an individual observation</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Real-world data</strong>: Not synthetic or artificially generated (see <a class="reference internal" href="synthetic_data.html"><span class="std std-doc">synthetic data guide</span></a>)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Clear data dictionary</strong>: You understand what each column represents</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Reasonable size</strong>: Not too small (&lt; 30 observations) or too large to work with comfortably</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Interesting to you</strong>: You have genuine curiosity about the research questions</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> <strong>Appropriate for your analysis goals</strong>: The variables match what you want to explore</p></li>
+</ul>
+</section>
+<section id="red-flags-to-avoid">
+<h2>Red Flags to Avoid<a class="headerlink" href="#red-flags-to-avoid" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>⚠️ <strong>Synthetic data</strong>: Datasets explicitly labeled as “synthetic,” “simulated,” or “generated”</p></li>
+<li><p>⚠️ <strong>Pre-aggregated summaries</strong>: Data that’s already been summarized or aggregated</p></li>
+<li><p>⚠️ <strong>Missing provenance</strong>: No clear source or data collection method described</p></li>
+<li><p>⚠️ <strong>Too “perfect”</strong>: Data that looks suspiciously clean or has unrealistic patterns</p></li>
+<li><p>⚠️ <strong>Vague descriptions</strong>: Dataset descriptions that lack concrete details about data collection</p></li>
+</ul>
+<p>For more information on identifying and avoiding synthetic data, see our <a class="reference internal" href="synthetic_data.html"><span class="std std-doc">synthetic data primer</span></a>.</p>
+</section>
+<section id="getting-help">
+<h2>Getting Help<a class="headerlink" href="#getting-help" title="Link to this heading">#</a></h2>
+<p>If you’re unsure whether a dataset is appropriate:</p>
+<ol class="arabic simple">
+<li><p>Check the dataset description carefully</p></li>
+<li><p>Look at the first few rows of data</p></li>
+<li><p>Read community discussions (especially on TidyTuesday and Kaggle)</p></li>
+<li><p>Ask your instructor or peers for feedback</p></li>
+<li><p>When in doubt, choose a different dataset</p></li>
+</ol>
+<p>Remember: The goal is to work with real, event-level data that allows you to perform meaningful statistical analysis. Taking time to find the right dataset will make your project much more rewarding!</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content/project"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../misc/run_your_own_jupyter.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Running Your Own Jupyter Environment</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="synthetic_data.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Synthetic Data: What You Need to Know</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#where-to-find-datasets">Where to Find Datasets</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tidytuesday-github-repository">TidyTuesday GitHub Repository</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kaggle">Kaggle</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-makes-a-good-dataset-for-statistical-analysis">What Makes a Good Dataset for Statistical Analysis?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#event-level-data-vs-pre-aggregated-data">Event-Level Data vs. Pre-Aggregated Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-identify-event-level-data">How to Identify Event-Level Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-good-vs-bad-dataset-structure">Example: Good vs. Bad Dataset Structure</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checklist-for-dataset-selection">Checklist for Dataset Selection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#red-flags-to-avoid">Red Flags to Avoid</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-help">Getting Help</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Will Dampier
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
