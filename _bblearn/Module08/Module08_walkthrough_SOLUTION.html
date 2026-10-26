@@ -499,10 +499,10 @@ However, due to its complexity, it is not approachable for beginners.</p>
 The outputs it creates are interpretable at a glance and contain outputs from a number of lower-level tools.
 This is intended to make it easier to apply statistical tests and interpret their results without getting bogged down in the complexities of statistical theory.
 Additionally, pingouin is designed to work well with Pandas and the Jupyter Notebook environment, which is popular among scientists for interactive data analysis.</p>
-<p>Check out the documentation for <a class="reference external" href="https://pingouin-stats.org/build/html/index.html">Pingouin</a>.</p>
+<p>Check out the documentation for <a class="reference external" href="https://pingouin-stats.org/">Pingouin</a>.</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://pingouin-stats.org/build/html/index.html#quick-start">Quick Start Examples</a></p></li>
-<li><p><a class="reference external" href="https://pingouin-stats.org/build/html/api.html">Available tests</a></p></li>
+<li><p><a class="reference external" href="https://pingouin-stats.org/#quick-start">Quick Start Examples</a></p></li>
+<li><p><a class="reference external" href="https://pingouin-stats.org/api.html">Available tests / API</a></p></li>
 <li><p><a class="reference external" href="https://pingouin-stats.org/guidelines.html">Which test to pick</a></p></li>
 </ul>
 <div class="cell docutils container">
@@ -891,7 +891,7 @@ If there is a difference, we will see that the bars have inconsistent <em>relati
 <img alt="../../_images/7b9cc1b3a156f054c81a054aa53fa42aabe0abda5d600b7727a251968748f816.png" src="../../_images/7b9cc1b3a156f054c81a054aa53fa42aabe0abda5d600b7727a251968748f816.png" />
 </div>
 </div>
-<p>Pingouin has a function for performing a chi2 test from a <code class="docutils literal notranslate"><span class="pre">pd.Dataframe</span></code> directly: <a class="reference external" href="https://pingouin-stats.org/build/html/generated/pingouin.chi2_independence.html"><code class="docutils literal notranslate"><span class="pre">pg.chi2_independence</span></code></a>.
+<p>Pingouin has a function for performing a chi2 test from a <code class="docutils literal notranslate"><span class="pre">pd.Dataframe</span></code> directly: <a class="reference external" href="https://pingouin-stats.org/generated/pingouin.chi2_independence.html"><code class="docutils literal notranslate"><span class="pre">pg.chi2_independence</span></code></a>.
 It will return three things:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1226,7 +1226,7 @@ It is the best place to start when starting considering normality.</p>
 </div>
 <p>Interesting, it rejected the hypothesis that this data is normally distributed.
 This is why you <em>NEED</em> to have documentation open when utilizing these tools.</p>
-<p><a class="reference external" href="https://pingouin-stats.org/build/html/generated/pingouin.normality.html">https://pingouin-stats.org/build/html/generated/pingouin.normality.html</a></p>
+<p><a class="reference external" href="https://pingouin-stats.org/generated/pingouin.normality.html">https://pingouin-stats.org/generated/pingouin.normality.html</a></p>
 <blockquote>
 <div><p>method: str
 Normality test.</p>
@@ -1962,7 +1962,8 @@ This would help correct for within sample variability.</p>
 <p>Let’s pretend that we believed the first Shapiro-Wilk normality test and instead used non-parametric methods.
 Use the flowchart below to test the whether there is a difference in education level across <code class="docutils literal notranslate"><span class="pre">race</span></code>.</p>
 <p><a class="reference external" href="https://pingouin-stats.org/guidelines.html#non-parametric">https://pingouin-stats.org/guidelines.html#non-parametric</a></p>
-<p><img alt="Non-parametric flow chart" src="https://pingouin-stats.org/build/html/_images/flowchart_nonparametric.svg" /></p>
+<p><img alt="Non-parametric flow chart" src="https://pingouin-stats.org/_images/flowchart_nonparametric.svg" /></p>
+<p>Interactive version with links to each test: <a class="reference external" href="https://pingouin-stats.org/guidelines.html#non-parametric">Pingouin non-parametric guidelines</a></p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>

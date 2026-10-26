@@ -2,6 +2,7 @@
 
 This page notes all of the major changes introduced since the initial launch of this book.
 
+- 2026-10-26 - Fixed broken Pingouin documentation links in Module 8 and Module 10 walkthroughs (docs moved off `/build/html/` to root paths like `/api.html`, `/generated/…`, `/_images/…`).
 - 2026-01-18 - **Testing Improvements and project ideas**
   - Adjusted the Module 5 testing to ask questions about figures instead of prescribing particular figures.
   - Created [Project Ideas](project/project1_dataset_ideas.md) to describe how to pick projects.
