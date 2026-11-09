@@ -2,7 +2,7 @@
 
 ## Overview
 
-This week you analyze a staged PBMC RNA-seq table from acute HIV infection versus uninfected controls (GSE199911). You will work on a log2 TPM scale, run a gene-wise t-test with Benjamini–Hochberg FDR, and interpret the result with Enrichr gene-set enrichment. The walkthrough and lab use Colab’s cell-level AI: you write plain-English prompts, run the generated code, and check the objects.
+This week you analyze a staged PBMC RNA-seq table from acute HIV infection versus uninfected controls (GSE199911). You will work on a log2 TPM scale, run a gene-wise t-test with Benjamini–Hochberg FDR, and interpret the result with Enrichr gene-set enrichment. The walkthrough and lab use Colab’s cell-level AI: you write plain-English prompts, run the generated code, and check the objects. Read [Two styles of AI-assisted programming](../part4/ai_programming_styles.md) first if you have not yet.
 
 ## Learning resources
 
@@ -10,8 +10,7 @@ This week you analyze a staged PBMC RNA-seq table from acute HIV infection versu
 
 **Technology and this study**
 
-- [How RNA-seq works](how_rnaseq_works.md)
-- [What is a TPM?](what_is_a_tpm.md)
+- [How RNA-seq works](how_rnaseq_works.md) — quantification, TPM, and differential expression
 
 **Multiple testing and enrichment**
 
@@ -27,7 +26,7 @@ This week you analyze a staged PBMC RNA-seq table from acute HIV infection versu
 
 ### Read
 
-Review the four background pages above before the walkthrough.
+Review the three background pages above before the walkthrough.
 
 ### Participate: Walkthrough
 

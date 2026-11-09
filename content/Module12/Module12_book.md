@@ -6,5 +6,6 @@ This chapter uses continuous activity-monitor data and contrasts cell-level AI c
 
 - [Depresjon dataset and question](depresjon_dataset.md)
 - [Pandas date-time utilities](pandas_datetime.md)
+- [Two styles of AI-assisted programming](../part4/ai_programming_styles.md)
 - [Code generation vs agent exploration](code_generation_vs_agents.md)
 - [License and citation](LICENSE.md)
