@@ -10,7 +10,7 @@ This page notes all of the major changes introduced since the initial launch of 
   - Module 11 walkthrough prompts: moved names/thresholds into Point; concise sample prompts behind hint tags.
   - Expanded gene-set enrichment page: MSigDB, Hallmark construction, Enrichr/gseapy/MSigDB links; removed unused methods.
   - Merged TPM into `how_rnaseq_works.md`, added DE context (Welch vs DESeq2/edgeR/limma/resampling), removed `what_is_a_tpm.md`.
-  - Part 4 opener: `part4/ai_programming_styles.md` (cell-by-cell natural-language programming vs agentic coding).
+  - Part 4 opener: `part4/ai_programming_styles.md` (autocomplete, cell-by-cell natural-language programming, and agentic coding).
 - 2026-10-26 - Fixed broken Pingouin documentation links in Module 8 and Module 10 walkthroughs (docs moved off `/build/html/` to root paths like `/api.html`, `/generated/…`, `/_images/…`).
 - 2026-10-26 - Removed leftover due-date reminders from Module 1 lab, Module 1 walkthrough book, and Module 8 lab.
 - 2026-01-18 - **Testing Improvements and project ideas**

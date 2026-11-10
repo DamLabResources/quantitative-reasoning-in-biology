@@ -1,6 +1,6 @@
 # Code generation vs agent-based exploration
 
-Use this page as presentation notes for Module 12. The Part 4 overview of both styles is in [Two styles of AI-assisted programming](../part4/ai_programming_styles.md). Module 11 and Module 12 both involve AI, but the human role differs.
+Use this page as presentation notes for Module 12. The Part 4 overview of all three styles is in [Three styles of AI-assisted programming](../part4/ai_programming_styles.md). Module 11 and Module 12 both involve AI, but the human role differs.
 
 ## Cell-level code generation (Module 11)
 

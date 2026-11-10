@@ -8,7 +8,7 @@ This week you explore continuous wrist actigraphy from the Depresjon study: peop
 
 - [Depresjon dataset and question](depresjon_dataset.md)
 - [Pandas date-time utilities](pandas_datetime.md)
-- [Two styles of AI-assisted programming](../part4/ai_programming_styles.md)
+- [Three styles of AI-assisted programming](../part4/ai_programming_styles.md)
 - [Code generation vs agent exploration](code_generation_vs_agents.md)
 - License and citation: [LICENSE.md](LICENSE.md)
 
