@@ -434,15 +434,13 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#biological-framing">Biological framing</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-load-the-staged-tables">Step 1. Load the staged tables</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-abundance-filter">Step 2. Abundance filter</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-are-tpm-values-normally-distributed">Step 3. Are TPM values normally distributed?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-log2-transform">Step 4. Log2 transform</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-retest-normality-on-the-log2-scale">Step 5. Retest normality on the log2 scale</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-variance-filter">Step 6. Variance filter</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-gene-wise-log2-fold-change">Step 7. Gene-wise log2 fold change</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-gene-wise-welch-t-test">Step 8. Gene-wise Welch t-test</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-benjaminihochberg-fdr">Step 9. Benjamini–Hochberg FDR</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-build-the-enrichr-input-list">Step 10. Build the Enrichr input list</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-11-enrichr-hallmark">Step 11. Enrichr (Hallmark)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-log2-transform">Step 3. Log2 transform</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-variance-filter">Step 4. Variance filter</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-gene-wise-log2-fold-change">Step 5. Gene-wise log2 fold change</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-gene-wise-welch-t-test">Step 6. Gene-wise Welch t-test</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-benjaminihochberg-fdr">Step 7. Benjamini–Hochberg FDR</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-build-the-enrichr-input-list">Step 8. Build the Enrichr input list</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-enrichr-hallmark">Step 9. Enrichr (Hallmark)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checkpoint">Checkpoint</a></li>
 </ul>
             </nav>
@@ -461,7 +459,7 @@ document.write(`
 <section id="learning-objectives">
 <h2>Learning objectives<a class="headerlink" href="#learning-objectives" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Filter low-abundance genes, inspect TPM normality, then <code class="docutils literal notranslate"><span class="pre">log2(TPM</span> <span class="pre">+</span> <span class="pre">1)</span></code> and re-check</p></li>
+<li><p>Filter low-abundance genes, then <code class="docutils literal notranslate"><span class="pre">log2(TPM</span> <span class="pre">+</span> <span class="pre">1)</span></code></p></li>
 <li><p>Drop low-variance genes on the log2 scale</p></li>
 <li><p>Compute gene-wise log2 fold changes, Welch t-tests, and Benjamini–Hochberg FDR</p></li>
 <li><p>Summarize significant genes with Enrichr (<code class="docutils literal notranslate"><span class="pre">MSigDB_Hallmark_2020</span></code>)</p></li>
@@ -536,35 +534,8 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="step-3-are-tpm-values-normally-distributed">
-<h2>Step 3. Are TPM values normally distributed?<a class="headerlink" href="#step-3-are-tpm-values-normally-distributed" title="Link to this heading">#</a></h2>
-<p>Pick a few mid-abundance genes and run Shapiro–Wilk on the TPM values across samples. Also look at a histogram of one gene. Expect clear skew (not normal).</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A few genes near the middle of the mean-TPM ranking</span>
-<span class="n">means</span> <span class="o">=</span> <span class="n">expr_f</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">probe_genes</span> <span class="o">=</span> <span class="n">means</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">means</span><span class="p">)</span><span class="o">//</span><span class="mi">3</span> <span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">means</span><span class="p">)</span><span class="o">//</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;probe genes:&#39;</span><span class="p">,</span> <span class="n">probe_genes</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">probe_genes</span><span class="p">:</span>
-    <span class="n">vals</span> <span class="o">=</span> <span class="n">expr_f</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">g</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
-    <span class="n">w</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">shapiro</span><span class="p">(</span><span class="n">vals</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">g</span><span class="si">}</span><span class="s1">: Shapiro W=</span><span class="si">{</span><span class="n">w</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">, p=</span><span class="si">{</span><span class="n">p</span><span class="si">:</span><span class="s1">.2e</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-
-<span class="n">g0</span> <span class="o">=</span> <span class="n">probe_genes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">))</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">expr_f</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">g0</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;TPM&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;TPM distribution: </span><span class="si">{</span><span class="n">g0</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="step-4-log2-transform">
-<h2>Step 4. Log2 transform<a class="headerlink" href="#step-4-log2-transform" title="Link to this heading">#</a></h2>
+<section id="step-3-log2-transform">
+<h2>Step 3. Log2 transform<a class="headerlink" href="#step-3-log2-transform" title="Link to this heading">#</a></h2>
 <p>Compute <code class="docutils literal notranslate"><span class="pre">log2(TPM</span> <span class="pre">+</span> <span class="pre">1)</span></code> for the abundance-filtered matrix.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -576,29 +547,8 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="step-5-retest-normality-on-the-log2-scale">
-<h2>Step 5. Retest normality on the log2 scale<a class="headerlink" href="#step-5-retest-normality-on-the-log2-scale" title="Link to this heading">#</a></h2>
-<p>Repeat Shapiro–Wilk (and a histogram) for the same probe genes on <code class="docutils literal notranslate"><span class="pre">log2</span></code>. The distribution should look closer to normal, even if not perfect.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">probe_genes</span><span class="p">:</span>
-    <span class="n">vals</span> <span class="o">=</span> <span class="n">log2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">g</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
-    <span class="n">w</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">shapiro</span><span class="p">(</span><span class="n">vals</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">g</span><span class="si">}</span><span class="s1">: Shapiro W=</span><span class="si">{</span><span class="n">w</span><span class="si">:</span><span class="s1">.3f</span><span class="si">}</span><span class="s1">, p=</span><span class="si">{</span><span class="n">p</span><span class="si">:</span><span class="s1">.2e</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">))</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">log2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">g0</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;log2(TPM + 1)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;log2 distribution: </span><span class="si">{</span><span class="n">g0</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="step-6-variance-filter">
-<h2>Step 6. Variance filter<a class="headerlink" href="#step-6-variance-filter" title="Link to this heading">#</a></h2>
+<section id="step-4-variance-filter">
+<h2>Step 4. Variance filter<a class="headerlink" href="#step-4-variance-filter" title="Link to this heading">#</a></h2>
 <p>On the log2 matrix, drop genes in the bottom 20% of variance across samples.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -613,8 +563,8 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="step-7-gene-wise-log2-fold-change">
-<h2>Step 7. Gene-wise log2 fold change<a class="headerlink" href="#step-7-gene-wise-log2-fold-change" title="Link to this heading">#</a></h2>
+<section id="step-5-gene-wise-log2-fold-change">
+<h2>Step 5. Gene-wise log2 fold change<a class="headerlink" href="#step-5-gene-wise-log2-fold-change" title="Link to this heading">#</a></h2>
 <p>For each gene, HIV mean minus control mean on the log2 scale.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -629,8 +579,8 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="step-8-gene-wise-welch-t-test">
-<h2>Step 8. Gene-wise Welch t-test<a class="headerlink" href="#step-8-gene-wise-welch-t-test" title="Link to this heading">#</a></h2>
+<section id="step-6-gene-wise-welch-t-test">
+<h2>Step 6. Gene-wise Welch t-test<a class="headerlink" href="#step-6-gene-wise-welch-t-test" title="Link to this heading">#</a></h2>
 <p>Use a <strong>vectorized</strong> <code class="docutils literal notranslate"><span class="pre">scipy.stats.ttest_ind</span></code> down the genes to calculate a p-value for each gene.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -644,8 +594,8 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="step-9-benjaminihochberg-fdr">
-<h2>Step 9. Benjamini–Hochberg FDR<a class="headerlink" href="#step-9-benjaminihochberg-fdr" title="Link to this heading">#</a></h2>
+<section id="step-7-benjaminihochberg-fdr">
+<h2>Step 7. Benjamini–Hochberg FDR<a class="headerlink" href="#step-7-benjaminihochberg-fdr" title="Link to this heading">#</a></h2>
 <p>Adjust the gene-wise p-values for multiple testing using the BH method and build the results table.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -666,8 +616,8 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="step-10-build-the-enrichr-input-list">
-<h2>Step 10. Build the Enrichr input list<a class="headerlink" href="#step-10-build-the-enrichr-input-list" title="Link to this heading">#</a></h2>
+<section id="step-8-build-the-enrichr-input-list">
+<h2>Step 8. Build the Enrichr input list<a class="headerlink" href="#step-8-build-the-enrichr-input-list" title="Link to this heading">#</a></h2>
 <p>Keep genes with FDR &lt; 0.05 and absolute log2 fold change &gt; 1.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -679,8 +629,8 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="step-11-enrichr-hallmark">
-<h2>Step 11. Enrichr (Hallmark)<a class="headerlink" href="#step-11-enrichr-hallmark" title="Link to this heading">#</a></h2>
+<section id="step-9-enrichr-hallmark">
+<h2>Step 9. Enrichr (Hallmark)<a class="headerlink" href="#step-9-enrichr-hallmark" title="Link to this heading">#</a></h2>
 <p>Run Enrichr on <code class="docutils literal notranslate"><span class="pre">sig</span></code> with <code class="docutils literal notranslate"><span class="pre">MSigDB_Hallmark_2020</span></code>. Use <code class="docutils literal notranslate"><span class="pre">outdir=None</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -776,15 +726,13 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#biological-framing">Biological framing</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-load-the-staged-tables">Step 1. Load the staged tables</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-abundance-filter">Step 2. Abundance filter</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-are-tpm-values-normally-distributed">Step 3. Are TPM values normally distributed?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-log2-transform">Step 4. Log2 transform</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-retest-normality-on-the-log2-scale">Step 5. Retest normality on the log2 scale</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-variance-filter">Step 6. Variance filter</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-gene-wise-log2-fold-change">Step 7. Gene-wise log2 fold change</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-gene-wise-welch-t-test">Step 8. Gene-wise Welch t-test</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-benjaminihochberg-fdr">Step 9. Benjamini–Hochberg FDR</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-build-the-enrichr-input-list">Step 10. Build the Enrichr input list</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-11-enrichr-hallmark">Step 11. Enrichr (Hallmark)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-log2-transform">Step 3. Log2 transform</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-variance-filter">Step 4. Variance filter</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-gene-wise-log2-fold-change">Step 5. Gene-wise log2 fold change</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-gene-wise-welch-t-test">Step 6. Gene-wise Welch t-test</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-benjaminihochberg-fdr">Step 7. Benjamini–Hochberg FDR</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-build-the-enrichr-input-list">Step 8. Build the Enrichr input list</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-enrichr-hallmark">Step 9. Enrichr (Hallmark)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checkpoint">Checkpoint</a></li>
 </ul>
   </nav></div>
