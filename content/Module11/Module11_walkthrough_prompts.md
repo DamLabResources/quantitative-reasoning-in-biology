@@ -32,19 +32,7 @@ The notebook already installs `applied-biostats-helper` and `gseapy==1.3.2` and 
 
 ---
 
-## Step 3. Are TPM values normally distributed?
-
-**Point:** On `expr_f`, pick about **five mid-abundance** genes (near one-third of the way down a mean-TPM ranking). For each, run Shapiro–Wilk across samples and print W and p. Histogram the first probe gene with a KDE. Expect clear skew on the raw TPM scale.
-
-<details><summary>Hint</summary>
-
-> Shapiro–Wilk five mid-abundance genes in `expr_f`; histogram the first with KDE.
-
-</details>
-
----
-
-## Step 4. Log2 transform
+## Step 3. Log2 transform
 
 **Point:** Create `log2` as **`log2(TPM + 1)`** from `expr_f`. Print shape and `log2.head()`.
 
@@ -56,19 +44,7 @@ The notebook already installs `applied-biostats-helper` and `gseapy==1.3.2` and 
 
 ---
 
-## Step 5. Retest normality on the log2 scale
-
-**Point:** Using the **same probe genes** as Step 3, run Shapiro–Wilk on `log2` and print W and p. Histogram the first probe gene on the log2 scale with a KDE. It should look closer to normal than raw TPM, even if not perfect.
-
-<details><summary>Hint</summary>
-
-> Repeat Shapiro–Wilk and the histogram on `log2` for the same probe genes.
-
-</details>
-
----
-
-## Step 6. Variance filter
+## Step 4. Variance filter
 
 **Point:** On `log2`, compute per-gene variance across samples. Drop genes in the **bottom 20%** of variance. Overwrite `log2` with the kept genes. Print the variance cutoff and the number of genes remaining.
 
@@ -80,7 +56,7 @@ The notebook already installs `applied-biostats-helper` and `gseapy==1.3.2` and 
 
 ---
 
-## Step 7. Gene-wise log2 fold change
+## Step 5. Gene-wise log2 fold change
 
 **Point:** From `samples`, get `sample_id` lists for **`hiv`** and **`control`**. For each gene in `log2`, compute HIV mean minus control mean. Store the Series as `log2fc`. Print how many genes have a fold change and show the top of `log2fc` sorted descending.
 
@@ -92,7 +68,7 @@ The notebook already installs `applied-biostats-helper` and `gseapy==1.3.2` and 
 
 ---
 
-## Step 8. Gene-wise Welch t-test
+## Step 6. Gene-wise Welch t-test
 
 **Point:** Using the HIV and control columns of `log2`, run a **vectorized** Welch t-test with `scipy.stats.ttest_ind(..., equal_var=False)` along genes (avoid pingouin loops). Store `t_stat` and `p_val`. Print the number of p-values and how many raw p-values are **&lt; 0.05**.
 
@@ -104,7 +80,7 @@ The notebook already installs `applied-biostats-helper` and `gseapy==1.3.2` and 
 
 ---
 
-## Step 9. Benjamini–Hochberg FDR
+## Step 7. Benjamini–Hochberg FDR
 
 **Point:** Adjust `p_val` with Benjamini–Hochberg via `statsmodels.stats.multitest.multipletests`. Build DataFrame `results` with columns `gene_symbol`, `log2fc`, `t`, `p`, and `fdr`, sorted by `fdr`. Print how many genes have **FDR &lt; 0.05** and show `results.head(10)`.
 
@@ -116,7 +92,7 @@ The notebook already installs `applied-biostats-helper` and `gseapy==1.3.2` and 
 
 ---
 
-## Step 10. Build the Enrichr input list
+## Step 8. Build the Enrichr input list
 
 **Point:** From `results`, make list `sig` of gene symbols with **FDR &lt; 0.05** and **|log2FC| &gt; 1**. Print `len(sig)` and the first 10 symbols.
 
@@ -128,7 +104,7 @@ The notebook already installs `applied-biostats-helper` and `gseapy==1.3.2` and 
 
 ---
 
-## Step 11. Enrichr (Hallmark)
+## Step 9. Enrichr (Hallmark)
 
 **Point:** Run `gseapy.enrichr` on `sig` with gene set library **`MSigDB_Hallmark_2020`**, organism **`Human`**, and **`outdir=None`**. Store the table as `enrich_df` sorted by adjusted p-value and show the top 10 rows.
 
