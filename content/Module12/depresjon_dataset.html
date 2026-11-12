@@ -431,6 +431,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-was-measured">What was measured</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-the-study-reported">What the study reported</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#files-in-this-module">Files in this module</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-for-the-module">Question for the module</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-this-dataset">Why this dataset</a></li>
@@ -453,24 +454,31 @@ document.write(`
 <ul class="simple">
 <li><p><strong>23</strong> people with unipolar or bipolar depression (<code class="docutils literal notranslate"><span class="pre">condition</span></code>)</p></li>
 <li><p><strong>32</strong> controls (<code class="docutils literal notranslate"><span class="pre">control</span></code>)</p></li>
-<li><p>About <strong>two weeks</strong> of recording per person (exact length varies; see <code class="docutils literal notranslate"><span class="pre">days</span></code> in the score table)</p></li>
-<li><p>Clinical scores including <strong>MADRS</strong> at the start and end of the recording window</p></li>
+<li><p>About <strong>two weeks</strong> of recording per person (exact length varies; see <code class="docutils literal notranslate"><span class="pre">days</span></code>)</p></li>
+<li><p>A timestamp and an activity count on each minute</p></li>
 </ul>
+<p>Score fields are stored on those minute rows and repeat for a given person: <code class="docutils literal notranslate"><span class="pre">gender</span></code>, <code class="docutils literal notranslate"><span class="pre">age</span></code> (age range), <code class="docutils literal notranslate"><span class="pre">edu</span></code> (education), <code class="docutils literal notranslate"><span class="pre">inpatient</span></code>, <code class="docutils literal notranslate"><span class="pre">madrs1</span></code> and <code class="docutils literal notranslate"><span class="pre">madrs2</span></code>, plus related fields (<code class="docutils literal notranslate"><span class="pre">afftype</span></code>, <code class="docutils literal notranslate"><span class="pre">melanch</span></code>, <code class="docutils literal notranslate"><span class="pre">marriage</span></code>, <code class="docutils literal notranslate"><span class="pre">work</span></code>).</p>
+<p>Each person was recorded on their own dates. A control file may fall in a different month than a condition file. Read each person on their own timeline, by hour and weekday, rather than by a shared calendar day.</p>
 <p>Original collection: Berge / Fasmer group, Haukeland University Hospital (Bergen, Norway). Public packaging: Garcia-Ceja et al., MMSys 2018.</p>
+</section>
+<section id="what-the-study-reported">
+<h2>What the study reported<a class="headerlink" href="#what-the-study-reported" title="Link to this heading">#</a></h2>
+<p>The study these recordings come from reported lower daytime activity in depression than in controls, and a larger gap on weekends than on weekdays.</p>
 </section>
 <section id="files-in-this-module">
 <h2>Files in this module<a class="headerlink" href="#files-in-this-module" title="Link to this heading">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">depresjon_minute.csv.gz</span></code> — one row per person-minute after trimming each recording to the first <code class="docutils literal notranslate"><span class="pre">days</span></code> listed for that person (the window used in the dataset paper). Columns include <code class="docutils literal notranslate"><span class="pre">person_id</span></code>, <code class="docutils literal notranslate"><span class="pre">group</span></code>, <code class="docutils literal notranslate"><span class="pre">timestamp</span></code>, <code class="docutils literal notranslate"><span class="pre">activity</span></code>, and score fields (<code class="docutils literal notranslate"><span class="pre">madrs1</span></code>, <code class="docutils literal notranslate"><span class="pre">madrs2</span></code>, age band, sex, …).</p>
+<p><code class="docutils literal notranslate"><span class="pre">depresjon_minute.csv.gz</span></code> — one row per person-minute after trimming each recording to the first <code class="docutils literal notranslate"><span class="pre">days</span></code> listed for that person (the window used in the dataset paper). Columns include <code class="docutils literal notranslate"><span class="pre">person_id</span></code>, <code class="docutils literal notranslate"><span class="pre">group</span></code>, <code class="docutils literal notranslate"><span class="pre">timestamp</span></code>, <code class="docutils literal notranslate"><span class="pre">activity</span></code>, <code class="docutils literal notranslate"><span class="pre">days</span></code>, and the score fields above.</p>
 <p>Rebuild with <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">prepare_depresjon.py</span></code>. Terms: <span class="xref myst">LICENSE.md</span> (CC BY-NC 4.0; citation required).</p>
 </section>
 <section id="question-for-the-module">
 <h2>Question for the module<a class="headerlink" href="#question-for-the-module" title="Link to this heading">#</a></h2>
-<p><strong>Among these wrist recordings, do people with depression have lower daytime activity than controls when activity is summarized per person?</strong></p>
-<p>A minute is <strong>not</strong> the sample size. Neither is a single hour treated as an independent subject. Aggregate first (for example mean daytime activity per person), then compare groups. You may also explore hour-of-day profiles and weekday versus weekend patterns, but any hypothesis test should state the observational unit explicitly.</p>
+<p><strong>In this table, is activity lower in the condition group than in controls, and does weekday versus weekend change the comparison?</strong></p>
+<p>A minute is <strong>not</strong> the sample size. Neither is a single hour treated as an independent subject. The person is the unit: the same person contributes both weekday and weekend activity. Use hour-of-day and day-of-week summaries to see the pattern, then aggregate to the person before a test.</p>
+<p>People do not share one weekly schedule. A person who is active on Monday will not look like a person whose active day is Tuesday, and a group average can blur that.</p>
 </section>
 <section id="why-this-dataset">
 <h2>Why this dataset<a class="headerlink" href="#why-this-dataset" title="Link to this heading">#</a></h2>
-<p>It forces the same replicate logic you practiced earlier: many measurements nested inside people. The Data Science Agent can propose many plots; you decide which summaries respect the design.</p>
+<p>Many measurements sit inside each person. The Data Science Agent can propose plots and tests. You decide which summaries respect the design, and you interpret the figure.</p>
 </section>
 </section>
 
@@ -539,6 +547,7 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-was-measured">What was measured</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-the-study-reported">What the study reported</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#files-in-this-module">Files in this module</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#question-for-the-module">Question for the module</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-this-dataset">Why this dataset</a></li>

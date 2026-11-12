@@ -54,7 +54,7 @@ You own long-range alignment: Is this still answering the question? Is the grain
 - You are willing to stop the agent when it drifts or tests at the wrong level
 - **You can audit a short trail of steps faster than writing every cell yourself**
 
-**Example:** In [Module 12](../Module12/Module12_book.md) the question is about daytime activity in depression vs controls **per person**, not per minute. Ask an agent to explore toward that claim, then reject any step that treats minutes as independent samples.
+**Example:** In [Module 12](../Module12/Module12_book.md) the question is whether activity is lower in depression than in controls, and whether weekdays and weekends differ, summarized **per person**, not per minute. Ask an agent to explore toward that claim, then reject any step that treats minutes as independent samples.
 
 ## How to choose
 
