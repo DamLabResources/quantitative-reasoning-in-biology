@@ -246,6 +246,28 @@
 </ul>
 </details></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 4 : AI-assisted analysis</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="part4/ai_programming_styles.html">Three styles of AI-assisted programming</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Module11/Module11_book.html">Module 11: RNA-seq differential expression and Enrichr</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="Module11/how_rnaseq_works.html">How RNA-seq works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Module11/multiple_testing.html">Multiple testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Module11/gene_set_enrichment.html">Gene-set enrichment and Enrichr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Module11/Module11_walkthrough_prompts.html">Module 11 walkthrough prompts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Module11/Module11_walkthrough_INTENDED.html">Walkthrough (INTENDED)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Module11/Module11_lab_prompts.html">Module 11 lab prompts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Module11/Module11_lab.html">Lab</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Module12/Module12_book.html">Module 12: Actigraphy time series and agent-assisted exploration</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="Module12/depresjon_dataset.html">Depresjon dataset and biological question</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Module12/pandas_datetime.html">Pandas date-time utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Module12/code_generation_vs_agents.html">Code generation vs agent-based exploration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Module12/Module12_walkthrough.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Module12/Module12_lab.html">Lab</a></li>
+</ul>
+</details></li>
+</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Extra</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="misc/python_types_reference.html">Python Types Reference Guide</a></li>
@@ -414,6 +436,20 @@ document.write(`
 <h1>Change Log<a class="headerlink" href="#change-log" title="Link to this heading">#</a></h1>
 <p>This page notes all of the major changes introduced since the initial launch of this book.</p>
 <ul class="simple">
+<li><p>2026-11-11 - <strong>Module 12:</strong> Dataset page now states the study’s lower-activity and larger weekend-gap report, and asks whether this table shows a group difference and a weekday-versus-weekend difference, with the person as the unit. The lab asks students to explore the other score columns. The walkthrough question and the Part 4 Module 12 example match that question.</p></li>
+<li><p>2026-11-10 - <strong>Part 4 opener:</strong> <code class="docutils literal notranslate"><span class="pre">part4/ai_programming_styles.md</span></code> now opens with a short argument on AI coding skill and paired productivity, cited through <code class="docutils literal notranslate"><span class="pre">content/references.bib</span></code>. The repository-issue claim cites SWE-bench-Live rather than the frozen 2024 SWE-bench score. A later paragraph adds the public-health trial, the non-programmer verification study, and the analyst verification study.</p></li>
+<li><p>2026-11-09 - <strong>Modules 11 and 12 (AI-assisted analysis):</strong></p>
+<ul>
+<li><p>Module 11: staged GSE199911 TPM / DE tables, background pages (RNA-seq, TPM, multiple testing, Enrichr; RNA-seq page links the Parker et al. PMC full text), student and INTENDED walkthrough/lab notebooks, and book pages for walkthrough/lab Colab AI prompts.</p></li>
+<li><p>Module 12: staged Depresjon minute actigraphy (<code class="docutils literal notranslate"><span class="pre">depresjon_minute.csv.gz</span></code>, CC BY-NC), dataset / datetime / agent-vs-codegen pages, and skeletal walkthrough/lab notebooks for the Data Science Agent.</p></li>
+<li><p>Added Part 4 to the book TOC. Module 12 prompt materials wait on the recording.</p></li>
+<li><p>Added Colab stub test folders and <code class="docutils literal notranslate"><span class="pre">tests/Module11_files.zip</span></code> / <code class="docutils literal notranslate"><span class="pre">tests/Module12_files.zip</span></code> (data + stubs) so <code class="docutils literal notranslate"><span class="pre">setup_environment</span></code> works when pushed.</p></li>
+<li><p>Module 11 walkthrough prompts: moved names/thresholds into Point; concise sample prompts behind hint tags.</p></li>
+<li><p>Expanded gene-set enrichment page: MSigDB, Hallmark construction, Enrichr/gseapy/MSigDB links; removed unused methods.</p></li>
+<li><p>Merged TPM into <code class="docutils literal notranslate"><span class="pre">how_rnaseq_works.md</span></code>, added DE context (Welch vs DESeq2/edgeR/limma/resampling), removed <code class="docutils literal notranslate"><span class="pre">what_is_a_tpm.md</span></code>.</p></li>
+<li><p>Part 4 opener: <code class="docutils literal notranslate"><span class="pre">part4/ai_programming_styles.md</span></code> (autocomplete, cell-by-cell natural-language programming, and agentic coding).</p></li>
+</ul>
+</li>
 <li><p>2026-10-26 - Fixed broken Pingouin documentation links in Module 8 and Module 10 walkthroughs (docs moved off <code class="docutils literal notranslate"><span class="pre">/build/html/</span></code> to root paths like <code class="docutils literal notranslate"><span class="pre">/api.html</span></code>, <code class="docutils literal notranslate"><span class="pre">/generated/…</span></code>, <code class="docutils literal notranslate"><span class="pre">/_images/…</span></code>).</p></li>
 <li><p>2026-10-26 - Removed leftover due-date reminders from Module 1 lab, Module 1 walkthrough book, and Module 8 lab.</p></li>
 <li><p>2026-01-18 - <strong>Testing Improvements and project ideas</strong></p>

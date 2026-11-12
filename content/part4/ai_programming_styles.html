@@ -1,0 +1,642 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Three styles of AI-assisted programming &#8212; Quantitative Reasoning in Biology</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=b8b12719"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/part4/ai_programming_styles';</script>
+    <link rel="canonical" href="https://damlabresources.github.io/quantitative-reasoning-in-biology/content/part4/ai_programming_styles.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Module 11: RNA-seq differential expression and Enrichr" href="../Module11/Module11_book.html" />
+    <link rel="prev" title="Lab" href="../../_bblearn/Module10/Module10_lab.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../book_index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Quantitative Reasoning in Biology</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../book_index.html">
+                    Quantitative Reasoning in Biology
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 0: Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../misc/how_to.html">How to use this book</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 1 : Hello World</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module01/Module01_book.html">Module 1: Hello World</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module01/notebook_actions.html">Notebook basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module01/Module01_walkthrough.html">Walkthrough</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module02/Module02_book.html">Module 2: Simple calculations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module02/dilution_calculations.html">Molarity Calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module02/Module02_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module02/Module02_lab.html">Lab</a></li>
+
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module03/Module03_book.html">Module 3: DataFrames</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module03/spreadsheet_organization.html">Spreadsheet Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module03/Module03_walkthrough_SOLUTION.html">Walkthrough</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module03/Module03_lab.html">Lab</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 2 : Descriptive Statistics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module04/Module04_book.html">Module 4: Analysis by groups</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module04/Module04_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module04/reshaping_data.html">Reshaping Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module04/Module04_lab.html">Lab</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module05/Module05_book.html">Module 5: Plotting with Pandas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module05/Module05_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module05/Module05_lab.html">Lab</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module06/Module06_book.html">Module 6: Visualizing with Confidence</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module06/grammar_of_graphics.html">Grammar of Graphics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module06/Module06_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module06/Module06_lab.html">Lab</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module07/Module07_book.html">Module 7: Samples and Replicates</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module07/Module07_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module07/Module07_lab.html">Lab</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 3 : Inferential Statistics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module08/Module08_book.html">Module 8: Hypothesis Testing</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module08/Module08_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module08/Module08_lab.html">Lab</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module09/Module09_book.html">Module 9: Linear Regression</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module09/Module09_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module09/Module09_lab.html">Lab</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module10/Module10_book.html">Module 10: Power Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module10/Module10_walkthrough_SOLUTION.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../_bblearn/Module10/Module10_lab.html">Lab</a></li>
+
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 4 : AI-assisted analysis</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Three styles of AI-assisted programming</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module11/Module11_book.html">Module 11: RNA-seq differential expression and Enrichr</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module11/how_rnaseq_works.html">How RNA-seq works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module11/multiple_testing.html">Multiple testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module11/gene_set_enrichment.html">Gene-set enrichment and Enrichr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module11/Module11_walkthrough_prompts.html">Module 11 walkthrough prompts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module11/Module11_walkthrough_INTENDED.html">Walkthrough (INTENDED)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module11/Module11_lab_prompts.html">Module 11 lab prompts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module11/Module11_lab.html">Lab</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Module12/Module12_book.html">Module 12: Actigraphy time series and agent-assisted exploration</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Module12/depresjon_dataset.html">Depresjon dataset and biological question</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module12/pandas_datetime.html">Pandas date-time utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module12/code_generation_vs_agents.html">Code generation vs agent-based exploration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module12/Module12_walkthrough.html">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Module12/Module12_lab.html">Lab</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Extra</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../misc/python_types_reference.html">Python Types Reference Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/python_syntax_guide.html">Python Syntax Quick Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/troubleshooting_errors.html">Troubleshooting Common Errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/about_this_book.html">About this book</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/run_your_own_jupyter.html">Running Your Own Jupyter Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project/project1_dataset_ideas.html">Picking a dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project/synthetic_data.html">Synthetic Data: What You Need to Know</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Change Log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/course_info.html">Course Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/author_bio.html">About the Author</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/works_cited.html">Works Cited</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/content/part4/ai_programming_styles.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Three styles of AI-assisted programming</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ai-enhanced-autocomplete">1. AI-enhanced autocomplete</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-language-programming-cell-by-cell">2. Natural-language programming (cell by cell)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agentic-coding-goal-based-iterative">3. Agentic coding (goal-based, iterative)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-choose">How to choose</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="three-styles-of-ai-assisted-programming">
+<h1>Three styles of AI-assisted programming<a class="headerlink" href="#three-styles-of-ai-assisted-programming" title="Link to this heading">#</a></h1>
+<p>Part 4 uses AI to write analysis code. The scientific rules do not change: name the observational unit, report effect before p, and keep a written claim tied to a table or figure. What changes is <strong>how much of the next code the AI proposes</strong>, and <strong>who steers the analysis path</strong>.</p>
+<p>A code model on its own can outscore most beginners <span id="id1">Finnie-Ansley <em>et al.</em> [<a class="reference internal" href="../misc/works_cited.html#id4" title="James Finnie-Ansley, Paul Denny, Brett A. Becker, Andrew Luxton-Reilly, and James Prather. The robots are coming: exploring the implications of OpenAI Codex on introductory programming. In Proceedings of the 24th Australasian Computing Education Conference, 10–19. 2022. doi:10.1145/3511861.3511863.">2022</a>]</span> and lands near the middle of a programming contest <span id="id2">Li <em>et al.</em> [<a class="reference internal" href="../misc/works_cited.html#id6" title="Yujia Li, David Choi, Junyoung Chung, Nate Kushman, Julian Schrittwieser, Rémi Leblond, Tom Eccles, James Keeling, Felix Gimeno, Agustin Dal Lago, Thomas Hubert, Peter Choy, Cyprien de Masson d'Autume, Igor Babuschkin, Xinyun Chen, Po-Sen Huang, Johannes Welbl, Sven Gowal, Alexey Cherepanov, James Molloy, Daniel J. Mankowitz, Esme Sutherland Robson, Pushmeet Kohli, Nando de Freitas, Koray Kavukcuoglu, Oriol Vinyals, and others. Competition-level code generation with AlphaCode. Science, 378(6624):1092–1097, 2022. doi:10.1126/science.abq1158.">2022</a>]</span>. On a set of GitHub issues the best agent in the study resolved about 43% <span id="id3">Jimenez <em>et al.</em> [<a class="reference internal" href="../misc/works_cited.html#id8" title="Carlos E. Jimenez, John Yang, Alexander Wettig, Shunyu Yao, Kexin Pei, Ofir Press, and Karthik Narasimhan. SWE-bench: can language models resolve real-world GitHub issues? In International Conference on Learning Representations. 2024. URL: https://arxiv.org/abs/2310.06770.">2024</a>], Zhang <em>et al.</em> [<a class="reference internal" href="../misc/works_cited.html#id7" title="Linghao Zhang, Shilin He, Chaoyun Zhang, Yu Kang, Bowen Li, Chengxing Xie, Junhao Wang, Maoquan Wang, Yufan Huang, Shengyu Fu, Elsie Nallipogu, Qingwei Lin, Yingnong Dang, Saravan Rajmohan, and Dongmei Zhang. SWE-bench goes live! In Advances in Neural Information Processing Systems, Datasets and Benchmarks Track. 2025. URL: https://arxiv.org/abs/2505.23419.">2025</a>]</span>. On course assignments, Copilot’s best suggestion was correct about as a student solution, and the rest of its suggestions were correct less often <span id="id4">Moradi Dakhel <em>et al.</em> [<a class="reference internal" href="../misc/works_cited.html#id5" title="Arghavan Moradi Dakhel, Vahid Majdinasab, Amin Nikanjam, Foutse Khomh, Michel C. Desmarais, and Zhen Ming Jiang. GitHub Copilot AI pair programmer: asset or liability? Journal of Systems and Software, 203:111734, 2023. doi:10.1016/j.jss.2023.111734.">2023</a>]</span>. The speedups show up when a person still accepts or rejects the code and the task has a known end. Developers with Copilot finished one specified program about 56% faster, Google engineers about 21% faster on a single enterprise change, and in three companies Copilot users closed about 26% more pull requests per week, <strong>with larger gains for less experienced developers</strong> <span id="id5">[<a class="reference internal" href="../misc/works_cited.html#id11" title="Kevin Zheyuan Cui, Mert Demirer, Sonia Jaffe, Leon Musolff, Sida Peng, and Tobias Salz. The effects of generative AI on high-skilled work: evidence from three field experiments with software developers. Management Science, 2025. doi:10.1287/mnsc.2025.00535.">Cui <em>et al.</em>, 2025</a>, <a class="reference internal" href="../misc/works_cited.html#id10" title="Elise Paradis, Kate Grey, Quinn Madison, Daye Nam, Andrew Macvean, Vahid Meimand, Nan Zhang, Ben Ferrari-Church, and Satish Chandra. How much does AI impact development speed? an enterprise-based randomized controlled trial. 2024. URL: https://arxiv.org/abs/2410.12944, arXiv:2410.12944.">Paradis <em>et al.</em>, 2024</a>, <a class="reference internal" href="../misc/works_cited.html#id9" title="Sida Peng, Eirini Kalliamvakou, Peter Cihon, and Mert Demirer. The impact of AI on developer productivity: evidence from GitHub Copilot. 2023. URL: https://arxiv.org/abs/2302.06590, arXiv:2302.06590.">Peng <em>et al.</em>, 2023</a>]</span>. Beside a human partner on a short exercise, Copilot wrote more lines, and more of those lines were deleted afterward <span id="id6">Imai [<a class="reference internal" href="../misc/works_cited.html#id12" title="Saki Imai. Is GitHub Copilot a substitute for human pair-programming? an empirical study. In Proceedings of the 44th International Conference on Software Engineering: Companion Proceedings, 319–321. 2022. doi:10.1145/3510454.3522684.">2022</a>]</span>.</p>
+<p>Analysis tasks with lighter coders land in the same place. Marketing and sales professionals with no programming jobs, reading plain-language accounts of ChatGPT analyses and warned that the model often errs, still missed safety-critical flaws, and some of those flaws were missed by everyone in the study <span id="id7">Virk and Liu [<a class="reference internal" href="../misc/works_cited.html#id19" title="Yuvraj Virk and Dongyu Liu. Non-programmers assessing AI-generated code: a case study of business users analyzing data. 2025. URL: https://arxiv.org/abs/2508.06484, arXiv:2508.06484.">2025</a>]</span>. Epidemiology students and staff who already knew the statistics, randomized to ChatGPT’s code interpreter or to R or Stata with ChatGPT beside it, scored about the same (8.5 versus 9.4 out of 17) with the interpreter group finishing in 38 minutes rather than 45 for the side-by-side group. A <em>serious mistake</em> was present in 74% of answers with ChatGPT plus R or Stata and in <strong>93% with the interpreter alone</strong> <span id="id8">Dhokotera <em>et al.</em> [<a class="reference internal" href="../misc/works_cited.html#id20" title="Tafadzwa Dhokotera, Nandi Joubert, Aline Veillat, Christoph Pimmer, Karin Gross, Marco Waser, Jan Hattendorf, and Julia Bohlius. Generative artificial intelligence for data analysis: a randomised controlled trial in a public health research institute. International Journal of Public Health, 70:1608572, 2025. doi:10.3389/ijph.2025.1608572.">2025</a>]</span>. In another study, analysts comfortable with code could still check an AI analysis by turning to the data tables once a step looked wrong <span id="id9">Gu <em>et al.</em> [<a class="reference internal" href="../misc/works_cited.html#id21" title="Ken Gu, Ruoxi Shang, Tim Althoff, Chenglong Wang, and Steven M. Drucker. How do analysts understand and verify AI-assisted data analyses? In Proceedings of the CHI Conference on Human Factors in Computing Systems. 2024. doi:10.1145/3613904.3642497.">2024</a>]</span>.</p>
+<p>The styles below follow from how the suggestion is used. When you already know the next step, the tool finishes the line. When you are unsure, it starts to choose the path, and students either steer it back to the assignment or drift from one wrong guess to the next <span id="id10">[<a class="reference internal" href="../misc/works_cited.html#id17" title="Shraddha Barke, Michael B. James, and Nadia Polikarpova. Grounded Copilot: how programmers interact with code-generating models. Proceedings of the ACM on Programming Languages, 2023. doi:10.1145/3586030.">Barke <em>et al.</em>, 2023</a>, <a class="reference internal" href="../misc/works_cited.html#id18" title="James Prather, Brent N. Reeves, Paul Denny, Brett A. Becker, Juho Leinonen, Andrew Luxton-Reilly, Garrett Powell, James Finnie-Ansley, and Eddie Antonio Santos. “it's weird that it knows what I want”: usability and interactions with Copilot for novice programmers. ACM Transactions on Computer-Human Interaction, 2024. doi:10.1145/3617367.">Prather <em>et al.</em>, 2024</a>]</span>. Autocomplete and one cell at a time are the first case: you keep the recipe, run the cell, and reject a result that fails the printed check. An agent is the second case. The trials that found a speedup left a person in charge of what counted as done. Here that person checks the observational unit, the effect, and a claim they would sign.</p>
+<section id="ai-enhanced-autocomplete">
+<h2>1. AI-enhanced autocomplete<a class="headerlink" href="#ai-enhanced-autocomplete" title="Link to this heading">#</a></h2>
+<p>AI autocomplete uses the surrounding text and code to infer what you are likely to type next. That can be the rest of a line or a multiline “verse” of code. You stay in the editor: accept, edit, or ignore the suggestion, then keep typing.</p>
+<p>This course has been subtly engineered so context clues in the notebooks steer autocomplete toward what you need next. The hope is that the autocomplete would help bridge the gap between your intent and the code you need to write. Markdown that summarizes the analysis so far, names next steps, and states overall goals helps the engine place the right suggestion. If you are coding outside of this course make it a habit to leave a short written trail of your results and intent. This will help your collaborators and future self understand your analysis; and it will let the autocomplete engine help effectively.</p>
+<p><strong>Useful when:</strong></p>
+<ul class="simple">
+<li><p>You mostly know the code and want help finishing a line or block</p></li>
+<li><p>Variable names and recent cells already define the next move</p></li>
+<li><p>You want to stay in flow without switching into a chat or agent</p></li>
+</ul>
+<div class="tip admonition">
+<p class="admonition-title">Tip</p>
+<p>Steer autocomplete by writing a <code class="docutils literal notranslate"><span class="pre">#</span></code> comment that states what you want the code to do, then let the suggestion fill in below it.</p>
+</div>
+</section>
+<section id="natural-language-programming-cell-by-cell">
+<h2>2. Natural-language programming (cell by cell)<a class="headerlink" href="#natural-language-programming-cell-by-cell" title="Link to this heading">#</a></h2>
+<p>You give <strong>one instruction at a time</strong> in plain English. The AI translates that instruction into code for a single cell. You run it, read the objects and plots, then write the next instruction.</p>
+<p>You own the analysis path. You choose the order of steps, name the objects the next cell will need, and catch mistakes while they are still local. <a class="reference internal" href="../Module11/Module11_book.html"><span class="std std-doc">Module 11</span></a> practices this style.</p>
+<p><strong>Useful when:</strong></p>
+<ul class="simple">
+<li><p>The recipe is already clear (filter → transform → test → summarize)</p></li>
+<li><p>You are learning a method and want each step visible</p></li>
+<li><p>Intermediate objects must stay under your control (<code class="docutils literal notranslate"><span class="pre">results</span></code>, <code class="docutils literal notranslate"><span class="pre">sig</span></code>, group sizes)</p></li>
+<li><p>A wrong step should not silently cascade into later tests</p></li>
+</ul>
+<p><strong>Example:</strong> In <a class="reference internal" href="../Module11/Module11_book.html"><span class="std std-doc">Module 11</span></a> you already know the destination—log2 TPM, Welch t-tests, FDR, then Enrichr. Each Colab prompt is one brick. If the filter cell is wrong, you fix that prompt before asking for fold changes.</p>
+</section>
+<section id="agentic-coding-goal-based-iterative">
+<h2>3. Agentic coding (goal-based, iterative)<a class="headerlink" href="#agentic-coding-goal-based-iterative" title="Link to this heading">#</a></h2>
+<p>You state a <strong>broader scientific goal</strong> and constraints (question, unit of analysis, what must not be treated as <em>n</em>). An agent proposes steps, writes code, runs it, and continues from the output. You refine the goal and reject bad turns; the agent manages most of the code trail. <a class="reference internal" href="../Module12/Module12_book.html"><span class="std std-doc">Module 12</span></a> practices this style.</p>
+<p>You own long-range alignment: Is this still answering the question? Is the grain still correct? Would you defend this claim in a paper?</p>
+<p><strong>Useful when:</strong></p>
+<ul class="simple">
+<li><p>The path is exploratory and many reasonable intermediate summaries exist</p></li>
+<li><p>The dataset is messy (timestamps, nested replicates, odd missingness) and you want help proposing the next check</p></li>
+<li><p>You are willing to stop the agent when it drifts or tests at the wrong level</p></li>
+<li><p><strong>You can audit a short trail of steps faster than writing every cell yourself</strong></p></li>
+</ul>
+<p><strong>Example:</strong> In <a class="reference internal" href="../Module12/Module12_book.html"><span class="std std-doc">Module 12</span></a> the question is whether activity is lower in depression than in controls, and whether weekdays and weekends differ, summarized <strong>per person</strong>, not per minute. Ask an agent to explore toward that claim, then reject any step that treats minutes as independent samples.</p>
+</section>
+<section id="how-to-choose">
+<h2>How to choose<a class="headerlink" href="#how-to-choose" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Situation</p></th>
+<th class="head"><p>Prefer</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Finishing code you already know how to structure</p></td>
+<td><p>AI-enhanced autocomplete</p></td>
+</tr>
+<tr class="row-odd"><td><p>Known pipeline, teaching a method, tight object names</p></td>
+<td><p>Natural-language, one cell at a time</p></td>
+</tr>
+<tr class="row-even"><td><p>Open exploration, agent proposes checks, you supervise goals and grain</p></td>
+<td><p>Agentic coding</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>All three fail the same way when science is sloppy: wrong unit of analysis, p-hunting across a long chat, or a conclusion that only exists in the prompt history. The notebook you produce is the record because it is deterministic, reproducible, sharable, verifiable, and auditable. Your chat history is not.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content/part4"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../../_bblearn/Module10/Module10_lab.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lab</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../Module11/Module11_book.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Module 11: RNA-seq differential expression and Enrichr</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ai-enhanced-autocomplete">1. AI-enhanced autocomplete</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-language-programming-cell-by-cell">2. Natural-language programming (cell by cell)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#agentic-coding-goal-based-iterative">3. Agentic coding (goal-based, iterative)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-choose">How to choose</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Will Dampier
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
