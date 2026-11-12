@@ -2,6 +2,7 @@
 
 This page notes all of the major changes introduced since the initial launch of this book.
 
+- 2026-11-11 - **Module 12:** Dataset page now states the study's lower-activity and larger weekend-gap report, and asks whether this table shows a group difference and a weekday-versus-weekend difference, with the person as the unit. The lab asks students to explore the other score columns. The walkthrough question and the Part 4 Module 12 example match that question.
 - 2026-11-10 - **Part 4 opener:** `part4/ai_programming_styles.md` now opens with a short argument on AI coding skill and paired productivity, cited through `content/references.bib`. The repository-issue claim cites SWE-bench-Live rather than the frozen 2024 SWE-bench score. A later paragraph adds the public-health trial, the non-programmer verification study, and the analyst verification study.
 - 2026-11-09 - **Modules 11 and 12 (AI-assisted analysis):**
   - Module 11: staged GSE199911 TPM / DE tables, background pages (RNA-seq, TPM, multiple testing, Enrichr; RNA-seq page links the Parker et al. PMC full text), student and INTENDED walkthrough/lab notebooks, and book pages for walkthrough/lab Colab AI prompts.

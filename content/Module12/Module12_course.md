@@ -25,7 +25,7 @@ Review the three pages above before opening the notebook.
 
 ### Participate: Walkthrough / Lab
 
-Open the skeletal Module 12 notebook. The setup cell and data load are filled in. Continue with the Data Science Agent following the person-level question on the dataset page. Prompts from the recorded session will be posted on Canvas after class.
+Open the skeletal Module 12 notebook. The setup cell and data load are filled in. Continue with the Data Science Agent on the question in [Depresjon dataset and question](depresjon_dataset.md). The lab stays on the same table and asks you to explore the other columns. Prompts from the recorded session will be posted on Canvas after class.
 
 ## Getting help
 
