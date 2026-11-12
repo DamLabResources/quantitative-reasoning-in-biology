@@ -90,6 +90,13 @@ rule zip_tests:
                     written.add(name)
                     handle.write(path, arcname = name)
                     
+# TODO: Modules 11 and 12 are not otter-assign notebooks. Their student
+# notebooks live at content/{module}/{module}_{activity}.ipynb and are copied
+# by hand into _bblearn/ (and quantitative-reasoning-in-biology/notebooks/).
+# This rule still requires otter student/autograder outputs, so `make uploads`
+# will not publish them. Teach deploy_notebook to copy a plain notebook when
+# no otter build exists, and decide how *_INTENDED.ipynb maps to the
+# *_SOLUTION.ipynb name this target expects.
 rule deploy_notebook:
     input:
         student_notebook = 'content/{module}/_build/{module}_{activity}_otter/student/{module}_{activity}.ipynb',      
