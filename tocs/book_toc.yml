@@ -67,6 +67,27 @@ parts:
       sections:
       - file: _bblearn/Module10/Module10_walkthrough_SOLUTION
       - file: _bblearn/Module10/Module10_lab
+
+  - caption: "Part 4 : AI-assisted analysis"
+    chapters:
+    - file: content/part4/ai_programming_styles
+    - file: content/Module11/Module11_book
+      sections:
+      - file: content/Module11/how_rnaseq_works
+      - file: content/Module11/multiple_testing
+      - file: content/Module11/gene_set_enrichment
+      - file: content/Module11/Module11_walkthrough_prompts
+      - file: content/Module11/Module11_walkthrough_INTENDED
+      - file: content/Module11/Module11_lab_prompts
+      - file: content/Module11/Module11_lab
+
+    - file: content/Module12/Module12_book
+      sections:
+      - file: content/Module12/depresjon_dataset
+      - file: content/Module12/pandas_datetime
+      - file: content/Module12/code_generation_vs_agents
+      - file: content/Module12/Module12_walkthrough
+      - file: content/Module12/Module12_lab
       
   - caption: "Extra"
     chapters:
